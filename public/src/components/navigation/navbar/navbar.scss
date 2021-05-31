@@ -5,4 +5,36 @@
   padding: 1rem;
   color: $off_white;
   font-size: 1.75rem;
+
+  &_mobile {
+
+  }
+
+  &_desktop {
+
+  }
+
+  &_profile {
+    .user-popup {
+      left: .5rem;
+      top: -.4rem;
+    }
+    
+    // Popup Transitions
+    .popup-enter-from,
+    .popup-leave-to {
+      opacity: 0;
+    }
+  
+    .popup-enter-to,
+    .popup-leave-from {
+      left: .5rem;
+      top: -.4rem;
+    }
+    
+    .popup-enter-active,
+    .popup-leave-active {
+      transition: all 0.3s;
+    }
+  }
 }
