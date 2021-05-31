@@ -1,0 +1,45 @@
+.hamburger-container {
+  &_icon {
+
+  }
+
+  &_links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: $accent_red;
+    padding: 0.5rem 1rem;
+    min-width: 15rem;
+    &_link {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 1rem 0;
+      &_icon {
+        margin-right: .5rem;
+      }
+      &_label {
+        font-size: 1.25rem;
+      }
+      &:last-child {
+        margin-bottom: .5rem;
+      }
+      &:first-child {
+        margin-top: 5rem;
+      }
+    }
+  }
+
+  // Links Transitions
+  .links-enter-from,
+  .links-leave-to {
+    left: -15rem;
+    opacity: 0;
+  }
+  
+  .links-enter-active,
+  .links-leave-active {
+    transition: all 0.3s;
+  }
+}
