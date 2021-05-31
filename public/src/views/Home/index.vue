@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <Navbar />
-    <h1>Home</h1>
+    <h1 class="site-title">Wiffle League</h1>
+    <button class="btn red_btn">Sign up today!</button>
   </div>
 </template>
 

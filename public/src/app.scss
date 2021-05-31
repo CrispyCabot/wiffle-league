@@ -14,3 +14,14 @@ html {
   min-height: 100vh;
   background-color: $dark_background;
 }
+
+.btn {
+  outline: none;
+  border: none;
+}
+
+.red_btn {
+  background-color: $accent_red;
+  color: $off_white;
+  padding: .5rem 1rem;
+}

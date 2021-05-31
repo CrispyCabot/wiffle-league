@@ -16,6 +16,9 @@ export default defineComponent({
     },
     toggleLinks() {
       this.isLinksOpen = !this.isLinksOpen
+    },
+    redirectLink(link: any) {
+      this.$router.push(link.redirect)
     }
   }
 })

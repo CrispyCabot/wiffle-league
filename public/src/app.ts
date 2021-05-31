@@ -1,3 +1,8 @@
+import Navbar from '@/components/navigation/navbar/index.vue'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    Navbar
+  }
 }
