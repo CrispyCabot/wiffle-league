@@ -23,5 +23,8 @@ html {
 .red_btn {
   background-color: $accent_red;
   color: $off_white;
-  padding: .5rem 1rem;
+  padding: .5rem 1.5rem;
+  border-radius: 50rem;
+  font-weight: 600;
+  font-style: italic;
 }
