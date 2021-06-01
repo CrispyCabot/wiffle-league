@@ -8,53 +8,54 @@
   background-size: 100vw;
   display: flex;
   justify-content: space-evenly;
+  .flex-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    .logo {
+      flex: 1 1 1;
+      margin: 1rem;
+      max-width: 100%;
+      img {
+        object-fit: cover;
+        height: 4rem;
+        width: 4rem;
+      }
+    }
+    .rhs {
+      display: flex;
+      flex-flow: column nowrap;
+      .links {
+        flex: 3 1 100%;
+        display: flex;
+        flex-flow: row wrap;
+        p {
+          color: $off_white;
+          font-size: .7rem;
+          text-align: center;
+          margin: 4px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+      }
+      .tiny-stuff {
+        font-size: 0.5rem;
+      }
+    }
+  }
 }
 
-.flex-container {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
 
-  padding: 0;
-  margin: 0;
-}
 
-.rhs {
-  display: flex;
-  flex-flow: column nowrap;
-}
 
-.tiny-stuff {
-  font-size: 0.5rem;
-}
 
-.links {
-  flex: 3 1 100%;
-  display: flex;
-  flex-flow: row wrap
-}
 
-.logo {
-  flex: 1 1 1;
-  padding: 1rem;
-  max-width: 100%;
-}
 
-img {
-  object-fit: cover;
-  height: 4rem;
-  width: 4rem;
-}
 
-p {
-  color: $off_white;
-  font-size: .7rem;
-  text-align: center;
-  margin: 4px;
-}
 
-p:hover {
-  cursor: pointer;
-}
+
