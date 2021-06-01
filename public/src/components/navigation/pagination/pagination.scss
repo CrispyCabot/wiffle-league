@@ -1,0 +1,46 @@
+.pagination-container {
+  margin: 1rem 0 0 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &_pagination {
+    &_page-size {
+      // position: absolute;
+      // top: 0;
+      // left: 0;
+    }
+    &_page-index {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .arrow {
+        margin: 0 .5rem;
+        color: $dark_background;
+        pointer-events: all;
+        &.inactive-arrow {
+          color: $light_grey;
+          pointer-events: none;
+        }
+      }
+      .indexs {
+        display: flex;
+        p {
+          height: 1.5rem;
+          width: 1.5rem;
+          vertical-align: middle;
+          line-height: 1.5rem;
+          border-radius: 50%;
+          background-color: $accent_light_red;
+          margin: 0 .25rem;
+          font-weight: bold;
+          color: $off_white;
+          &.active-page {
+            background-color: $accent_red;
+          }
+        }
+      }
+    }
+  }
+}
+

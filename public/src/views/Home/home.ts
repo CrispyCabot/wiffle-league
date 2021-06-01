@@ -40,28 +40,57 @@ export default defineComponent({
             startDate: {text: '5/28/21', type: 'date'},
             endDate: {text: '7/28/21', type: 'date'}
           },
+          {
+            name: {text: '5', type: 'string'},
+            players: {text: '6/6', type: 'numeric'},
+            startDate: {text: '5/28/21', type: 'date'},
+            endDate: {text: '7/28/21', type: 'date'}
+          },
+          {
+            name: {text: '6', type: 'string'},
+            players: {text: '2/6', type: 'numeric'},
+            startDate: {text: '5/28/21', type: 'date'},
+            endDate: {text: '7/28/21', type: 'date'}
+          },
+          {
+            name: {text: '7', type: 'string'},
+            players: {text: '4/6', type: 'numeric'},
+            startDate: {text: '5/28/21', type: 'date'},
+            endDate: {text: '7/28/21', type: 'date'}
+          },
+          {
+            name: {text: '8', type: 'string'},
+            players: {text: '6/6', type: 'numeric'},
+            startDate: {text: '5/28/21', type: 'date'},
+            endDate: {text: '7/28/21', type: 'date'}
+          },
         ],
         hasPagination: true,
-        pageIndex: 1,
-        pageSize: 1,
-        startingPage: 1,
-        endingPage: 4
+        hasSizeSelector: true,
+        pageIndex: 0,
+        pageSize: 4,
+        startingIndex: 0,
+        endingIndex: 4
       }
     }
   },
-  created() {
-    this.leagueTable.endingPage = Math.ceil(this.leagueTable.rows.length / this.leagueTable.pageSize)
+  mounted() {
+    this.leagueTable.endingIndex = this.leagueTable.startingIndex + this.leagueTable.pageSize
+  },
+  computed: {
+    splicedRows(): Array<Object> {
+      return this.leagueTable.rows.slice(this.leagueTable.startingIndex, this.leagueTable.endingIndex)
+    }
   },
   methods: {
     changePageIndex(pageIndex: number) {
-      // TODO
-      // Once the backend is setup, a new fetch will fill overwrite rows in data
-      // with pageSize amount of rows starting from new pageIndex in database 
       this.leagueTable.pageIndex = pageIndex
+      this.leagueTable.startingIndex = pageIndex * this.leagueTable.pageSize
+      this.leagueTable.endingIndex = this.leagueTable.startingIndex + this.leagueTable.pageSize
     },
     changePageSize(pageSize: number) {
       this.leagueTable.pageSize = pageSize
-      this.leagueTable.endingPage = Math.ceil(this.leagueTable.rows.length / this.leagueTable.pageSize)
+      this.leagueTable.endingIndex = this.leagueTable.startingIndex + this.leagueTable.pageSize
     }
   }
 })

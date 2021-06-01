@@ -26,22 +26,14 @@
     </div>
 
     <div v-if="hasPagination" class="grid-table_pagination">
-      <div class="grid-table_pagination_page-size"></div>
-      <div class="grid-table_pagination_page-index">
-        <div class="arrow arrow-left" :class="{'inactive-arrow': startingPage == 1}">
-          <font-awesome-icon :icon="['fas', 'chevron-left']"></font-awesome-icon>
-        </div>
-        <div class="indexs">
-          <p v-for="page in pageCount"
-            :key="page"
-            :class="{'active-page': page == pageIndex}"
-            @click="$emit('page-index-change', page)"
-          >{{page}}</p>
-        </div>
-        <div class="arrow arrow-right" :class="{'inactive-arrow': endingPage == pageCount}">
-          <font-awesome-icon :icon="['fas', 'chevron-right']"></font-awesome-icon>
-        </div>
-      </div>
+      <pagination
+        :totalItemCount="rowsCount"
+        :pageIndex="pageIndex"
+        :pageSize="pageSize"
+        :hasSizeSelector="hasSizeSelector"
+        @page-index-change="$emit('page-index-change', $event)"
+        @page-size-change="$emit('page-size-change', $event)"
+      />
     </div>
   </div>
 </template>

@@ -5,14 +5,14 @@
     <div class="league-table">
       <grid-table
         :columns="leagueTable.columns"
-        :rows="leagueTable.rows"
+        :rows="splicedRows"
+        :rowsCount="leagueTable.rows.length"
         :hasHeader="true"
         :title="'Active Leagues'"
         :hasPagination="leagueTable.hasPagination"
+        :hasSizeSelector="leagueTable.hasSizeSelector"
         :pageIndex="leagueTable.pageIndex"
         :pageSize="leagueTable.pageSize"
-        :startingPage="leagueTable.startingPage"
-        :endingPage="leagueTable.endingPage"
         @page-index-change="changePageIndex($event)"
         @page-size-change="changePageSize($event)"
       ></grid-table>
