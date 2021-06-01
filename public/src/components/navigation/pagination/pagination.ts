@@ -49,10 +49,19 @@ export default defineComponent({
         this.endingPage++
       }
     },
-    pageSelection(pageSize: any) {
+    pageSizeSelection(pageSize: any) {
       this.$emit('page-size-change', pageSize)
-      if (Math.ceil(this.totalItemCount / pageSize) < this.pageIndex) {
-        this.$emit('page-index-change', Math.ceil(this.totalItemCount / pageSize) - 1)
+    }
+  },
+  watch: {
+    pageSize() {
+      if (Math.ceil(this.totalItemCount / this.pageSize) < this.pageIndex) {
+        this.$emit('page-index-change', Math.ceil(this.totalItemCount / this.pageSize) - 1)
+      } else if (this.endingPage > this.maxPageCount) {
+        this.endingPage = Math.ceil(this.totalItemCount / this.pageSize)
+        this.startingPage = this.endingPage - this.displayedPageCount >= 1 ? this.endingPage - this.displayedPageCount : 1
+      } else {
+        this.endingPage = (this.startingPage - 1) + this.displayedPageCount
       }
     }
   }

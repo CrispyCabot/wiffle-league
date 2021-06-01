@@ -10,6 +10,7 @@
       <font-awesome-icon class="simple-dropdown_selected-item_icon" :class="{'open': !isCollapsed}" :icon="['fas', 'chevron-down']"></font-awesome-icon>
     </div>
 
+    <div v-if="!isCollapsed" class="simple-dropdown_content-arrow"></div>
     <div v-if="!isCollapsed" class="simple-dropdown_content">
       <div v-for="item in items" :key="item" class="simple-dropdown_content_item" @click="selectItem(item)">
         <p>{{item}}</p>
