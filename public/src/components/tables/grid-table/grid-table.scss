@@ -1,0 +1,96 @@
+.grid-table {
+  width: 90%;
+  margin: 0 auto;
+  background-color: $off_white;
+  &_title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: .5rem 0;
+  }
+
+  &_label {
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 600;
+    padding: .25rem 0;
+  }
+  
+  &_table {
+    margin: 0 auto;
+    width: max-content;
+    border-collapse: collapse;
+    text-align: left;
+    &-container {
+      overflow-x: auto;
+    }
+
+    &_head {
+      color: $off_white;
+      background-color: $accent_red;
+      th {
+        font-weight: 400;
+        padding: .6rem .75rem;
+        border-right: 1px solid $off_white;
+        &:last-child {
+          border-right: unset;
+        }
+      }
+    }
+    &_body {
+      &_row {
+        border-bottom: 1px solid $accent_light_red;
+        &_cell {
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          padding: .25rem .5rem;
+          &.numeric {
+            text-align: center;
+          }
+          &.date {
+            text-align: center;
+          }
+          &.string {
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+
+  &_pagination {
+    margin: 1rem 0 0 0;
+    &_page-size {
+
+    }
+    &_page-index {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .arrow {
+        margin: 0 .5rem;
+        color: $dark_background;
+        &.inactive-arrow {
+          color: $light_grey;
+        }
+      }
+      .indexs {
+        display: flex;
+        p {
+          height: 1.5rem;
+          width: 1.5rem;
+          vertical-align: middle;
+          line-height: 1.5rem;
+          border-radius: 50%;
+          background-color: $accent_light_red;
+          margin: 0 .25rem;
+          font-weight: bold;
+          color: $off_white;
+          &.active-page {
+            background-color: $accent_red;
+          }
+        }
+      }
+    }
+  }
+}
