@@ -19,6 +19,7 @@ export default defineComponent({
     },
     redirectLink(link: any) {
       this.$router.push(link.redirect)
+      this.closeLinks()
     }
   }
 })

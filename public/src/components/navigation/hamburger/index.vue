@@ -5,7 +5,7 @@
     </div>
 
     <transition name="links">
-      <div v-show="isLinksOpen" class="hamburger-container_links">
+      <div v-show="isLinksOpen" v-click-away="closeLinks" class="hamburger-container_links">
         <font-awesome-icon class="hamburger-container_links_icon" :icon="['fas', 'times']" @click="closeLinks"></font-awesome-icon>
         <div v-for="link in links" :key="link" class="hamburger-container_links_link" @click="redirectLink(link)">
           <font-awesome-icon class="hamburger-container_links_link_icon" :icon="['fas', link.icon]"></font-awesome-icon>
