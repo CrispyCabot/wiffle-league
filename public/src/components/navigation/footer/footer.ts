@@ -11,7 +11,7 @@ export default defineComponent({
   methods: {
     redirect(link: string) {
       if (link == "top") {
-        window.scrollTo(0, 0);
+        window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
       }
       else {
         this.$router.push(link)

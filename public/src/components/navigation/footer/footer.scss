@@ -1,7 +1,4 @@
 .footer-container {
-  position: absolute;
-  top: 100%;
-  left: 0;
   width: 100vw;
   height: 10vh;
   background-image: url("../../../assets/footer_background.png");
@@ -17,8 +14,7 @@
     padding: 0;
     margin: 0;
     .logo {
-      flex: 1 1 1;
-      margin: 1rem;
+      margin: 0 1rem;
       max-width: 100%;
       img {
         object-fit: cover;
