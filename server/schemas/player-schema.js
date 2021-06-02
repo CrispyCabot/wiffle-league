@@ -10,7 +10,11 @@ const player_schema = new Schema({
   lastname: String,
   nickname: String,
   phone_number: String,
-  player_stats: stats,
+  player_stats: [stats],
   show_information: Boolean,
   leauge_ids: [Schema.Types.ObjectId]
 })
+
+module.exports = {
+  player_schema
+}
