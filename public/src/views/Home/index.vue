@@ -17,7 +17,18 @@
         @page-size-change="changePageSize($event)"
       ></grid-table>
     </div>
-    <div :style="{height: '20vh'}"></div>
+    <div class = "thingy">
+      <h3>Want to join in on the fun?</h3>
+      <button class="btn red_btn">Sign Up</button>
+      <button class="btn red_btn">Create a League</button>
+    </div>
+    <div class = "about">
+      <h2>About</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut metus eget libero facilisis aliquam. Phasellus in lobortis eros, ac dapibus elit. Curabitur ac magna ut metus finibus dapibus at in purus. Aenean consequat ipsum et orci mattis, a tristique ex mattis. Vestibulum eleifend libero quis arcu consequat, ac imperdiet purus feugiat. Nullam mauris quam, ultrices nec pellentesque vel, efficitur a nibh. Curabitur in enim quis velit sodales egestas luctus ac purus. Etiam nibh nulla, porttitor sit amet fringilla at, pretium ut quam. Maecenas dolor est, viverra non lobortis et, rutrum sit amet ligula.
+        <br><br>
+Morbi nisl nibh, facilisis at vehicula rhoncus, porttitor non dolor. Sed ac orci sagittis, accumsan ex sit amet, faucibus lacus. Quisque felis libero, blandit eget semper eu, scelerisque eu quam. Nunc vulputate lorem risus, ac hendrerit tellus consequat efficitur. Pellentesque nec tempor urna. Nam suscipit accumsan tortor molestie ultricies. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce ut erat sed dolor dignissim rhoncus eget id orci. Aenean erat quam, scelerisque tempor sapien id, varius volutpat mi. Quisque vulputate quis enim ut ultricies. Nam maximus, dui sed elementum gravida, nisi nibh aliquam libero, nec mollis quam tellus sit amet sem. Etiam eget massa sagittis, maximus metus id, molestie eros. Aliquam maximus orci eu lobortis porta. Etiam fringilla enim non blandit vehicula.</p>
+    </div>
+    <!-- <div :style="{height: '20vh'}"></div> -->
   </div>
 </template>
 
