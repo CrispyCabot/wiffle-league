@@ -8,7 +8,7 @@
     <input class = "default-input login-input" type="text" placeholder = "First Name" id="fname" name="fname">
     <input class = "default-input login-input" type="text" placeholder = "Last Name" id="lname" name="lname">
     <input class = "default-input login-input" type="text" placeholder = "Nickname (Optional)" id="nickname" name="nickname">
-    <input class = "default-input login-input" type="text" placeholder = "Phone Number (Optional)" id="phonenumber" name="phonenumber">
+    <input class = "default-input login-input" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder = "Phone Number (Optional)" id="phonenumber" name="phonenumber">
     <div class = "gender">
       <input type="radio" name="gender" value="male"> Male
       <input type="radio" name="gender" value="female"> Female
