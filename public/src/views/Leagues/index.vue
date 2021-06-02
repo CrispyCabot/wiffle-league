@@ -1,6 +1,10 @@
 <template>
   <div class="leagues-container">
-    <h1>Leagues</h1>
+    <h1 class="site-title">Leagues</h1>
+    <div class="leagues-table white_card_background ">
+      <search-input @search-value-change="searchValueChange" />
+      <radio-slider :values="displayValues" :selectedValue="selectedDisplayValue" @value-change="displayViewChange" />
+    </div>
   </div>
 </template>
 

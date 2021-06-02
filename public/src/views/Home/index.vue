@@ -2,7 +2,7 @@
   <div class="home">
     <h1 class="site-title">Wiffle League</h1>
     <button class="btn red_btn">Sign up today!</button>
-    <div class="league-table">
+    <div class="league-table white_card_background ">
       <grid-table
         :columns="leagueTable.columns"
         :rows="splicedRows"

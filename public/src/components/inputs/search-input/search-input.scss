@@ -1,0 +1,21 @@
+.search-input {
+  width: max-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 1rem;
+  background-color: $pure_white;
+  border: 1px solid $light_grey;
+  border-radius: .25rem;
+  &_input {
+    outline: none;
+    border: none;
+    color: $dark_background;
+    &::placeholder {
+      color: $light_grey;
+    }
+  }
+  &_icon {
+    color: $light_grey;
+  }
+}

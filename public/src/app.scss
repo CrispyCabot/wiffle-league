@@ -48,3 +48,15 @@ body {
   padding: 0.5rem 0.5rem;
   color: $dark_background;
 }
+
+.white_card_background {
+  background-color: $off_white;
+  padding: 1rem 0;
+  width: 90%;
+  margin: 0 auto;
+  border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
