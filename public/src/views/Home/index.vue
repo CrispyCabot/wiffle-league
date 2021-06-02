@@ -6,7 +6,7 @@
       <grid-table
         :columns="leagueTable.columns"
         :rows="splicedRows"
-        :rowsCount="leagueTable.rows.length"
+        :rowsCount="rows.length"
         :hasHeader="true"
         :title="'Active Leagues'"
         :hasPagination="leagueTable.hasPagination"

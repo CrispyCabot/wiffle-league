@@ -14,7 +14,7 @@
           @click="pageIndexChange(startingPage + i - 1)"
         >{{startingPage + i}}</p>
       </div>
-      <div class="arrow arrow-right" :class="{'inactive-arrow': endingPage == maxPageCount}">
+      <div class="arrow arrow-right" :class="{'inactive-arrow': endingPage == maxPageCount || endingPage == 0}">
         <font-awesome-icon :icon="['fas', 'chevron-right']" @click="pageEndChange"></font-awesome-icon>
       </div>
     </div>
