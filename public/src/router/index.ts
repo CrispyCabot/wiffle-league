@@ -7,8 +7,10 @@ import SignUp from '../views/SignUp/index.vue'
 import Login from '../views/Login/index.vue'
 import Schedules from '../views/Schedules/index.vue'
 import Leagues from '../views/Leagues/index.vue'
+import League from '../views/League/index.vue'
 import Contact from '../views/Contact/index.vue'
 import Players from '../views/Players/index.vue'
+import TopStats from '../views/TopStats/index.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -32,6 +34,11 @@ const routes: Array<RouteRecordRaw> = [
     component: Leagues
   },
   {
+    path: '/league/:id',
+    name: routeNames.League,
+    component: League
+  },
+  {
     path: '/rules',
     name: routeNames.Rules,
     component: Rules
@@ -42,7 +49,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Contact
   },
   {
-    path: '/schedules',
+    path: '/leagues/schedules',
     name: routeNames.Schedules,
     component: Schedules
   },
@@ -50,6 +57,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/players',
     name: routeNames.Players,
     component: Players
+  },
+  {
+    path: '/players/top-stats',
+    name: routeNames.TopStats,
+    component: TopStats
   },
   // Catch All Routes
   {

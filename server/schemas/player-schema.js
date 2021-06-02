@@ -12,7 +12,7 @@ const player_schema = new Schema({
   phone_number: String,
   player_stats: [stats],
   show_information: Boolean,
-  leauge_ids: [Schema.Types.ObjectId]
+  league_ids: [Schema.Types.ObjectId]
 })
 
 module.exports = {

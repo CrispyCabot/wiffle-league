@@ -32,6 +32,8 @@ router.route('/leagues/:id/stats').get((req, res) => {
   })
 })
 
+// Player Getters
 
+// Game Getters
 
 module.exports = router
