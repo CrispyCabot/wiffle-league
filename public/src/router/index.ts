@@ -5,6 +5,7 @@ import NotFound from '../views/NotFound/index.vue'
 import Rules from '../views/Rules/index.vue'
 import SignUp from '../views/SignUp/index.vue'
 import Login from '../views/Login/index.vue'
+import Schedules from '../views/Schedules/index.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -26,6 +27,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/rules',
     name: routeNames.Rules,
     component: Rules
+  },
+  {
+    path: '/schedules',
+    name: routeNames.Schedules,
+    component: Schedules
   },
   // Catch All Routes
   {

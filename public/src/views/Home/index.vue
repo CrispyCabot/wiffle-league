@@ -8,7 +8,7 @@
         :rows="splicedRows"
         :rowsCount="rows.length"
         :hasHeader="true"
-        :title="'Active Leagues'"
+        :title="'Leagues'"
         :hasPagination="leagueTable.hasPagination"
         :hasSizeSelector="leagueTable.hasSizeSelector"
         :pageIndex="leagueTable.pageIndex"
