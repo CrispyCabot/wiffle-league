@@ -6,6 +6,18 @@ body {
   overflow-x: hidden;
 }
 
+.site-title {
+  color: $off_white;
+  margin: .5rem 0;
+  font-style: italic;
+  font-size: 2.5rem;
+}
+
+.default-input {
+  padding: 0.5rem 0.5rem;
+  color: $dark_background;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
