@@ -1,0 +1,23 @@
+{
+  "name": "wiffle-league",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "start npm run pull && start npm run frontend && start npm run backend",
+    "pull": "git pull",
+    "frontend": "cd ./public && npm run serve",
+    "backend": "cd ./server && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Devin-Harris/wiffle-league.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Devin-Harris/wiffle-league/issues"
+  },
+  "homepage": "https://github.com/Devin-Harris/wiffle-league#readme",
+  "dependencies": {}
+}

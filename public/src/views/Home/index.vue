@@ -28,7 +28,6 @@
         <br><br>
 Morbi nisl nibh, facilisis at vehicula rhoncus, porttitor non dolor. Sed ac orci sagittis, accumsan ex sit amet, faucibus lacus. Quisque felis libero, blandit eget semper eu, scelerisque eu quam. Nunc vulputate lorem risus, ac hendrerit tellus consequat efficitur. Pellentesque nec tempor urna. Nam suscipit accumsan tortor molestie ultricies. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce ut erat sed dolor dignissim rhoncus eget id orci. Aenean erat quam, scelerisque tempor sapien id, varius volutpat mi. Quisque vulputate quis enim ut ultricies. Nam maximus, dui sed elementum gravida, nisi nibh aliquam libero, nec mollis quam tellus sit amet sem. Etiam eget massa sagittis, maximus metus id, molestie eros. Aliquam maximus orci eu lobortis porta. Etiam fringilla enim non blandit vehicula.</p>
     </div>
-    <div :style="{height: '10vh'}"></div> <!-- To make up footer height -->
   </div>
 </template>
 

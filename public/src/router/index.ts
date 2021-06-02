@@ -6,6 +6,7 @@ import Rules from '../views/Rules/index.vue'
 import SignUp from '../views/SignUp/index.vue'
 import Login from '../views/Login/index.vue'
 import Schedules from '../views/Schedules/index.vue'
+import Leagues from '../views/Leagues/index.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -22,6 +23,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/login',
     name: routeNames.Login,
     component: Login
+  },
+  {
+    path: '/leagues',
+    name: routeNames.Leagues,
+    component: Leagues
   },
   {
     path: '/rules',
