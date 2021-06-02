@@ -12,13 +12,14 @@ export default defineComponent({
   data() {
     return {
       links: Links,
-      isUserPopupOpen: false
+      isUserPopupOpen: false,
+      isMobileView: true
     }
   },
-  computed: {
-    isMobileView() {
-      return Boolean(window.outerWidth <= 576)
-    }
+  computed: {},
+  created() {
+    this.setIsMobileView()
+    window.addEventListener('resize', this.setIsMobileView)
   },
   methods: {
     closeUserPopup() {
@@ -26,6 +27,12 @@ export default defineComponent({
     },
     toggleUserPopup() {
       this.isUserPopupOpen = !this.isUserPopupOpen
+    },
+    setIsMobileView() {
+      this.isMobileView = Boolean(window.outerWidth <= 576)
     }
+  },
+  unmounted() { 
+    window.removeEventListener('resize', this.setIsMobileView)
   }
 })
