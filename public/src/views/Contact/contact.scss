@@ -1,0 +1,22 @@
+.contact-container {
+    h1 {
+        text-align: center;
+    }
+    .contact-card {
+        background: $off_white;
+        margin: 1rem;
+        padding: 0.5rem;
+        border-radius: 5px;
+    }
+    h2 {
+        background: $accent_red;
+        color: $off_white;
+        padding: 0.4rem;
+    }
+    p {
+        padding: 0.4rem;
+    }
+    ul {
+        margin-left: 2rem;
+    }
+}
