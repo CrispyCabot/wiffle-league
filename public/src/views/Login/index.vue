@@ -4,7 +4,7 @@
     <img src="../../assets/logo.png">
     <input class = "default-input login-input" type="text" placeholder = "email" id="email" name="email">
     <input class = "default-input login-input" type="text" placeholder = "password" id="password" name="password">
-    <button class="btn red_btn">Log In<Inp></Inp></button>
+    <button class="btn red_btn">Log In</button>
   </div>
 </template>
 
