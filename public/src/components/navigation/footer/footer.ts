@@ -10,8 +10,12 @@ export default defineComponent({
   },
   methods: {
     redirect(link: string) {
-      console.log("clicked");
-      this.$router.push(link)
+      if (link == "top") {
+        window.scrollTo(0, 0);
+      }
+      else {
+        this.$router.push(link)
+      }
     }
   }
 })
