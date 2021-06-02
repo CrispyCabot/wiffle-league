@@ -55,21 +55,26 @@
       position: absolute;
       top: calc(100% - .1rem);
       left: 50%;
-      transform: translate(-50%, 0%) rotate(45deg);
+      transform: translate(-50%, -50%);
       z-index: 6;
-      width: .75rem;
-      height: .75rem;
-      background-color: $off_white;
-      border: 1px solid $light_grey;
+      width: 0; 
+      height: 0; 
+      border-left: .8rem solid transparent;
+      border-right: .8rem solid transparent;
+      border-bottom: .8rem solid $light_grey;
+      border-top: none;
       &::after {
         content: '';
         position: absolute;
-        top: 0;
-        right: -2px;
-        width: .75rem;
-        height: .75rem;
-        z-index: 6;
-        background-color: $off_white;
+        top: .1rem;
+        left: -.75rem;
+        width: 0; 
+        height: 0; 
+        border-left: .75rem solid transparent;
+        border-right: .75rem solid transparent;
+        border-bottom: .75rem solid $off_white;
+        border-top: none;
+        z-index: 3;
       }
     }
   }

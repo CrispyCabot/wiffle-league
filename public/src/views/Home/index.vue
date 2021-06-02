@@ -17,6 +17,7 @@
         @page-size-change="changePageSize($event)"
       ></grid-table>
     </div>
+    <div :style="{height: '20vh'}"></div>
   </div>
 </template>
 
