@@ -8,11 +8,10 @@
     background-color: $off_white;
   }
   .thingy {
-    padding: 1rem;
-    padding-top: 0;
+    margin: 3rem 0;
     h3 {
       color: $off_white;
-      padding: 1rem;
+      margin-bottom: .5rem;
     }
 
     .red_btn {
@@ -23,7 +22,7 @@
   .about {
     width: 100%;
     background: $off_white;
-    padding: 1rem;
+    padding: 2rem 1.5rem;
 
     h2 {
       color: $dark_background;
@@ -33,7 +32,6 @@
 
     p {
       text-align: left;
-      padding: 20px 5px;
       font-size: 0.9rem;
     }
   }
