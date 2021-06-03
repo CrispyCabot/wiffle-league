@@ -1,11 +1,11 @@
 leagueJSON = """
 {
-    "_id": {
+  "_id": {
         "$oid": "id_placeholder"
     },
     "name": "name_placeholder",
     "player_ids": playerIDs_placeholder,
-    "player_stats": playerStats_placeholder,
+    "player_stats": stats_placeholder,
     "max_num_players": maxPlayers_placeholder,
     "league_creator_id": { "$oid": "creator_placeholder" },
     "game_ids": games_placeholder,
@@ -41,26 +41,13 @@ playerJSON = """
     "lastname": "lastname_placeholder",
     "nickname": "nickname_placeholder",
     "phone_number": "phone_placeholder",
-    "player_stats": { "$oid": "stats_placeholder" },
+    "player_stats": stats_placeholder,
     "show_information": false,
     "league_ids": leagues_placeholder
 },"""
 
-statsJSON = """
-{
-    "_id": {
-        "$oid": "id_placeholder"
-    },
-    "player_id": {"$oid": "pid_placeholder" },
-    "hits": "hits_placeholder",
-    "singles": "singles_placeholder",
-    "doubles": "doubles_placeholder",
-    "triples": "triples_placeholder",
-    "homeruns": "homeruns_placeholder",
-    "plate_appearances": "pa_placeholder",
-    "at_bats": "ab_placeholder"
-},"""
 
+statThings = ['hits', 'singles', 'doubles', 'triples', 'homeruns', 'plate_appearances', 'at_bats', 'games']
 gameJSON = """
 {
     "_id": {
@@ -72,7 +59,8 @@ gameJSON = """
     "game_date": {
         "$date": {
             "$numberLong": "date_placeholder"
-        },
+        }
+    },
     "game_location": "location_placeholder",
     "player_stats": stats_placeholder
 },"""
@@ -81,7 +69,7 @@ from faker import Faker
 from random import randint
 import random
 
-amts = { "players": 100, "leagues": 5, "games": 20, "stats": 20 }
+amts = { "players": 100, "leagues": 8, "games": 50, "stats": 200 }
 
 letters = ['a', 'b', 'c', 'd', 'e', 'f'] # 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 digits = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
@@ -91,7 +79,8 @@ leagueIDs = []
 gameIDs = []
 statsIDs = []
 
-def makeIDs(lis, amt):
+def makeIDs(lis, amt, typ):
+    file = open('server/sample-data/'+typ+".txt", "w")
     for i in range(amt):
         id = ""
         fake = Faker()
@@ -101,6 +90,8 @@ def makeIDs(lis, amt):
             else:
                 id += random.choice(letters)
         lis.append(id)
+    file.write(str(lis))
+    file.close()
 
 def showListAsOIDs(list):
     if len(list) == 0:
@@ -111,10 +102,9 @@ def showListAsOIDs(list):
     thing = thing[0:-1] + ']'
     return thing
 
-makeIDs(playerIDs, amts['players'])
-makeIDs(leagueIDs, amts['leagues'])
-makeIDs(gameIDs, amts['games'])
-makeIDs(statsIDs, amts['stats'])
+makeIDs(playerIDs, amts['players'], 'playerIDs')
+makeIDs(leagueIDs, amts['leagues'], 'leagueIDs')
+makeIDs(gameIDs, amts['games'], 'gameIDs')
 
 #fake.date_object()
 #fake.words()
@@ -122,71 +112,53 @@ makeIDs(statsIDs, amts['stats'])
 def main():
     makeLeagues()
     makePlayers()
-    makeStats()
     makeGames()
 
 def makeGames():
-    file = open("sample-data/games.json", "w")
+    file = open("server/sample-data/games.json", "w")
     file.write('[')
 
     fake = Faker()
 
     for i in gameIDs:
+        players = []
+        teamSize = randint(1, 4)
+        for _ in range(teamSize*2):
+            players.append(random.choice(playerIDs))
         temp = gameJSON
         temp = temp.replace("id_placeholder", i)
         temp = temp.replace("league_placeholder", random.choice(leagueIDs))
         s = []
-        amt = randint(1, 4)
-        for _ in range(amt):
-            s.append(random.choice(playerIDs))
+        for x in range(0, int(len(players)/2)):
+            s.append(players[x])
         temp = temp.replace("team1_placeholder", showListAsOIDs(s))
         s = []
-        for _ in range(amt):
-            s.append(random.choice(playerIDs))
+        for x in range(int(len(players)/2), len(players)):
+            s.append(players[x])
         temp = temp.replace("team2_placeholder", showListAsOIDs(s))
         date = 16224 #May 30th 8 0s
         temp = temp.replace("date_placeholder", str(date+randint(25,100)) + "00000000")
         temp = temp.replace("location_placeholder", fake.address().replace('\n', ''))
-        s = []
-        for _ in range(amt*2):
-            s.append(random.choice(statsIDs))
-        temp = temp.replace("stats_placeholder", showListAsOIDs(s))
+        
+        s = '['
+        for p in players:
+            s += '{ "player_id": { "$oid": "' + p + '" },'
+            s += '"stats": {'
+            for x in statThings:
+                s += '"'+x+'": '+str(randint(0,3))+','
+            s = s[0:-1] + '} },'
+        s = s[0:-1] + ']'
+        temp = temp.replace("stats_placeholder", s)
 
         #Cut off last , and add ]
-        if i == statsIDs[-1]:
-            temp = temp[0:-1] + ']'
-        file.write(temp)
-    
-    file.close()
-
-def makeStats():
-    file = open("sample-data/stats.json", "w")
-    file.write('[')
-
-    fake = Faker()
-
-    for i in statsIDs:
-        temp = statsJSON
-        temp = temp.replace("id_placeholder", i)
-        temp = temp.replace("pid_placeholder", random.choice(playerIDs))
-        temp = temp.replace("hits_placeholder", str(randint(0,100)))
-        temp = temp.replace("singles_placeholder", str(randint(0,25)))
-        temp = temp.replace("doubles_placeholder", str(randint(0,25)))
-        temp = temp.replace("triples_placeholder", str(randint(0,25)))
-        temp = temp.replace("homeruns_placeholder", str(randint(0,25)))
-        pa = randint(100, 120)
-        temp = temp.replace("pa_placeholder", str(pa))
-        temp = temp.replace("ab_placeholder", str(pa - randint(0, 30)))
-
-        #Cut off last , and add ]
-        if i == statsIDs[-1]:
+        if i == gameIDs[-1]:
             temp = temp[0:-1] + ']'
         file.write(temp)
     
     file.close()
 
 def makePlayers():
-    file = open("sample-data/players.json", "w")
+    file = open("server/sample-data/players.json", "w")
     file.write('[')
 
     fake = Faker()
@@ -207,7 +179,12 @@ def makePlayers():
             temp = temp.replace("phone_placeholder", fake.phone_number())
         else:
             temp = temp.replace("phone_placeholder", "")
-        temp = temp.replace("stats_placeholder", random.choice(statsIDs))
+
+        s = ' {'
+        for x in statThings:
+            s += '"'+x+'": '+str(randint(0,100))+','
+        s = s[0:-1] + '}'
+        temp = temp.replace("stats_placeholder", s)
         s = []
         for _ in range(randint(0, 3)):
             s.append(random.choice(leagueIDs))
@@ -222,7 +199,7 @@ def makePlayers():
     file.close()
 
 def makeLeagues():
-    file = open("sample-data/leagues.json", "w")
+    file = open("server/sample-data/leagues.json", "w")
     file.write('[')
 
     fake = Faker()
@@ -231,23 +208,25 @@ def makeLeagues():
         #Create leagues
         maxPlayers = randint(3, 20)
         numPlayers = randint(3, maxPlayers)
+        players = []
+        for x in range(numPlayers):
+            players.append(random.choice(playerIDs))
         temp = leagueJSON
         temp = temp.replace("id_placeholder", i)
-        s = ''
-        for w in fake.words():
-            s = s + w + ' '
-        temp = temp.replace("name_placeholder", s)
-        s = []
-        for _ in range(0, numPlayers):
-            s.append(random.choice(statsIDs))
-            s = list(set(s)) #remove duplicates
-        temp = temp.replace("playerStats_placeholder", showListAsOIDs(s))
-        s = []
-        for _ in range(0, numPlayers):
-            s.append(random.choice(playerIDs))
-        temp = temp.replace("playerIDs_placeholder", showListAsOIDs(s))
+        temp = temp.replace("name_placeholder", fake.job())
+        
+        s = '['
+        for p in players:
+            s += '{ "player_id": { "$oid": "' + p + '" },'
+            s += '"stats": {'
+            for x in statThings:
+                s += '"'+x+'": '+str(randint(0,50))+','
+            s = s[0:-1] + '} },'
+        s = s[0:-1] + ']'
+        temp = temp.replace("stats_placeholder", s)
+        temp = temp.replace("playerIDs_placeholder", showListAsOIDs(players))
         temp = temp.replace("maxPlayers_placeholder", str(maxPlayers))
-        temp = temp.replace("creator_placeholder", random.choice(playerIDs))
+        temp = temp.replace("creator_placeholder", random.choice(players))
         numGames = randint(4, 16)
         s = []
         for _ in range(numGames):

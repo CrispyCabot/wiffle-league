@@ -1,0 +1,1401 @@
+[
+{
+    "_id": {
+        "$oid": "8fef87dab8812289f8f6affc"
+    },
+    "email": "RobertRoberson@email.com",
+    "password": "password",
+    "firstname": "Robert",
+    "lastname": "Roberson",
+    "nickname": "Victoria",
+    "phone_number": "",
+    "player_stats":  {"hits": 62,"singles": 46,"doubles": 84,"triples": 52,"homeruns": 74,"plate_appearances": 55,"at_bats": 26,"games": 27},
+    "show_information": false,
+    "league_ids": [{ "$oid": "d394768de9e1389ae9b5f41b" },{ "$oid": "abbf6ae55772ae4bd918ad35" },{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "79a8db2b6a54eff719f23dff"
+    },
+    "email": "JenniferBishop@email.com",
+    "password": "password",
+    "firstname": "Jennifer",
+    "lastname": "Bishop",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 23,"singles": 10,"doubles": 100,"triples": 19,"homeruns": 78,"plate_appearances": 49,"at_bats": 50,"games": 69},
+    "show_information": false,
+    "league_ids": [{ "$oid": "abbf6ae55772ae4bd918ad35" }]
+},
+{
+    "_id": {
+        "$oid": "c78ffb2d54bfc4ad535b33f1"
+    },
+    "email": "StephanieDuran@email.com",
+    "password": "password",
+    "firstname": "Stephanie",
+    "lastname": "Duran",
+    "nickname": "",
+    "phone_number": "+1-528-810-9101",
+    "player_stats":  {"hits": 60,"singles": 58,"doubles": 43,"triples": 61,"homeruns": 31,"plate_appearances": 79,"at_bats": 7,"games": 99},
+    "show_information": false,
+    "league_ids": [{ "$oid": "e36bab3fc5d1eb8a168ceae1" },{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "2dbdf4e36422bd26eb9936d8"
+    },
+    "email": "AmyGrant@email.com",
+    "password": "password",
+    "firstname": "Amy",
+    "lastname": "Grant",
+    "nickname": "Dustin",
+    "phone_number": "",
+    "player_stats":  {"hits": 34,"singles": 23,"doubles": 53,"triples": 52,"homeruns": 2,"plate_appearances": 65,"at_bats": 63,"games": 25},
+    "show_information": false,
+    "league_ids": [{ "$oid": "e36bab3fc5d1eb8a168ceae1" }]
+},
+{
+    "_id": {
+        "$oid": "cf7221ef6f7e622c9bd33a4c"
+    },
+    "email": "MichaelPowers@email.com",
+    "password": "password",
+    "firstname": "Michael",
+    "lastname": "Powers",
+    "nickname": "Malik",
+    "phone_number": "",
+    "player_stats":  {"hits": 77,"singles": 99,"doubles": 88,"triples": 2,"homeruns": 64,"plate_appearances": 22,"at_bats": 36,"games": 20},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "cf635298b86fe7fb3dafdce1"
+    },
+    "email": "RebeccaRichardson@email.com",
+    "password": "password",
+    "firstname": "Rebecca",
+    "lastname": "Richardson",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 38,"singles": 77,"doubles": 84,"triples": 49,"homeruns": 44,"plate_appearances": 56,"at_bats": 37,"games": 53},
+    "show_information": false,
+    "league_ids": [{ "$oid": "8e7435ead3f1739baedd6fdf" }]
+},
+{
+    "_id": {
+        "$oid": "dfe918eefd3e5ecd7f4cb7c2"
+    },
+    "email": "ColinTorres@email.com",
+    "password": "password",
+    "firstname": "Colin",
+    "lastname": "Torres",
+    "nickname": "",
+    "phone_number": "603.455.9784x09934",
+    "player_stats":  {"hits": 20,"singles": 9,"doubles": 66,"triples": 2,"homeruns": 30,"plate_appearances": 55,"at_bats": 1,"games": 24},
+    "show_information": false,
+    "league_ids": [{ "$oid": "6aeabefcc2badb7c3f5522e5" },{ "$oid": "abbf6ae55772ae4bd918ad35" },{ "$oid": "eb4e3f9a241dd654b1e9ff3b" }]
+},
+{
+    "_id": {
+        "$oid": "d4183ebb7df969fdecf1cc6b"
+    },
+    "email": "StaceyDickerson@email.com",
+    "password": "password",
+    "firstname": "Stacey",
+    "lastname": "Dickerson",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 30,"singles": 75,"doubles": 28,"triples": 72,"homeruns": 80,"plate_appearances": 97,"at_bats": 13,"games": 47},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "d4e5196443faaeb319391eca"
+    },
+    "email": "DanielWaters@email.com",
+    "password": "password",
+    "firstname": "Daniel",
+    "lastname": "Waters",
+    "nickname": "Kevin",
+    "phone_number": "",
+    "player_stats":  {"hits": 91,"singles": 19,"doubles": 83,"triples": 53,"homeruns": 95,"plate_appearances": 88,"at_bats": 87,"games": 3},
+    "show_information": false,
+    "league_ids": [{ "$oid": "8e7435ead3f1739baedd6fdf" }]
+},
+{
+    "_id": {
+        "$oid": "bcbba241a323bf77778f1165"
+    },
+    "email": "TabithaWilkinson@email.com",
+    "password": "password",
+    "firstname": "Tabitha",
+    "lastname": "Wilkinson",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 53,"singles": 100,"doubles": 60,"triples": 32,"homeruns": 52,"plate_appearances": 39,"at_bats": 42,"games": 28},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "2a824be562785d9f96adddd7"
+    },
+    "email": "MariePena@email.com",
+    "password": "password",
+    "firstname": "Marie",
+    "lastname": "Pena",
+    "nickname": "Jared",
+    "phone_number": "",
+    "player_stats":  {"hits": 33,"singles": 7,"doubles": 79,"triples": 50,"homeruns": 2,"plate_appearances": 16,"at_bats": 14,"games": 0},
+    "show_information": false,
+    "league_ids": [{ "$oid": "eb4e3f9a241dd654b1e9ff3b" },{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "a893ae9fffdc78c5aada79eb"
+    },
+    "email": "BrendaJordan@email.com",
+    "password": "password",
+    "firstname": "Brenda",
+    "lastname": "Jordan",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 17,"singles": 11,"doubles": 27,"triples": 76,"homeruns": 61,"plate_appearances": 55,"at_bats": 98,"games": 9},
+    "show_information": false,
+    "league_ids": [{ "$oid": "e36bab3fc5d1eb8a168ceae1" },{ "$oid": "a44f2564524dcbfdd835cc51" }]
+},
+{
+    "_id": {
+        "$oid": "fbaaafbab6de7dc8512e628c"
+    },
+    "email": "SethMoore@email.com",
+    "password": "password",
+    "firstname": "Seth",
+    "lastname": "Moore",
+    "nickname": "Samantha",
+    "phone_number": "",
+    "player_stats":  {"hits": 70,"singles": 59,"doubles": 68,"triples": 90,"homeruns": 64,"plate_appearances": 63,"at_bats": 80,"games": 67},
+    "show_information": false,
+    "league_ids": [{ "$oid": "abbf6ae55772ae4bd918ad35" }]
+},
+{
+    "_id": {
+        "$oid": "e66bfc22e12cf8647cda31a9"
+    },
+    "email": "JenniferWilliams@email.com",
+    "password": "password",
+    "firstname": "Jennifer",
+    "lastname": "Williams",
+    "nickname": "Natalie",
+    "phone_number": "+1-239-196-7241",
+    "player_stats":  {"hits": 74,"singles": 36,"doubles": 78,"triples": 69,"homeruns": 6,"plate_appearances": 33,"at_bats": 33,"games": 2},
+    "show_information": false,
+    "league_ids": [{ "$oid": "eb4e3f9a241dd654b1e9ff3b" }]
+},
+{
+    "_id": {
+        "$oid": "b2d178bf7d1dbeb7c418718c"
+    },
+    "email": "AmyJohnson@email.com",
+    "password": "password",
+    "firstname": "Amy",
+    "lastname": "Johnson",
+    "nickname": "Joanne",
+    "phone_number": "",
+    "player_stats":  {"hits": 84,"singles": 61,"doubles": 34,"triples": 7,"homeruns": 62,"plate_appearances": 14,"at_bats": 50,"games": 27},
+    "show_information": false,
+    "league_ids": [{ "$oid": "d394768de9e1389ae9b5f41b" },{ "$oid": "6aeabefcc2badb7c3f5522e5" },{ "$oid": "a44f2564524dcbfdd835cc51" }]
+},
+{
+    "_id": {
+        "$oid": "d651b1135f39dbcc7b7b9bfc"
+    },
+    "email": "DustinWest@email.com",
+    "password": "password",
+    "firstname": "Dustin",
+    "lastname": "West",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 19,"singles": 43,"doubles": 11,"triples": 73,"homeruns": 14,"plate_appearances": 30,"at_bats": 88,"games": 41},
+    "show_information": false,
+    "league_ids": [{ "$oid": "41cf395e31e3ab7d55ce5194" },{ "$oid": "eb4e3f9a241dd654b1e9ff3b" }]
+},
+{
+    "_id": {
+        "$oid": "d28abc4d459faeb7dceb7521"
+    },
+    "email": "StevenPerez@email.com",
+    "password": "password",
+    "firstname": "Steven",
+    "lastname": "Perez",
+    "nickname": "Sarah",
+    "phone_number": "647.623.3489x2323",
+    "player_stats":  {"hits": 43,"singles": 7,"doubles": 93,"triples": 46,"homeruns": 70,"plate_appearances": 95,"at_bats": 67,"games": 52},
+    "show_information": false,
+    "league_ids": [{ "$oid": "8e7435ead3f1739baedd6fdf" },{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "ffc5efee7a13ec7969d1773d"
+    },
+    "email": "BrandonVasquez@email.com",
+    "password": "password",
+    "firstname": "Brandon",
+    "lastname": "Vasquez",
+    "nickname": "",
+    "phone_number": "224.607.8996x01310",
+    "player_stats":  {"hits": 3,"singles": 57,"doubles": 1,"triples": 89,"homeruns": 39,"plate_appearances": 48,"at_bats": 55,"games": 75},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "6178348dd3d1b8f9ea6fce23"
+    },
+    "email": "SaraWalker@email.com",
+    "password": "password",
+    "firstname": "Sara",
+    "lastname": "Walker",
+    "nickname": "Jonathan",
+    "phone_number": "+1-771-455-4759x0723",
+    "player_stats":  {"hits": 15,"singles": 95,"doubles": 100,"triples": 21,"homeruns": 82,"plate_appearances": 15,"at_bats": 74,"games": 83},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "925f41d377d297bf2a6ee16c"
+    },
+    "email": "AmandaMartinez@email.com",
+    "password": "password",
+    "firstname": "Amanda",
+    "lastname": "Martinez",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 73,"singles": 47,"doubles": 60,"triples": 11,"homeruns": 16,"plate_appearances": 36,"at_bats": 25,"games": 65},
+    "show_information": false,
+    "league_ids": [{ "$oid": "e36bab3fc5d1eb8a168ceae1" },{ "$oid": "6aeabefcc2badb7c3f5522e5" }]
+},
+{
+    "_id": {
+        "$oid": "31ceb32e65fad4dab312a641"
+    },
+    "email": "JulianSullivan@email.com",
+    "password": "password",
+    "firstname": "Julian",
+    "lastname": "Sullivan",
+    "nickname": "",
+    "phone_number": "(023)416-6630x4099",
+    "player_stats":  {"hits": 78,"singles": 65,"doubles": 24,"triples": 77,"homeruns": 53,"plate_appearances": 73,"at_bats": 76,"games": 96},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "8dfb7a1665b85c67bade39aa"
+    },
+    "email": "ChristopherWerner@email.com",
+    "password": "password",
+    "firstname": "Christopher",
+    "lastname": "Werner",
+    "nickname": "Brian",
+    "phone_number": "(503)883-5595x4098",
+    "player_stats":  {"hits": 56,"singles": 90,"doubles": 49,"triples": 64,"homeruns": 51,"plate_appearances": 62,"at_bats": 100,"games": 68},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "54bd42e17e12b86d2c67b8dd"
+    },
+    "email": "WilliamParks@email.com",
+    "password": "password",
+    "firstname": "William",
+    "lastname": "Parks",
+    "nickname": "Matthew",
+    "phone_number": "",
+    "player_stats":  {"hits": 57,"singles": 80,"doubles": 93,"triples": 55,"homeruns": 45,"plate_appearances": 30,"at_bats": 55,"games": 91},
+    "show_information": false,
+    "league_ids": [{ "$oid": "eb4e3f9a241dd654b1e9ff3b" }]
+},
+{
+    "_id": {
+        "$oid": "afa2eac1a621d6a1da5bbbca"
+    },
+    "email": "AnthonyWood@email.com",
+    "password": "password",
+    "firstname": "Anthony",
+    "lastname": "Wood",
+    "nickname": "Dennis",
+    "phone_number": "",
+    "player_stats":  {"hits": 27,"singles": 91,"doubles": 88,"triples": 31,"homeruns": 13,"plate_appearances": 97,"at_bats": 23,"games": 40},
+    "show_information": false,
+    "league_ids": [{ "$oid": "a44f2564524dcbfdd835cc51" },{ "$oid": "eb4e3f9a241dd654b1e9ff3b" }]
+},
+{
+    "_id": {
+        "$oid": "d282f2b2de7645f71e6d27c8"
+    },
+    "email": "ChristinaMitchell@email.com",
+    "password": "password",
+    "firstname": "Christina",
+    "lastname": "Mitchell",
+    "nickname": "",
+    "phone_number": "546.187.8401x7027",
+    "player_stats":  {"hits": 48,"singles": 19,"doubles": 82,"triples": 90,"homeruns": 18,"plate_appearances": 86,"at_bats": 29,"games": 100},
+    "show_information": false,
+    "league_ids": [{ "$oid": "d394768de9e1389ae9b5f41b" },{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "6f9b538ecfd9a7c9c2bb8e9a"
+    },
+    "email": "MelindaBrown@email.com",
+    "password": "password",
+    "firstname": "Melinda",
+    "lastname": "Brown",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 70,"singles": 36,"doubles": 43,"triples": 68,"homeruns": 54,"plate_appearances": 58,"at_bats": 74,"games": 26},
+    "show_information": false,
+    "league_ids": [{ "$oid": "d394768de9e1389ae9b5f41b" },{ "$oid": "a44f2564524dcbfdd835cc51" },{ "$oid": "eb4e3f9a241dd654b1e9ff3b" }]
+},
+{
+    "_id": {
+        "$oid": "2838a3e846afcaedcdfbebd2"
+    },
+    "email": "JessicaDelgado@email.com",
+    "password": "password",
+    "firstname": "Jessica",
+    "lastname": "Delgado",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 50,"singles": 24,"doubles": 92,"triples": 24,"homeruns": 75,"plate_appearances": 20,"at_bats": 38,"games": 57},
+    "show_information": false,
+    "league_ids": [{ "$oid": "abbf6ae55772ae4bd918ad35" }]
+},
+{
+    "_id": {
+        "$oid": "7de7a3bb7a8c8587a67be276"
+    },
+    "email": "DarrenRamos@email.com",
+    "password": "password",
+    "firstname": "Darren",
+    "lastname": "Ramos",
+    "nickname": "",
+    "phone_number": "(791)115-3657",
+    "player_stats":  {"hits": 83,"singles": 46,"doubles": 84,"triples": 76,"homeruns": 21,"plate_appearances": 73,"at_bats": 98,"games": 74},
+    "show_information": false,
+    "league_ids": [{ "$oid": "a44f2564524dcbfdd835cc51" },{ "$oid": "abbf6ae55772ae4bd918ad35" },{ "$oid": "8e7435ead3f1739baedd6fdf" }]
+},
+{
+    "_id": {
+        "$oid": "d5f95aaf7fb87ea2ffc6b9ec"
+    },
+    "email": "CharlesBrown@email.com",
+    "password": "password",
+    "firstname": "Charles",
+    "lastname": "Brown",
+    "nickname": "",
+    "phone_number": "330-934-9983x560",
+    "player_stats":  {"hits": 38,"singles": 93,"doubles": 34,"triples": 62,"homeruns": 0,"plate_appearances": 8,"at_bats": 68,"games": 91},
+    "show_information": false,
+    "league_ids": [{ "$oid": "e36bab3fc5d1eb8a168ceae1" },{ "$oid": "8e7435ead3f1739baedd6fdf" }]
+},
+{
+    "_id": {
+        "$oid": "f65bcf56dfb6c552ad1af6da"
+    },
+    "email": "RebeccaJenkins@email.com",
+    "password": "password",
+    "firstname": "Rebecca",
+    "lastname": "Jenkins",
+    "nickname": "",
+    "phone_number": "204.377.1214",
+    "player_stats":  {"hits": 3,"singles": 40,"doubles": 99,"triples": 52,"homeruns": 70,"plate_appearances": 80,"at_bats": 43,"games": 71},
+    "show_information": false,
+    "league_ids": [{ "$oid": "6aeabefcc2badb7c3f5522e5" },{ "$oid": "8e7435ead3f1739baedd6fdf" }]
+},
+{
+    "_id": {
+        "$oid": "27c78a8e39f6382ce65afe4b"
+    },
+    "email": "MistyLarson@email.com",
+    "password": "password",
+    "firstname": "Misty",
+    "lastname": "Larson",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 29,"singles": 10,"doubles": 88,"triples": 32,"homeruns": 15,"plate_appearances": 25,"at_bats": 37,"games": 5},
+    "show_information": false,
+    "league_ids": [{ "$oid": "6aeabefcc2badb7c3f5522e5" }]
+},
+{
+    "_id": {
+        "$oid": "3e4d24982b167a331de9ace4"
+    },
+    "email": "BrianMontgomery@email.com",
+    "password": "password",
+    "firstname": "Brian",
+    "lastname": "Montgomery",
+    "nickname": "",
+    "phone_number": "707.877.1552x756",
+    "player_stats":  {"hits": 66,"singles": 68,"doubles": 25,"triples": 2,"homeruns": 19,"plate_appearances": 2,"at_bats": 70,"games": 90},
+    "show_information": false,
+    "league_ids": [{ "$oid": "d394768de9e1389ae9b5f41b" },{ "$oid": "6aeabefcc2badb7c3f5522e5" },{ "$oid": "a44f2564524dcbfdd835cc51" }]
+},
+{
+    "_id": {
+        "$oid": "cfac77e3cc9c259dc27c3efe"
+    },
+    "email": "KaitlynMckinney@email.com",
+    "password": "password",
+    "firstname": "Kaitlyn",
+    "lastname": "Mckinney",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 24,"singles": 96,"doubles": 75,"triples": 20,"homeruns": 89,"plate_appearances": 60,"at_bats": 82,"games": 21},
+    "show_information": false,
+    "league_ids": [{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "24646ab8ebe6d9e1ff4bee26"
+    },
+    "email": "DylanPhelps@email.com",
+    "password": "password",
+    "firstname": "Dylan",
+    "lastname": "Phelps",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 34,"singles": 77,"doubles": 46,"triples": 76,"homeruns": 27,"plate_appearances": 26,"at_bats": 59,"games": 12},
+    "show_information": false,
+    "league_ids": [{ "$oid": "e36bab3fc5d1eb8a168ceae1" },{ "$oid": "8e7435ead3f1739baedd6fdf" }]
+},
+{
+    "_id": {
+        "$oid": "eedbbc9a4a8ef86a5e72e59c"
+    },
+    "email": "AllisonBaker@email.com",
+    "password": "password",
+    "firstname": "Allison",
+    "lastname": "Baker",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 41,"singles": 26,"doubles": 16,"triples": 72,"homeruns": 3,"plate_appearances": 73,"at_bats": 3,"games": 21},
+    "show_information": false,
+    "league_ids": [{ "$oid": "d394768de9e1389ae9b5f41b" },{ "$oid": "8e7435ead3f1739baedd6fdf" }]
+},
+{
+    "_id": {
+        "$oid": "7eb3fde5687dcc6a5211cedf"
+    },
+    "email": "AnnaHarris@email.com",
+    "password": "password",
+    "firstname": "Anna",
+    "lastname": "Harris",
+    "nickname": "Kimberly",
+    "phone_number": "(134)992-3119x35030",
+    "player_stats":  {"hits": 51,"singles": 58,"doubles": 100,"triples": 57,"homeruns": 18,"plate_appearances": 18,"at_bats": 37,"games": 77},
+    "show_information": false,
+    "league_ids": [{ "$oid": "6aeabefcc2badb7c3f5522e5" },{ "$oid": "8e7435ead3f1739baedd6fdf" }]
+},
+{
+    "_id": {
+        "$oid": "eafa6cdaa132fe53487e3e94"
+    },
+    "email": "SeanMcdaniel@email.com",
+    "password": "password",
+    "firstname": "Sean",
+    "lastname": "Mcdaniel",
+    "nickname": "",
+    "phone_number": "(949)983-6476x5012",
+    "player_stats":  {"hits": 41,"singles": 32,"doubles": 5,"triples": 80,"homeruns": 23,"plate_appearances": 85,"at_bats": 50,"games": 1},
+    "show_information": false,
+    "league_ids": [{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "84a381ad9cf99a4fbb4cb4e7"
+    },
+    "email": "ShelbyMunoz@email.com",
+    "password": "password",
+    "firstname": "Shelby",
+    "lastname": "Munoz",
+    "nickname": "Laura",
+    "phone_number": "",
+    "player_stats":  {"hits": 68,"singles": 83,"doubles": 25,"triples": 16,"homeruns": 84,"plate_appearances": 32,"at_bats": 7,"games": 26},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "e741dbccddbd5dca72ecee6e"
+    },
+    "email": "RobertGarcia@email.com",
+    "password": "password",
+    "firstname": "Robert",
+    "lastname": "Garcia",
+    "nickname": "Deborah",
+    "phone_number": "073-986-8171x5832",
+    "player_stats":  {"hits": 36,"singles": 75,"doubles": 94,"triples": 70,"homeruns": 33,"plate_appearances": 97,"at_bats": 37,"games": 77},
+    "show_information": false,
+    "league_ids": [{ "$oid": "e36bab3fc5d1eb8a168ceae1" },{ "$oid": "a44f2564524dcbfdd835cc51" }]
+},
+{
+    "_id": {
+        "$oid": "7aa698aafaee3beeaecba76d"
+    },
+    "email": "AmberCalderon@email.com",
+    "password": "password",
+    "firstname": "Amber",
+    "lastname": "Calderon",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 6,"singles": 36,"doubles": 18,"triples": 36,"homeruns": 30,"plate_appearances": 68,"at_bats": 53,"games": 44},
+    "show_information": false,
+    "league_ids": [{ "$oid": "d394768de9e1389ae9b5f41b" }]
+},
+{
+    "_id": {
+        "$oid": "18cdb94d5dd2fe44362da88e"
+    },
+    "email": "MichelleMaldonado@email.com",
+    "password": "password",
+    "firstname": "Michelle",
+    "lastname": "Maldonado",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 20,"singles": 32,"doubles": 51,"triples": 5,"homeruns": 51,"plate_appearances": 19,"at_bats": 96,"games": 19},
+    "show_information": false,
+    "league_ids": [{ "$oid": "e36bab3fc5d1eb8a168ceae1" },{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "eafdbe42dc5c6c5fabbdbc34"
+    },
+    "email": "EricBrooks@email.com",
+    "password": "password",
+    "firstname": "Eric",
+    "lastname": "Brooks",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 39,"singles": 77,"doubles": 38,"triples": 91,"homeruns": 37,"plate_appearances": 88,"at_bats": 94,"games": 21},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "bea3eca1bc7dcc3e1fc7b4ea"
+    },
+    "email": "LauraHayes@email.com",
+    "password": "password",
+    "firstname": "Laura",
+    "lastname": "Hayes",
+    "nickname": "Ronnie",
+    "phone_number": "+1-142-207-5229x14112",
+    "player_stats":  {"hits": 47,"singles": 49,"doubles": 29,"triples": 30,"homeruns": 85,"plate_appearances": 3,"at_bats": 100,"games": 16},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "9bd215ae9c752bec21db4131"
+    },
+    "email": "AshleyWilliams@email.com",
+    "password": "password",
+    "firstname": "Ashley",
+    "lastname": "Williams",
+    "nickname": "Scott",
+    "phone_number": "(632)634-5079x0862",
+    "player_stats":  {"hits": 58,"singles": 10,"doubles": 86,"triples": 93,"homeruns": 33,"plate_appearances": 78,"at_bats": 17,"games": 58},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "c8352bf356d21af884d8abfc"
+    },
+    "email": "AliciaWilson@email.com",
+    "password": "password",
+    "firstname": "Alicia",
+    "lastname": "Wilson",
+    "nickname": "Justin",
+    "phone_number": "+1-760-519-3127",
+    "player_stats":  {"hits": 70,"singles": 77,"doubles": 17,"triples": 45,"homeruns": 46,"plate_appearances": 2,"at_bats": 17,"games": 15},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "c959dc7aa9774fc51ebebbd3"
+    },
+    "email": "GlennLopez@email.com",
+    "password": "password",
+    "firstname": "Glenn",
+    "lastname": "Lopez",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 81,"singles": 23,"doubles": 44,"triples": 88,"homeruns": 90,"plate_appearances": 30,"at_bats": 59,"games": 3},
+    "show_information": false,
+    "league_ids": [{ "$oid": "d394768de9e1389ae9b5f41b" },{ "$oid": "8e7435ead3f1739baedd6fdf" },{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "cabaf9d66d23efb1e7988369"
+    },
+    "email": "BrianWilliams@email.com",
+    "password": "password",
+    "firstname": "Brian",
+    "lastname": "Williams",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 85,"singles": 45,"doubles": 78,"triples": 51,"homeruns": 19,"plate_appearances": 15,"at_bats": 72,"games": 52},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "19d3d9ae991f62a53fc571fc"
+    },
+    "email": "GuyWalter@email.com",
+    "password": "password",
+    "firstname": "Guy",
+    "lastname": "Walter",
+    "nickname": "",
+    "phone_number": "1909313445",
+    "player_stats":  {"hits": 56,"singles": 65,"doubles": 26,"triples": 28,"homeruns": 5,"plate_appearances": 73,"at_bats": 31,"games": 87},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "49c3edce5bdd5a2eaeebf271"
+    },
+    "email": "BillHuffman@email.com",
+    "password": "password",
+    "firstname": "Bill",
+    "lastname": "Huffman",
+    "nickname": "",
+    "phone_number": "+1-046-568-7022x861",
+    "player_stats":  {"hits": 6,"singles": 8,"doubles": 38,"triples": 49,"homeruns": 42,"plate_appearances": 40,"at_bats": 38,"games": 81},
+    "show_information": false,
+    "league_ids": [{ "$oid": "e36bab3fc5d1eb8a168ceae1" },{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "d4abe2fb5e7adc1b2ecac158"
+    },
+    "email": "CarolineBarnett@email.com",
+    "password": "password",
+    "firstname": "Caroline",
+    "lastname": "Barnett",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 35,"singles": 46,"doubles": 91,"triples": 50,"homeruns": 17,"plate_appearances": 24,"at_bats": 56,"games": 6},
+    "show_information": false,
+    "league_ids": [{ "$oid": "41cf395e31e3ab7d55ce5194" },{ "$oid": "eb4e3f9a241dd654b1e9ff3b" }]
+},
+{
+    "_id": {
+        "$oid": "63ce17654e586dae7edc51ab"
+    },
+    "email": "CherylGallegos@email.com",
+    "password": "password",
+    "firstname": "Cheryl",
+    "lastname": "Gallegos",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 25,"singles": 83,"doubles": 15,"triples": 51,"homeruns": 75,"plate_appearances": 81,"at_bats": 63,"games": 1},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "bebaa1c9d865aa14f4dd9dc8"
+    },
+    "email": "DeniseSanders@email.com",
+    "password": "password",
+    "firstname": "Denise",
+    "lastname": "Sanders",
+    "nickname": "",
+    "phone_number": "954-066-1938x287",
+    "player_stats":  {"hits": 62,"singles": 65,"doubles": 17,"triples": 81,"homeruns": 84,"plate_appearances": 18,"at_bats": 36,"games": 11},
+    "show_information": false,
+    "league_ids": [{ "$oid": "8e7435ead3f1739baedd6fdf" }]
+},
+{
+    "_id": {
+        "$oid": "3c9cc358eb9aca51fd8c2784"
+    },
+    "email": "DebraBurnett@email.com",
+    "password": "password",
+    "firstname": "Debra",
+    "lastname": "Burnett",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 76,"singles": 63,"doubles": 79,"triples": 79,"homeruns": 11,"plate_appearances": 83,"at_bats": 12,"games": 26},
+    "show_information": false,
+    "league_ids": [{ "$oid": "a44f2564524dcbfdd835cc51" }]
+},
+{
+    "_id": {
+        "$oid": "8bc292fffcc66458a4574e9e"
+    },
+    "email": "JenniferSimmons@email.com",
+    "password": "password",
+    "firstname": "Jennifer",
+    "lastname": "Simmons",
+    "nickname": "Glen",
+    "phone_number": "001-529-949-9900",
+    "player_stats":  {"hits": 34,"singles": 72,"doubles": 57,"triples": 1,"homeruns": 45,"plate_appearances": 56,"at_bats": 36,"games": 1},
+    "show_information": false,
+    "league_ids": [{ "$oid": "6aeabefcc2badb7c3f5522e5" }]
+},
+{
+    "_id": {
+        "$oid": "63fc4f2de6346cd2ee4ce4f8"
+    },
+    "email": "KathrynMccoy@email.com",
+    "password": "password",
+    "firstname": "Kathryn",
+    "lastname": "Mccoy",
+    "nickname": "Willie",
+    "phone_number": "",
+    "player_stats":  {"hits": 74,"singles": 29,"doubles": 93,"triples": 19,"homeruns": 95,"plate_appearances": 39,"at_bats": 65,"games": 89},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "c4a61f4bdc7165345c7ba3ff"
+    },
+    "email": "RichardRamirez@email.com",
+    "password": "password",
+    "firstname": "Richard",
+    "lastname": "Ramirez",
+    "nickname": "",
+    "phone_number": "430.065.2879",
+    "player_stats":  {"hits": 18,"singles": 31,"doubles": 40,"triples": 67,"homeruns": 98,"plate_appearances": 98,"at_bats": 65,"games": 41},
+    "show_information": false,
+    "league_ids": [{ "$oid": "6aeabefcc2badb7c3f5522e5" },{ "$oid": "abbf6ae55772ae4bd918ad35" },{ "$oid": "8e7435ead3f1739baedd6fdf" }]
+},
+{
+    "_id": {
+        "$oid": "18fd79fc7d12a77394dba73a"
+    },
+    "email": "WilliamFernandez@email.com",
+    "password": "password",
+    "firstname": "William",
+    "lastname": "Fernandez",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 64,"singles": 45,"doubles": 64,"triples": 14,"homeruns": 4,"plate_appearances": 94,"at_bats": 41,"games": 0},
+    "show_information": false,
+    "league_ids": [{ "$oid": "a44f2564524dcbfdd835cc51" },{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "3c892b15fd44f992388cda58"
+    },
+    "email": "ElizabethNunez@email.com",
+    "password": "password",
+    "firstname": "Elizabeth",
+    "lastname": "Nunez",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 92,"singles": 47,"doubles": 66,"triples": 59,"homeruns": 62,"plate_appearances": 55,"at_bats": 92,"games": 78},
+    "show_information": false,
+    "league_ids": [{ "$oid": "6aeabefcc2badb7c3f5522e5" }]
+},
+{
+    "_id": {
+        "$oid": "8b2ce642ae7aacd87e7d14c6"
+    },
+    "email": "NicholasRamirez@email.com",
+    "password": "password",
+    "firstname": "Nicholas",
+    "lastname": "Ramirez",
+    "nickname": "",
+    "phone_number": "+1-729-833-6384",
+    "player_stats":  {"hits": 11,"singles": 22,"doubles": 34,"triples": 38,"homeruns": 69,"plate_appearances": 65,"at_bats": 34,"games": 69},
+    "show_information": false,
+    "league_ids": [{ "$oid": "abbf6ae55772ae4bd918ad35" }]
+},
+{
+    "_id": {
+        "$oid": "117accbbd4bd45774d111737"
+    },
+    "email": "MaryStein@email.com",
+    "password": "password",
+    "firstname": "Mary",
+    "lastname": "Stein",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 19,"singles": 26,"doubles": 100,"triples": 7,"homeruns": 83,"plate_appearances": 69,"at_bats": 82,"games": 71},
+    "show_information": false,
+    "league_ids": [{ "$oid": "6aeabefcc2badb7c3f5522e5" },{ "$oid": "abbf6ae55772ae4bd918ad35" },{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "2519191e9a69c74e5edf7a9e"
+    },
+    "email": "ChristineCollins@email.com",
+    "password": "password",
+    "firstname": "Christine",
+    "lastname": "Collins",
+    "nickname": "",
+    "phone_number": "(087)586-5041",
+    "player_stats":  {"hits": 77,"singles": 72,"doubles": 84,"triples": 71,"homeruns": 56,"plate_appearances": 70,"at_bats": 77,"games": 63},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "da33ea5ce1bbe34197ebec67"
+    },
+    "email": "DestinyRodriguez@email.com",
+    "password": "password",
+    "firstname": "Destiny",
+    "lastname": "Rodriguez",
+    "nickname": "Terrance",
+    "phone_number": "",
+    "player_stats":  {"hits": 65,"singles": 58,"doubles": 98,"triples": 76,"homeruns": 12,"plate_appearances": 3,"at_bats": 87,"games": 19},
+    "show_information": false,
+    "league_ids": [{ "$oid": "6aeabefcc2badb7c3f5522e5" }]
+},
+{
+    "_id": {
+        "$oid": "cb847df41a1fc6aff465a2ef"
+    },
+    "email": "MeaganKing@email.com",
+    "password": "password",
+    "firstname": "Meagan",
+    "lastname": "King",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 68,"singles": 85,"doubles": 92,"triples": 100,"homeruns": 30,"plate_appearances": 73,"at_bats": 12,"games": 96},
+    "show_information": false,
+    "league_ids": [{ "$oid": "e36bab3fc5d1eb8a168ceae1" },{ "$oid": "a44f2564524dcbfdd835cc51" }]
+},
+{
+    "_id": {
+        "$oid": "1f97d328d73fba9d469bb8af"
+    },
+    "email": "MicheleRodriguez@email.com",
+    "password": "password",
+    "firstname": "Michele",
+    "lastname": "Rodriguez",
+    "nickname": "",
+    "phone_number": "(126)702-7759x4793",
+    "player_stats":  {"hits": 25,"singles": 82,"doubles": 40,"triples": 97,"homeruns": 30,"plate_appearances": 39,"at_bats": 99,"games": 16},
+    "show_information": false,
+    "league_ids": [{ "$oid": "e36bab3fc5d1eb8a168ceae1" },{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "df26bbadbe91a7556a6a5b88"
+    },
+    "email": "AmyMurphy@email.com",
+    "password": "password",
+    "firstname": "Amy",
+    "lastname": "Murphy",
+    "nickname": "",
+    "phone_number": "876.296.6744",
+    "player_stats":  {"hits": 68,"singles": 2,"doubles": 85,"triples": 36,"homeruns": 18,"plate_appearances": 4,"at_bats": 40,"games": 85},
+    "show_information": false,
+    "league_ids": [{ "$oid": "abbf6ae55772ae4bd918ad35" },{ "$oid": "8e7435ead3f1739baedd6fdf" }]
+},
+{
+    "_id": {
+        "$oid": "879131cd8ddc6fe3ecf94fbb"
+    },
+    "email": "AlexanderDavis@email.com",
+    "password": "password",
+    "firstname": "Alexander",
+    "lastname": "Davis",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 42,"singles": 2,"doubles": 33,"triples": 69,"homeruns": 90,"plate_appearances": 10,"at_bats": 8,"games": 32},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "ab3697b6a964592f7b3ade83"
+    },
+    "email": "AshleyWilliams@email.com",
+    "password": "password",
+    "firstname": "Ashley",
+    "lastname": "Williams",
+    "nickname": "James",
+    "phone_number": "(568)334-2488x8453",
+    "player_stats":  {"hits": 25,"singles": 11,"doubles": 73,"triples": 65,"homeruns": 43,"plate_appearances": 24,"at_bats": 66,"games": 79},
+    "show_information": false,
+    "league_ids": [{ "$oid": "8e7435ead3f1739baedd6fdf" }]
+},
+{
+    "_id": {
+        "$oid": "fb321d9fd4ebfce7a4a6e386"
+    },
+    "email": "DanielleGibson@email.com",
+    "password": "password",
+    "firstname": "Danielle",
+    "lastname": "Gibson",
+    "nickname": "",
+    "phone_number": "663.597.8508x22381",
+    "player_stats":  {"hits": 45,"singles": 81,"doubles": 84,"triples": 21,"homeruns": 51,"plate_appearances": 13,"at_bats": 22,"games": 31},
+    "show_information": false,
+    "league_ids": [{ "$oid": "e36bab3fc5d1eb8a168ceae1" },{ "$oid": "eb4e3f9a241dd654b1e9ff3b" }]
+},
+{
+    "_id": {
+        "$oid": "735d175bdf39e39a6e5aa383"
+    },
+    "email": "LindsayBurton@email.com",
+    "password": "password",
+    "firstname": "Lindsay",
+    "lastname": "Burton",
+    "nickname": "Jesus",
+    "phone_number": "084-818-1493x637",
+    "player_stats":  {"hits": 34,"singles": 36,"doubles": 7,"triples": 88,"homeruns": 86,"plate_appearances": 84,"at_bats": 50,"games": 54},
+    "show_information": false,
+    "league_ids": [{ "$oid": "6aeabefcc2badb7c3f5522e5" },{ "$oid": "abbf6ae55772ae4bd918ad35" },{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "3dbedb37aa6861d15d4b5ccc"
+    },
+    "email": "RaymondStewart@email.com",
+    "password": "password",
+    "firstname": "Raymond",
+    "lastname": "Stewart",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 42,"singles": 37,"doubles": 43,"triples": 53,"homeruns": 61,"plate_appearances": 98,"at_bats": 80,"games": 40},
+    "show_information": false,
+    "league_ids": [{ "$oid": "e36bab3fc5d1eb8a168ceae1" },{ "$oid": "8e7435ead3f1739baedd6fdf" }]
+},
+{
+    "_id": {
+        "$oid": "bd4f6dbfd68a4c9edf484cdc"
+    },
+    "email": "TracyHawkins@email.com",
+    "password": "password",
+    "firstname": "Tracy",
+    "lastname": "Hawkins",
+    "nickname": "Cathy",
+    "phone_number": "8911632422",
+    "player_stats":  {"hits": 71,"singles": 49,"doubles": 25,"triples": 91,"homeruns": 22,"plate_appearances": 61,"at_bats": 95,"games": 34},
+    "show_information": false,
+    "league_ids": [{ "$oid": "8e7435ead3f1739baedd6fdf" }]
+},
+{
+    "_id": {
+        "$oid": "f297eac8a516d1878771ea62"
+    },
+    "email": "WendyRoberts@email.com",
+    "password": "password",
+    "firstname": "Wendy",
+    "lastname": "Roberts",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 2,"singles": 68,"doubles": 82,"triples": 65,"homeruns": 63,"plate_appearances": 48,"at_bats": 42,"games": 60},
+    "show_information": false,
+    "league_ids": [{ "$oid": "e36bab3fc5d1eb8a168ceae1" },{ "$oid": "d394768de9e1389ae9b5f41b" },{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "811faf6761df21c8784798ec"
+    },
+    "email": "AlyssaVance@email.com",
+    "password": "password",
+    "firstname": "Alyssa",
+    "lastname": "Vance",
+    "nickname": "Chris",
+    "phone_number": "",
+    "player_stats":  {"hits": 80,"singles": 41,"doubles": 81,"triples": 3,"homeruns": 63,"plate_appearances": 40,"at_bats": 100,"games": 26},
+    "show_information": false,
+    "league_ids": [{ "$oid": "e36bab3fc5d1eb8a168ceae1" },{ "$oid": "6aeabefcc2badb7c3f5522e5" },{ "$oid": "abbf6ae55772ae4bd918ad35" }]
+},
+{
+    "_id": {
+        "$oid": "e4c2a66b2312a4da4e5bcab3"
+    },
+    "email": "AliceGrant@email.com",
+    "password": "password",
+    "firstname": "Alice",
+    "lastname": "Grant",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 41,"singles": 40,"doubles": 17,"triples": 3,"homeruns": 13,"plate_appearances": 54,"at_bats": 17,"games": 4},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "5cbb99ea397372b1d91d5e83"
+    },
+    "email": "BethOliver@email.com",
+    "password": "password",
+    "firstname": "Beth",
+    "lastname": "Oliver",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 67,"singles": 31,"doubles": 56,"triples": 85,"homeruns": 59,"plate_appearances": 85,"at_bats": 47,"games": 35},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "3affecd5eb537e377f64838d"
+    },
+    "email": "ThomasMcconnell@email.com",
+    "password": "password",
+    "firstname": "Thomas",
+    "lastname": "Mcconnell",
+    "nickname": "Patrick",
+    "phone_number": "",
+    "player_stats":  {"hits": 89,"singles": 90,"doubles": 23,"triples": 73,"homeruns": 77,"plate_appearances": 4,"at_bats": 26,"games": 76},
+    "show_information": false,
+    "league_ids": [{ "$oid": "e36bab3fc5d1eb8a168ceae1" },{ "$oid": "abbf6ae55772ae4bd918ad35" },{ "$oid": "eb4e3f9a241dd654b1e9ff3b" }]
+},
+{
+    "_id": {
+        "$oid": "47cdeedafdda9fdd8bb23766"
+    },
+    "email": "DavidAllen@email.com",
+    "password": "password",
+    "firstname": "David",
+    "lastname": "Allen",
+    "nickname": "Sara",
+    "phone_number": "",
+    "player_stats":  {"hits": 25,"singles": 1,"doubles": 81,"triples": 59,"homeruns": 97,"plate_appearances": 93,"at_bats": 53,"games": 97},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "d6da3415ebd4ffd7fb484ffd"
+    },
+    "email": "TinaRomero@email.com",
+    "password": "password",
+    "firstname": "Tina",
+    "lastname": "Romero",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 83,"singles": 40,"doubles": 8,"triples": 91,"homeruns": 31,"plate_appearances": 20,"at_bats": 98,"games": 39},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "ad326dd882e7723e9db27a97"
+    },
+    "email": "MaryJohnston@email.com",
+    "password": "password",
+    "firstname": "Mary",
+    "lastname": "Johnston",
+    "nickname": "Antonio",
+    "phone_number": "789.512.5445",
+    "player_stats":  {"hits": 69,"singles": 70,"doubles": 51,"triples": 91,"homeruns": 36,"plate_appearances": 53,"at_bats": 65,"games": 1},
+    "show_information": false,
+    "league_ids": [{ "$oid": "8e7435ead3f1739baedd6fdf" },{ "$oid": "eb4e3f9a241dd654b1e9ff3b" }]
+},
+{
+    "_id": {
+        "$oid": "fede443cd5a26e2b9faf53cf"
+    },
+    "email": "MirandaHurley@email.com",
+    "password": "password",
+    "firstname": "Miranda",
+    "lastname": "Hurley",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 27,"singles": 60,"doubles": 97,"triples": 69,"homeruns": 1,"plate_appearances": 24,"at_bats": 64,"games": 92},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "6c822f8c8eea965fc2facd9d"
+    },
+    "email": "NicholasWilson@email.com",
+    "password": "password",
+    "firstname": "Nicholas",
+    "lastname": "Wilson",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 74,"singles": 41,"doubles": 96,"triples": 90,"homeruns": 98,"plate_appearances": 27,"at_bats": 87,"games": 52},
+    "show_information": false,
+    "league_ids": [{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "c3cae9d81bbd64fd8ef3bb8e"
+    },
+    "email": "KatelynEdwards@email.com",
+    "password": "password",
+    "firstname": "Katelyn",
+    "lastname": "Edwards",
+    "nickname": "Andrew",
+    "phone_number": "",
+    "player_stats":  {"hits": 2,"singles": 26,"doubles": 5,"triples": 36,"homeruns": 63,"plate_appearances": 11,"at_bats": 15,"games": 48},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "24d75f8febbc6fff6f839f4e"
+    },
+    "email": "SharonBrown@email.com",
+    "password": "password",
+    "firstname": "Sharon",
+    "lastname": "Brown",
+    "nickname": "Daniel",
+    "phone_number": "",
+    "player_stats":  {"hits": 22,"singles": 64,"doubles": 99,"triples": 95,"homeruns": 25,"plate_appearances": 23,"at_bats": 68,"games": 34},
+    "show_information": false,
+    "league_ids": [{ "$oid": "6aeabefcc2badb7c3f5522e5" },{ "$oid": "eb4e3f9a241dd654b1e9ff3b" }]
+},
+{
+    "_id": {
+        "$oid": "bb4c5eea7abb613ffc6eb3ac"
+    },
+    "email": "DebraScott@email.com",
+    "password": "password",
+    "firstname": "Debra",
+    "lastname": "Scott",
+    "nickname": "",
+    "phone_number": "001-225-732-2867x9561",
+    "player_stats":  {"hits": 15,"singles": 97,"doubles": 23,"triples": 60,"homeruns": 72,"plate_appearances": 54,"at_bats": 9,"games": 51},
+    "show_information": false,
+    "league_ids": [{ "$oid": "d394768de9e1389ae9b5f41b" }]
+},
+{
+    "_id": {
+        "$oid": "6bc8f6dbc1ae4fb265bd1e6c"
+    },
+    "email": "LauraFerguson@email.com",
+    "password": "password",
+    "firstname": "Laura",
+    "lastname": "Ferguson",
+    "nickname": "James",
+    "phone_number": "",
+    "player_stats":  {"hits": 32,"singles": 95,"doubles": 92,"triples": 91,"homeruns": 60,"plate_appearances": 21,"at_bats": 30,"games": 5},
+    "show_information": false,
+    "league_ids": [{ "$oid": "a44f2564524dcbfdd835cc51" },{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "f85f715ec674db6f66ecb6b2"
+    },
+    "email": "ChristopherRivera@email.com",
+    "password": "password",
+    "firstname": "Christopher",
+    "lastname": "Rivera",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 97,"singles": 33,"doubles": 17,"triples": 69,"homeruns": 41,"plate_appearances": 92,"at_bats": 94,"games": 45},
+    "show_information": false,
+    "league_ids": [{ "$oid": "abbf6ae55772ae4bd918ad35" },{ "$oid": "eb4e3f9a241dd654b1e9ff3b" }]
+},
+{
+    "_id": {
+        "$oid": "fffd6c4b9fca481c448d71a9"
+    },
+    "email": "TriciaJohnson@email.com",
+    "password": "password",
+    "firstname": "Tricia",
+    "lastname": "Johnson",
+    "nickname": "Joseph",
+    "phone_number": "",
+    "player_stats":  {"hits": 34,"singles": 90,"doubles": 98,"triples": 75,"homeruns": 69,"plate_appearances": 41,"at_bats": 95,"games": 50},
+    "show_information": false,
+    "league_ids": [{ "$oid": "6aeabefcc2badb7c3f5522e5" },{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "45cd943edeff48a4f1cf2dfb"
+    },
+    "email": "StacieThomas@email.com",
+    "password": "password",
+    "firstname": "Stacie",
+    "lastname": "Thomas",
+    "nickname": "Brandy",
+    "phone_number": "",
+    "player_stats":  {"hits": 60,"singles": 16,"doubles": 16,"triples": 1,"homeruns": 60,"plate_appearances": 44,"at_bats": 65,"games": 23},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "65de1bec7dffada129daa1b7"
+    },
+    "email": "BrendaHughes@email.com",
+    "password": "password",
+    "firstname": "Brenda",
+    "lastname": "Hughes",
+    "nickname": "Anthony",
+    "phone_number": "",
+    "player_stats":  {"hits": 84,"singles": 41,"doubles": 36,"triples": 21,"homeruns": 62,"plate_appearances": 59,"at_bats": 16,"games": 16},
+    "show_information": false,
+    "league_ids": [{ "$oid": "6aeabefcc2badb7c3f5522e5" },{ "$oid": "eb4e3f9a241dd654b1e9ff3b" }]
+},
+{
+    "_id": {
+        "$oid": "91451fcfaab74d6aa7cd9cdd"
+    },
+    "email": "BarryMiller@email.com",
+    "password": "password",
+    "firstname": "Barry",
+    "lastname": "Miller",
+    "nickname": "",
+    "phone_number": "9764789281",
+    "player_stats":  {"hits": 49,"singles": 14,"doubles": 37,"triples": 88,"homeruns": 39,"plate_appearances": 68,"at_bats": 29,"games": 8},
+    "show_information": false,
+    "league_ids": [{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "7f13c6da7ad89828158cce34"
+    },
+    "email": "EricSmith@email.com",
+    "password": "password",
+    "firstname": "Eric",
+    "lastname": "Smith",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 62,"singles": 67,"doubles": 38,"triples": 49,"homeruns": 61,"plate_appearances": 28,"at_bats": 89,"games": 59},
+    "show_information": false,
+    "league_ids": [{ "$oid": "abbf6ae55772ae4bd918ad35" },{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "6a85289cc3ae76de48aa2e4f"
+    },
+    "email": "JessicaGreen@email.com",
+    "password": "password",
+    "firstname": "Jessica",
+    "lastname": "Green",
+    "nickname": "Nathaniel",
+    "phone_number": "",
+    "player_stats":  {"hits": 60,"singles": 22,"doubles": 59,"triples": 82,"homeruns": 10,"plate_appearances": 28,"at_bats": 85,"games": 14},
+    "show_information": false,
+    "league_ids": [{ "$oid": "d394768de9e1389ae9b5f41b" },{ "$oid": "eb4e3f9a241dd654b1e9ff3b" }]
+},
+{
+    "_id": {
+        "$oid": "6f7b7fbed9ad61c22accdcac"
+    },
+    "email": "DustinYoung@email.com",
+    "password": "password",
+    "firstname": "Dustin",
+    "lastname": "Young",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 10,"singles": 48,"doubles": 17,"triples": 80,"homeruns": 9,"plate_appearances": 25,"at_bats": 8,"games": 62},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "a71dcf2f7f6b43912dadcab3"
+    },
+    "email": "MathewCarr@email.com",
+    "password": "password",
+    "firstname": "Mathew",
+    "lastname": "Carr",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 27,"singles": 10,"doubles": 98,"triples": 97,"homeruns": 4,"plate_appearances": 49,"at_bats": 54,"games": 4},
+    "show_information": false,
+    "league_ids": ""
+},
+{
+    "_id": {
+        "$oid": "982fb9a781853c69eb1659bc"
+    },
+    "email": "StephenRodriguez@email.com",
+    "password": "password",
+    "firstname": "Stephen",
+    "lastname": "Rodriguez",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 76,"singles": 36,"doubles": 15,"triples": 52,"homeruns": 19,"plate_appearances": 67,"at_bats": 43,"games": 49},
+    "show_information": false,
+    "league_ids": [{ "$oid": "d394768de9e1389ae9b5f41b" }]
+},
+{
+    "_id": {
+        "$oid": "ae1bdcec4e37be585c3beadb"
+    },
+    "email": "StephanieAnderson@email.com",
+    "password": "password",
+    "firstname": "Stephanie",
+    "lastname": "Anderson",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 92,"singles": 96,"doubles": 25,"triples": 90,"homeruns": 99,"plate_appearances": 52,"at_bats": 71,"games": 61},
+    "show_information": false,
+    "league_ids": [{ "$oid": "6aeabefcc2badb7c3f5522e5" },{ "$oid": "eb4e3f9a241dd654b1e9ff3b" }]
+},
+{
+    "_id": {
+        "$oid": "5864c9ca426dbbff3dab3ab7"
+    },
+    "email": "AmyHunter@email.com",
+    "password": "password",
+    "firstname": "Amy",
+    "lastname": "Hunter",
+    "nickname": "Elizabeth",
+    "phone_number": "(196)239-6642",
+    "player_stats":  {"hits": 63,"singles": 60,"doubles": 44,"triples": 43,"homeruns": 33,"plate_appearances": 64,"at_bats": 71,"games": 83},
+    "show_information": false,
+    "league_ids": [{ "$oid": "d394768de9e1389ae9b5f41b" },{ "$oid": "eb4e3f9a241dd654b1e9ff3b" }]
+},
+{
+    "_id": {
+        "$oid": "c5fc1c473bf7e1465fcef8f3"
+    },
+    "email": "JohnnyReeves@email.com",
+    "password": "password",
+    "firstname": "Johnny",
+    "lastname": "Reeves",
+    "nickname": "Eric",
+    "phone_number": "",
+    "player_stats":  {"hits": 85,"singles": 74,"doubles": 33,"triples": 55,"homeruns": 80,"plate_appearances": 26,"at_bats": 16,"games": 44},
+    "show_information": false,
+    "league_ids": [{ "$oid": "d394768de9e1389ae9b5f41b" },{ "$oid": "eb4e3f9a241dd654b1e9ff3b" }]
+},
+{
+    "_id": {
+        "$oid": "4bbe28ac68deaecf6ceacc24"
+    },
+    "email": "AllenLiu@email.com",
+    "password": "password",
+    "firstname": "Allen",
+    "lastname": "Liu",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats":  {"hits": 40,"singles": 32,"doubles": 24,"triples": 27,"homeruns": 58,"plate_appearances": 21,"at_bats": 12,"games": 97},
+    "show_information": false,
+    "league_ids": [{ "$oid": "e36bab3fc5d1eb8a168ceae1" },{ "$oid": "abbf6ae55772ae4bd918ad35" },{ "$oid": "41cf395e31e3ab7d55ce5194" }]
+},
+{
+    "_id": {
+        "$oid": "98cfb64cbb4875a3b1c1ce32"
+    },
+    "email": "TracyHendricks@email.com",
+    "password": "password",
+    "firstname": "Tracy",
+    "lastname": "Hendricks",
+    "nickname": "",
+    "phone_number": "367.723.8907",
+    "player_stats":  {"hits": 70,"singles": 72,"doubles": 55,"triples": 4,"homeruns": 98,"plate_appearances": 48,"at_bats": 78,"games": 37},
+    "show_information": false,
+    "league_ids": [{ "$oid": "d394768de9e1389ae9b5f41b" },{ "$oid": "abbf6ae55772ae4bd918ad35" },{ "$oid": "a44f2564524dcbfdd835cc51" }]
+}]

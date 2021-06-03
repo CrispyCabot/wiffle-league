@@ -1,0 +1,241 @@
+[
+{
+  "_id": {
+        "$oid": "e36bab3fc5d1eb8a168ceae1"
+    },
+    "name": "Biomedical engineer",
+    "player_ids": [{ "$oid": "8dfb7a1665b85c67bade39aa" },{ "$oid": "735d175bdf39e39a6e5aa383" },{ "$oid": "6f9b538ecfd9a7c9c2bb8e9a" }],
+    "player_stats": [{ "player_id": { "$oid": "8dfb7a1665b85c67bade39aa" },"stats": {"hits": 49,"singles": 8,"doubles": 5,"triples": 0,"homeruns": 46,"plate_appearances": 32,"at_bats": 50,"games": 45} },{ "player_id": { "$oid": "735d175bdf39e39a6e5aa383" },"stats": {"hits": 40,"singles": 12,"doubles": 7,"triples": 29,"homeruns": 4,"plate_appearances": 32,"at_bats": 37,"games": 25} },{ "player_id": { "$oid": "6f9b538ecfd9a7c9c2bb8e9a" },"stats": {"hits": 44,"singles": 6,"doubles": 26,"triples": 36,"homeruns": 45,"plate_appearances": 27,"at_bats": 8,"games": 32} }],
+    "max_num_players": 3,
+    "league_creator_id": { "$oid": "6f9b538ecfd9a7c9c2bb8e9a" },
+    "game_ids": [{ "$oid": "a1f9df8c4df7988b153b5e1b" },{ "$oid": "77e83c66b1998292ac4d5d7a" },{ "$oid": "b3a753be18edb97f6982b5a6" },{ "$oid": "f41ca696d1f6a7d87db4681e" },{ "$oid": "77e83c66b1998292ac4d5d7a" },{ "$oid": "7bbcd2799d26a47fef5448aa" },{ "$oid": "4b4ee7292a31ec9932de3be1" },{ "$oid": "f6ed19db44a2a663acd37e12" },{ "$oid": "64c32db429edf5f32afccca1" },{ "$oid": "696376aacdb49f24ba56befe" },{ "$oid": "c5fcbdc4f31158864f1537b6" },{ "$oid": "eb5cbb9ace2927581cf7fabc" },{ "$oid": "2bf62b41e27266efddd93b4d" }],
+    "num_games": 13,
+    "games_created": false,
+    "team_size": 1,
+    "start_date": {
+        "$date": {
+            "$numberLong": "1632000000000"
+        }
+    },
+    "end_date": {
+        "$date": {
+            "$numberLong": "1634600000000"
+        }
+    },
+    "deadline_date": {
+        "$date": {
+            "$numberLong": "1631500000000"
+        }
+    },
+    "about_text": "Mind might early early husband. Morning matter term center several. So western education herself again."
+},
+{
+  "_id": {
+        "$oid": "d394768de9e1389ae9b5f41b"
+    },
+    "name": "Product/process development scientist",
+    "player_ids": [{ "$oid": "d4e5196443faaeb319391eca" },{ "$oid": "dfe918eefd3e5ecd7f4cb7c2" },{ "$oid": "3e4d24982b167a331de9ace4" },{ "$oid": "811faf6761df21c8784798ec" },{ "$oid": "bb4c5eea7abb613ffc6eb3ac" },{ "$oid": "bcbba241a323bf77778f1165" },{ "$oid": "98cfb64cbb4875a3b1c1ce32" }],
+    "player_stats": [{ "player_id": { "$oid": "d4e5196443faaeb319391eca" },"stats": {"hits": 8,"singles": 28,"doubles": 31,"triples": 38,"homeruns": 41,"plate_appearances": 44,"at_bats": 33,"games": 46} },{ "player_id": { "$oid": "dfe918eefd3e5ecd7f4cb7c2" },"stats": {"hits": 1,"singles": 9,"doubles": 11,"triples": 9,"homeruns": 35,"plate_appearances": 6,"at_bats": 21,"games": 41} },{ "player_id": { "$oid": "3e4d24982b167a331de9ace4" },"stats": {"hits": 27,"singles": 36,"doubles": 36,"triples": 15,"homeruns": 6,"plate_appearances": 50,"at_bats": 39,"games": 17} },{ "player_id": { "$oid": "811faf6761df21c8784798ec" },"stats": {"hits": 38,"singles": 10,"doubles": 6,"triples": 4,"homeruns": 36,"plate_appearances": 39,"at_bats": 28,"games": 22} },{ "player_id": { "$oid": "bb4c5eea7abb613ffc6eb3ac" },"stats": {"hits": 41,"singles": 8,"doubles": 26,"triples": 33,"homeruns": 14,"plate_appearances": 21,"at_bats": 46,"games": 11} },{ "player_id": { "$oid": "bcbba241a323bf77778f1165" },"stats": {"hits": 23,"singles": 50,"doubles": 38,"triples": 32,"homeruns": 2,"plate_appearances": 18,"at_bats": 31,"games": 24} },{ "player_id": { "$oid": "98cfb64cbb4875a3b1c1ce32" },"stats": {"hits": 29,"singles": 18,"doubles": 28,"triples": 10,"homeruns": 42,"plate_appearances": 20,"at_bats": 29,"games": 25} }],
+    "max_num_players": 11,
+    "league_creator_id": { "$oid": "d4e5196443faaeb319391eca" },
+    "game_ids": [{ "$oid": "2bf62b41e27266efddd93b4d" },{ "$oid": "cdfd32a455c3994b1d9b6284" },{ "$oid": "98f9f51c4e6f26ccc94c8f8c" },{ "$oid": "65eaa627ffcf4841d2ce2a2a" },{ "$oid": "f6ed19db44a2a663acd37e12" },{ "$oid": "eb5cbb9ace2927581cf7fabc" },{ "$oid": "4cab982a8bd2158859be2e27" },{ "$oid": "f6ed19db44a2a663acd37e12" },{ "$oid": "f6ed19db44a2a663acd37e12" },{ "$oid": "1bef15a6ee7fbbaaa4171c14" },{ "$oid": "b8fc3caedb75c5745e8624ca" },{ "$oid": "45ca7ed2a73f1e55cf9cd221" }],
+    "num_games": 12,
+    "games_created": false,
+    "team_size": 1,
+    "start_date": {
+        "$date": {
+            "$numberLong": "1622900000000"
+        }
+    },
+    "end_date": {
+        "$date": {
+            "$numberLong": "1626900000000"
+        }
+    },
+    "deadline_date": {
+        "$date": {
+            "$numberLong": "1622800000000"
+        }
+    },
+    "about_text": "Hour view dark tough begin line. Staff moment mission less history behavior. Lead dark behavior deal involve. Through heart great some game nothing."
+},
+{
+  "_id": {
+        "$oid": "abbf6ae55772ae4bd918ad35"
+    },
+    "name": "Astronomer",
+    "player_ids": [{ "$oid": "fffd6c4b9fca481c448d71a9" },{ "$oid": "9bd215ae9c752bec21db4131" },{ "$oid": "4bbe28ac68deaecf6ceacc24" }],
+    "player_stats": [{ "player_id": { "$oid": "fffd6c4b9fca481c448d71a9" },"stats": {"hits": 8,"singles": 35,"doubles": 29,"triples": 33,"homeruns": 8,"plate_appearances": 19,"at_bats": 15,"games": 34} },{ "player_id": { "$oid": "9bd215ae9c752bec21db4131" },"stats": {"hits": 38,"singles": 44,"doubles": 18,"triples": 0,"homeruns": 33,"plate_appearances": 12,"at_bats": 50,"games": 43} },{ "player_id": { "$oid": "4bbe28ac68deaecf6ceacc24" },"stats": {"hits": 29,"singles": 34,"doubles": 29,"triples": 32,"homeruns": 5,"plate_appearances": 7,"at_bats": 9,"games": 21} }],
+    "max_num_players": 3,
+    "league_creator_id": { "$oid": "9bd215ae9c752bec21db4131" },
+    "game_ids": [{ "$oid": "dd42843c8dc8892346349f2c" },{ "$oid": "98f9f51c4e6f26ccc94c8f8c" },{ "$oid": "6b1acaf96adcdcaa52cb3765" },{ "$oid": "4b4ee7292a31ec9932de3be1" }],
+    "num_games": 4,
+    "games_created": false,
+    "team_size": 4,
+    "start_date": {
+        "$date": {
+            "$numberLong": "1628300000000"
+        }
+    },
+    "end_date": {
+        "$date": {
+            "$numberLong": "1632100000000"
+        }
+    },
+    "deadline_date": {
+        "$date": {
+            "$numberLong": "1627400000000"
+        }
+    },
+    "about_text": "Role interesting amount offer room involve suddenly theory. Participant letter need test. Much try must reality among situation language television."
+},
+{
+  "_id": {
+        "$oid": "a44f2564524dcbfdd835cc51"
+    },
+    "name": "Photographer",
+    "player_ids": [{ "$oid": "63ce17654e586dae7edc51ab" },{ "$oid": "bb4c5eea7abb613ffc6eb3ac" },{ "$oid": "bebaa1c9d865aa14f4dd9dc8" },{ "$oid": "3affecd5eb537e377f64838d" },{ "$oid": "6c822f8c8eea965fc2facd9d" },{ "$oid": "24646ab8ebe6d9e1ff4bee26" }],
+    "player_stats": [{ "player_id": { "$oid": "63ce17654e586dae7edc51ab" },"stats": {"hits": 5,"singles": 24,"doubles": 27,"triples": 18,"homeruns": 17,"plate_appearances": 13,"at_bats": 4,"games": 41} },{ "player_id": { "$oid": "bb4c5eea7abb613ffc6eb3ac" },"stats": {"hits": 27,"singles": 5,"doubles": 21,"triples": 11,"homeruns": 43,"plate_appearances": 6,"at_bats": 9,"games": 11} },{ "player_id": { "$oid": "bebaa1c9d865aa14f4dd9dc8" },"stats": {"hits": 36,"singles": 49,"doubles": 47,"triples": 27,"homeruns": 3,"plate_appearances": 44,"at_bats": 22,"games": 35} },{ "player_id": { "$oid": "3affecd5eb537e377f64838d" },"stats": {"hits": 15,"singles": 36,"doubles": 7,"triples": 31,"homeruns": 1,"plate_appearances": 1,"at_bats": 15,"games": 6} },{ "player_id": { "$oid": "6c822f8c8eea965fc2facd9d" },"stats": {"hits": 0,"singles": 12,"doubles": 31,"triples": 7,"homeruns": 3,"plate_appearances": 19,"at_bats": 5,"games": 39} },{ "player_id": { "$oid": "24646ab8ebe6d9e1ff4bee26" },"stats": {"hits": 33,"singles": 14,"doubles": 3,"triples": 47,"homeruns": 17,"plate_appearances": 38,"at_bats": 26,"games": 50} }],
+    "max_num_players": 20,
+    "league_creator_id": { "$oid": "bebaa1c9d865aa14f4dd9dc8" },
+    "game_ids": [{ "$oid": "d38ab3da1b4c86e9526f9cb8" },{ "$oid": "c71dd2cc1af86aa4affae4cf" },{ "$oid": "c5fcbdc4f31158864f1537b6" },{ "$oid": "eb5cbb9ace2927581cf7fabc" },{ "$oid": "4cab982a8bd2158859be2e27" },{ "$oid": "6b1acaf96adcdcaa52cb3765" },{ "$oid": "64b2a9fc7e87f3a4a3e1483b" },{ "$oid": "863abaff62bff92bf741a81f" },{ "$oid": "7bbcd2799d26a47fef5448aa" },{ "$oid": "696376aacdb49f24ba56befe" },{ "$oid": "4121fc3bbddc66bfab211d4b" },{ "$oid": "cfbcaa61c81aa26a49d742ef" },{ "$oid": "a1f9df8c4df7988b153b5e1b" },{ "$oid": "a5cab4be22a4fba7dba5e1fc" },{ "$oid": "dd42843c8dc8892346349f2c" }],
+    "num_games": 15,
+    "games_created": false,
+    "team_size": 2,
+    "start_date": {
+        "$date": {
+            "$numberLong": "1625800000000"
+        }
+    },
+    "end_date": {
+        "$date": {
+            "$numberLong": "1628400000000"
+        }
+    },
+    "deadline_date": {
+        "$date": {
+            "$numberLong": "1625500000000"
+        }
+    },
+    "about_text": "Free happen remain side now remember serve. Ago bag against wind mission dark trade task. Turn game eye whole range. Investment often Mrs close foreign. We ground quite often easy."
+},
+{
+  "_id": {
+        "$oid": "6aeabefcc2badb7c3f5522e5"
+    },
+    "name": "Comptroller",
+    "player_ids": [{ "$oid": "ae1bdcec4e37be585c3beadb" },{ "$oid": "bd4f6dbfd68a4c9edf484cdc" },{ "$oid": "45cd943edeff48a4f1cf2dfb" },{ "$oid": "3c9cc358eb9aca51fd8c2784" },{ "$oid": "c8352bf356d21af884d8abfc" },{ "$oid": "735d175bdf39e39a6e5aa383" },{ "$oid": "811faf6761df21c8784798ec" },{ "$oid": "afa2eac1a621d6a1da5bbbca" }],
+    "player_stats": [{ "player_id": { "$oid": "ae1bdcec4e37be585c3beadb" },"stats": {"hits": 27,"singles": 7,"doubles": 28,"triples": 6,"homeruns": 15,"plate_appearances": 16,"at_bats": 22,"games": 25} },{ "player_id": { "$oid": "bd4f6dbfd68a4c9edf484cdc" },"stats": {"hits": 29,"singles": 22,"doubles": 21,"triples": 47,"homeruns": 18,"plate_appearances": 17,"at_bats": 30,"games": 2} },{ "player_id": { "$oid": "45cd943edeff48a4f1cf2dfb" },"stats": {"hits": 50,"singles": 49,"doubles": 19,"triples": 5,"homeruns": 43,"plate_appearances": 2,"at_bats": 31,"games": 1} },{ "player_id": { "$oid": "3c9cc358eb9aca51fd8c2784" },"stats": {"hits": 48,"singles": 38,"doubles": 38,"triples": 40,"homeruns": 30,"plate_appearances": 43,"at_bats": 40,"games": 26} },{ "player_id": { "$oid": "c8352bf356d21af884d8abfc" },"stats": {"hits": 6,"singles": 28,"doubles": 26,"triples": 28,"homeruns": 5,"plate_appearances": 15,"at_bats": 36,"games": 13} },{ "player_id": { "$oid": "735d175bdf39e39a6e5aa383" },"stats": {"hits": 23,"singles": 15,"doubles": 43,"triples": 49,"homeruns": 24,"plate_appearances": 14,"at_bats": 37,"games": 21} },{ "player_id": { "$oid": "811faf6761df21c8784798ec" },"stats": {"hits": 4,"singles": 16,"doubles": 10,"triples": 33,"homeruns": 12,"plate_appearances": 24,"at_bats": 4,"games": 38} },{ "player_id": { "$oid": "afa2eac1a621d6a1da5bbbca" },"stats": {"hits": 38,"singles": 35,"doubles": 36,"triples": 32,"homeruns": 36,"plate_appearances": 41,"at_bats": 32,"games": 39} }],
+    "max_num_players": 8,
+    "league_creator_id": { "$oid": "ae1bdcec4e37be585c3beadb" },
+    "game_ids": [{ "$oid": "c71dd2cc1af86aa4affae4cf" },{ "$oid": "f5e2eadc3f73a345bb2db432" },{ "$oid": "77e83c66b1998292ac4d5d7a" },{ "$oid": "696376aacdb49f24ba56befe" },{ "$oid": "64b2a9fc7e87f3a4a3e1483b" },{ "$oid": "6b1acaf96adcdcaa52cb3765" },{ "$oid": "7bbcd2799d26a47fef5448aa" },{ "$oid": "bba1cd6baf86edf1d62ff6dc" },{ "$oid": "48ac971df25a89e66ba2e31d" }],
+    "num_games": 9,
+    "games_created": false,
+    "team_size": 4,
+    "start_date": {
+        "$date": {
+            "$numberLong": "1631000000000"
+        }
+    },
+    "end_date": {
+        "$date": {
+            "$numberLong": "1634100000000"
+        }
+    },
+    "deadline_date": {
+        "$date": {
+            "$numberLong": "1630100000000"
+        }
+    },
+    "about_text": "Determine game important whole economy thank step. Set show then. Establish race sit federal military show. Mr light prepare song international your."
+},
+{
+  "_id": {
+        "$oid": "8e7435ead3f1739baedd6fdf"
+    },
+    "name": "Fish farm manager",
+    "player_ids": [{ "$oid": "df26bbadbe91a7556a6a5b88" },{ "$oid": "84a381ad9cf99a4fbb4cb4e7" },{ "$oid": "7aa698aafaee3beeaecba76d" },{ "$oid": "6f9b538ecfd9a7c9c2bb8e9a" },{ "$oid": "6178348dd3d1b8f9ea6fce23" },{ "$oid": "cf635298b86fe7fb3dafdce1" },{ "$oid": "d6da3415ebd4ffd7fb484ffd" },{ "$oid": "d651b1135f39dbcc7b7b9bfc" },{ "$oid": "6f9b538ecfd9a7c9c2bb8e9a" },{ "$oid": "c4a61f4bdc7165345c7ba3ff" }],
+    "player_stats": [{ "player_id": { "$oid": "df26bbadbe91a7556a6a5b88" },"stats": {"hits": 10,"singles": 31,"doubles": 19,"triples": 38,"homeruns": 17,"plate_appearances": 12,"at_bats": 46,"games": 2} },{ "player_id": { "$oid": "84a381ad9cf99a4fbb4cb4e7" },"stats": {"hits": 40,"singles": 5,"doubles": 4,"triples": 44,"homeruns": 24,"plate_appearances": 46,"at_bats": 1,"games": 16} },{ "player_id": { "$oid": "7aa698aafaee3beeaecba76d" },"stats": {"hits": 45,"singles": 32,"doubles": 7,"triples": 22,"homeruns": 2,"plate_appearances": 0,"at_bats": 23,"games": 32} },{ "player_id": { "$oid": "6f9b538ecfd9a7c9c2bb8e9a" },"stats": {"hits": 15,"singles": 31,"doubles": 34,"triples": 2,"homeruns": 33,"plate_appearances": 9,"at_bats": 15,"games": 28} },{ "player_id": { "$oid": "6178348dd3d1b8f9ea6fce23" },"stats": {"hits": 22,"singles": 9,"doubles": 8,"triples": 30,"homeruns": 48,"plate_appearances": 27,"at_bats": 9,"games": 26} },{ "player_id": { "$oid": "cf635298b86fe7fb3dafdce1" },"stats": {"hits": 3,"singles": 23,"doubles": 48,"triples": 36,"homeruns": 7,"plate_appearances": 48,"at_bats": 29,"games": 6} },{ "player_id": { "$oid": "d6da3415ebd4ffd7fb484ffd" },"stats": {"hits": 20,"singles": 2,"doubles": 34,"triples": 34,"homeruns": 18,"plate_appearances": 36,"at_bats": 13,"games": 28} },{ "player_id": { "$oid": "d651b1135f39dbcc7b7b9bfc" },"stats": {"hits": 0,"singles": 7,"doubles": 39,"triples": 1,"homeruns": 7,"plate_appearances": 42,"at_bats": 48,"games": 47} },{ "player_id": { "$oid": "6f9b538ecfd9a7c9c2bb8e9a" },"stats": {"hits": 31,"singles": 50,"doubles": 21,"triples": 26,"homeruns": 17,"plate_appearances": 41,"at_bats": 2,"games": 32} },{ "player_id": { "$oid": "c4a61f4bdc7165345c7ba3ff" },"stats": {"hits": 9,"singles": 20,"doubles": 17,"triples": 6,"homeruns": 34,"plate_appearances": 26,"at_bats": 23,"games": 13} }],
+    "max_num_players": 14,
+    "league_creator_id": { "$oid": "6178348dd3d1b8f9ea6fce23" },
+    "game_ids": [{ "$oid": "65eaa627ffcf4841d2ce2a2a" },{ "$oid": "28fea2d4f88b7b9dce2e1c42" },{ "$oid": "b183767a3fa9f9de8e363cf2" },{ "$oid": "2e1e2a773a8ab44a8c6657b4" },{ "$oid": "6b1acaf96adcdcaa52cb3765" },{ "$oid": "4b4ee7292a31ec9932de3be1" },{ "$oid": "b3a753be18edb97f6982b5a6" },{ "$oid": "4b4ee7292a31ec9932de3be1" },{ "$oid": "7a7bf3cd54b9e9ba8ae4bf32" },{ "$oid": "863abaff62bff92bf741a81f" },{ "$oid": "6b1acaf96adcdcaa52cb3765" },{ "$oid": "4121fc3bbddc66bfab211d4b" },{ "$oid": "863abaff62bff92bf741a81f" },{ "$oid": "2dffa8e92de8a4938ab2f92e" },{ "$oid": "78179c7a6b95948cfe3c323a" }],
+    "num_games": 15,
+    "games_created": false,
+    "team_size": 1,
+    "start_date": {
+        "$date": {
+            "$numberLong": "1626000000000"
+        }
+    },
+    "end_date": {
+        "$date": {
+            "$numberLong": "1629900000000"
+        }
+    },
+    "deadline_date": {
+        "$date": {
+            "$numberLong": "1625100000000"
+        }
+    },
+    "about_text": "Owner mean professor. Your bag decision car trade drive process much. Current benefit large newspaper between single knowledge. Might go system gas life. Amount position no state."
+},
+{
+  "_id": {
+        "$oid": "eb4e3f9a241dd654b1e9ff3b"
+    },
+    "name": "Financial controller",
+    "player_ids": [{ "$oid": "3dbedb37aa6861d15d4b5ccc" },{ "$oid": "d4183ebb7df969fdecf1cc6b" },{ "$oid": "24d75f8febbc6fff6f839f4e" },{ "$oid": "4bbe28ac68deaecf6ceacc24" },{ "$oid": "cf7221ef6f7e622c9bd33a4c" },{ "$oid": "47cdeedafdda9fdd8bb23766" }],
+    "player_stats": [{ "player_id": { "$oid": "3dbedb37aa6861d15d4b5ccc" },"stats": {"hits": 2,"singles": 27,"doubles": 27,"triples": 47,"homeruns": 31,"plate_appearances": 26,"at_bats": 5,"games": 45} },{ "player_id": { "$oid": "d4183ebb7df969fdecf1cc6b" },"stats": {"hits": 32,"singles": 11,"doubles": 1,"triples": 33,"homeruns": 38,"plate_appearances": 46,"at_bats": 25,"games": 40} },{ "player_id": { "$oid": "24d75f8febbc6fff6f839f4e" },"stats": {"hits": 42,"singles": 43,"doubles": 24,"triples": 3,"homeruns": 40,"plate_appearances": 49,"at_bats": 31,"games": 34} },{ "player_id": { "$oid": "4bbe28ac68deaecf6ceacc24" },"stats": {"hits": 3,"singles": 16,"doubles": 16,"triples": 45,"homeruns": 39,"plate_appearances": 35,"at_bats": 16,"games": 10} },{ "player_id": { "$oid": "cf7221ef6f7e622c9bd33a4c" },"stats": {"hits": 5,"singles": 22,"doubles": 2,"triples": 41,"homeruns": 22,"plate_appearances": 11,"at_bats": 35,"games": 24} },{ "player_id": { "$oid": "47cdeedafdda9fdd8bb23766" },"stats": {"hits": 12,"singles": 30,"doubles": 45,"triples": 8,"homeruns": 40,"plate_appearances": 46,"at_bats": 49,"games": 7} }],
+    "max_num_players": 6,
+    "league_creator_id": { "$oid": "cf7221ef6f7e622c9bd33a4c" },
+    "game_ids": [{ "$oid": "2fbcb6bf8aaea6afe4dc5e5c" },{ "$oid": "4cab982a8bd2158859be2e27" },{ "$oid": "863abaff62bff92bf741a81f" },{ "$oid": "2e1e2a773a8ab44a8c6657b4" },{ "$oid": "65eaa627ffcf4841d2ce2a2a" },{ "$oid": "2a357e6a4f236dded3cfb1f1" },{ "$oid": "55798cfde4d2f1c57c898ef9" },{ "$oid": "64b2a9fc7e87f3a4a3e1483b" },{ "$oid": "e2e7a4593ae98eae7f966fb9" },{ "$oid": "7bbcd2799d26a47fef5448aa" },{ "$oid": "b8fc3caedb75c5745e8624ca" },{ "$oid": "bba1cd6baf86edf1d62ff6dc" },{ "$oid": "4cab982a8bd2158859be2e27" }],
+    "num_games": 13,
+    "games_created": false,
+    "team_size": 4,
+    "start_date": {
+        "$date": {
+            "$numberLong": "1623900000000"
+        }
+    },
+    "end_date": {
+        "$date": {
+            "$numberLong": "1625100000000"
+        }
+    },
+    "deadline_date": {
+        "$date": {
+            "$numberLong": "1623300000000"
+        }
+    },
+    "about_text": "On mention four lead environment wide indeed teacher. Quickly ball cost themselves sister none. Bar fund nature evening eat career increase. Indicate fish sport."
+},
+{
+  "_id": {
+        "$oid": "41cf395e31e3ab7d55ce5194"
+    },
+    "name": "Systems analyst",
+    "player_ids": [{ "$oid": "63fc4f2de6346cd2ee4ce4f8" },{ "$oid": "98cfb64cbb4875a3b1c1ce32" },{ "$oid": "cf635298b86fe7fb3dafdce1" }],
+    "player_stats": [{ "player_id": { "$oid": "63fc4f2de6346cd2ee4ce4f8" },"stats": {"hits": 48,"singles": 33,"doubles": 40,"triples": 32,"homeruns": 16,"plate_appearances": 26,"at_bats": 28,"games": 9} },{ "player_id": { "$oid": "98cfb64cbb4875a3b1c1ce32" },"stats": {"hits": 22,"singles": 31,"doubles": 43,"triples": 26,"homeruns": 38,"plate_appearances": 44,"at_bats": 32,"games": 38} },{ "player_id": { "$oid": "cf635298b86fe7fb3dafdce1" },"stats": {"hits": 8,"singles": 11,"doubles": 1,"triples": 33,"homeruns": 46,"plate_appearances": 41,"at_bats": 37,"games": 36} }],
+    "max_num_players": 20,
+    "league_creator_id": { "$oid": "98cfb64cbb4875a3b1c1ce32" },
+    "game_ids": [{ "$oid": "c71dd2cc1af86aa4affae4cf" },{ "$oid": "a1f9df8c4df7988b153b5e1b" },{ "$oid": "ac6eaf5d9dc69fbda2e7e43c" },{ "$oid": "7f2ea5f255a688e4f392a1ce" },{ "$oid": "696376aacdb49f24ba56befe" },{ "$oid": "45ca7ed2a73f1e55cf9cd221" },{ "$oid": "638df4c426e4b4cf74cfa9b9" },{ "$oid": "7bbcd2799d26a47fef5448aa" },{ "$oid": "7f2ea5f255a688e4f392a1ce" },{ "$oid": "b8fc3caedb75c5745e8624ca" },{ "$oid": "2bf62b41e27266efddd93b4d" },{ "$oid": "98f9f51c4e6f26ccc94c8f8c" },{ "$oid": "2e1e2a773a8ab44a8c6657b4" },{ "$oid": "65eaa627ffcf4841d2ce2a2a" },{ "$oid": "4121fc3bbddc66bfab211d4b" }],
+    "num_games": 15,
+    "games_created": false,
+    "team_size": 4,
+    "start_date": {
+        "$date": {
+            "$numberLong": "1631900000000"
+        }
+    },
+    "end_date": {
+        "$date": {
+            "$numberLong": "1633300000000"
+        }
+    },
+    "deadline_date": {
+        "$date": {
+            "$numberLong": "1631800000000"
+        }
+    },
+    "about_text": "Ball peace ground president. Responsibility deep east large seem along. Without year group purpose. Fish sound game we practice particularly size spring. Hair gun generation of us."
+}]
