@@ -7,14 +7,13 @@ const Schema = mongoose.Schema
 const stats_schema = new Schema({
   id: Schema.Types.ObjectId,
   hits: Number,
-  single: Number,
-  double: Number,
-  triple: Number,
-  hr: Number,
+  singles: Number,
+  doubles: Number,
+  triples: Number,
+  homeruns: Number,
   plate_appearances: Number,
   at_bats: Number,
-  games: Number,
-  avg: Number
+  games: Number
 })
 
 module.exports = {

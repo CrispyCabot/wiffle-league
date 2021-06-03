@@ -1,0 +1,281 @@
+[
+{
+    "_id": {
+        "$oid": "ad2e793bf82a5292772cfb3e"
+    },
+    "league_id": { "$oid": "b1e189176142ab26f2524eb6" },
+    "team_1_ids": [{ "$oid": "f3e6e8c24383ccabbaed89ab" },{ "$oid": "dacaa56fa45dee941c9addbb" }],
+    "team_2_ids": [{ "$oid": "bb9a7df217556a9becc4e61a" },{ "$oid": "f518c2b3356cdd1d99584f3a" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1631600000000"
+        },
+    "game_location": "60013 Teresa WallJohnborough, MD 70206",
+    "player_stats": [{ "$oid": "4d6579f9324a2be1d3aaf2ad" },{ "$oid": "e9c9e4cff88a8cdce2aead3b" },{ "$oid": "8cfcec555f97fd4f9fa43edf" },{ "$oid": "faad1ff3d994eaddfcedfe19" }]
+},
+{
+    "_id": {
+        "$oid": "9dd489d6ddf33a24e82ddd4c"
+    },
+    "league_id": { "$oid": "b1e189176142ab26f2524eb6" },
+    "team_1_ids": [{ "$oid": "acdc8ac9f348dcbb9796a3be" },{ "$oid": "acdc8ac9f348dcbb9796a3be" },{ "$oid": "8c864cea684b9e7fb269a849" }],
+    "team_2_ids": [{ "$oid": "de326f14934a5338da12c9ca" },{ "$oid": "3d1fdc7a6e6a8dc2bf4b88f5" },{ "$oid": "2a11afd87cf25e9114d9a1c2" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1626600000000"
+        },
+    "game_location": "415 Michael SpurSeanmouth, MS 71611",
+    "player_stats": [{ "$oid": "eff444bed961a31d2fe41743" },{ "$oid": "26ecbcefde5cecdc33cfafcc" },{ "$oid": "4d6579f9324a2be1d3aaf2ad" },{ "$oid": "eff444bed961a31d2fe41743" },{ "$oid": "7ed4322ab8257966bdd1dbc6" },{ "$oid": "98f221e22bffbad7fd27dcc8" }]
+},
+{
+    "_id": {
+        "$oid": "5cbea465b747bf42bd3ec4f9"
+    },
+    "league_id": { "$oid": "b43aeecdc2f664f7adfddcbd" },
+    "team_1_ids": [{ "$oid": "65b2f41f17d1887ffbabc4c6" },{ "$oid": "c385a828a92256f79f865bdf" }],
+    "team_2_ids": [{ "$oid": "e8d83dfd933f14c8f11fefe6" },{ "$oid": "25873518325fc9bf93a1c2c1" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1630300000000"
+        },
+    "game_location": "1193 Blevins Lodge Apt. 869New Gregory, OK 32770",
+    "player_stats": [{ "$oid": "e1fb551875ce62e55bffcd1b" },{ "$oid": "7d69c34ff2fe87a78ddbd4ca" },{ "$oid": "aeec6ff8d85dade75ab1a7e5" },{ "$oid": "eff444bed961a31d2fe41743" }]
+},
+{
+    "_id": {
+        "$oid": "8c32e68176e78c7ba7e293e4"
+    },
+    "league_id": { "$oid": "b1e189176142ab26f2524eb6" },
+    "team_1_ids": [{ "$oid": "feb3ce8de564a47f95e8b3cf" },{ "$oid": "feb3ce8de564a47f95e8b3cf" },{ "$oid": "76a8deed3ce5bbe1fb83bb56" },{ "$oid": "c385a828a92256f79f865bdf" }],
+    "team_2_ids": [{ "$oid": "2c188fe6fc25eb96b7dd39c5" },{ "$oid": "d78acf1befa21fc7b6cd28ef" },{ "$oid": "2b334af4332edba1bae6bcf2" },{ "$oid": "bdb834dfd5a4cc659ae48fa8" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1629500000000"
+        },
+    "game_location": "4995 Humphrey Island Suite 168New Johnmouth, VA 28002",
+    "player_stats": [{ "$oid": "26ecbcefde5cecdc33cfafcc" },{ "$oid": "dfe4ae6e66b36f29b8aef5cf" },{ "$oid": "8cfcec555f97fd4f9fa43edf" },{ "$oid": "8cfcec555f97fd4f9fa43edf" },{ "$oid": "99fc9dfd456a1edc92c96cd6" },{ "$oid": "7d69c34ff2fe87a78ddbd4ca" },{ "$oid": "99fc9dfd456a1edc92c96cd6" },{ "$oid": "98f221e22bffbad7fd27dcc8" }]
+},
+{
+    "_id": {
+        "$oid": "ed1ff7eac268a1dd1a1a1447"
+    },
+    "league_id": { "$oid": "b1e189176142ab26f2524eb6" },
+    "team_1_ids": [{ "$oid": "e675dee181bf6b1cc1d2218b" },{ "$oid": "338af72a2b29f236e5a8ec2b" }],
+    "team_2_ids": [{ "$oid": "de326f14934a5338da12c9ca" },{ "$oid": "c385a828a92256f79f865bdf" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1629600000000"
+        },
+    "game_location": "6739 Jasmine Drives Suite 235Jenningsside, HI 37321",
+    "player_stats": [{ "$oid": "4d6579f9324a2be1d3aaf2ad" },{ "$oid": "faad1ff3d994eaddfcedfe19" },{ "$oid": "7d69c34ff2fe87a78ddbd4ca" },{ "$oid": "ebeb3ba1ed4182ce38afdb9e" }]
+},
+{
+    "_id": {
+        "$oid": "2aebdbcbfd94f65ad9523afe"
+    },
+    "league_id": { "$oid": "4c745a8b187c92c6d2adfadc" },
+    "team_1_ids": [{ "$oid": "571edb112e1aee4bcea9c1dc" }],
+    "team_2_ids": [{ "$oid": "c63b65de9dfe45feab5e2ab7" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1626500000000"
+        },
+    "game_location": "3103 Walsh RunPort Stephanieland, IN 35770",
+    "player_stats": [{ "$oid": "26ecbcefde5cecdc33cfafcc" },{ "$oid": "aeec6ff8d85dade75ab1a7e5" }]
+},
+{
+    "_id": {
+        "$oid": "61e757fe9c79a1cccfd8e8d5"
+    },
+    "league_id": { "$oid": "4c745a8b187c92c6d2adfadc" },
+    "team_1_ids": [{ "$oid": "da3ae2f17e22d989a9d217b3" },{ "$oid": "f3e6e8c24383ccabbaed89ab" },{ "$oid": "dbc19b53be15ea54ca8dfef3" }],
+    "team_2_ids": [{ "$oid": "feb3ce8de564a47f95e8b3cf" },{ "$oid": "a8e93afb4da26b167b3188cd" },{ "$oid": "de583227f6cb16883af48ef6" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1628800000000"
+        },
+    "game_location": "34176 Sara UnderpassEast Christopher, MO 60617",
+    "player_stats": [{ "$oid": "faad1ff3d994eaddfcedfe19" },{ "$oid": "ba7c1c98aa759ca433269da6" },{ "$oid": "8cfcec555f97fd4f9fa43edf" },{ "$oid": "26ecbcefde5cecdc33cfafcc" },{ "$oid": "7ed4322ab8257966bdd1dbc6" },{ "$oid": "857471e29fc5c9a85a7f8cfb" }]
+},
+{
+    "_id": {
+        "$oid": "fa172cafa3fba6e8beb99e41"
+    },
+    "league_id": { "$oid": "b43aeecdc2f664f7adfddcbd" },
+    "team_1_ids": [{ "$oid": "bdb834dfd5a4cc659ae48fa8" }],
+    "team_2_ids": [{ "$oid": "bb5a7ff8c8b2f6fbe8aeee91" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1625000000000"
+        },
+    "game_location": "883 Shepherd Ways Apt. 575New Vincent, FL 71654",
+    "player_stats": [{ "$oid": "99fc9dfd456a1edc92c96cd6" },{ "$oid": "faad1ff3d994eaddfcedfe19" }]
+},
+{
+    "_id": {
+        "$oid": "9def35eea3fcf2d9d2aba237"
+    },
+    "league_id": { "$oid": "bbb56f15fcac54a95cecf1fc" },
+    "team_1_ids": [{ "$oid": "de326f14934a5338da12c9ca" },{ "$oid": "d9ef58a8fdea893f8fd6663b" },{ "$oid": "86bd54bc82ccc8baf49be9ff" },{ "$oid": "fc27a7f4ddcddb5574aa99c3" }],
+    "team_2_ids": [{ "$oid": "feb3ce8de564a47f95e8b3cf" },{ "$oid": "bdb834dfd5a4cc659ae48fa8" },{ "$oid": "f39bfe37944cee2f1cceadcc" },{ "$oid": "feb3ce8de564a47f95e8b3cf" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1628100000000"
+        },
+    "game_location": "701 Albert Mission Apt. 533Marktown, KS 52853",
+    "player_stats": [{ "$oid": "7464351badaebfbda9982aa7" },{ "$oid": "26ecbcefde5cecdc33cfafcc" },{ "$oid": "565c38cb76ef53be776f5a9f" },{ "$oid": "e1fb551875ce62e55bffcd1b" },{ "$oid": "faad1ff3d994eaddfcedfe19" },{ "$oid": "857471e29fc5c9a85a7f8cfb" },{ "$oid": "eff444bed961a31d2fe41743" },{ "$oid": "e9c9e4cff88a8cdce2aead3b" }]
+},
+{
+    "_id": {
+        "$oid": "a9be133bd12b5ea43d964fc7"
+    },
+    "league_id": { "$oid": "b43aeecdc2f664f7adfddcbd" },
+    "team_1_ids": [{ "$oid": "e8d83dfd933f14c8f11fefe6" },{ "$oid": "7e52fb896249de6acc8ee7b3" },{ "$oid": "995b7f6f5e9cf4b5d571cb1d" }],
+    "team_2_ids": [{ "$oid": "dee7ce7d85139c3edc15bbc7" },{ "$oid": "de583227f6cb16883af48ef6" },{ "$oid": "b247f6fd691c852ffec9cfc2" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1627900000000"
+        },
+    "game_location": "90489 Elizabeth Springs Apt. 907New Nancyhaven, OR 77400",
+    "player_stats": [{ "$oid": "7ed4322ab8257966bdd1dbc6" },{ "$oid": "eff444bed961a31d2fe41743" },{ "$oid": "26ecbcefde5cecdc33cfafcc" },{ "$oid": "ba7c1c98aa759ca433269da6" },{ "$oid": "ebeb3ba1ed4182ce38afdb9e" },{ "$oid": "e9c9e4cff88a8cdce2aead3b" }]
+},
+{
+    "_id": {
+        "$oid": "76efcaefd7d1a86fa7552157"
+    },
+    "league_id": { "$oid": "b1e189176142ab26f2524eb6" },
+    "team_1_ids": [{ "$oid": "a1bfd497dfabadaafd5f1dc9" },{ "$oid": "86bd54bc82ccc8baf49be9ff" },{ "$oid": "241bce52c12e18bd9ddb86ad" },{ "$oid": "3e9abae85524b185bc822272" }],
+    "team_2_ids": [{ "$oid": "6fc5f9adabe768899c648ff8" },{ "$oid": "da3ae2f17e22d989a9d217b3" },{ "$oid": "f39bfe37944cee2f1cceadcc" },{ "$oid": "6f146ae19e9aea8722eb171a" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1626500000000"
+        },
+    "game_location": "030 Long LockNew Cynthia, NY 19361",
+    "player_stats": [{ "$oid": "857471e29fc5c9a85a7f8cfb" },{ "$oid": "565c38cb76ef53be776f5a9f" },{ "$oid": "7d69c34ff2fe87a78ddbd4ca" },{ "$oid": "cbde433dbc1fdcbc2ee96318" },{ "$oid": "98f221e22bffbad7fd27dcc8" },{ "$oid": "565c38cb76ef53be776f5a9f" },{ "$oid": "857471e29fc5c9a85a7f8cfb" },{ "$oid": "e1fb551875ce62e55bffcd1b" }]
+},
+{
+    "_id": {
+        "$oid": "53cffceeddbb6fedba73cd3d"
+    },
+    "league_id": { "$oid": "329aac7ced747aedb772bf6c" },
+    "team_1_ids": [{ "$oid": "caadce1323fc5ef8b4d63edf" },{ "$oid": "23c9b273dfb7d24aca5bcddf" },{ "$oid": "b71faba2e9bb8d9d68ea2c7a" }],
+    "team_2_ids": [{ "$oid": "de583227f6cb16883af48ef6" },{ "$oid": "feb3ce8de564a47f95e8b3cf" },{ "$oid": "bb9a7df217556a9becc4e61a" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1631400000000"
+        },
+    "game_location": "663 James Mill Suite 330Mariafurt, OK 78821",
+    "player_stats": [{ "$oid": "e1fb551875ce62e55bffcd1b" },{ "$oid": "4d6579f9324a2be1d3aaf2ad" },{ "$oid": "7464351badaebfbda9982aa7" },{ "$oid": "faad1ff3d994eaddfcedfe19" },{ "$oid": "e9c9e4cff88a8cdce2aead3b" },{ "$oid": "26ecbcefde5cecdc33cfafcc" }]
+},
+{
+    "_id": {
+        "$oid": "f4ed1cf6abca49eb92bf6bd4"
+    },
+    "league_id": { "$oid": "329aac7ced747aedb772bf6c" },
+    "team_1_ids": [{ "$oid": "b7c24ddcc4c56fe6ba24ff53" },{ "$oid": "82ff44429f9c2eb6ce6c229c" }],
+    "team_2_ids": [{ "$oid": "6a9fbc6b3b26e66cb77ba9d9" },{ "$oid": "65b2f41f17d1887ffbabc4c6" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1628100000000"
+        },
+    "game_location": "2763 Michael Bypass Suite 079West Jeremybury, IL 72447",
+    "player_stats": [{ "$oid": "cbde433dbc1fdcbc2ee96318" },{ "$oid": "e9c9e4cff88a8cdce2aead3b" },{ "$oid": "8cfcec555f97fd4f9fa43edf" },{ "$oid": "7ed4322ab8257966bdd1dbc6" }]
+},
+{
+    "_id": {
+        "$oid": "c2e8f8dfc5cb5c67dc93ae5d"
+    },
+    "league_id": { "$oid": "329aac7ced747aedb772bf6c" },
+    "team_1_ids": [{ "$oid": "e951ada56b867fe1a3281bcc" },{ "$oid": "fc52c1a76ded7faee8cbb7a5" }],
+    "team_2_ids": [{ "$oid": "e951ada56b867fe1a3281bcc" },{ "$oid": "2d699c1f9d89fb7be7a2313c" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1626500000000"
+        },
+    "game_location": "04214 Dunn Mews Suite 517Holmesmouth, NC 97146",
+    "player_stats": [{ "$oid": "98f221e22bffbad7fd27dcc8" },{ "$oid": "565c38cb76ef53be776f5a9f" },{ "$oid": "7464351badaebfbda9982aa7" },{ "$oid": "99fc9dfd456a1edc92c96cd6" }]
+},
+{
+    "_id": {
+        "$oid": "89cef7ac6face97cecc916b3"
+    },
+    "league_id": { "$oid": "bbb56f15fcac54a95cecf1fc" },
+    "team_1_ids": [{ "$oid": "82ff44429f9c2eb6ce6c229c" },{ "$oid": "de326f14934a5338da12c9ca" }],
+    "team_2_ids": [{ "$oid": "3e9abae85524b185bc822272" },{ "$oid": "b7c24ddcc4c56fe6ba24ff53" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1625300000000"
+        },
+    "game_location": "29921 Alexandra Route Suite 759New Makayla, AL 35829",
+    "player_stats": [{ "$oid": "565c38cb76ef53be776f5a9f" },{ "$oid": "aeec6ff8d85dade75ab1a7e5" },{ "$oid": "547be8df469c122c6d2843cd" },{ "$oid": "547be8df469c122c6d2843cd" }]
+},
+{
+    "_id": {
+        "$oid": "acacb27dfcc589ffdf474c23"
+    },
+    "league_id": { "$oid": "b43aeecdc2f664f7adfddcbd" },
+    "team_1_ids": [{ "$oid": "caadce1323fc5ef8b4d63edf" },{ "$oid": "c63b65de9dfe45feab5e2ab7" },{ "$oid": "6645ddbbdba2dbe1f1f8a72c" },{ "$oid": "2c2974dbede97dfed39dd7cc" }],
+    "team_2_ids": [{ "$oid": "7ee46eef12df63ecec378bbb" },{ "$oid": "72ef5efc2dafb62ad2533e81" },{ "$oid": "caadce1323fc5ef8b4d63edf" },{ "$oid": "1ac752ea9ae8cbffaad72cff" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1629300000000"
+        },
+    "game_location": "3415 Smith ViaductPort James, KY 63709",
+    "player_stats": [{ "$oid": "e1fb551875ce62e55bffcd1b" },{ "$oid": "565c38cb76ef53be776f5a9f" },{ "$oid": "26ecbcefde5cecdc33cfafcc" },{ "$oid": "7464351badaebfbda9982aa7" },{ "$oid": "99fc9dfd456a1edc92c96cd6" },{ "$oid": "eff444bed961a31d2fe41743" },{ "$oid": "aeec6ff8d85dade75ab1a7e5" },{ "$oid": "e1fb551875ce62e55bffcd1b" }]
+},
+{
+    "_id": {
+        "$oid": "5b36bbe3cf4aaefd4adcd3fe"
+    },
+    "league_id": { "$oid": "bbb56f15fcac54a95cecf1fc" },
+    "team_1_ids": [{ "$oid": "65b2f41f17d1887ffbabc4c6" },{ "$oid": "7e52fb896249de6acc8ee7b3" },{ "$oid": "925c47969395da863aaa7bff" },{ "$oid": "f6744c2fa58942735caffb33" }],
+    "team_2_ids": [{ "$oid": "8eaad875872aaac87e566e3f" },{ "$oid": "de583227f6cb16883af48ef6" },{ "$oid": "5f4416be59de8ebea5851fc1" },{ "$oid": "1fda4a6b679fab389e718ce7" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1626500000000"
+        },
+    "game_location": "49520 Kimberly Mount Suite 058North Joshuaton, ND 53610",
+    "player_stats": [{ "$oid": "dfe4ae6e66b36f29b8aef5cf" },{ "$oid": "7ed4322ab8257966bdd1dbc6" },{ "$oid": "7d69c34ff2fe87a78ddbd4ca" },{ "$oid": "857471e29fc5c9a85a7f8cfb" },{ "$oid": "547be8df469c122c6d2843cd" },{ "$oid": "547be8df469c122c6d2843cd" },{ "$oid": "8cfcec555f97fd4f9fa43edf" },{ "$oid": "aeec6ff8d85dade75ab1a7e5" }]
+},
+{
+    "_id": {
+        "$oid": "cdbccc5bac7332aa4eae2bed"
+    },
+    "league_id": { "$oid": "b1e189176142ab26f2524eb6" },
+    "team_1_ids": [{ "$oid": "de326f14934a5338da12c9ca" }],
+    "team_2_ids": [{ "$oid": "1fda4a6b679fab389e718ce7" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1628500000000"
+        },
+    "game_location": "51160 Torres Motorway Apt. 046North Kyle, NV 91724",
+    "player_stats": [{ "$oid": "547be8df469c122c6d2843cd" },{ "$oid": "dfe4ae6e66b36f29b8aef5cf" }]
+},
+{
+    "_id": {
+        "$oid": "c4b6b73bca4cd9ff82ff4a6a"
+    },
+    "league_id": { "$oid": "329aac7ced747aedb772bf6c" },
+    "team_1_ids": [{ "$oid": "76a8deed3ce5bbe1fb83bb56" },{ "$oid": "925c47969395da863aaa7bff" }],
+    "team_2_ids": [{ "$oid": "1ac752ea9ae8cbffaad72cff" },{ "$oid": "25873518325fc9bf93a1c2c1" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1625200000000"
+        },
+    "game_location": "62574 Teresa Underpass Suite 122Port Joshua, AK 92405",
+    "player_stats": [{ "$oid": "faad1ff3d994eaddfcedfe19" },{ "$oid": "26ecbcefde5cecdc33cfafcc" },{ "$oid": "faad1ff3d994eaddfcedfe19" },{ "$oid": "faad1ff3d994eaddfcedfe19" }]
+},
+{
+    "_id": {
+        "$oid": "9fff5d94c9d4bc4d5d3af244"
+    },
+    "league_id": { "$oid": "329aac7ced747aedb772bf6c" },
+    "team_1_ids": [{ "$oid": "e1673d46a97871179be36fdf" }],
+    "team_2_ids": [{ "$oid": "995b7f6f5e9cf4b5d571cb1d" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1625100000000"
+        },
+    "game_location": "0545 Bryan Junction Apt. 841North John, ND 63446",
+    "player_stats": [{ "$oid": "eff444bed961a31d2fe41743" },{ "$oid": "eff444bed961a31d2fe41743" }]
+},

@@ -4,7 +4,7 @@ const stats = require('./stats-schema')
 
 const game_schema = new Schema({
   _id: Schema.Types.ObjectId,
-  leauge_id: Schema.Types.ObjectId,
+  league_id: Schema.Types.ObjectId,
   team_1_ids: [Schema.Types.ObjectId],
   team_2_ids: [Schema.Types.ObjectId],
   game_date: Date,
