@@ -1,6 +1,14 @@
 import api from '@/api/api'
 
 export default {
+  fetchLeaguesTableColumns() {
+    return [
+      {columnLabel: 'Name', columnName: 'name', maxWidth: '10rem'},
+      {columnLabel: 'Players', columnName: 'players', maxWidth: 'unset'},
+      {columnLabel: 'Start Date', columnName: 'startDate', maxWidth: 'unset'},
+      {columnLabel: 'End Date', columnName: 'endDate', maxWidth: 'unset'},
+    ]
+  },
   fetchLeagues() {
     return new Promise((resolve, reject) => {
       api.get('/leagues')

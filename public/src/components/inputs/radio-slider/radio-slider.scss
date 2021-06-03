@@ -1,0 +1,43 @@
+.radio-slider {
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &_label {
+
+  }
+  &_input {
+    margin-left: .5rem;
+    input {
+      display: none;
+    }
+    &_display {
+      width: 3rem;
+      height: 1.25rem;
+      border-radius: 50rem;
+      background-color: $accent_red;
+      border: 1px solid $accent_red;
+      position: relative;
+      transition: .5s;
+      &.selected {
+        background-color: $off_white;
+      }
+      &-circle {
+        width: .8rem;
+        height: .8rem;
+        border-radius: 50%;
+        background-color: $off_white;
+        position: absolute;
+        top: 50%;
+        left: .25rem;
+        transform: translate(0%, -50%);
+        transition: .5s;
+        &.selected {
+          background-color: $accent_red;
+          right: .25rem;
+          left: unset;
+        }
+      }
+    }
+  }
+}

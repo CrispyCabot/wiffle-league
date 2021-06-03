@@ -57,6 +57,8 @@ export default defineComponent({
     pageSize() {
       if (Math.ceil(this.totalItemCount / this.pageSize) < this.pageIndex) {
         this.$emit('page-index-change', Math.ceil(this.totalItemCount / this.pageSize) - 1)
+        this.endingPage = Math.ceil(this.totalItemCount / this.pageSize)
+        this.startingPage = this.endingPage - this.displayedPageCount >= 1 ? this.endingPage - this.displayedPageCount : 1
       } else if (this.endingPage > this.maxPageCount) {
         this.endingPage = Math.ceil(this.totalItemCount / this.pageSize)
         this.startingPage = this.endingPage - this.displayedPageCount >= 1 ? this.endingPage - this.displayedPageCount : 1

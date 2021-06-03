@@ -4,15 +4,16 @@
     <button class="btn red_btn">Sign up today!</button>
     <div class="league-table white_card_background ">
       <grid-table
-        :columns="leagueTable.columns"
+        v-if="columns.length > 0"
+        :columns="columns"
         :rows="splicedRows"
         :rowsCount="rows.length"
         :hasHeader="true"
         :title="'Leagues'"
-        :hasPagination="leagueTable.hasPagination"
-        :hasSizeSelector="leagueTable.hasSizeSelector"
-        :pageIndex="leagueTable.pageIndex"
-        :pageSize="leagueTable.pageSize"
+        :hasPagination="hasPagination"
+        :hasSizeSelector="hasSizeSelector"
+        :pageIndex="pageIndex"
+        :pageSize="pageSize"
         @page-index-change="changePageIndex($event)"
         @page-size-change="changePageSize($event)"
       ></grid-table>

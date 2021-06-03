@@ -2,5 +2,21 @@
   text-align: center;
   .leagues-table {
     margin: 1rem auto;
+    &_navigation {
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      &_search {
+        margin-bottom: .5rem;
+      }
+      &_radio {
+        margin-bottom: 1rem;
+      }
+    }
+    &_table {
+      margin-top: .5rem;
+    }
   }
 }
