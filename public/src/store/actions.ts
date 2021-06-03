@@ -3,10 +3,11 @@ import api from '@/api/api'
 export default {
   fetchLeaguesTableColumns() {
     return [
-      {columnLabel: 'Name', columnName: 'name', maxWidth: '10rem'},
-      {columnLabel: 'Players', columnName: 'players', maxWidth: 'unset'},
-      {columnLabel: 'Start Date', columnName: 'startDate', maxWidth: 'unset'},
-      {columnLabel: 'End Date', columnName: 'endDate', maxWidth: 'unset'},
+      {columnLabel: 'Name', columnName: 'name', maxWidth: '10rem', isHidden: false},
+      {columnLabel: 'Players', columnName: 'players', maxWidth: 'unset', isHidden: false},
+      {columnLabel: 'Start Date', columnName: 'startDate', maxWidth: 'unset', isHidden: false},
+      {columnLabel: 'End Date', columnName: 'endDate', maxWidth: 'unset', isHidden: false},
+      {columnLabel: 'Id', columnName: 'id', maxWidth: 'unset', isHidden: true}
     ]
   },
   fetchLeagues() {

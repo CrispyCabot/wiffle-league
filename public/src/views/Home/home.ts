@@ -26,7 +26,8 @@ export default defineComponent({
           name: {text: league.name, type: 'string'},
           players: {text: league.player_ids.length + ' / ' + league.max_num_players, type: 'numeric'},
           startDate: {text: new Date(league.start_date).toLocaleDateString(undefined, {year: 'numeric', month: 'numeric', day: 'numeric'}), type: 'date'},
-          endDate: {text: new Date(league.end_date).toLocaleDateString(undefined, {year: 'numeric', month: 'numeric', day: 'numeric'}), type: 'date'}
+          endDate: {text: new Date(league.end_date).toLocaleDateString(undefined, {year: 'numeric', month: 'numeric', day: 'numeric'}), type: 'date'},
+          id: {text: league._id, type: 'hidden'}
         }
       })
     },
@@ -35,6 +36,10 @@ export default defineComponent({
     }
   },
   methods: {
-    ...mapActions(['fetchLeagues', 'fetchLeaguesTableColumns'])
+    ...mapActions(['fetchLeagues', 'fetchLeaguesTableColumns']),
+    handleLeagueClick(row: any) {
+      const id = row.id.text
+      this.$router.push(`/league/${id}`)
+    }
   }
 })

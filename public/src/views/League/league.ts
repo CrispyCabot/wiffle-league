@@ -1,4 +1,5 @@
 import { defineComponent } from "@vue/runtime-core";
+import { setup } from "vue-class-component";
 import { mapActions } from "vuex";
 
 export default defineComponent({

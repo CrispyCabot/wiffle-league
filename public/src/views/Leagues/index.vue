@@ -22,6 +22,7 @@
         :paginationRefresh="paginationRefresh"
         @page-index-change="changePageIndex($event)"
         @page-size-change="changePageSize($event)"
+        @row-clicked="handleLeagueClick"
       ></grid-table>
 
     </div>

@@ -1,6 +1,6 @@
 <template>
   <div class="league-container">
-    <h1 class="site-title">{{ leagueData.name }}</h1>
+    <h1 class="site-title" v-if="leagueData && leagueData.name">{{ leagueData.name }}</h1>
   </div>
 </template>
 

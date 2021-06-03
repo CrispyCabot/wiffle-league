@@ -34,6 +34,9 @@
         &:last-child {
           border-right: unset;
         }
+        &.hidden {
+          display: none;
+        }
       }
     }
     &_body {
@@ -52,6 +55,9 @@
           }
           &.string {
             text-align: left;
+          }
+          &.hidden {
+            display: none;
           }
         }
       }
