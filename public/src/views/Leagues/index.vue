@@ -19,6 +19,7 @@
         :hasSizeSelector="hasSizeSelector"
         :pageIndex="pageIndex"
         :pageSize="pageSize"
+        :paginationRefresh="paginationRefresh"
         @page-index-change="changePageIndex($event)"
         @page-size-change="changePageSize($event)"
       ></grid-table>

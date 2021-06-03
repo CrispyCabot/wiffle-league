@@ -8,7 +8,7 @@
         <thead v-if="hasHeader" class="grid-table_table_head">
           <th v-for="column in columns" :key="column.columnLabel">{{column.columnLabel}}</th>
         </thead>
-        <tbody class="grid-table_table_body">
+        <tbody v-if="rowsCount > 0" class="grid-table_table_body">
           <tr v-for="row in rows" :key="row.name" class="grid-table_table_body_row">
             <td v-for="(col, key, index) in row"
               :key="col"
@@ -23,6 +23,10 @@
           </tr>
         </tbody>
       </table>
+      <div v-if="rowsCount == 0" class="grid-table_table-empty">
+        <h6>Oops!</h6>
+        <p>No Data Found</p>
+      </div>
     </div>
 
     <div v-if="hasPagination" class="grid-table_pagination">
@@ -31,6 +35,7 @@
         :pageIndex="pageIndex"
         :pageSize="pageSize"
         :hasSizeSelector="hasSizeSelector"
+        :paginationRefresh="paginationRefresh"
         @page-index-change="$emit('page-index-change', $event)"
         @page-size-change="$emit('page-size-change', $event)"
       />

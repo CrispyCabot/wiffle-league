@@ -11,7 +11,8 @@ export default defineComponent({
     pageIndex: { type: Number, default: 0 },
     pageSize: { type: Number, default: 4 },
     hasSizeSelector: { type: Boolean, default: false },
-    maxPagesDisplayed: { type: Number, default: 4 }
+    maxPagesDisplayed: { type: Number, default: 4 },
+    paginationRefresh: { type: Boolean, default: true }
   },
   data() {
     return {
@@ -51,10 +52,8 @@ export default defineComponent({
     },
     pageSizeSelection(pageSize: any) {
       this.$emit('page-size-change', pageSize)
-    }
-  },
-  watch: {
-    pageSize() {
+    },
+    setPagination() {
       if (Math.ceil(this.totalItemCount / this.pageSize) < this.pageIndex) {
         this.$emit('page-index-change', Math.ceil(this.totalItemCount / this.pageSize) - 1)
         this.endingPage = Math.ceil(this.totalItemCount / this.pageSize)
@@ -65,6 +64,14 @@ export default defineComponent({
       } else {
         this.endingPage = (this.startingPage - 1) + this.displayedPageCount
       }
+    }
+  },
+  watch: {
+    pageSize() {
+      this.setPagination()
+    },
+    paginationRefresh() {
+      this.setPagination()
     }
   }
 })

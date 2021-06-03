@@ -57,4 +57,15 @@
       }
     }
   }
+
+  &_table-empty {
+    border-bottom: 1px solid $accent_light_red;
+    padding: .5rem 0;
+    h6 {
+      font-size: 1.5rem;
+    }
+    p {
+
+    }
+  }
 }

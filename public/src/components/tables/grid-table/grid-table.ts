@@ -16,6 +16,7 @@ export default defineComponent({
     hasPagination: { type: Boolean, default: false },
     pageIndex: { type: Number, default: 0 },
     pageSize: { type: Number, default: 4 },
-    hasSizeSelector: { type: Boolean, default: false }
+    hasSizeSelector: { type: Boolean, default: false },
+    paginationRefresh: { type: Boolean, default: true }
   }
 })

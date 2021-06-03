@@ -19,19 +19,25 @@ export default defineComponent({
       searchValue: '',
       displayValues: ['Detailed', 'Simple'],
       selectedDisplayValue: 'Detailed',
-      columns: []
+      columns: [],
+      paginationRefresh: true
     }
   },
   computed: {
     rows(): Array<Object> {
-      return this.leagues.map((league: any) => {
-        return {
-          name: {text: league.name, type: 'string'},
-          players: {text: league.player_ids.length + ' / ' + league.max_num_players, type: 'numeric'},
-          startDate: {text: new Date(league.start_date).toLocaleDateString(undefined, {year: 'numeric', month: 'numeric', day: 'numeric'}), type: 'date'},
-          endDate: {text: new Date(league.end_date).toLocaleDateString(undefined, {year: 'numeric', month: 'numeric', day: 'numeric'}), type: 'date'}
-        }
-      })
+      return this.leagues
+        .filter((league: any) => {
+          if (this.searchValue == '') return true
+          return (this.searchValue.toLowerCase() == league.name.toLowerCase().slice(0, this.searchValue.length))
+        })
+        .map((league: any) => {
+          return {
+            name: {text: league.name, type: 'string'},
+            players: {text: league.player_ids.length + ' / ' + league.max_num_players, type: 'numeric'},
+            startDate: {text: new Date(league.start_date).toLocaleDateString(undefined, {year: 'numeric', month: 'numeric', day: 'numeric'}), type: 'date'},
+            endDate: {text: new Date(league.end_date).toLocaleDateString(undefined, {year: 'numeric', month: 'numeric', day: 'numeric'}), type: 'date'}
+          }
+        })
     },
     splicedRows(): Array<Object> {
       return this.rows.slice(this.startingIndex, this.endingIndex)
@@ -48,6 +54,11 @@ export default defineComponent({
     },
     displayViewChange(view: string) {
       this.selectedDisplayValue = view
+    }
+  },
+  watch: {
+    rows() {
+      this.paginationRefresh = !this.paginationRefresh
     }
   }
 })
