@@ -10,7 +10,7 @@ const player_schema = new Schema({
   lastname: String,
   nickname: String,
   phone_number: String,
-  player_stats: [stats],
+  player_stats: stats,
   show_information: Boolean,
   league_ids: [Schema.Types.ObjectId]
 })

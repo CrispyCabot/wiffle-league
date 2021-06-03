@@ -9,7 +9,9 @@ const game_schema = new Schema({
   team_2_ids: [Schema.Types.ObjectId],
   game_date: Date,
   game_location: String,
-  player_stats: [stats],
+  player_stats: [
+    { player_id: Schema.Types.ObjectId, stats: stats }
+  ],
 })
 
 module.exports = {

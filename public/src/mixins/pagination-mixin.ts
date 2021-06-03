@@ -1,7 +1,7 @@
 import { defineComponent } from "@vue/runtime-core"
 
 export default defineComponent({
-  name: 'table-mixin',
+  name: 'pagination-mixin',
   data() {
     return {
       hasPagination: true,

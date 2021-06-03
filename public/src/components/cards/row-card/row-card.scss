@@ -1,0 +1,56 @@
+.row-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding: .5rem 1rem;
+  margin: .25rem 0;
+  background-color: $accent_red;
+  border-bottom: .25rem solid $accent_light_red;
+  &_column {
+    color: $off_white;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    padding: .25rem .5rem;
+    p {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    &-subtitle {
+      position: absolute;
+      right: .5rem;
+      font-size: .8rem;
+      font-style: normal;
+      font-weight: 400;
+    }
+    &.numeric {
+      text-align: center;
+    }
+    &.date {
+      text-align: center;
+    }
+    &.string {
+      text-align: left;
+    }
+    &.hidden {
+      display: none;
+    }
+    &.title {
+      text-align: left;
+      font-style: italic;
+      font-weight: 600;
+    }
+    &.paddingBottom {
+      padding-bottom: 1rem;
+    }
+    &.arrow {
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  }
+}
