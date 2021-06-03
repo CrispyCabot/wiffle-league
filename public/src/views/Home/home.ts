@@ -1,5 +1,5 @@
 import GridTable from '@/components/tables/grid-table/index.vue'
-import TableMixin from '@/mixins/grid-table-mixin'
+import PaginationMixin from '@/mixins/pagination-mixin'
 import { defineComponent } from '@vue/runtime-core'
 import { mapActions } from 'vuex'
 
@@ -8,7 +8,7 @@ export default defineComponent({
   components: {
     GridTable
   },
-  mixins: [TableMixin],
+  mixins: [PaginationMixin],
   data() {
     return {
       leagues: [],
