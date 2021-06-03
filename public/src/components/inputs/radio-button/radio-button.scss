@@ -1,0 +1,32 @@
+.radio-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &_circle {
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    border: .1rem solid $light_grey;
+    margin-right: .25rem;
+    background-color: $off_white;
+    position: relative;
+    &_selected {
+      border: .1rem solid $accent_red;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: .65rem;
+        width: .65rem;
+        border-radius: 50%;
+        background-color: $accent_red;
+      }
+    }
+  }
+
+  &_label {
+    color: $off_white;
+  }
+}

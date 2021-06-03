@@ -1,29 +1,29 @@
 .signup-container {
-    img {
-        display: block;
-        margin: 2rem auto 2rem auto;
-        width: 50%;
-    }
+  img {
+    display: block;
+    margin: 2rem auto 2rem auto;
+    width: 50%;
+  }
 
-    .login-input {
-        display: block;
-        margin: 1rem auto 1rem auto;
-        width: 75%;
-    }
+  .login-input {
+    display: block;
+    margin: 1rem auto 1rem auto;
+    width: 75%;
+  }
 
-    button {
-        display: block;
-        margin: 2rem auto 2rem auto;
-        width: 35%;
-        color: $dark_background;
-        background: $off_white;
-    }
+  button {
+    display: block;
+    margin: 2rem auto 2rem auto;
+    width: 35%;
+    color: $dark_background;
+    background: $off_white;
+  }
     
-    .gender{
-        display: inline-block;
-        width: 100%;
-        color: $off_white;
-        padding: 1rem;
-        text-align: center;
-    }
+  .gender{
+    display: inline-block;
+    width: 100%;
+    color: $off_white;
+    padding: 1rem;
+    text-align: center;
+  }
 }

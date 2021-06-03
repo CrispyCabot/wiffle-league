@@ -47,6 +47,11 @@ body {
 .default-input {
   padding: 0.5rem 0.5rem;
   color: $dark_background;
+  outline: none;
+  border: 1px solid transparent;
+  &:focus {
+    border: 1px solid $accent_light_red;
+  }
 }
 
 .white_card_background {
