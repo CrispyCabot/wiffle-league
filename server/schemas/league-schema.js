@@ -6,7 +6,9 @@ const league_schema = new Schema({
   _id: Schema.Types.ObjectId,
   name: String,
   player_ids: Array,
-  player_stats: [stats],
+  player_stats: [
+    { player_id: Schema.Types.ObjectId, stats: stats }
+  ],
   max_num_players: Number,
   league_creator_id: Schema.Types.ObjectId,
   game_ids: [Schema.Types.ObjectId],

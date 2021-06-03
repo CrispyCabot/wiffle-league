@@ -5,7 +5,6 @@ const Schema = mongoose.Schema
 //from the other fields
 
 const stats_schema = new Schema({
-  id: Schema.Types.ObjectId,
   hits: Number,
   single: Number,
   double: Number,
