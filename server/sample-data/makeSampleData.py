@@ -39,6 +39,7 @@ playerJSON = """
     "password": "password",
     "firstname": "firstname_placeholder",
     "lastname": "lastname_placeholder",
+    "gender": "gender_placeholder",
     "nickname": "nickname_placeholder",
     "phone_number": "phone_placeholder",
     "player_stats": stats_placeholder,
@@ -69,7 +70,7 @@ from faker import Faker
 from random import randint
 import random
 
-amts = { "players": 100, "leagues": 8, "games": 50, "stats": 200 }
+amts = { "players": 30, "leagues": 8, "games": 50, "stats": 100 }
 
 letters = ['a', 'b', 'c', 'd', 'e', 'f'] # 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 digits = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
@@ -171,6 +172,13 @@ def makePlayers():
         temp = temp.replace("email_placeholder", fname+lname+"@email.com")
         temp = temp.replace("firstname_placeholder", fname)
         temp = temp.replace("lastname_placeholder", lname)
+        val = randint(0, 7)
+        g = "Other"
+        if val < 4:
+            g = "Male"
+        elif val < 7:
+            g = "Female"
+        temp = temp.replace("gender_placeholder", g)
         if randint(0,2) == 1:
             temp = temp.replace("nickname_placeholder", fake.first_name())
         else:
