@@ -37,6 +37,7 @@ export default defineComponent({
         this.validPassword  && 
         this.fields.fname.value && 
         this.fields.lname.value && 
+        this.validPhone && 
         this.fields.gender.value
       )
     },
@@ -49,6 +50,11 @@ export default defineComponent({
     },
     validPassword(): Boolean {
       return (this.fields.password.value.length >= 6) || this.fields.password.value == ''
+    },
+    validPhone(): Boolean {
+      const re = /^[0-9]{3}-[0-9]{3}-[0-9]{4}/
+      const reNoDash = /^[0-9]{3}[0-9]{3}[0-9]{4}/
+      return reNoDash.test(String(this.fields.phone.value.toLowerCase())) || re.test(String(this.fields.phone.value.toLowerCase())) || this.fields.phone.value == ''
     }
   },
   methods: {
@@ -64,7 +70,7 @@ export default defineComponent({
         fname: this.fields.fname,
         lname: this.fields.lname,
         nname: this.fields.nname,
-        phone: this.fields.phone,
+        phone: this.fields.phone.value.split('-').join(''),
         gender: this.fields.gender.value
       })
       if (res.status == 400) {
@@ -73,6 +79,19 @@ export default defineComponent({
         this.updateIsLoggedIn(true)
         this.updateLoggedInPlayer(res.player)
         this.$router.push('/')
+      }
+    },
+    formatPhone(e: any, isPhone: boolean) {
+      if (isPhone) {
+        const phoneWithoutDashes = this.fields.phone.value.split('-').join('')
+        const newValue = [
+          phoneWithoutDashes.slice(0, 3),
+          phoneWithoutDashes.slice(3, 6),
+          phoneWithoutDashes.slice(6, 10)
+        ]
+        if (this.fields.phone.value.length == 10) {
+          this.fields.phone.value = newValue.filter(v => v != "").join('-')
+        }
       }
     }
   }

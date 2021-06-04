@@ -26,6 +26,7 @@
         &.error {
           margin-top: 2rem;
           input {
+            background-color: $accent_light_red;
             border-bottom: .2rem solid $accent_red;
             &::placeholder {
               color: $dark_background;
@@ -36,9 +37,6 @@
           display: block;
           width: 100%;
           border-bottom: .2rem solid $light-grey;
-          &.error {
-            background-color: $accent_light_red;
-          }
         }
         &_required {
           position: absolute;
