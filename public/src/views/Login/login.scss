@@ -1,21 +1,92 @@
 .login-container {
-    img {
-        display: block;
-        margin: 2rem auto 2rem auto;
-        width: 50%;
-    }
+  img {
+    display: block;
+    margin: 2rem auto 2rem auto;
+    width: 50%;
+  }
 
-    .login-input {
-        display: block;
-        margin: 1rem auto 1rem auto;
+  &_fields {
+    &_field {
+      &_label {
+        color: $off_white;
+        font-size: .9rem;
+        width: max-content;
+        position: absolute;
+        top: -82%;
+        transform: translate(0, 50%);
+      }
+      .login-input {
         width: 75%;
-    }
+        position: relative;
+        margin: 1rem auto;
+        transition: .3s;
+        &.extra-margin-top {
+          margin-top: 2rem;
+        }
+        &.error {
+          margin-top: 2rem;
+          margin-bottom: 1.5rem;
+          input {
+            background-color: $accent_light_red;
+            border-bottom: .2rem solid $accent_red;
+            &::placeholder {
+              color: $dark_background;
+            }
+          }
+        }
+        input {
+          display: block;
+          width: 100%;
+        }
+        &_required {
+          position: absolute;
+          top: .1rem;
+          left: .1rem;
+          color: $accent_red;
+        }
+        
+        &_error {
+          position: absolute;
+          top: 82%;
+          right: 0;
+          transform: translate(0, 50%);
+          color: $accent_red;
+          font-size: .75rem;
+        }
 
-    button {
-        display: block;
-        margin: 2rem auto 1rem auto;
-        width: 35%;
-        color: $dark_background;
-        background: $off_white;
+        // Slide Transitions
+        .slide-enter-from,
+        .slide-leave-to {
+          top: 0;
+          opacity: 0;
+        }
+        
+        .slide-enter-to,
+        .slide-leave-from {
+          opacity: 1;
+          top: -90%;
+        }
+        
+        .slide-enter-active,
+        .slide-leave-active {
+          transition: all 0.3s;
+        }
+      }
     }
+  }
+
+  button {
+    display: block;
+    margin: 2rem auto 2rem auto;
+    width: 35%;
+    pointer-events: all;
+    cursor: pointer;
+    transition: .3s;
+    &.disabled {
+      cursor: default;
+      pointer-events: none;
+      color: $off_white;
+      background-color: $light-grey;
+    }
+  }
 }

@@ -65,11 +65,11 @@ export default defineComponent({
     },
     async signUp() {
       const res = await this.createNewPlayer({
-        email: this.fields.email,
-        password: this.fields.password,
-        fname: this.fields.fname,
-        lname: this.fields.lname,
-        nname: this.fields.nname,
+        email: this.fields.email.value,
+        password: this.fields.password.value,
+        fname: this.fields.fname.value,
+        lname: this.fields.lname.value,
+        nname: this.fields.nname.value,
         phone: this.fields.phone.value.split('-').join(''),
         gender: this.fields.gender.value
       })
