@@ -45,10 +45,10 @@ export default defineComponent({
     },
     validEmail(): Boolean {
       const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return re.test(String(this.fields.email.value).toLowerCase())
+      return re.test(String(this.fields.email.value).toLowerCase()) || this.fields.email.value == ''
     },
     validPassword(): Boolean {
-      return (this.fields.password.value.length < 6)
+      return (this.fields.password.value.length >= 6) || this.fields.password.value == ''
     }
   },
   methods: {
