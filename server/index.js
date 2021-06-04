@@ -49,5 +49,7 @@ app.get('/', (req, res) => {
 // Routes
 const router = express.Router();
 const getters = require("./routes/getters");
+const setters = require("./routes/setters");
 
 app.use(router.use('/', getters))
+app.use(router.use('/', setters))

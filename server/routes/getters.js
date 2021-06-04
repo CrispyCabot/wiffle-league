@@ -33,6 +33,7 @@ router.route('/leagues/:id/stats').get((req, res) => {
 })
 
 // Player Getters
+const Players = require('../models/player-model')
 
 // Game Getters
 

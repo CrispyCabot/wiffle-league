@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 const stats = require('./stats-schema')
 
 const league_schema = new Schema({
-  _id: Schema.Types.ObjectId,
+  _id: { type: Schema.ObjectId, auto: true },
   name: String,
   player_ids: Array,
   player_stats: [
@@ -21,6 +21,4 @@ const league_schema = new Schema({
   about_text: String,
 })
 
-module.exports = {
-  league_schema
-}
+module.exports = league_schema

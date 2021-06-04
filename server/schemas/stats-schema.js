@@ -1,7 +1,4 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
-
-const stats_schema = new Schema({
+const stats_schema = {
   hits: Number,
   singles: Number,
   doubles: Number,
@@ -10,8 +7,6 @@ const stats_schema = new Schema({
   plate_appearances: Number,
   at_bats: Number,
   games: Number
-})
-
-module.exports = {
-  stats_schema
 }
+
+module.exports = stats_schema

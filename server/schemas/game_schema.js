@@ -3,7 +3,7 @@ const Schema = mongoose.Schema
 const stats = require('./stats-schema')
 
 const game_schema = new Schema({
-  _id: Schema.Types.ObjectId,
+  _id: { type: Schema.ObjectId, auto: true },
   league_id: Schema.Types.ObjectId,
   team_1_ids: [Schema.Types.ObjectId],
   team_2_ids: [Schema.Types.ObjectId],
@@ -14,6 +14,4 @@ const game_schema = new Schema({
   ],
 })
 
-module.exports = {
-  game_schema
-}
+module.exports = game_schema

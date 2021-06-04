@@ -2,16 +2,24 @@
   <div class="signup-container">
     <h1 class="home site-title">Wiffle League</h1>
     <img src="../../assets/logo.png">
-    <input class="default-input login-input" type="text" placeholder="email" name="email" v-model="email">
-    <input class="default-input login-input" type="text" placeholder="password" name="password">
-    <input class="default-input login-input" type="text" placeholder="confirm password" name="confirm password">
-    <input class="default-input login-input" type="text" placeholder="First Name" name="fname">
-    <input class="default-input login-input" type="text" placeholder="Last Name" name="lname">
-    <input class="default-input login-input" type="text" placeholder="Nickname (Optional)" name="nickname">
-    <input class="default-input login-input" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Phone Number (Optional)" name="phonenumber">
-    <radio-button-group :buttons="genderRadioButtons" :selectedRadioButton="selectedGender" @radio-button-change="setGender" />
-    <button class="btn red_btn">Sign Up</button>
-    <div style="height: 1vh;"></div>
+    <div class="signup-container_fields">
+      <div class="signup-container_fields_field" v-for="field in fields" :key="field.name">
+        <div v-if="field.name !== 'gender'" class="login-input" :class="{'extra-margin-top': field.value !== ''}">
+          <label v-if="field.value !== ''" class="signup-container_fields_field_label" :for="field.name">{{field.placeholder}}</label>
+          <input class="default-input"
+            :type="field.name !== 'phone' ? 'text' : 'tel'"
+            :pattern="field.name !== 'phone' ? '' : '[0-9]{3}-[0-9]{3}-[0-9]{4}'"
+            :placeholder="field.placeholder"
+            :name="field.name"
+            v-model="field.value"
+          >
+          <span v-if="field.isRequired">*</span>
+        </div>
+        <radio-button-group v-else class="signup-container_fields_field" :buttons="genderRadioButtons" :selectedRadioButton="field.value" @radio-button-change="setGender" />
+      </div>
+    </div>
+
+    <button class="btn red_btn" @click="signUp">Sign Up</button>
   </div>
 </template>
 

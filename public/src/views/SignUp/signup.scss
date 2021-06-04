@@ -5,10 +5,35 @@
     width: 50%;
   }
 
-  .login-input {
-    display: block;
-    margin: 1rem auto 1rem auto;
-    width: 75%;
+  &_fields {
+    &_field {
+      &_label {
+        color: $off_white;
+        font-size: .9rem;
+        width: max-content;
+        position: absolute;
+        top: -90%;
+        transform: translate(0, 50%);
+      }
+      .login-input {
+        width: 75%;
+        position: relative;
+        margin: 1rem auto;
+        &.extra-margin-top {
+          margin-top: 2rem;
+        }
+        input {
+          display: block;
+          width: 100%;
+        }
+        span {
+          position: absolute;
+          top: .1rem;
+          left: .1rem;
+          color: $accent_red;
+        }
+      }
+    }
   }
 
   button {
@@ -17,13 +42,5 @@
     width: 35%;
     color: $dark_background;
     background: $off_white;
-  }
-    
-  .gender{
-    display: inline-block;
-    width: 100%;
-    color: $off_white;
-    padding: 1rem;
-    text-align: center;
   }
 }
