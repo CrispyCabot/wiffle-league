@@ -44,16 +44,24 @@ export default defineComponent({
       return Boolean(this.fields.password.value == this.fields.confirm.value)
     },
     validEmail(): Boolean {
-      // TODO
-      // Make sure there is some text followed by an @
-      // followed by a domain, followed by a . followed by
-      // a com or other top level domain
-      return true
+      //got this from https://stackoverflow.com/questions/46155/how-to-validate-an-email-address-in-javascript
+      const email = this.fields.email.value;
+
+      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if (re.test(String(email).toLowerCase())) {
+        return true
+      }
+
+      return false
     },
+
     validPassword(): Boolean {
       // TODO
       // Do we want to require a capital letter, number,
       // special character and/or minimum num of characters
+      if (this.fields.password.value.length < 6) {
+        return false;
+      }
       return true
     }
   },
