@@ -26,6 +26,37 @@ export default defineComponent({
       ]
     }
   },
+  computed: {
+    enabledSignUpButton(): Boolean {
+      return Boolean(
+        this.fields.email.value && 
+        this.validEmail && 
+        this.fields.password.value && 
+        this.fields.confirm.value && 
+        this.confirmPassMatch  && 
+        this.validPassword  && 
+        this.fields.fname.value && 
+        this.fields.lname.value && 
+        this.fields.gender.value
+      )
+    },
+    confirmPassMatch(): Boolean {
+      return Boolean(this.fields.password.value == this.fields.confirm.value)
+    },
+    validEmail(): Boolean {
+      // TODO
+      // Make sure there is some text followed by an @
+      // followed by a domain, followed by a . followed by
+      // a com or other top level domain
+      return true
+    },
+    validPassword(): Boolean {
+      // TODO
+      // Do we want to require a capital letter, number,
+      // special character and/or minimum num of characters
+      return true
+    }
+  },
   methods: {
     ...mapActions(['createNewPlayer']),
     ...mapMutations(['updateIsLoggedIn', 'updateLoggedInPlayer']),
@@ -47,6 +78,7 @@ export default defineComponent({
       } else if (res.status == 200) {
         this.updateIsLoggedIn(true)
         this.updateLoggedInPlayer(res.player)
+        this.$router.push('/')
       }
     }
   }
