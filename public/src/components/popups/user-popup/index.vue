@@ -11,7 +11,7 @@
           <font-awesome-icon class="icon" :icon="['fas', 'clipboard']"></font-awesome-icon>
           <p>My stats</p>
         </div>
-        <p class="signout-link" @click="redirectLink('/login')">Sign out...</p>
+        <p class="signout-link" @click="redirectLink('/logout')">Sign out...</p>
       </div>
       <div v-else-if="!getIsLoggedIn" class="not_logged_in_links">
         <p class="logged-out-text">You're not currently logged in</p>
