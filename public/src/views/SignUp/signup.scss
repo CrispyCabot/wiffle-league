@@ -12,7 +12,7 @@
         font-size: .9rem;
         width: max-content;
         position: absolute;
-        top: -90%;
+        top: -82%;
         transform: translate(0, 50%);
       }
       .login-input {
@@ -23,15 +23,37 @@
         &.extra-margin-top {
           margin-top: 2rem;
         }
+        &.error {
+          margin-top: 2rem;
+          input {
+            border-bottom: .2rem solid $accent_red;
+            &::placeholder {
+              color: $dark_background;
+            }
+          }
+        }
         input {
           display: block;
           width: 100%;
+          border-bottom: .2rem solid $light-grey;
+          &.error {
+            background-color: $accent_light_red;
+          }
         }
-        span {
+        &_required {
           position: absolute;
           top: .1rem;
           left: .1rem;
           color: $accent_red;
+        }
+        
+        &_error {
+          position: absolute;
+          top: -72%;
+          right: 0;
+          transform: translate(0, 50%);
+          color: $accent_red;
+          font-size: .75rem;
         }
 
         // Slide Transitions
