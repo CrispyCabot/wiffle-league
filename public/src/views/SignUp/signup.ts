@@ -89,7 +89,7 @@ export default defineComponent({
           phoneWithoutDashes.slice(3, 6),
           phoneWithoutDashes.slice(6, 10)
         ]
-        if (this.fields.phone.value.length == 10) {
+        if (this.fields.phone.value.length >= 10) {
           this.fields.phone.value = newValue.filter(v => v != "").join('-')
         }
       }

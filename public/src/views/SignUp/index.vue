@@ -24,7 +24,7 @@
             :placeholder="field.placeholder"
             :name="field.name"
             v-model="field.value"
-            @change="formatPhone($event, field.name == 'phone')"
+            @input="formatPhone($event, field.name == 'phone')"
           >
           <span class="login-input_required" v-if="field.isRequired">*</span>
           <span class="login-input_error email-error" v-if="(field.name == 'email' && !validEmail)">Please enter a valid email</span>

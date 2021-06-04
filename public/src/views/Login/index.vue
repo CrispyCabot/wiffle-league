@@ -10,7 +10,6 @@
             'extra-margin-top': field.value !== '',
             'error': (field.name == 'email' && !validEmail) ||
               (field.name == 'password' && !validPassword)
-
           }"
         >
           <transition name="slide">
