@@ -28,7 +28,7 @@
           >
           <span class="login-input_required" v-if="field.isRequired">*</span>
           <span class="login-input_error email-error" v-if="(field.name == 'email' && !validEmail)">Please enter a valid email</span>
-          <span class="login-input_error password-error" v-else-if="(field.name == 'password' && !validPassword)">Please enter a valid password</span>
+          <span class="login-input_error password-error" v-else-if="(field.name == 'password' && !validPassword)">Password must have at least 6 characters</span>
           <span class="login-input_error confirm-password-error" v-else-if="(field.name == 'confirm' && !confirmPassMatch)">Passwords do not match</span>
           <span class="login-input_error confirm-phone-error" v-else-if="(field.name == 'phone' && !validPhone)">Please enter a valid phone number</span>
         </div>

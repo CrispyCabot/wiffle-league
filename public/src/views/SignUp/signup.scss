@@ -25,6 +25,7 @@
         }
         &.error {
           margin-top: 2rem;
+          margin-bottom: 1.5rem;
           input {
             background-color: $accent_light_red;
             border-bottom: .2rem solid $accent_red;
@@ -47,7 +48,7 @@
         
         &_error {
           position: absolute;
-          top: -72%;
+          top: 82%;
           right: 0;
           transform: translate(0, 50%);
           color: $accent_red;
