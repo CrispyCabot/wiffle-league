@@ -19,12 +19,12 @@
         @row-clicked="handleLeagueClick"
       ></grid-table>
     </div>
-    <div class = "thingy">
+    <div class="thingy">
       <h3>Want to join in on the fun?</h3>
       <button class="btn red_btn">Sign Up</button>
       <button class="btn red_btn">Create a League</button>
     </div>
-    <div class = "about">
+    <div class="about">
       <h2>About</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut metus eget libero facilisis aliquam. Phasellus in lobortis eros, ac dapibus elit. Curabitur ac magna ut metus finibus dapibus at in purus. Aenean consequat ipsum et orci mattis, a tristique ex mattis. Vestibulum eleifend libero quis arcu consequat, ac imperdiet purus feugiat. Nullam mauris quam, ultrices nec pellentesque vel, efficitur a nibh. Curabitur in enim quis velit sodales egestas luctus ac purus. Etiam nibh nulla, porttitor sit amet fringilla at, pretium ut quam. Maecenas dolor est, viverra non lobortis et, rutrum sit amet ligula.
         <br><br>

@@ -1,9 +1,6 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-//I still don't think we should include hits bc that and a bunch of other stuff can be calculated
-//from the other fields
-
 const stats_schema = new Schema({
   hits: Number,
   singles: Number,

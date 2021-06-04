@@ -1,0 +1,10 @@
+.radio-button-group {
+  &_buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_button {
+      margin: 0 .5rem;
+    }
+  }
+}
