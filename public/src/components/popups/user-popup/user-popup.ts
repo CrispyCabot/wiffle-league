@@ -15,7 +15,8 @@ export default defineComponent({
     async redirectLink(link: string) {
       if (link == '/logout') {
         await this.logPlayerOut()
-        this.$router.push('/login')
+      } else if (link == '/login') {
+        this.$router.push(`${link}?redirect=${this.$route.path}`)
       } else {
         this.$router.push(link)
       }

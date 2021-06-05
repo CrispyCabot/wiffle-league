@@ -5,6 +5,39 @@ const { createAccessToken, createJRTEM, sendRefreshToken } = require('./utils/au
 
 // League Setters
 const Leagues = require('../models/league-model')
+router.route('/leagues/create').post(async (req, res) => {
+  const { name, player_ids, player_stats, max_num_players, league_creator_id, game_ids, num_games } = req.body
+  const { games_created, team_size, start_date, end_date, deadline_date, about_text, gender } = req.body
+
+  const doesLeagueNameExist = await Leagues.exists({name: name})
+  const doesCreatorExist = await Players.exists({_id: league_creator_id})
+  if (!doesLeagueNameExist) {
+    if (doesCreatorExist) {
+      const league = await Leagues.create({
+        name,
+        player_ids: [...player_ids.filter(i => i != league_creator_id), league_creator_id],
+        player_stats,
+        max_num_players,
+        league_creator_id,
+        game_ids,
+        num_games,
+        games_created,
+        team_size,
+        start_date,
+        end_date,
+        deadline_date,
+        about_text,
+        gender
+      })
+      res.json({league: league, status: 200, message: 'Successfully created league'})
+    } else {
+      res.json({status: 400, message: 'Cannot create league with invalid creator id'})
+    }
+  } else {
+    res.json({status: 400, message: 'League with this name already exists'})
+  }
+
+})
 
 // Player Setters
 const Players = require('../models/player-model')

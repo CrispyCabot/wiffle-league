@@ -50,7 +50,11 @@ export default defineComponent({
       } else if (res.status == 200) {
         this.updateIsLoggedIn(true)
         this.updateLoggedInPlayer(res.player)
-        this.$router.push('/')
+        if (this.$route.query.redirect) {
+          this.$router.push(String(this.$route.query.redirect))
+        } else {
+          this.$router.push('/')
+        }
       }
     }
   }

@@ -9,14 +9,16 @@ export default defineComponent({
     Navbar,
     Footer
   },
-  created() {
-    this.retrieveRefreshToken().then(res => {
-      console.log('token refreshed', res);
-      if (res.ok) this.updateIsLoggedIn(true);
-    })
+  async created() {
+    const res = await this.retrieveRefreshToken()
+    console.log('token refreshed', res);
+    if (res.ok) {
+      await this.updateIsLoggedIn(true);
+      await this.updateLoggedInPlayer(res.user);
+    }
   },
   methods: {
     ...mapActions(['retrieveRefreshToken']),
-    ...mapMutations(['updateIsLoggedIn'])
+    ...mapMutations(['updateIsLoggedIn', 'updateLoggedInPlayer'])
   }
 })

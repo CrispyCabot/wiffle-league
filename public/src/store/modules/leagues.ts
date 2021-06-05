@@ -42,5 +42,32 @@ export const LeagueActions = {
           reject(error)
         })
     })
+  },
+  createLeague(_:any, payload: any) {
+    const { creatorId, name, maxPlayers, numGames, teamSize, startDate, endDate, deadlineDate, other, gender } = payload
+    return new Promise((resolve, reject) => {
+      api.post(`/leagues/create`, {
+        name: name,
+        player_ids: [],
+        player_stats: [],
+        max_num_players: maxPlayers,
+        league_creator_id: creatorId,
+        game_ids: [],
+        num_games: numGames,
+        games_created: false,
+        team_size: teamSize,
+        start_date: startDate,
+        end_date: endDate,
+        deadline_date: deadlineDate,
+        about_text: other,
+        gender: gender
+      })
+        .then(({data}) => {
+          resolve(data)
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    })
   }
 }
