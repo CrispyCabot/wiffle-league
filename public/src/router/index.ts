@@ -11,6 +11,7 @@ import League from '../views/League/index.vue'
 import Contact from '../views/Contact/index.vue'
 import Players from '../views/Players/index.vue'
 import TopStats from '../views/TopStats/index.vue'
+import CreateLeague from '../views/CreateLeague/index.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -52,6 +53,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/leagues/schedules',
     name: routeNames.Schedules,
     component: Schedules
+  },
+  {
+    path: '/leagues/create',
+    name: routeNames.CreateLeague,
+    component: CreateLeague
   },
   {
     path: '/players',

@@ -40,6 +40,9 @@ export default defineComponent({
     handleLeagueClick(row: any) {
       const id = row.id.text
       this.$router.push(`/league/${id}`)
+    },
+    redirect(link: string) {
+      this.$router.push(link)
     }
   }
 })

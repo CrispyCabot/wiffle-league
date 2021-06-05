@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <h1 class="site-title">Wiffle League</h1>
-    <button class="btn red_btn">Sign up today!</button>
+    <button class="btn red_btn" @click="redirect('/signup')">Sign up today!</button>
     <div class="league-table white_card_background ">
       <grid-table
         v-if="columns.length > 0"
@@ -21,8 +21,8 @@
     </div>
     <div class="thingy">
       <h3>Want to join in on the fun?</h3>
-      <button class="btn red_btn">Sign Up</button>
-      <button class="btn red_btn">Create a League</button>
+      <button class="btn red_btn" @click="redirect('/signup')">Sign Up</button>
+      <button class="btn red_btn" @click="redirect('/leagues/create')">Create a League</button>
     </div>
     <div class="about">
       <h2>About</h2>
