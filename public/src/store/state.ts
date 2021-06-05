@@ -1,4 +1,5 @@
 export default {
   isLoggedIn: false,
-  loggedInPlayer: {}
+  loggedInPlayer: {},
+  accessToken: null
 }

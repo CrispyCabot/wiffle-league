@@ -1,5 +1,5 @@
 import { defineComponent } from "@vue/runtime-core";
-import { mapGetters, mapMutations } from "vuex";
+import { mapActions, mapGetters, mapMutations } from "vuex";
 
 export default defineComponent({
   name: 'user-popup',
@@ -10,15 +10,15 @@ export default defineComponent({
     ...mapGetters(['getIsLoggedIn'])
   },
   methods: {
+    ...mapActions(['logPlayerOut']),
     ...mapMutations(['updateIsLoggedIn', 'updateLoggedInPlayer']),
-    redirectLink(link: string) {
+    async redirectLink(link: string) {
       if (link == '/logout') {
-        this.updateIsLoggedIn(false)
-        this.updateLoggedInPlayer({})
+        await this.logPlayerOut()
         this.$router.push('/login')
-        return
+      } else {
+        this.$router.push(link)
       }
-      this.$router.push(link)
       this.$emit('link-click')
     }
   }

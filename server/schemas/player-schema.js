@@ -13,7 +13,8 @@ const player_schema = new Schema({
   gender: String,
   player_stats: stats,
   show_information: Boolean,
-  league_ids: [Schema.Types.ObjectId]
+  league_ids: [Schema.Types.ObjectId],
+  token_version: Number
 }, {strict: false})
 
 module.exports = player_schema

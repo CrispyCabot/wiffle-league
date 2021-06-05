@@ -6,5 +6,8 @@ export default {
   },
   getLoggedInPlayer() {
     return state.loggedInPlayer
+  },
+  getAccessToken() {
+    return state.accessToken
   }
 }
