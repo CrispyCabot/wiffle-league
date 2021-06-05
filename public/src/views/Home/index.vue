@@ -4,13 +4,12 @@
     <button class="btn red_btn" @click="redirect('/signup')">Sign up today!</button>
     <div class="league-table white_card_background ">
       <grid-table
-        v-if="columns.length > 0"
         :columns="columns"
         :rows="splicedRows"
         :rowsCount="rows.length"
-        :hasHeader="true"
+        :hasHeader="columns.length > 0"
         :title="'Leagues'"
-        :hasPagination="hasPagination"
+        :hasPagination="hasPagination && columns.length > 0"
         :hasSizeSelector="hasSizeSelector"
         :pageIndex="pageIndex"
         :pageSize="pageSize"
@@ -21,7 +20,7 @@
     </div>
     <div class="thingy">
       <h3>Want to join in on the fun?</h3>
-      <button class="btn red_btn" @click="redirect('/signup')">Sign Up</button>
+      <button class="btn red_btn" @click="redirect('/players')">Find players</button>
       <button class="btn red_btn" @click="redirect('/leagues/create')">Create a League</button>
     </div>
     <div class="about">

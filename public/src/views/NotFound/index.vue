@@ -1,6 +1,7 @@
 <template>
   <div class="not-found">
-    <h1>Not Found</h1>
+    <h1 class="title site-title">Page not found</h1>
+    <button class="btn red_btn" @click="$router.push('/')">Return home</button>
   </div>
 </template>
 

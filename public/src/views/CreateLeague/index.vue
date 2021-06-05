@@ -1,7 +1,7 @@
 <template>
   <div class="create-league">
-    <h1 class="home site-title">Create League</h1>
-    <p v-if="!getIsLoggedIn && getLoggedInPlayer == {}" class="home not-logged-in-text">Please login before creating a league</p>
+    <h1 class="title site-title">Create League</h1>
+    <p v-if="!getIsLoggedIn || getLoggedInPlayer == {}" class="home not-logged-in-text">Please login before creating a league</p>
     <div class="create-league_fields">
       <div class="create-league_fields_field" v-for="field in fields" :key="field.name">
         <div v-if="field.name !== 'gender'"
