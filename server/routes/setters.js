@@ -18,8 +18,6 @@ router.route('/players/create').post(async (req, res) => {
     if (!isValidEmail) {
       res.json({player: response, status: 400, message: 'Invalid Email'})
     } else {
-      const accessToken = createAccessToken(playerWithEmail)
-      sendRefreshToken(req, res, createJRTEM(playerWithEmail))
       const player = await Players.create({
           email: email,
           password: hashedPassword,
@@ -30,8 +28,11 @@ router.route('/players/create').post(async (req, res) => {
           gender: gender,
           player_stats: {},
           show_information: false,
-          league_ids: []
+          league_ids: [],
+          token_version: 0
         })
+      const accessToken = createAccessToken(player)
+      sendRefreshToken(req, res, createJRTEM(player))
       res.json({player: player, accessToken: accessToken, status: 200, message: 'Successfully been made an account'})
     }
   } else {
@@ -84,12 +85,7 @@ router.route('/refresh_token').post((req, res) => {
     console.log(err)
     return res.send({ ok: false, accessToken: '' })
   }
-
   
-  // token is valid
-  // we can send back an access token
-  // if we ever need to revoke a users refresh token (i.e. their account was hacked)
-  // simply go to db token_version column for that user and increment the integer
   Players.findOne({_id: decodedPayload.userId}).then(user => {
     if (!user || user.token_version !== decodedPayload.tokenVersion) return res.send({ ok: false, accessToken: '' });
     sendRefreshToken(req, res, createJRTEM(user))

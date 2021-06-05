@@ -11,7 +11,6 @@ const createJRTEM = (user) => {
 }
 
 const sendRefreshToken = (req, res, token) => {
-  console.log('setting cookie')
   res.cookie('jrtem', token,
   {
     httpOnly: true,
