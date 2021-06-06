@@ -1,7 +1,7 @@
 .content-dropdown {
-  width: 100%;
+  width: calc(100% - .55rem);
   &_label {
-    width: 100%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,7 +13,12 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
+      width: calc(100% - 2rem);
       p {
+        text-align: left;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
         margin-left: .5rem;
       }
     }

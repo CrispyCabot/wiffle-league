@@ -63,6 +63,11 @@
           &.hidden {
             display: none;
           }
+          &.wrap {
+            text-overflow: unset;
+            overflow: auto;
+            white-space: unset;
+          }
         }
       }
     }

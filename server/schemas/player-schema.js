@@ -18,7 +18,8 @@ const player_schema = new Schema({
   token_version: Number,
   notifications: [
     notification
-  ]
+  ],
+  selected_league_schedules: Array
 }, {strict: false})
 
 module.exports = player_schema

@@ -3,10 +3,20 @@ import api from '@/api/api'
 export const LeagueActions = {
   fetchLeaguesTableColumns() {
     return [
-      {columnLabel: 'Name', columnName: 'name', maxWidth: '10rem', isHidden: false},
+      {columnLabel: 'Name', columnName: 'name', maxWidth: '33vw', isHidden: false},
       {columnLabel: 'Players', columnName: 'players', maxWidth: 'unset', isHidden: false},
       {columnLabel: 'Start Date', columnName: 'startDate', maxWidth: 'unset', isHidden: false},
       {columnLabel: 'End Date', columnName: 'endDate', maxWidth: 'unset', isHidden: false},
+      {columnLabel: 'Id', columnName: 'id', maxWidth: 'unset', isHidden: true}
+    ]
+  },
+  fetchLeaguesScheduleTableColumns() {
+    return [
+      {columnLabel: 'Team 1', columnName: 'team1', maxWidth: '33vw', isHidden: false},
+      {columnLabel: 'Team 2', columnName: 'team2', maxWidth: '33vw', isHidden: false},
+      {columnLabel: 'Date', columnName: 'date', maxWidth: 'unset', isHidden: false},
+      {columnLabel: 'Time', columnName: 'time', maxWidth: 'unset', isHidden: false},
+      {columnLabel: 'Location', columnName: 'location', maxWidth: '33vw', isHidden: false},
       {columnLabel: 'Id', columnName: 'id', maxWidth: 'unset', isHidden: true}
     ]
   },

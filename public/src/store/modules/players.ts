@@ -79,5 +79,27 @@ export const PlayerActions = {
           reject(error)
         })
     })
+  },
+  fetchPlayerById(_:any, id: string) {
+    return new Promise((resolve, reject) => {
+      api.get(`/players/${id}`)
+        .then(({data}: any) => {
+          resolve(data)
+        })
+        .catch(error => {
+          reject(error)
+        })
+    })
+  },
+  fetchPlayerSelectedSchedules({ getters }: any, id: string) {
+    return new Promise((resolve, reject) => {
+      api.get(`/players/${id}/selected-schedules`)
+        .then(({data}: any) => {
+          resolve(data);
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    })
   }
 }

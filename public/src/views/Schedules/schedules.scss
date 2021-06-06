@@ -1,0 +1,17 @@
+.schedules-container {
+  text-align: center;
+
+  .leagues-schedules {
+    width: 90%;
+    padding: 1.5rem 0;
+    &_dropdowns {
+      width: inherit;
+      &_dropdown {
+        margin: .5rem 0;
+        .leagues-schedules_table {
+          padding: 1rem 0;
+        }
+      }
+    }
+  }
+}

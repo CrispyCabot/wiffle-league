@@ -18,6 +18,7 @@
                 'numeric-left': col.type === 'numeric-left',
                 'date': col.type === 'date',
                 'string': col.type === 'string',
+                'wrap': col.type === 'string-wrap' || col.type === 'date-wrap' || col.type === 'numeric-wrap',
                 'hidden': col.type === 'hidden'
               }"
               :style="{'max-width': columns[index] ? columns[index].maxWidth : 'unset'}"
