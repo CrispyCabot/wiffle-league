@@ -62,7 +62,8 @@ export const PlayerActions = {
         })
     })
   },
-  updateUserSettings({ commit }: any, payload: any) {
+  updateUserSettings({ commit, getters }: any, payload: any) {
+    api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`;
     const { playerId, updates } = payload
     return new Promise((resolve, reject) => {
       api.put(`/players/update-profile`, { playerId, updates })

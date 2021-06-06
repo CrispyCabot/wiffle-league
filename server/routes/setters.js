@@ -1,11 +1,12 @@
 const router = require("express").Router();
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { createAccessToken, createJRTEM, sendRefreshToken } = require('./utils/authorization');
+const authChecker = require("./utils/auth-checker");
 
 // League Setters
 const Leagues = require('../models/league-model')
-router.route('/leagues/create').post(async (req, res) => {
+router.route('/leagues/create').post(authChecker, async (req, res) => {
   const { name, player_ids, player_stats, max_num_players, league_creator_id, game_ids, num_games } = req.body
   const { games_created, team_size, start_date, end_date, deadline_date, about_text, gender } = req.body
 
@@ -40,7 +41,7 @@ router.route('/leagues/create').post(async (req, res) => {
 })
 
 // Player Setters
-const Players = require('../models/player-model')
+const Players = require('../models/player-model');
 router.route('/players/create').post(async (req, res) => {
   const { email, password, fname, lname, nname, phone, gender } = req.body
   const hashedPassword = await bcrypt.hash(String(password), Number(process.env.SALT_ROUNDS))

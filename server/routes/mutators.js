@@ -1,13 +1,15 @@
 const router = require("express").Router();
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt');
+const authChecker = require("./utils/auth-checker");
 
 // League Getters
 const Leagues = require('../models/league-model')
 
 // Player Getters
-const Players = require('../models/player-model')
-router.route('/players/update-profile').put(async (req, res) => {
+const Players = require('../models/player-model');
+router.route('/players/update-profile').put(authChecker, async (req, res) => {
   const { playerId, updates } = req.body
+  const preUpdatePlayer = await Players.findOne({_id: playerId})
   let updatedPlayer = false
 
   // Hash password if password is present on updates
@@ -24,7 +26,7 @@ router.route('/players/update-profile').put(async (req, res) => {
     const doesPlayerEmailExist = await Players.exists({email: updates.email})
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const isValidEmail = re.test(String(updates.email).toLowerCase())
-    if (doesPlayerEmailExist) {
+    if (doesPlayerEmailExist && updates.email != preUpdatePlayer.email) {
       res.send({ status: 400, message: 'This email is already in use' })
       return
     } else if (!isValidEmail) {
@@ -34,7 +36,6 @@ router.route('/players/update-profile').put(async (req, res) => {
   }
 
   // Make sure updates does not have unmutable fields
-  const preUpdatePlayer = await Players.findOne({_id: playerId})
   const immutableFields = [ '_id', 'token_version', 'league_ids', 'player_stats' ]
   const presentImmutableFields = immutableFields.map(f => updates[f]).filter(f => f)
   if (presentImmutableFields.length > 0) {

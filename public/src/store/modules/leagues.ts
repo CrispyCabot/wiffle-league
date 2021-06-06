@@ -43,8 +43,9 @@ export const LeagueActions = {
         })
     })
   },
-  createLeague(_:any, payload: any) {
+  createLeague({ getters }:any, payload: any) {
     const { creatorId, name, maxPlayers, numGames, teamSize, startDate, endDate, deadlineDate, other, gender } = payload
+    api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`;
     return new Promise((resolve, reject) => {
       api.post(`/leagues/create`, {
         name: name,
