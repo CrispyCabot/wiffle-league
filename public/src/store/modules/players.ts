@@ -1,6 +1,18 @@
 import api from '@/api/api'
 
 export const PlayerActions = {
+  fetchPlayerStatsTableColumns() {
+    return [
+      { columnLabel: 'Hits', columnName: 'hits', maxWidth: 'unset', isHidden: false },
+      { columnLabel: '1B', columnName: 'singles', maxWidth: 'unset', isHidden: false },
+      { columnLabel: '2B', columnName: 'doubles', maxWidth: 'unset', isHidden: false },
+      { columnLabel: '3B', columnName: 'triples', maxWidth: 'unset', isHidden: false },
+      { columnLabel: 'HR', columnName: 'homeruns', maxWidth: 'unset', isHidden: false },
+      { columnLabel: 'At Bats', columnName: 'at_bats', maxWidth: 'unset', isHidden: false },
+      { columnLabel: 'Games', columnName: 'games', maxWidth: 'unset', isHidden: false },
+      { columnLabel: 'Plate Appearances', columnName: 'plate_appearances', maxWidth: 'unset', isHidden: false }
+    ]
+  },
   createNewPlayer({ getters }: any, payload: any) {
     const { email, password, fname, lname, nname, phone, gender } = payload
     return new Promise((resolve, reject) => {

@@ -59,7 +59,16 @@ router.route('/players/create').post(async (req, res) => {
           nickname: nname,
           phone_number: phone,
           gender: gender,
-          player_stats: {},
+          player_stats: {
+            hits: 0,
+            singles: 0,
+            doubles: 0,
+            triples: 0,
+            homeruns: 0,
+            plate_appearances: 0,
+            at_bats: 0,
+            games: 0
+          },
           show_information: false,
           league_ids: [],
           token_version: 0
@@ -113,9 +122,7 @@ router.route('/refresh_token').post((req, res) => {
   let decodedPayload = null;
   try {
     decodedPayload = jwt.verify(token, process.env.JRTEM_KEY)
-    console.log('is rt valid', decodedPayload)
   } catch(err) {
-    console.log(err)
     return res.send({ ok: false, accessToken: '' })
   }
   

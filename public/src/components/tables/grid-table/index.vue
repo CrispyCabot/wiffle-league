@@ -15,11 +15,12 @@
               class="grid-table_table_body_row_cell"
               :class="{
                 'numeric': col.type === 'numeric',
+                'numeric-left': col.type === 'numeric-left',
                 'date': col.type === 'date',
                 'string': col.type === 'string',
                 'hidden': col.type === 'hidden'
               }"
-              :style="{'max-width': columns[index].maxWidth}"
+              :style="{'max-width': columns[index] ? columns[index].maxWidth : 'unset'}"
             >{{col.text}}</td>
           </tr>
         </tbody>

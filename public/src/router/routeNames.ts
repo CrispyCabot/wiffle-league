@@ -16,4 +16,5 @@ export default {
   SubmitScore: 'submit-score',
   Games: 'games',
   NotFound: 'not-found',
+  Profile: 'profile'
 }

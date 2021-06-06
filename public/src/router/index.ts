@@ -12,6 +12,7 @@ import Contact from '../views/Contact/index.vue'
 import Players from '../views/Players/index.vue'
 import TopStats from '../views/TopStats/index.vue'
 import CreateLeague from '../views/CreateLeague/index.vue'
+import Profile from '../views/Profile/index.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -28,6 +29,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/login',
     name: routeNames.Login,
     component: Login
+  },
+  {
+    path: '/profile',
+    name: routeNames.Profile,
+    component: Profile
   },
   {
     path: '/leagues',

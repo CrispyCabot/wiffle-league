@@ -1,13 +1,13 @@
 import state from "./state"
 
 export default {
-  getIsLoggedIn() {
+  getIsLoggedIn(): Boolean {
     return state.isLoggedIn
   },
-  getLoggedInPlayer() {
+  getLoggedInPlayer(): any {
     return state.loggedInPlayer
   },
-  getAccessToken() {
+  getAccessToken(): String {
     return state.accessToken
   }
 }
