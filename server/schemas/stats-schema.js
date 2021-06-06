@@ -6,7 +6,10 @@ const stats_schema = {
   homeruns: Number,
   plate_appearances: Number,
   at_bats: Number,
-  games: Number
+  games: Number,
+  wins: Number,
+  losses: Number,
+  points: Number
 }
 
 module.exports = stats_schema

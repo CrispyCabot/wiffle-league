@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 const stats = require('./stats-schema')
+const notification = require('./notification-schema')
 
 const player_schema = new Schema({
   _id: { type: Schema.ObjectId, auto: true },
@@ -14,7 +15,10 @@ const player_schema = new Schema({
   player_stats: stats,
   show_information: Boolean,
   league_ids: [Schema.Types.ObjectId],
-  token_version: Number
+  token_version: Number,
+  notifications: [
+    notification
+  ]
 }, {strict: false})
 
 module.exports = player_schema
