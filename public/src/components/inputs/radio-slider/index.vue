@@ -1,6 +1,6 @@
 <template>
-  <div class="radio-slider" @click="changeSelectedValue">
-    <div class="radio-slider_label">
+  <div class="radio-slider" :class="{'radio-slider_disabled': disabled}" @click="changeSelectedValue">
+    <div v-if="showLabel" class="radio-slider_label">
       <p>{{ selectedValue }}</p>
     </div>
     <div class="radio-slider_input">

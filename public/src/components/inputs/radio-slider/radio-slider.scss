@@ -4,10 +4,9 @@
   justify-content: center;
   align-items: center;
   &_label {
-
+    margin-right: .5rem;
   }
   &_input {
-    margin-left: .5rem;
     input {
       display: none;
     }
@@ -36,6 +35,18 @@
           background-color: $accent_red;
           right: .25rem;
           left: unset;
+        }
+      }
+    }
+  }
+  &_disabled {
+    pointer-events: none;
+    .radio-slider_input_display {
+      background-color: $light-grey;
+      border: 1px solid $light-grey;
+      &-circle {
+        &.selected {
+          background-color: $off_white;
         }
       }
     }

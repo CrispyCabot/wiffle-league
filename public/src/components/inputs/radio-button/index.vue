@@ -8,4 +8,4 @@
 </template>
 
 <script src='./radio-button.ts'></script>
-<style src='./radio-button.scss' lang="scss"></style>
+<style src='./radio-button.scss' lang="scss" scoped></style>

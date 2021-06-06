@@ -4,7 +4,9 @@ export default defineComponent({
   name: 'radio-slider',
   props: {
     values: { type: Array, default: () => [] },
-    selectedValue: { type: String, default: '' }
+    selectedValue: { type: [String, Boolean], default: '' },
+    showLabel: { type: Boolean, default: true },
+    disabled: { type: Boolean, default: false }
   },
   computed: {
     getSelectedValueIndex(): number {

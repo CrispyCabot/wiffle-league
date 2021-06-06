@@ -13,4 +13,4 @@
 </template>
 
 <script src='./radio-button-group.ts'></script>
-<style src='./radio-button-group.scss' lang="scss"></style>
+<style src='./radio-button-group.scss' lang="scss" scoped></style>

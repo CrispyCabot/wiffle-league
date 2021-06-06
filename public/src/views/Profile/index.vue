@@ -3,8 +3,8 @@
 
     <div class="profile-stats-table white_card_background ">
 
-      <h1 class="profile-stats-table_firstname">{{getLoggedInPlayer.firstname}}</h1>
-      <p v-if="getLoggedInPlayer.nickname" class="profile-stats-table_nickname">
+      <h1 v-if="getLoggedInPlayer && getLoggedInPlayer.firstname" class="profile-stats-table_firstname">{{getLoggedInPlayer.firstname}}</h1>
+      <p v-if="getLoggedInPlayer && getLoggedInPlayer.nickname" class="profile-stats-table_nickname">
         <span>a.k.a</span> <br> {{getLoggedInPlayer.nickname}}
       </p>
 
@@ -18,6 +18,27 @@
         :hasPagination="false"
         :hasSizeSelector="false"
       ></grid-table>
+
+      <content-dropdown class="profile-stats-table_settings" :label="'Settings'" :iconClass="'fas cog'">
+        <div class="profile-stats-table_settings_grid">
+          <div v-for="field in fields" :key="field.name" class="profile-stats-table_settings_grid_field" :class="{'full-width': field.type == 'radio-group'}">
+            <div v-if="field.type == 'input' && isFieldShown(field)" class="profile-stats-table_settings_grid_field_input">
+              <label :for="field.name">{{ field.placeholder }}</label>
+              <input class="default-input field-input" :disabled="!isSettingsEditing" type="text" :placeholder="field.placeholder" :name="field.name" v-model="field.value">
+            </div>
+            <div v-else-if="field.type == 'radio' && isFieldShown(field)" class="profile-stats-table_settings_grid_field_toggle">
+              <label>{{ field.placeholder }}</label>
+              <radio-slider :disabled="!isSettingsEditing" :showLabel="false" :values="[true, false]" :selectedValue="field.value" @value-change="changeRadioValue($event, field)" />
+            </div>
+            <div v-else-if="field.type == 'radio-group' && isFieldShown(field)" class="profile-stats-table_settings_grid_field_radio-group">
+              <radio-button-group :class="{'profile-stats-table_settings_grid_field_radio-group-disabled': !isSettingsEditing}" :buttons="genderRadioButtons" :selectedRadioButton="field.value" @radio-button-change="setGender" />
+            </div>
+          </div>
+        </div>
+        <button v-if="!isSettingsEditing" class="btn red_btn profile-stats-table_settings_btn-edit" @click="editSettings">Edit</button>
+        <button v-else-if="isSettingsEditing" class="btn red_btn profile-stats-table_settings_btn-save" @click="saveSettings">Save</button>
+        <p v-if="isSettingsEditing" class="profile-stats-table_settings_btn-cancel"  @click="cancelSettings">Cancel</p>
+      </content-dropdown>
     </div>
 
   </div>
