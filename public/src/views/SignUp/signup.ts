@@ -10,14 +10,14 @@ export default defineComponent({
   data() {
     return {
       fields: {
-        email: { value: '', placeholder: 'Email', name: 'email', isRequired: true, error: ''  },
-        password: { value: '', placeholder: 'Password', name: 'password', isRequired: true, error: ''  },
-        confirm: { value: '', placeholder: 'Confirm password', name: 'confirm', isRequired: true, error: ''  },
-        fname: { value: '', placeholder: 'First Name', name: 'fname', isRequired: true, error: ''  },
-        lname: { value: '', placeholder: 'Last Name', name: 'lname', isRequired: true, error: ''  },
-        nname: { value: '', placeholder: 'Nick Name', name: 'nname', isRequired: false, error: ''  },
-        phone: { value: '', placeholder: 'Phone', name: 'phone', isRequired: false, error: ''  },
-        gender: { value: '', placeholder: 'Gender', name: 'gender', isRequired: true, error: ''  }
+        email: { value: '', placeholder: 'Email', name: 'email', isRequired: true  },
+        password: { value: '', placeholder: 'Password', name: 'password', isRequired: true  },
+        confirm: { value: '', placeholder: 'Confirm password', name: 'confirm', isRequired: true  },
+        fname: { value: '', placeholder: 'First Name', name: 'fname', isRequired: true  },
+        lname: { value: '', placeholder: 'Last Name', name: 'lname', isRequired: true  },
+        nname: { value: '', placeholder: 'Nick Name', name: 'nname', isRequired: false  },
+        phone: { value: '', placeholder: 'Phone', name: 'phone', isRequired: false  },
+        gender: { value: '', placeholder: 'Gender', name: 'gender', isRequired: true  }
       },
       genderRadioButtons: [
         'Male',

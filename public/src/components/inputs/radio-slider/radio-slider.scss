@@ -28,13 +28,13 @@
         background-color: $off_white;
         position: absolute;
         top: 50%;
-        left: .25rem;
+        right: .25rem;
         transform: translate(0%, -50%);
         transition: .5s;
         &.selected {
           background-color: $accent_red;
-          right: .25rem;
-          left: unset;
+          left: .25rem;
+          right: unset;
         }
       }
     }

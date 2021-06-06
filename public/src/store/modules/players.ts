@@ -47,19 +47,36 @@ export const PlayerActions = {
   logPlayerOut({ commit }: any) {
     return new Promise((resolve, reject) => {
       api.post(`/players/logout`)
-          .then(({data}) => {
-              if (data.status == 200) {
-                  commit('updateIsLoggedIn', false);
-                  commit('updateLoggedInPlayer', {});
-                  commit('updateAccessToken', null);
-                  resolve(data);
-              } else {
-                  throw 'Invalid logout'
-              }
-          })
-          .catch((error) => {
-            reject(error)
-          })
+        .then(({data}) => {
+          if (data.status == 200) {
+            commit('updateIsLoggedIn', false);
+            commit('updateLoggedInPlayer', {});
+            commit('updateAccessToken', null);
+            resolve(data);
+          } else {
+            throw 'Invalid logout'
+          }
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    })
+  },
+  updateUserSettings({ commit }: any, payload: any) {
+    const { playerId, updates } = payload
+    return new Promise((resolve, reject) => {
+      api.put(`/players/update-profile`, { playerId, updates })
+        .then(({data}) => {
+            if (data.status == 200) {
+              commit('updateLoggedInPlayer', data.player);
+              resolve(data);
+            } else {
+              throw 'Invalid logout'
+            }
+        })
+        .catch((error) => {
+          reject(error)
+        })
     })
   }
 }

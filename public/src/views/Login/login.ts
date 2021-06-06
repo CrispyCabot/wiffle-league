@@ -50,7 +50,7 @@ export default defineComponent({
       } else if (res.status == 200) {
         this.updateIsLoggedIn(true)
         this.updateLoggedInPlayer(res.player)
-        if (this.$route.query.redirect) {
+        if (this.$route.query.redirect && this.$route.query.redirect != '/signup') {
           this.$router.push(String(this.$route.query.redirect))
         } else {
           this.$router.push('/')

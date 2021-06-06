@@ -30,12 +30,21 @@
         &_field {
           label {
             font-size: .8rem;
+            span {
+              color: $accent_red;
+              margin-left: .1rem;
+            }
           }
           &_input {
             .field-input {
               font-size: .8rem;
               border: 1px solid $light-grey;
               width: 100%;
+            }
+            &.invalid {
+              .field-input {
+                border-color: $accent_red;
+              }
             }
           }
           &_toggle {
@@ -73,6 +82,11 @@
         display: block;
         margin: .25rem auto .75rem auto;
         text-align: center;
+        transition: .3s;
+        &.disabled {
+          pointer-events: none;
+          background-color: $light-grey;
+        }
       }
       &_btn-cancel {
         text-align: center;

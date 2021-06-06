@@ -51,6 +51,7 @@ app.get('/', (req, res) => {
 const router = express.Router();
 const getters = require("./routes/getters");
 const setters = require("./routes/setters");
-
+const mutators = require("./routes/mutators");
 app.use(router.use('/', getters))
 app.use(router.use('/', setters))
+app.use(router.use('/', mutators))

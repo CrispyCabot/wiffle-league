@@ -22,12 +22,28 @@
       <content-dropdown class="profile-stats-table_settings" :label="'Settings'" :iconClass="'fas cog'">
         <div class="profile-stats-table_settings_grid">
           <div v-for="field in fields" :key="field.name" class="profile-stats-table_settings_grid_field" :class="{'full-width': field.type == 'radio-group'}">
-            <div v-if="field.type == 'input' && isFieldShown(field)" class="profile-stats-table_settings_grid_field_input">
-              <label :for="field.name">{{ field.placeholder }}</label>
-              <input class="default-input field-input" :disabled="!isSettingsEditing" type="text" :placeholder="field.placeholder" :name="field.name" v-model="field.value">
+            <div v-if="field.type == 'input' && isFieldShown(field)"
+              class="profile-stats-table_settings_grid_field_input"
+              :class="{'invalid': 
+                (!validEmail && field.name == 'email') ||
+                (!validPassword && field.name == 'password') ||
+                (!confirmPassMatch && field.name == 'confirm') ||
+                (!validPhone && field.name == 'phone') ||
+                (field.isRequired && field.value == '')
+              }"
+            >
+              <label :for="field.name">{{ field.placeholder }}<span>{{ field.isRequired ? '*' : '' }}</span></label>
+              <input class="default-input field-input"
+                :disabled="!isSettingsEditing"
+                :type="'text'"
+                :placeholder="field.placeholder"
+                :name="field.name"
+                v-model="field.value"
+                @change="formatPhone($event, field.name == 'phone')"
+              >
             </div>
             <div v-else-if="field.type == 'radio' && isFieldShown(field)" class="profile-stats-table_settings_grid_field_toggle">
-              <label>{{ field.placeholder }}</label>
+              <label>{{ field.placeholder }}<span>{{ field.isRequired ? '*' : '' }}</span></label>
               <radio-slider :disabled="!isSettingsEditing" :showLabel="false" :values="[true, false]" :selectedValue="field.value" @value-change="changeRadioValue($event, field)" />
             </div>
             <div v-else-if="field.type == 'radio-group' && isFieldShown(field)" class="profile-stats-table_settings_grid_field_radio-group">
@@ -36,7 +52,7 @@
           </div>
         </div>
         <button v-if="!isSettingsEditing" class="btn red_btn profile-stats-table_settings_btn-edit" @click="editSettings">Edit</button>
-        <button v-else-if="isSettingsEditing" class="btn red_btn profile-stats-table_settings_btn-save" @click="saveSettings">Save</button>
+        <button v-else-if="isSettingsEditing" class="btn red_btn profile-stats-table_settings_btn-save" :class="{'disabled': !isSaveEnabled}" @click="saveSettings">Save</button>
         <p v-if="isSettingsEditing" class="profile-stats-table_settings_btn-cancel"  @click="cancelSettings">Cancel</p>
       </content-dropdown>
     </div>
