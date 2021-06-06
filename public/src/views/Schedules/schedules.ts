@@ -18,7 +18,8 @@ export default defineComponent({
       selectedSchedules: [],
       shownLeagues: Array<Promise<any>>(),
       columns: [],
-      gamesShown:  Array<any>()
+      gamesShown:  Array<any>(),
+      loadingGames: false
     }
   },
   computed: {
@@ -41,9 +42,15 @@ export default defineComponent({
       'fetchPlayerById'
     ]),
     findGames(league: any) {
-      return this.gamesShown.find((g: any) => g.leagueId == league._id).games
+      const gameShownForLeague = this.gamesShown.find((g: any) => g.leagueId == league._id)
+      if (gameShownForLeague) {
+        return gameShownForLeague.games
+      } else {
+        return []
+      }
     },
     async loadGames(league: any) {
+      this.loadingGames = true
       const games = await Promise.all(league.game_ids.map(async (id: any) => {
         const game = await this.fetchGameById(id)
         const team1 = await Promise.all(game.team_1_ids.map(async (team1Id: any) => {
@@ -59,7 +66,7 @@ export default defineComponent({
           team2: { text: team2.join(', '), type: 'string-wrap' },
           date: { text: new Date(game.game_date).toLocaleDateString(undefined, {year: 'numeric', month: 'numeric', day: 'numeric'}), type: 'date-wrap' },
           time: { text: new Date(game.game_date).toLocaleTimeString(), type: 'date-wrap' },
-          location: { text: game.game_location, type: 'string-wrap' },
+          location: { text: game.game_location, type: 'location-wrap' },
           id: { text: game._id, type: 'hidden' }
         }
       }))
@@ -70,6 +77,8 @@ export default defineComponent({
         leagueId: league._id,
         games
       })
+      
+      this.loadingGames = false
     },
     handleGameClick(e: any) {
       this.$router.push(`/games/${e.id}`)

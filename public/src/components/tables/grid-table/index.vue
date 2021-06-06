@@ -14,11 +14,12 @@
               :key="col"
               class="grid-table_table_body_row_cell"
               :class="{
-                'numeric': col.type === 'numeric',
-                'numeric-left': col.type === 'numeric-left',
-                'date': col.type === 'date',
-                'string': col.type === 'string',
-                'wrap': col.type === 'string-wrap' || col.type === 'date-wrap' || col.type === 'numeric-wrap',
+                'numeric': col.type === 'numeric' || col.type == 'numeric-wrap',
+                'numeric-left': col.type === 'numeric-left' || col.type == 'numeric-left-wrap',
+                'date': col.type === 'date' || col.type == 'date-wrap',
+                'string': col.type === 'string' || col.type == 'string-wrap',
+                'location': col.type === 'location' || col.type == 'location-wrap',
+                'wrap': col.type === 'string-wrap' || col.type === 'date-wrap' || col.type === 'numeric-wrap' || col.type === 'location-wrap',
                 'hidden': col.type === 'hidden'
               }"
               :style="{'max-width': columns[index] ? columns[index].maxWidth : 'unset'}"

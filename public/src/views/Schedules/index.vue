@@ -8,7 +8,7 @@
           <Suspense>
             <template #default>
               <grid-table
-                v-if="columns.length > 0"
+                v-if="columns.length > 0 && !loadingGames"
                 class="leagues-schedules_table"
                 :columns="columns"
                 :rows="findGames(league)"
