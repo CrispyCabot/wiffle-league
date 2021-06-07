@@ -17,25 +17,23 @@
       />
 
       <div class="leagues-schedules_dropdowns">
-        <content-dropdown class="leagues-schedules_dropdowns_dropdown" v-for="league in splicedLeagues" :label="league.name" :key="league._id" @click="loadGames(league)">
-          <Suspense>
-            <template #default>
-              <grid-table
-                v-if="columns.length > 0 && !loadingGames"
-                class="leagues-schedules_table"
-                :columns="columns"
-                :rows="findGames(league)"
-                :rowsCount="findGames(league) ? findGames(league).length : 0"
-                :hasHeader="true"
-                :hasPagination="false"
-                :hasSizeSelector="false"
-                @row-clicked="handleGameClick"
-              ></grid-table>
-            </template>
-            <template #fallback>
-              <div>Loading...</div>
-            </template>
-          </Suspense>
+        <content-dropdown class="leagues-schedules_dropdowns_dropdown" v-for="league in splicedLeagues" :label="league.name" :key="league._id" @click.stop="loadGames(league)">
+          <grid-table
+            v-if="columns.length > 0 && (!loadingGames || gamesShown.some(g => g.leagueId == league._id))"
+            class="leagues-schedules_table"
+            :columns="columns"
+            :rows="findGames(league)"
+            :rowsCount="findGames(league) ? findGames(league).length : 0"
+            :hasHeader="true"
+            :hasPagination="false"
+            :hasSizeSelector="false"
+            @row-clicked="handleGameClick"
+          ></grid-table>
+          <div v-if="loadingGames && !gamesShown.some(g => g.leagueId == league._id)" class="leagues-schedules_dropdowns_dropdown_loading">
+            <span>Loading</span>
+            <font-awesome-icon :icon="['fas', 'spinner']" class="fa-spin"></font-awesome-icon>
+          </div>
+          <p v-if="!loadingGames || gamesShown.some(g => g.leagueId == league._id)" class="leagues-schedules_dropdowns_dropdown_link" @click.stop="viewLeague(league)">View League...</p>
         </content-dropdown>
 
         <div v-if="splicedLeagues.length == 0" class="leagues-schedules_dropdowns_no-dropdowns">

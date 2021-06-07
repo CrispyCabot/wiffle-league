@@ -32,7 +32,6 @@
       background-color: $off_white;
       border: 1px solid $light_grey;
       border-radius: .4rem;
-      padding: .5rem .25rem;
       &_arrow {
         position: absolute;
         left: 50%;
@@ -55,12 +54,15 @@
         }
       }
       &_search {
+        
+        padding: .5rem;
       }
       &_items {
-        margin: .75rem 0 0 0;
+        margin: .5rem 0 0 0;
         max-width: 15rem;
         max-height: 15rem;
         overflow-y: scroll;
+        border-radius: .4rem;
         &_item {
           padding: .5rem;
           display: flex;

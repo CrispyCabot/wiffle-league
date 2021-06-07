@@ -64,7 +64,10 @@ export default defineComponent({
       }
     },
     async loadGames(league: any) {
+      if (this.gamesShown.some((g: any) => g.leagueId == league._id)) return
+
       this.loadingGames = true
+
       const games = await Promise.all(league.game_ids.map(async (id: any) => {
         const game = await this.fetchGameById(id)
         const team1 = await Promise.all(game.team_1_ids.map(async (team1Id: any) => {
@@ -85,12 +88,7 @@ export default defineComponent({
         }
       }))
 
-      if (this.gamesShown.includes((g: any) => g.leagueId == league._id)) return
-
-      this.gamesShown.push({
-        leagueId: league._id,
-        games
-      })
+      this.gamesShown = [...this.gamesShown, { leagueId: league._id, games }]
       
       this.loadingGames = false
     },
@@ -123,6 +121,9 @@ export default defineComponent({
           }
         }
       }
+    },
+    viewLeague(league: any) {
+      this.$router.push(`/league/${league._id}`)
     }
   },
   watch: {

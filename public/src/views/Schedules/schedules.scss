@@ -12,6 +12,19 @@
         .leagues-schedules_table {
           padding: 1rem 0;
         }
+        &_link {
+          width: 90%;
+          margin: 0 auto;
+          padding-bottom: 1rem;
+          color: $accent_light_red;
+          text-align: left;
+        }
+        &_loading {
+          padding: 2rem 0;
+          span {
+            margin-right: .5rem;
+          }
+        }
       }
       &_no-dropdowns {
         display: flex;

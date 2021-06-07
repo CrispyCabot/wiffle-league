@@ -4,7 +4,7 @@ export default defineComponent({
   name: 'content-dropdown',
   props: {
     label: { type: String, default: '' },
-    iconClass: { type: String, default: '' },
+    iconClass: { type: String, default: '' }
   },
   data() {
     return {
@@ -12,6 +12,9 @@ export default defineComponent({
     }
   },
   methods: {
+    closeIsOpen() {
+      this.isOpen = false
+    },
     toggleIsOpen() {
       this.isOpen = !this.isOpen
     }
