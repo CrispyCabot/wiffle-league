@@ -1,5 +1,12 @@
 .multi-item-selector {
   position: relative;
+  &_label {
+    font-size: .9rem;
+    text-align: left;
+    margin-bottom: .25rem;
+    color: $accent_red;
+    font-weight: 600;
+  }
   &_selector {
     display: flex;
     justify-content: space-between;
@@ -83,6 +90,20 @@
           .item-check {
             font-size: .9rem;
             color: $dark_background;
+          }
+        }
+        &_no-items {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 2rem auto 3rem auto;
+          h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+          }
+          .no-items-frown {
+            margin-left: 1rem;
+            font-size: 1.25rem;
           }
         }
       }

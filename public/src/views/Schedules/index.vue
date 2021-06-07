@@ -12,8 +12,10 @@
             ? 'None'
             : ''
           "
+        :label="'Selected League(s)'"
         :itemMaxCharacters="Math.floor((allLeagueNames.length / selectedSchedulesNames.length) * 3)"
         @multi-item-selection="handleScheduleSelection"
+        @search-value-change="searchValueChange($event)"
       />
 
       <div class="leagues-schedules_dropdowns">

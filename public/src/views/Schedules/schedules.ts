@@ -23,7 +23,8 @@ export default defineComponent({
       columns: [],
       gamesShown:  Array<any>(),
       loadingGames: false,
-      paginationRefresh: false
+      paginationRefresh: false,
+      searchText: ''
     }
   },
   computed: {
@@ -32,6 +33,11 @@ export default defineComponent({
       return this.shownLeagues.slice(this.startingIndex, this.endingIndex)
     },
     allLeagueNames(): Array<any> {
+      if (this.searchText) {
+        return this.allLeagues
+          .filter((l: any) => (l.name.toLowerCase().slice(0, this.searchText.length) == this.searchText.toLowerCase()))
+          .map((l: any) => l.name)
+      }
       return this.allLeagues.map((l: any) => l.name)
     },
     selectedSchedulesNames(): Array<any> {
@@ -124,6 +130,9 @@ export default defineComponent({
     },
     viewLeague(league: any) {
       this.$router.push(`/league/${league._id}`)
+    },
+    searchValueChange(searchText: string) {
+      this.searchText = searchText
     }
   },
   watch: {

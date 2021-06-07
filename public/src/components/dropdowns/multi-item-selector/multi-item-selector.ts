@@ -5,6 +5,7 @@ export default defineComponent({
   name: 'multi-item-selector',
   props: {
     selectedItems: { type: Array, default: () => [] },
+    label: { type: String, default: '' },
     items: { type: Array, default: () => [] },
     overrideText: { type: String, default: '' },
     itemMaxCharacters: { type: Number, default: 100000000 }
