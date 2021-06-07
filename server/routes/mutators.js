@@ -58,6 +58,51 @@ router.route('/players/update-profile').put(authChecker, async (req, res) => {
   }
 
 })
+router.route('/players/:id/selected-schedules/add').put(async (req, res) => {
+  const playerId = req.params.id
+  const leagueId = req.body.id
+  await Players.findOneAndUpdate({_id: playerId}, { $addToSet: { selected_league_schedules: leagueId } })
+  const player = await Players.findOne({_id: playerId})
+  
+  if (player) {
+    const allLeagues = await Leagues.find({})
+    if (player.selected_league_schedules.length == allLeagues.length && !player.selected_league_schedules.includes('All')) {
+      await Players.findOneAndUpdate({_id: playerId}, { $addToSet: { selected_league_schedules: 'All' } })
+      const playerAddAllSelected = await Players.findOne({_id: playerId})
+      if (playerAddAllSelected) {
+        res.send({status: 200, player: playerAddAllSelected})
+      } else {
+        res.send({status: 400 })
+      }
+    } else {
+      res.send({status: 200, player: player})
+    }
+  } else {
+    res.send({status: 400 })
+  }
+})
+router.route('/players/:id/selected-schedules/remove').put(async (req, res) => {
+  const playerId = req.params.id
+  const leagueId = req.body.id
+  await Players.findOneAndUpdate({_id: playerId}, { $pull: { selected_league_schedules: leagueId } })
+  const player = await Players.findOne({_id: playerId})
+
+  if (player) {
+    if (player.selected_league_schedules.length == 1 && player.selected_league_schedules[0] == 'All') {
+      await Players.findOneAndUpdate({_id: playerId}, { $pull: { selected_league_schedules: 'All' } })
+      const playerNoSelected = await Players.findOne({_id: playerId})
+      if (playerNoSelected) {
+        res.send({status: 200, player: playerNoSelected})
+      } else {
+        res.send({ status: 400 })
+      }
+    } else {
+      res.send({status: 200, player: player})
+    }
+  } else {
+    res.send({ status: 400 })
+  }
+})
 
 // Game Getters
 

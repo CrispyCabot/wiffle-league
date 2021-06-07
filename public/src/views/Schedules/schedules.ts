@@ -4,33 +4,45 @@ import Pagination from '@/components/navigation/pagination/index.vue'
 import PaginationMixin from '@/mixins/pagination-mixin'
 import ContentDropdown from '@/components/dropdowns/content-dropdown/index.vue'
 import GridTable from '@/components/tables/grid-table/index.vue'
+import MultiItemSelector from '@/components/dropdowns/multi-item-selector/index.vue'
 
 export default defineComponent({
   name: 'schedules',
   components: {
     Pagination,
     ContentDropdown,
-    GridTable
+    GridTable,
+    MultiItemSelector
   },
   mixins: [ PaginationMixin ],
   data() {
     return {
-      selectedSchedules: [],
+      selectedSchedules:  Array<any>(),
       shownLeagues: Array<Promise<any>>(),
+      allLeagues: [],
       columns: [],
       gamesShown:  Array<any>(),
-      loadingGames: false
+      loadingGames: false,
+      paginationRefresh: false
     }
   },
   computed: {
-    ...mapGetters(['getLoggedInPlayer']),
+    ...mapGetters(['getLoggedInPlayer', 'getIsLoggedIn']),
     splicedLeagues(): Array<Object> {
       return this.shownLeagues.slice(this.startingIndex, this.endingIndex)
+    },
+    allLeagueNames(): Array<any> {
+      return this.allLeagues.map((l: any) => l.name)
+    },
+    selectedSchedulesNames(): Array<any> {
+      return this.allLeagues.filter((l: any) => this.selectedSchedules.includes(l._id)).map((l: any) => l.name)
     }
   },
   async created() {
+    this.allLeagues = await this.fetchLeagues()
     this.columns = await this.fetchLeaguesScheduleTableColumns()
-    this.shownLeagues = await this.fetchLeagues()
+    this.shownLeagues = this.allLeagues
+    await this.setSelectedSchedules()
   },
   methods: {
     ...mapActions([
@@ -39,7 +51,9 @@ export default defineComponent({
       'fetchLeagues',
       'fetchLeaguesScheduleTableColumns',
       'fetchGameById',
-      'fetchPlayerById'
+      'fetchPlayerById',
+      'addSelectedSchedule',
+      'removeSelectedSchedule'
     ]),
     findGames(league: any) {
       const gameShownForLeague = this.gamesShown.find((g: any) => g.leagueId == league._id)
@@ -82,27 +96,57 @@ export default defineComponent({
     },
     handleGameClick(e: any) {
       this.$router.push(`/games/${e.id}`)
+    },
+    async setSelectedSchedules() {
+      if (this.getLoggedInPlayer && this.getIsLoggedIn && this.getLoggedInPlayer._id) {
+        this.selectedSchedules = await this.fetchPlayerSelectedSchedules(this.getLoggedInPlayer._id)
+      } else {
+        this.selectedSchedules = [ 'All', ...this.allLeagues.map((l: any) => l._id) ]
+      }
+    },
+    handleScheduleSelection(leagueName: string) {
+      const league: any = this.allLeagues.find((l: any) => l.name == leagueName)
+      
+      if (league) {
+        if (this.selectedSchedules.includes(league._id)) {
+          this.selectedSchedules = this.selectedSchedules.filter(l => l != league._id)
+          if (this.selectedSchedules.length == 1 && this.selectedSchedules[0] == 'All') {
+            this.selectedSchedules = this.selectedSchedules.filter(l => l != 'All')
+          }
+          if (this.getIsLoggedIn) {
+            this.removeSelectedSchedule(league._id)
+          }
+        } else {
+          this.selectedSchedules = [...this.selectedSchedules, league._id]
+          if (this.getIsLoggedIn) {
+            this.addSelectedSchedule(league._id)
+          }
+        }
+      }
     }
   },
   watch: {
     async getLoggedInPlayer() {
-      if (this.getLoggedInPlayer && this.getLoggedInPlayer._id) {
-        this.selectedSchedules = await this.fetchPlayerSelectedSchedules(this.getLoggedInPlayer._id)
-      }
+      await this.setSelectedSchedules()
     },
     async selectedSchedules() {
-      if (!this.selectedSchedules) {
+      if (!this.selectedSchedules || this.selectedSchedules.length == 0) {
         this.shownLeagues = []
         return
       }
 
-      if (this.selectedSchedules.length == 1 && this.selectedSchedules[0] == '*') {
-        this.shownLeagues = await this.fetchLeagues()
+      if (this.selectedSchedules.length == 1 && this.selectedSchedules[0] == 'All') {
+        this.shownLeagues = this.allLeagues
+        this.selectedSchedules = this.allLeagues.map((l: any) => l._id)
       } else {
-        this.shownLeagues = this.selectedSchedules.filter(id => id == '*').map(async (leagueId: any) => {
+        const filteredSelectedSchedules = this.selectedSchedules.filter(id => id != 'All')
+        this.shownLeagues = await Promise.all(filteredSelectedSchedules.map(async (leagueId: any) => {
           return await this.fetchLeagueById(leagueId)
-        })
+        }))
       }
+    },
+    shownLeagues() {
+      this.paginationRefresh = !this.paginationRefresh
     }
   }
 })

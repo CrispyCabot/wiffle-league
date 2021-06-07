@@ -5,11 +5,30 @@
     width: 90%;
     padding: 1.5rem 0;
     &_dropdowns {
+      margin: 1rem 0 0 0;
       width: inherit;
       &_dropdown {
         margin: .5rem 0;
         .leagues-schedules_table {
           padding: 1rem 0;
+        }
+      }
+      &_no-dropdowns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 2rem auto 3rem auto;
+        width: max-content    ;
+        max-width: 100%;
+        padding-bottom: .5rem;
+        border-bottom: 1px solid $accent_red;
+        h1 {
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+        .no-dropdown-frown {
+          margin-left: 1.25rem;
+          font-size: 1.75rem;
         }
       }
     }

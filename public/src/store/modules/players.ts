@@ -101,5 +101,27 @@ export const PlayerActions = {
           reject(error)
         })
     })
+  },
+  addSelectedSchedule({ getters }: any, id: string) {
+    return new Promise((resolve, reject) => {
+      api.put(`/players/${getters.getLoggedInPlayer._id}/selected-schedules/add`, { id })
+        .then(({data}: any) => {
+          resolve(data);
+        })
+        .catch((error) => {
+          reject(error)
+        })
+      })
+  },
+  removeSelectedSchedule({ getters }: any, id: string) {
+    return new Promise((resolve, reject) => {
+      api.put(`/players/${getters.getLoggedInPlayer._id}/selected-schedules/remove`, { id })
+        .then(({data}: any) => {
+          resolve(data);
+        })
+        .catch((error) => {
+          reject(error)
+        })
+      })
   }
 }

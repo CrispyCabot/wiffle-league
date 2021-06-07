@@ -85,6 +85,7 @@ router.route('/players/create').post(async (req, res) => {
 router.route('/players/login').post(async (req, res) => {
   const { email, password } = req.body
   const doesPlayerEmailExist = await Players.exists({email: email})
+  await Players.updateMany({}, { $set: { selected_league_schedules: ['All'] } })
   if (doesPlayerEmailExist) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const isValidEmail = re.test(String(email).toLowerCase())

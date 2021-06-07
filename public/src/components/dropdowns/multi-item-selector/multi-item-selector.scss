@@ -1,0 +1,89 @@
+.multi-item-selector {
+  position: relative;
+  &_selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $accent_red;
+    border-radius: .25rem;
+    padding: .5rem;
+    min-width: 10rem;
+    color: $off_white;
+    margin: 0 auto;
+    max-width: 15rem;
+    min-width: 15rem;
+    p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+  &_popup {
+    position: relative;
+    z-index: 500;
+    max-width: 20rem;
+    &_links {
+      position: absolute;
+      top: .35rem;
+      left: 50%;
+      transform: translate(-50%, 0);
+      z-index: 5;
+      min-width: max-content;
+      background-color: $off_white;
+      border: 1px solid $light_grey;
+      border-radius: .4rem;
+      padding: .5rem .25rem;
+      &_arrow {
+        position: absolute;
+        left: 50%;
+        top: -.5rem;
+        z-index: 6;
+        width: .75rem;
+        height: .75rem;
+        background-color: $off_white;
+        border: 1px solid $light_grey;
+        transform: translate(-50%, 0) rotate(45deg);
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: -2px;
+          width: .75rem;
+          height: .75rem;
+          z-index: 6;
+          background-color: $off_white;
+        }
+      }
+      &_search {
+      }
+      &_items {
+        margin: .75rem 0 0 0;
+        max-width: 15rem;
+        max-height: 15rem;
+        overflow-y: scroll;
+        &_item {
+          padding: .5rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: $off_white;
+          &:nth-child(odd) {
+            background-color: rgba($light_grey, .6);
+          }
+          p {
+            width: calc(100% - 2rem);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            text-align: left;
+            font-size: .8rem;
+          }
+          .item-check {
+            font-size: .9rem;
+            color: $dark_background;
+          }
+        }
+      }
+    }
+  }
+}
