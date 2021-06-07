@@ -36,7 +36,7 @@ playerJSON = """
         "$oid": "id_placeholder"
     },
     "email": "email_placeholder",
-    "password": "password",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
     "firstname": "firstname_placeholder",
     "lastname": "lastname_placeholder",
     "gender": "gender_placeholder",
