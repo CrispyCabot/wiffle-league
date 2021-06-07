@@ -10,7 +10,10 @@ export const PlayerActions = {
       { columnLabel: 'HR', columnName: 'homeruns', maxWidth: 'unset', isHidden: false },
       { columnLabel: 'At Bats', columnName: 'at_bats', maxWidth: 'unset', isHidden: false },
       { columnLabel: 'Games', columnName: 'games', maxWidth: 'unset', isHidden: false },
-      { columnLabel: 'Plate Appearances', columnName: 'plate_appearances', maxWidth: 'unset', isHidden: false }
+      { columnLabel: 'Plate Appearances', columnName: 'plate_appearances', maxWidth: 'unset', isHidden: false },
+      { columnLabel: 'Wins', columnName: 'wins', maxWidth: 'unset', isHidden: false },
+      { columnLabel: 'Losses', columnName: 'losses', maxWidth: 'unset', isHidden: false },
+      { columnLabel: 'Points', columnName: 'points', maxWidth: 'unset', isHidden: false }
     ]
   },
   createNewPlayer({ getters }: any, payload: any) {

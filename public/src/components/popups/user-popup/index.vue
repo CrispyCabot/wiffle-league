@@ -7,9 +7,13 @@
           <font-awesome-icon class="icon" :icon="['fas', 'user-circle']"></font-awesome-icon>
           <p>My profile</p>
         </div>
-        <div class="link" @click="redirectLink('/stats')">
+        <div class="link" @click="redirectLink('/notifications')">
+          <font-awesome-icon class="icon" :icon="['fas', 'bell']"></font-awesome-icon>
+          <p>My notifications</p>
+        </div>
+        <div class="link" @click="redirectLink('/my-leagues')">
           <font-awesome-icon class="icon" :icon="['fas', 'clipboard']"></font-awesome-icon>
-          <p>My stats</p>
+          <p>My leagues</p>
         </div>
         <p class="signout-link" @click="redirectLink('/logout')">Sign out...</p>
       </div>

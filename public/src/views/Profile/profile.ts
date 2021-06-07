@@ -45,7 +45,7 @@ export default defineComponent({
 
       if (this.getLoggedInPlayer.player_stats) {
         Object.keys(this.getLoggedInPlayer.player_stats).forEach((s: string) => {
-          stats[s] = { text: this.getLoggedInPlayer.player_stats[s], type: 'numeric-left' } 
+          stats[s] = { text: this.getLoggedInPlayer.player_stats[s], type: 'numeric' } 
         })
       }
 
