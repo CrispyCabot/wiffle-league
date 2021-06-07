@@ -44,11 +44,14 @@ playerJSON = """
     "phone_number": "phone_placeholder",
     "player_stats": stats_placeholder,
     "show_information": false,
-    "league_ids": leagues_placeholder
+    "league_ids": leagues_placeholder,
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": []
 },"""
 
 
-statThings = ['hits', 'singles', 'doubles', 'triples', 'homeruns', 'plate_appearances', 'at_bats', 'games']
+statThings = ['hits', 'singles', 'doubles', 'triples', 'homeruns', 'plate_appearances', 'at_bats', 'games', 'wins', 'losses', 'points']
 gameJSON = """
 {
     "_id": {
@@ -79,6 +82,8 @@ playerIDs = []
 leagueIDs = []
 gameIDs = []
 statsIDs = []
+
+leaguePlayerIDS = {} #will contain key player id with value [league id]
 
 def makeIDs(lis, amt, typ):
     file = open('server/sample-data/'+typ+".txt", "w")
@@ -146,7 +151,12 @@ def makeGames():
             s += '{ "player_id": { "$oid": "' + p + '" },'
             s += '"stats": {'
             for x in statThings:
-                s += '"'+x+'": '+str(randint(0,3))+','
+                val = randint(0,3)
+                if x in ['wins', 'losses']:
+                    val = -1
+                if x == 'points':
+                    val = randint(0,10)
+                s += '"'+x+'": '+str(val)+','
             s = s[0:-1] + '} },'
         s = s[0:-1] + ']'
         temp = temp.replace("stats_placeholder", s)
@@ -193,11 +203,11 @@ def makePlayers():
             s += '"'+x+'": '+str(randint(0,100))+','
         s = s[0:-1] + '}'
         temp = temp.replace("stats_placeholder", s)
-        s = []
-        for _ in range(randint(0, 3)):
-            s.append(random.choice(leagueIDs))
-            s = list(set(s)) #remove duplicates
-        temp = temp.replace("leagues_placeholder", showListAsOIDs(s))
+        if i in leaguePlayerIDS:
+            playerLeagues = leaguePlayerIDS[i]
+            temp = temp.replace("leagues_placeholder", showListAsOIDs(playerLeagues))
+        else:
+            temp = temp.replace("leagues_placeholder", "[]")
 
         #Cut off last , and add ]
         if i == playerIDs[-1]:
@@ -218,7 +228,13 @@ def makeLeagues():
         numPlayers = randint(3, maxPlayers)
         players = []
         for x in range(numPlayers):
-            players.append(random.choice(playerIDs))
+            p = random.choice(playerIDs)
+            players.append(p)
+            if p in leaguePlayerIDS:
+                leaguePlayerIDS[p].append(i)
+            else:
+                leaguePlayerIDS[p] = [i]
+        leaguePlayerIDS[i] = players
         temp = leagueJSON
         temp = temp.replace("id_placeholder", i)
         temp = temp.replace("name_placeholder", fake.job())
