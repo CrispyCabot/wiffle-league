@@ -88,7 +88,7 @@ export default defineComponent({
           team1: { text: team1.join(', '), type: 'string-wrap' },
           team2: { text: team2.join(', '), type: 'string-wrap' },
           date: { text: new Date(game.game_date).toLocaleDateString(undefined, {year: 'numeric', month: 'numeric', day: 'numeric'}), type: 'date-wrap' },
-          time: { text: new Date(game.game_date).toLocaleTimeString(), type: 'date-wrap' },
+          time: { text: new Date(game.game_date).toLocaleTimeString(undefined, {hour: '2-digit', minute:'2-digit', hour12: true}), type: 'date-wrap' },
           location: { text: game.game_location, type: 'location-wrap' },
           id: { text: game._id, type: 'hidden' }
         }

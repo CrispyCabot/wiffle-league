@@ -21,6 +21,50 @@
       font-size: .8rem;
       color: $accent_red;
     }
+    &_leaderboard {
+      width: inherit;
+      .grid-table {
+        width: 100%;
+        &_table {
+          width: 100%;
+          &-container {
+            width: inherit;
+          }
+        }
+      }
+    }
+    &_schedule {
+      width: inherit;
+      .grid-table {
+        width: 100%;
+        &_table {
+          width: 100%;
+          &-container {
+            width: inherit;
+          }
+        }
+      }
+    }
+    &_overall-stats {
+      width: inherit;
+      .grid-table {
+        width: 100%;
+        &_table {
+          width: 100%;
+          &-container {
+            width: inherit;
+          }
+        }
+      }
+    }
+
+    table {
+      th {
+        width: max-content;
+        white-space: nowrap;
+      }
+    }
+
     &_players {
       width: inherit;
       margin: 1rem auto;
@@ -36,6 +80,7 @@
     }
     &_league-info {
       width: inherit;
+      margin-bottom: 0 !important;
       p {
         text-align: left;
         font-weight: 600;
@@ -69,6 +114,14 @@
           }
         }
       }
+      .league-rules {
+        font-size: .9rem;
+        font-weight: 400;
+        width: 100%;
+        color: $accent_light_red;
+        text-align: left;
+        margin-top: .75rem;
+      }
     }
     &_buttons {
       margin-bottom: 0 !important;
@@ -88,11 +141,12 @@
     &_title {
       font-weight: 600;
       font-size: 1.25rem;
+      margin-bottom: .25rem;
     }
 
     &_content {
       width: inherit;
-      text-align: center;
+      text-align: left;
       font-size: .8rem;
       color: $accent_red;
     }
@@ -100,6 +154,7 @@
 
   &_edit {
     margin: 0 auto;
+    margin-bottom: 4rem !important;
     width: 90%;
 
     &_title {

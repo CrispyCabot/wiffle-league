@@ -5,9 +5,45 @@
       <p v-if="leagueData && leagueData.name" class="league-container_content_title">{{ leagueData.name }}</p>
       <p v-if="leagueData && !leagueData.games_created" class="league-container_content_sub-title">(League has not started)</p>
 
-      <div v-if="isLeagueStarted" class="content-section league-container_content_leaderboard"></div>
-      <div v-if="isLeagueStarted" class="content-section league-container_content_schedule"></div>
-      <div v-if="isLeagueStarted" class="content-section league-container_content_overall-stats"></div>
+      <div v-if="isLeagueStarted" class="content-section league-container_content_leaderboard">
+        <grid-table
+          class="league-container_content_leaderboard"
+          :columns="leaderboardColumns"
+          :rows="leaderboardRows"
+          :rowsCount="leaderboardRows ? leaderboardRows.length : 0"
+          :hasHeader="true"
+          :label="'Leaderboard'"
+          :hasPagination="false"
+          :hasSizeSelector="false"
+          :canHideContent="true"
+        ></grid-table>
+      </div>
+      <div v-if="isLeagueStarted" class="content-section league-container_content_schedule">
+        <grid-table
+          class="league-container_content_schedule"
+          :columns="scheduleColumns"
+          :rows="scheduleRows"
+          :rowsCount="scheduleRows ? scheduleRows.length : 0"
+          :hasHeader="scheduleColumns.length > 0"
+          :label="'Schedule'"
+          :hasPagination="false"
+          :hasSizeSelector="false"
+          :canHideContent="true"
+        ></grid-table>
+      </div>
+      <div v-if="isLeagueStarted" class="content-section league-container_content_overall-stats">
+        <grid-table
+          class="league-container_content_overall-stats_table"
+          :columns="overallStatsColumns"
+          :rows="statsRows"
+          :rowsCount="statsRows ? statsRows.length : 0"
+          :hasHeader="overallStatsColumns.length > 0"
+          :label="'Overall Stats'"
+          :hasPagination="false"
+          :hasSizeSelector="false"
+          :canHideContent="true"
+      ></grid-table>
+      </div>
 
       <div v-if="!isLeagueStarted" class="content-section league-container_content_players">
         <grid-table
@@ -40,12 +76,14 @@
             </tbody>
           </table>
         </div>
+        <p class="league-rules" @click="$router.push('/rules')">View league rules...</p>
       </div>
 
-      <div v-if="isLoggedInPlayerCreatorOfLeague || isLeagueStarted" class="content-section league-container_content_buttons">
+      <div class="content-section league-container_content_buttons">
         <button v-if="isLoggedInPlayerCreatorOfLeague && !isLeagueStarted" class="btn red_btn" @click="startLeague">Start League</button>
+        <button v-if="!isLoggedInPlayerCreatorOfLeague && !isLeagueStarted" class="btn red_btn" @click="joinLeague">Request to join</button>
         <button v-if="isLeagueStarted" class="btn red_btn" @click="submitScores">Submit scores</button>
-        <p v-if="isLoggedInPlayerCreatorOfLeague" @click="deleteLeague">Delete League</p>
+        <p v-if="isLoggedInPlayerCreatorOfLeague" class="delete-league" @click="deleteLeague">Delete League</p>
       </div>
     </div>
 

@@ -17,6 +17,19 @@ export default defineComponent({
     pageIndex: { type: Number, default: 0 },
     pageSize: { type: Number, default: 4 },
     hasSizeSelector: { type: Boolean, default: false },
-    paginationRefresh: { type: Boolean, default: true }
+    paginationRefresh: { type: Boolean, default: true },
+    canHideContent: { type: Boolean, default: false }
+  },
+  data() {
+    return {
+      isContentOpen: true
+    }
+  },
+  methods: {
+    toggleIsContentOpen() {
+      if (this.canHideContent) {
+        this.isContentOpen = !this.isContentOpen
+      }
+    }
   }
 })
