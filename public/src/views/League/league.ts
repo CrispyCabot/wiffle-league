@@ -1,6 +1,7 @@
 import { defineComponent } from "@vue/runtime-core";
 import { mapActions, mapGetters } from "vuex";
 import GridTable from '@/components/tables/grid-table/index.vue'
+import { faThemeisle } from "@fortawesome/free-brands-svg-icons";
 
 export default defineComponent({
   name: 'league',
@@ -51,7 +52,13 @@ export default defineComponent({
     this.creator = await this.fetchPlayerById(this.leagueData.league_creator_id)
   },
   methods: {
-    ...mapActions(['fetchLeagueById', 'fetchLeagueStatsById', 'fetchPlayerById']),
+    ...mapActions([
+      'fetchLeagueById',
+      'fetchLeagueStatsById',
+      'fetchPlayerById',
+      'removePlayerFromLeagueGivenId',
+      'deleteLeagueById'
+    ]),
     async fetchPlayers() {
       this.players = await Promise.all(this.leagueData.player_ids.map(async (id: any) => {
         return await this.fetchPlayerById(id)
@@ -69,12 +76,8 @@ export default defineComponent({
       if (avg.length > 5) return avg.slice(1, 5)
       return avg
     },
-    handleKickPlayerClick(row: any, column: any) {
-      // TODO
-      // Make new route for kicking a player from a league
-      // Should remove players id from leagues player_ids and
-      // Should remove league id from players league_ids
-      // Should also send a notification?
+    async handleKickPlayerClick(row: any, column: any) {
+      this.leagueData = await this.removePlayerFromLeagueGivenId({ playerId: row.id.text, leagueId: this.leagueData._id })
     },
     startLeague() {
       // TODO
@@ -82,8 +85,14 @@ export default defineComponent({
     submitScores() {
       // TODO
     },
-    deleteLeague() {
-      // TODO
+    async deleteLeague() {
+      const res = await this.deleteLeagueById(this.leagueData._id)
+      if (res.status === 200) {
+        console.log('success')
+        this.$router.push('/')
+      } else {
+        console.log('failure', res.message)
+      }
     }
   },
   watch: {

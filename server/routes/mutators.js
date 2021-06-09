@@ -4,6 +4,40 @@ const authChecker = require("./utils/auth-checker");
 
 // League Getters
 const Leagues = require('../models/league-model')
+router.route('/leagues/kick-player').put(authChecker, async (req, res) => {
+  const { playerId, leagueId } = req.body
+
+  const league = await Leagues.findOne({_id: leagueId})
+  if (!league) {
+    res.send({ status: 400, message: 'Could not find league'})
+  }
+
+  // Make sure player id is in league
+  const playerIsInLeague = league.player_ids.includes(playerId)
+  // Make sure player being removed isnt the creator
+  const playerIsNotTheCreator = league.league_creator_id != playerId
+
+  if (!playerIsInLeague) {
+    res.send({ status: 400, message: 'Player is not in the league'})
+  } else if (!playerIsNotTheCreator) {
+    res.send({ status: 400, message: 'Cannot kick the creator'})
+  } else {
+    // Remove player id from league
+    await Leagues.findOneAndUpdate({_id: leagueId}, { $set: { player_ids: league.player_ids.filter(id => id != playerId) } })
+    // Remove league id from player
+    await Players.findOneAndUpdate({_id: playerId}, { $pull: { league_ids: leagueId } })
+    // TODO
+    // Should also send a notification?
+
+    const updatedLeague = await Leagues.findOne({_id: leagueId})
+    if (updatedLeague) {
+      res.send({ status: 200, message: 'Player successfully kicked', league: updatedLeague})
+    } else { 
+      res.send({ status: 400, message: 'Player unsuccessfully kicked' })
+    }
+  }
+  
+})
 
 // Player Getters
 const Players = require('../models/player-model');

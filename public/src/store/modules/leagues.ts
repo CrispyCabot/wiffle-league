@@ -80,5 +80,30 @@ export const LeagueActions = {
           reject(error)
         })
     })
+  },
+  removePlayerFromLeagueGivenId({ getters }: any, payload: any) {
+    const { playerId, leagueId } = payload
+    api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`;
+    return new Promise((resolve, reject) => {
+      api.put(`/leagues/kick-player`, { playerId, leagueId })
+        .then(({data}) => {
+          resolve(data)
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    })
+  },
+  deleteLeagueById({getters}: any, leagueId: String) {
+    api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`;
+    return new Promise((resolve, reject) => {
+      api.post(`/leagues/delete`, { leagueId })
+        .then(({data}) => {
+          resolve(data)
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    })
   }
 }

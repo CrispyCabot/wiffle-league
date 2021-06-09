@@ -41,6 +41,17 @@ router.route('/leagues/create').post(authChecker, async (req, res) => {
   }
 
 })
+router.route('/leagues/delete').post(authChecker, async (req, res) => {
+  const { leagueId } = req.body
+
+  const doesLeagueNameExist = await Leagues.exists({_id: leagueId})
+  if (!doesLeagueNameExist) {
+    res.json({status: 400, message: 'League does not exist'})
+  } else {
+    await Leagues.deleteOne({_id: leagueId})
+    res.json({status: 200, message: 'League successfully deleted'})
+  }
+})
 
 // Player Setters
 const Players = require('../models/player-model');
