@@ -13,6 +13,7 @@ const league_schema = new Schema({
   league_creator_id: Schema.Types.ObjectId,
   game_ids: [Schema.Types.ObjectId],
   num_games: Number,
+  num_games_completed: Number,
   games_created: Boolean,
   team_size: Number,
   start_date: Date,

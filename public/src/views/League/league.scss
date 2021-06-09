@@ -1,22 +1,110 @@
-.rules-container {
-    h1 {
+.league-container {
+  width: 100%;
+  .white_card_background {
+    margin-bottom: 1rem;
+  }
+
+  &_content {
+    margin: 0 auto;
+    width: 90%;
+
+    .content-section {
+      margin: 1rem 0;
+    }
+
+    &_title {
+      font-weight: 600;
+      font-size: 1.25rem;
+      text-align: center;
+    }
+    &_sub-title {
+      font-size: .8rem;
+      color: $accent_red;
+    }
+    &_players {
+      width: inherit;
+      margin: 1rem auto;
+      .grid-table {
+        width: 100%;
+        &_table {
+          width: 100%;
+          &-container {
+            width: inherit;
+          }
+        }
+      }
+    }
+    &_league-info {
+      width: inherit;
+      p {
+        text-align: left;
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: .25rem;
+      }
+      &_table {
+        width: 100%;
+        overflow-x: auto;
+        table {
+          width: max-content;
+          border-collapse: collapse;
+          text-align: left;
+          thead {
+            th {
+              padding: 0rem .75rem;
+              padding-left: 0;
+              width: max-content;
+              font-weight: 300;
+              font-size: .8rem;
+            }
+          }
+          tbody {
+            td {
+              font-weight: 600;
+              font-size: 1rem;
+              color: $accent_red;
+              padding: .1rem 1.25rem;
+              padding-left: 0;
+            }
+          }
+        }
+      }
+    }
+    &_buttons {
+      margin-bottom: 0 !important;
+      p {
         text-align: center;
+        font-size: .8rem;
+        color: $light-grey;
+        margin: .5rem 0 0 0;
+      }
     }
-    .contact-card {
-        background: $off_white;
-        margin: 1rem;
-        padding: 0.5rem;
-        border-radius: 5px;
+  }
+
+  &_about {
+    margin: 0 auto;
+    width: 90%;
+
+    &_title {
+      font-weight: 600;
+      font-size: 1.25rem;
     }
-    h2 {
-        background: $accent_red;
-        color: $off_white;
-        padding: 0.4rem;
+
+    &_content {
+      width: inherit;
+      text-align: center;
+      font-size: .8rem;
+      color: $accent_red;
     }
-    p {
-        padding: 0.4rem;
+  }
+
+  &_edit {
+    margin: 0 auto;
+    width: 90%;
+
+    &_title {
+      font-weight: 600;
+      font-size: 1.25rem;
     }
-    ul {
-        margin-left: 2rem;
-    }
+  }
 }

@@ -12,6 +12,7 @@ const game_schema = new Schema({
   player_stats: [
     { player_id: Schema.Types.ObjectId, stats: stats }
   ],
+  completed: Boolean
 })
 
 module.exports = game_schema

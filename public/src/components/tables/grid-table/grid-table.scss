@@ -71,6 +71,15 @@
             overflow: auto;
             white-space: unset;
           }
+          &.button {
+            span {
+              button {
+                margin: .5rem 0;
+                font-size: .75rem;
+                padding: .3rem .75rem;
+              }
+            }
+          }
         }
       }
     }

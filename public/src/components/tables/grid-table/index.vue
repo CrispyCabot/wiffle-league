@@ -20,10 +20,14 @@
                 'string': col.type === 'string' || col.type == 'string-wrap',
                 'location': col.type === 'location' || col.type == 'location-wrap',
                 'wrap': col.type === 'string-wrap' || col.type === 'date-wrap' || col.type === 'numeric-wrap' || col.type === 'location-wrap',
+                'button': col.type === 'button',
                 'hidden': col.type === 'hidden'
               }"
               :style="{'max-width': columns[index] ? columns[index].maxWidth : 'unset'}"
-            >{{col.text}}</td>
+            >
+              <span v-if="col.type != 'button'">{{col.text}}</span>
+              <span v-if="col.type == 'button'"> <button class="btn red_btn" @click.stop="$emit('row-button-clicked', row, col)">{{col.text}}</button> </span>
+            </td>
           </tr>
         </tbody>
       </table>

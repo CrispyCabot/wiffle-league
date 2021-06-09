@@ -30,6 +30,8 @@ router.route('/leagues/create').post(authChecker, async (req, res) => {
         about_text,
         gender
       })
+      // Add league id to player that is creating league
+      await Players.findOneAndUpdate({_id: league_creator_id}, { $addToSet: { league_ids: league._id } })
       res.json({league: league, status: 200, message: 'Successfully created league'})
     } else {
       res.json({status: 400, message: 'Cannot create league with invalid creator id'})
@@ -72,7 +74,9 @@ router.route('/players/create').post(async (req, res) => {
           },
           show_information: false,
           league_ids: [],
-          token_version: 0
+          token_version: 0,
+          notifications: [],
+          selected_league_schedules: ['All']
         })
       const accessToken = createAccessToken(player)
       sendRefreshToken(req, res, createJRTEM(player))
