@@ -81,8 +81,8 @@
 
       <div class="content-section league-container_content_buttons">
         <button v-if="isLoggedInPlayerCreatorOfLeague && !isLeagueStarted" class="btn red_btn" @click="startLeague">Start League</button>
-        <button v-if="!isLoggedInPlayerCreatorOfLeague && !isLeagueStarted" class="btn red_btn" @click="joinLeague">Request to join</button>
-        <button v-if="isLeagueStarted" class="btn red_btn" @click="submitScores">Submit scores</button>
+        <button v-if="!isLeagueStarted && !isLoggedInPlayerInLeague" class="btn red_btn" @click="joinLeague">Request to join</button>
+        <button v-if="isLeagueStarted && isLoggedInPlayerInLeague" class="btn red_btn" @click="submitScores">Submit scores</button>
         <p v-if="isLoggedInPlayerCreatorOfLeague" class="delete-league" @click="deleteLeague">Delete League</p>
       </div>
     </div>
@@ -101,16 +101,19 @@
       <div class="league-container_edit_settings">
         <div class="league-container_edit_settings_grid">
           <div v-for="field in fields" :key="field.name" class="league-container_edit_settings_grid_field" :class="{'full-width': field.type == 'radio-group'}">
-            <div v-if="field.type === 'input' || field.type === 'date'"
+            <div v-if="field.type === 'input' || field.type === 'date' || field.type === 'number'"
               class="league-container_edit_settings_grid_field_input"
               :class="{'invalid': 
-                (field.isRequired && field.value == '')
+                (field.isRequired && field.value == '') ||
+                (field.name === 'deadlineDate' && !isDeadlineDateValid) ||
+                (field.name === 'startDate' && !isStartDateValid) ||
+                (field.name === 'endDate' && !isEndDateValid)
               }"
             >
               <label :for="field.name">{{ field.placeholder }}<span>{{ field.isRequired ? '*' : '' }}</span></label>
               <input class="default-input field-input"
                 :disabled="!isSettingsEditing"
-                :type="field.type === 'input' ? 'text' : 'date'"
+                :type="field.type === 'input' ? 'text' : field.type"
                 :placeholder="field.placeholder"
                 :name="field.name"
                 v-model="field.value"

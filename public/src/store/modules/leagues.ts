@@ -81,6 +81,30 @@ export const LeagueActions = {
         })
     })
   },
+  editLeagueSettings({ getters }:any, payload: any) {
+    const { leagueId, name, maxPlayers, numGames, teamSize, startDate, endDate, deadlineDate, other, gender } = payload
+    api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`;
+    return new Promise((resolve, reject) => {
+      api.put(`/leagues/edit-settings`, {
+        leagueId: leagueId,
+        name: name,
+        max_num_players: maxPlayers,
+        num_games: numGames,
+        team_size: teamSize,
+        start_date: startDate,
+        end_date: endDate,
+        deadline_date: deadlineDate,
+        about_text: other,
+        gender: gender
+      })
+        .then(({data}) => {
+          resolve(data)
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    })
+  },
   removePlayerFromLeagueGivenId({ getters }: any, payload: any) {
     const { playerId, leagueId } = payload
     api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`;

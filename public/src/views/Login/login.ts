@@ -51,7 +51,7 @@ export default defineComponent({
         this.updateIsLoggedIn(true)
         this.updateLoggedInPlayer(res.player)
         if (this.$route.query.redirect && this.$route.query.redirect != '/signup') {
-          this.$router.push(String(this.$route.query.redirect))
+          this.$router.push(decodeURIComponent(String(this.$route.query.redirect)))
         } else {
           this.$router.push('/')
         }

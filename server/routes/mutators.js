@@ -38,6 +38,29 @@ router.route('/leagues/kick-player').put(authChecker, async (req, res) => {
   }
   
 })
+router.route('/leagues/edit-settings').put(authChecker, async (req, res) => {
+  const { leagueId, name, max_num_players, num_games, team_size, start_date, end_date, deadline_date, about_text, gender } = req.body
+
+  const league = await Leagues.findOne({_id: leagueId})
+  if (!league) {
+    res.send({ status: 400, message: 'Could not find league'})
+  } else {
+    // Update league fields
+    await Leagues.findOneAndUpdate({_id: leagueId}, {
+      $set: {
+        name, max_num_players, num_games, team_size, start_date, end_date, deadline_date, about_text, gender
+      }
+     })
+
+    const updatedLeague = await Leagues.findOne({_id: leagueId})
+    if (updatedLeague) {
+      res.send({ status: 200, message: 'Successfully updated league settings', league: updatedLeague})
+    } else { 
+      res.send({ status: 400, message: 'Unsuccessfully updated league settings' })
+    }
+  }
+  
+})
 
 // Player Getters
 const Players = require('../models/player-model');

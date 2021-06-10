@@ -36,9 +36,9 @@ export default defineComponent({
         deadlineDate: { value: '', placeholder: 'Deadline Date', name: 'deadlineDate', isRequired: true, type: 'date' },
         startDate: { value: '', placeholder: 'Start Date', name: 'startDate', isRequired: true, type: 'date' },
         endDate: { value: '', placeholder: 'End Date', name: 'endDate', isRequired: true, type: 'date' },
-        maxPlayers: { value: '', placeholder: 'Max Players', name: 'maxPlayers', isRequired: true, type: 'input' },
-        teamSize: { value: '', placeholder: 'Team Size', name: 'teamSize', isRequired: true, type: 'input' },
-        numGames: { value: '', placeholder: 'Num Games', name: 'numGames', isRequired: true, type: 'input' },
+        maxPlayers: { value: '', placeholder: 'Max Players', name: 'maxPlayers', isRequired: true, type: 'number' },
+        teamSize: { value: '', placeholder: 'Team Size', name: 'teamSize', isRequired: true, type: 'number' },
+        numGames: { value: '', placeholder: 'Num Games', name: 'numGames', isRequired: true, type: 'number' },
         other: { value: '', placeholder: 'Other', name: 'other', isRequired: false, type: 'text-area' },
         gender: { value: '', placeholder: 'Gender', name: 'gender', isRequired: true, type: 'radio-group' }
       },
@@ -58,6 +58,10 @@ export default defineComponent({
     isLoggedInPlayerCreatorOfLeague(): Boolean {
       if (!this.leagueData || !this.leagueData.league_creator_id) return false
       return this.leagueData.league_creator_id == this.getLoggedInPlayer._id && this.getIsLoggedIn
+    },
+    isLoggedInPlayerInLeague(): Boolean {
+      if (!this.leagueData || !this.leagueData.player_ids) return false
+      return this.leagueData.player_ids.includes(this.getLoggedInPlayer._id) && this.getIsLoggedIn
     },
     playersRows(): Array<Object> {
       if (!this.leagueData) return []
@@ -105,7 +109,28 @@ export default defineComponent({
         this.fields.maxPlayers.value &&
         this.fields.teamSize.value &&
         this.fields.numGames.value &&
-        this.fields.gender.value
+        this.fields.gender.value &&
+        this.isStartDateValid &&
+        this.isEndDateValid &&
+        this.isDeadlineDateValid
+      )
+    },
+    isStartDateValid(): Boolean {
+      return Boolean(
+        (new Date(this.fields.startDate.value) < new Date(this.fields.endDate.value)) ||
+        this.fields.startDate.value == ''
+      )
+    },
+    isEndDateValid(): Boolean {
+      return Boolean(
+        (new Date(this.fields.endDate.value)) > (new Date(this.fields.startDate.value)) ||
+        this.fields.endDate.value == ''
+      )
+    },
+    isDeadlineDateValid(): Boolean {
+      return Boolean(
+        (new Date(this.fields.deadlineDate.value) <= new Date(this.fields.startDate.value)) ||
+        this.fields.deadlineDate.value == ''
       )
     }
   },
@@ -132,7 +157,8 @@ export default defineComponent({
       'deleteLeagueById',
       'fetchPlayerStatsTableColumns',
       'fetchLeaguesScheduleTableColumns',
-      'fetchGameById'
+      'fetchGameById',
+      'editLeagueSettings'
     ]),
     async fetchPlayers() {
       this.players = await Promise.all(this.leagueData.player_ids.map(async (id: any) => {
@@ -215,8 +241,24 @@ export default defineComponent({
       this.fields.gender.value = gender
     },
     async saveSettings() {
-      // TODO
-    },
+      const res = await this.editLeagueSettings({
+        leagueId: this.leagueData._id,
+        name: this.fields.name.value,
+        maxPlayers: this.fields.maxPlayers.value,
+        numGames: this.fields.numGames.value,
+        teamSize: this.fields.teamSize.value,
+        startDate: this.fields.startDate.value,
+        endDate: this.fields.endDate.value,
+        deadlineDate: this.fields.deadlineDate.value,
+        other: this.fields.other.value,
+        gender: this.fields.gender.value
+      })
+
+      if (res.status === 200) {
+        this.leagueData = res.league
+        this.isSettingsEditing = false
+      }
+   },
     editSettings() {
       this.isSettingsEditing = true
     },

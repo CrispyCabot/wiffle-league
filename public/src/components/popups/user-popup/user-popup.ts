@@ -16,7 +16,7 @@ export default defineComponent({
       if (link == '/logout') {
         await this.logPlayerOut()
       } else if (link == '/login') {
-        this.$router.push(`${link}?redirect=${this.$route.path}`)
+        this.$router.push(`${link}?redirect=${encodeURIComponent(this.$route.path)}`)
       } else {
         this.$router.push(link)
       }
