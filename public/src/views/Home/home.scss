@@ -1,11 +1,11 @@
 .home {
   padding-bottom: unset;
   text-align: center;
-  .league-table {
+  &_league-table {
     margin: 1rem auto;
     padding: 1rem 0 1.5rem 0;
   }
-  .thingy {
+  &_btns {
     margin: 3rem 0;
     h3 {
       color: $off_white;
@@ -17,7 +17,7 @@
       margin-right: 0.6rem;
     }
   }
-  .about {
+  &_about {
     width: 100%;
     background: $off_white;
     padding: 2rem 1.5rem;
@@ -34,3 +34,45 @@
     }
   }
 }
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .home {
+    &_about {
+      padding: 2rem 3rem;
+      p {
+        max-width: 60rem;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .home {
+    &_league-table {
+      width: 80%;
+      margin: 3rem auto;
+    }
+    &_about {
+      padding: 5rem 3rem;
+      h2 {
+        margin-bottom: 1rem;
+      }
+    }
+    &_btns {
+      font-size: 1.5rem;
+      margin: 8rem auto;
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}

@@ -2,7 +2,7 @@
   <div class="home">
     <h1 class="site-title">Wiffle League</h1>
     <button class="btn red_btn" @click="redirect('/signup')">Sign up today!</button>
-    <div class="league-table white_card_background ">
+    <div class="home_league-table white_card_background ">
       <grid-table
         :columns="columns"
         :rows="splicedRows"
@@ -18,12 +18,12 @@
         @row-clicked="handleLeagueClick"
       ></grid-table>
     </div>
-    <div class="thingy">
+    <div class="home_btns">
       <h3>Want to join in on the fun?</h3>
       <button class="btn red_btn" @click="redirect('/players')">Find players</button>
       <button class="btn red_btn" @click="redirect('/leagues/create')">Create a League</button>
     </div>
-    <div class="about">
+    <div class="home_about">
       <h2>About</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut metus eget libero facilisis aliquam. Phasellus in lobortis eros, ac dapibus elit. Curabitur ac magna ut metus finibus dapibus at in purus. Aenean consequat ipsum et orci mattis, a tristique ex mattis. Vestibulum eleifend libero quis arcu consequat, ac imperdiet purus feugiat. Nullam mauris quam, ultrices nec pellentesque vel, efficitur a nibh. Curabitur in enim quis velit sodales egestas luctus ac purus. Etiam nibh nulla, porttitor sit amet fringilla at, pretium ut quam. Maecenas dolor est, viverra non lobortis et, rutrum sit amet ligula.
         <br><br>

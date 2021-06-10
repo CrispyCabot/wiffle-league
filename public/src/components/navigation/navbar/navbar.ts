@@ -30,6 +30,9 @@ export default defineComponent({
     },
     setIsMobileView() {
       this.isMobileView = Boolean(window.outerWidth <= 576)
+    },
+    redirect(link: any) {
+      this.$router.push(link.redirect)
     }
   },
   unmounted() { 

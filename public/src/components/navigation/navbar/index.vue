@@ -4,7 +4,8 @@
       <Hamburger :links="links" />
     </div>
     <div v-else class="navbar-container_desktop">
-      <p v-for="link in links" :key="link.redirect">{{ link.label }}</p>
+      <img src="../../../assets/logo.png" @click="redirect({redirect: '/'})">
+      <p v-for="link in links" :key="link.redirect" :class="{'active': link.redirect === $route.path}" @click="redirect(link)">{{ link.label }}</p>
     </div>
 
     <div class="navbar-container_profile" v-click-away="closeUserPopup">

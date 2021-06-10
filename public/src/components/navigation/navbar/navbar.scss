@@ -5,13 +5,38 @@
   padding: 1rem;
   color: $off_white;
   font-size: 1.75rem;
+  max-width: 120rem;
+  margin: 0 auto;
 
   &_mobile {
 
   }
 
   &_desktop {
-
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+      object-fit: cover;
+      margin-right: .5rem;
+      cursor: pointer;
+    }
+    p {
+      font-size: .9rem;
+      margin-right: .5rem;
+      color: $accent_light_red;
+      cursor: pointer;
+      transition: color .3s;
+      &.active {
+        color: $off_white;
+        font-weight: 600;
+      }
+      &:hover {
+        color: $off_white;
+      }
+    }
   }
 
   &_profile {
@@ -36,5 +61,41 @@
     .popup-leave-active {
       transition: all 0.3s;
     }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .navbar-container {
+    padding: 2rem;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .navbar-container {
+    padding: 2rem 3rem;
+    &_desktop {
+      img {
+        margin-right: 1rem;
+      }
+      p {
+        margin-right: 1rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .navbar-container {
+    padding: 3rem;
   }
 }
