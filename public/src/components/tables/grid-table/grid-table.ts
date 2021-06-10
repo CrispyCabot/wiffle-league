@@ -22,7 +22,7 @@ export default defineComponent({
   },
   data() {
     return {
-      isContentOpen: true
+      isContentOpen: false
     }
   },
   methods: {

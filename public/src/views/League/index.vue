@@ -97,6 +97,48 @@
 
     <div v-if="isLoggedInPlayerCreatorOfLeague" class="league-container_edit white_card_background">
       <p class="league-container_edit_title">Edit League</p>
+
+      <div class="league-container_edit_settings">
+        <div class="league-container_edit_settings_grid">
+          <div v-for="field in fields" :key="field.name" class="league-container_edit_settings_grid_field" :class="{'full-width': field.type == 'radio-group'}">
+            <div v-if="field.type === 'input' || field.type === 'date'"
+              class="league-container_edit_settings_grid_field_input"
+              :class="{'invalid': 
+                (field.isRequired && field.value == '')
+              }"
+            >
+              <label :for="field.name">{{ field.placeholder }}<span>{{ field.isRequired ? '*' : '' }}</span></label>
+              <input class="default-input field-input"
+                :disabled="!isSettingsEditing"
+                :type="field.type === 'input' ? 'text' : 'date'"
+                :placeholder="field.placeholder"
+                :name="field.name"
+                v-model="field.value"
+              >
+            </div>
+            <div v-if="field.type === 'text-area'"
+              class="league-container_edit_settings_grid_field_text-area"
+              :class="{'invalid': 
+                (field.isRequired && field.value == '')
+              }"
+            >
+              <label :for="field.name">{{ field.placeholder }}<span>{{ field.isRequired ? '*' : '' }}</span></label>
+              <textarea class="default-input field-input"
+                :disabled="!isSettingsEditing"
+                :placeholder="field.placeholder"
+                :name="field.name"
+                v-model="field.value"
+              ></textarea>
+            </div>
+            <div v-else-if="field.type === 'radio-group'" class="league-container_edit_settings_grid_field_radio-group">
+              <radio-button-group :class="{'league-container_edit_settings_grid_field_radio-group-disabled': !isSettingsEditing}" :buttons="genderRadioButtons" :selectedRadioButton="field.value" @radio-button-change="setGender" />
+            </div>
+          </div>
+        </div>
+        <button v-if="!isSettingsEditing" class="btn red_btn league-container_edit_settings_btn-edit" @click="editSettings">Edit</button>
+        <button v-else-if="isSettingsEditing" class="btn red_btn league-container_edit_settings_btn-save" :class="{'disabled': !isSaveEnabled}" @click="saveSettings">Save</button>
+        <p v-if="isSettingsEditing" class="league-container_edit_settings_btn-cancel"  @click="cancelSettings">Cancel</p>
+      </div>
     </div>
 
   </div>

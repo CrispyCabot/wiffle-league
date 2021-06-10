@@ -16,6 +16,7 @@
       font-weight: 600;
       font-size: 1.25rem;
       text-align: center;
+      padding: .75rem 0;
     }
     &_sub-title {
       font-size: .8rem;
@@ -160,6 +161,87 @@
     &_title {
       font-weight: 600;
       font-size: 1.25rem;
+    }
+
+    &_settings {
+      width: 90%;
+      box-sizing: border-box;
+      &_grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+        grid-column-gap: 1rem;
+        grid-row-gap: .5rem;
+        width: 100%;
+        min-width: 0;
+        &_field {
+          min-width: 0;
+          label {
+            font-size: .8rem;
+            span {
+              color: $accent_red;
+              margin-left: .1rem;
+            }
+          }
+          &_text-area {
+            height: max-content;
+            .field-input {
+              min-height: 2rem;
+              resize: vertical;
+              overflow: auto;
+            }
+          }
+          &_input, &_text-area {
+            .field-input {
+              font-size: .8rem;
+              border: 1px solid $light-grey;
+              width: 100%;
+            }
+            &.invalid {
+              .field-input {
+                border-color: $accent_red;
+              }
+            }
+          }
+          &_radio-group {
+            margin-top: .5rem;
+            p {
+              color: $dark_background !important;
+            }
+            &-disabled {
+              .radio-button-group_buttons_button {
+                pointer-events: none;
+                .radio-button_circle_selected {
+                  border-color: $light-grey;
+                  &::after {
+                    background-color: $light-grey;
+                  }
+                }
+              }
+            }
+          }
+          &.full-width {
+            grid-column-start: 1;
+            grid-column-end: 3;
+          }
+        }
+      }
+      &_btn-edit, &_btn-save {
+        display: block;
+        margin: 1rem auto .5rem auto;
+        text-align: center;
+        transition: .3s;
+        &.disabled {
+          pointer-events: none;
+          background-color: $light-grey;
+        }
+      }
+      &_btn-cancel {
+        text-align: center;
+        font-size: 1rem;
+        margin: .25rem auto .75rem auto;
+        color: $light-grey;
+      }
     }
   }
 }

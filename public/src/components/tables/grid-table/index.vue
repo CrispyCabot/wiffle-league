@@ -3,8 +3,8 @@
     <div v-if="title" class="grid-table_title">{{ title }}</div>
 
     <div v-if="label" class="grid-table_label" :class="{'open': isContentOpen, 'closed': !isContentOpen}">
-      <p @click="toggleIsContentOpen">{{ label }}</p>
       <font-awesome-icon v-if="canHideContent" class="grid-table_label-icon" :icon="['fas', 'chevron-circle-down']" @click="toggleIsContentOpen"></font-awesome-icon>
+      <p @click="toggleIsContentOpen">{{ label }}</p>
     </div>
     <div v-if="isContentOpen || !canHideContent" class="grid-table_table-container">
       <table class="grid-table_table">

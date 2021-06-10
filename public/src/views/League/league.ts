@@ -1,12 +1,13 @@
 import { defineComponent } from "@vue/runtime-core";
 import { mapActions, mapGetters } from "vuex";
 import GridTable from '@/components/tables/grid-table/index.vue'
-import { faThemeisle } from "@fortawesome/free-brands-svg-icons";
+import RadioButtonGroup from '@/components/inputs/radio-button-group/index.vue'
 
 export default defineComponent({
   name: 'league',
   components: {
-    GridTable
+    GridTable,
+    RadioButtonGroup
   },
   data() {
     return {
@@ -29,7 +30,24 @@ export default defineComponent({
         {columnLabel: 'Id', columnName: 'id', maxWidth: 'unset', isHidden: true}
       ],
       players: Array<any>(),
-      scheduleRows: Array<any>()
+      scheduleRows: Array<any>(),
+      fields: {
+        name: { value: '', placeholder: 'Name', name: 'name', isRequired: true, type: 'input' },
+        deadlineDate: { value: '', placeholder: 'Deadline Date', name: 'deadlineDate', isRequired: true, type: 'date' },
+        startDate: { value: '', placeholder: 'Start Date', name: 'startDate', isRequired: true, type: 'date' },
+        endDate: { value: '', placeholder: 'End Date', name: 'endDate', isRequired: true, type: 'date' },
+        maxPlayers: { value: '', placeholder: 'Max Players', name: 'maxPlayers', isRequired: true, type: 'input' },
+        teamSize: { value: '', placeholder: 'Team Size', name: 'teamSize', isRequired: true, type: 'input' },
+        numGames: { value: '', placeholder: 'Num Games', name: 'numGames', isRequired: true, type: 'input' },
+        other: { value: '', placeholder: 'Other', name: 'other', isRequired: false, type: 'text-area' },
+        gender: { value: '', placeholder: 'Gender', name: 'gender', isRequired: true, type: 'radio-group' }
+      },
+      genderRadioButtons: [
+        'Male',
+        'Female',
+        'Other'
+      ],
+      isSettingsEditing: false
     }
   },
   computed: {
@@ -78,6 +96,18 @@ export default defineComponent({
       })
       return rows
     },
+    isSaveEnabled(): Boolean {
+      return Boolean(
+        this.fields.name.value &&
+        this.fields.deadlineDate.value &&
+        this.fields.startDate.value &&
+        this.fields.endDate.value &&
+        this.fields.maxPlayers.value &&
+        this.fields.teamSize.value &&
+        this.fields.numGames.value &&
+        this.fields.gender.value
+      )
+    }
   },
   async created() {
     this.leagueId = String(this.$route.params.id)
@@ -91,6 +121,7 @@ export default defineComponent({
     this.scheduleColumns = await this.fetchLeaguesScheduleTableColumns()
 
     await this.setupScheduleRows() 
+    this.setupFieldsValues()
   },
   methods: {
     ...mapActions([
@@ -178,6 +209,32 @@ export default defineComponent({
         else if (playerIndex % 10 === 3) return playerIndex + 'rd'
         else if (playerIndex % 10 === 0) return playerIndex + 'th'
         return ''
+      }
+    },
+    setGender(gender: string) {
+      this.fields.gender.value = gender
+    },
+    async saveSettings() {
+      // TODO
+    },
+    editSettings() {
+      this.isSettingsEditing = true
+    },
+    cancelSettings() {
+      this.isSettingsEditing = false
+      this.setupFieldsValues()
+    },
+    setupFieldsValues() {
+      if (this.leagueData) {
+        this.fields.name.value = this.leagueData.name
+        this.fields.deadlineDate.value = new Date(this.leagueData.deadline_date).toISOString().substr(0, 10)
+        this.fields.startDate.value = new Date(this.leagueData.start_date).toISOString().substr(0, 10)
+        this.fields.endDate.value = new Date(this.leagueData.end_date).toISOString().substr(0, 10)
+        this.fields.maxPlayers.value = this.leagueData.max_num_players
+        this.fields.teamSize.value = this.leagueData.team_size
+        this.fields.numGames.value = this.leagueData.num_games
+        this.fields.other.value = this.leagueData.about_text
+        this.fields.gender.value = this.leagueData.gender
       }
     }
   },

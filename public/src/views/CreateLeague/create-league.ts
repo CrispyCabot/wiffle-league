@@ -18,7 +18,7 @@ export default defineComponent({
         endDate: { value: '', label: 'End Date',  placeholder: 'End Date', name: 'endDate', isRequired: true  },
         deadlineDate: { value: '', label: 'Deadline Date', placeholder: 'Deadline Date', name: 'deadlineDate', isRequired: true  },
         gender: { value: '', label: 'Gender', placeholder: 'Gender', name: 'gender', isRequired: true  },
-        other: { value: '', label: 'Other Info', placeholder: 'Other Info (Unique Rules, prizes, whatever)', name: 'other', isRequired: false  }
+        other: { value: '', label: 'Other Info', placeholder: 'Other Info (Unique Rules, prizes, etc...)', name: 'other', isRequired: false  }
       },
       genderRadioButtons: [
         'Male',
