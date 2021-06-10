@@ -12,8 +12,8 @@ export const LeagueActions = {
   },
   fetchLeaguesScheduleTableColumns() {
     return [
-      {columnLabel: 'Team 1', columnName: 'team1', maxWidth: '33vw', isHidden: false},
-      {columnLabel: 'Team 2', columnName: 'team2', maxWidth: '33vw', isHidden: false},
+      {columnLabel: 'Team 1', columnName: 'team1', maxWidth: 'unset', isHidden: false},
+      {columnLabel: 'Team 2', columnName: 'team2', maxWidth: 'unset', isHidden: false},
       {columnLabel: 'Date', columnName: 'date', maxWidth: 'unset', isHidden: false},
       {columnLabel: 'Time', columnName: 'time', maxWidth: 'unset', isHidden: false},
       {columnLabel: 'Location', columnName: 'location', maxWidth: '33vw', isHidden: false},

@@ -24,7 +24,7 @@ export default defineComponent({
       return this.leagues.map((league: any) => {
         return {
           name: {text: league.name, type: 'string'},
-          players: {text: league.player_ids.length + ' / ' + league.max_num_players, type: 'numeric'},
+          players: {text: league.player_ids.length + ' / ' + league.max_num_players, type: 'numeric-left'},
           startDate: {text: new Date(league.start_date).toLocaleDateString(undefined, {year: 'numeric', month: 'numeric', day: 'numeric'}), type: 'date'},
           endDate: {text: new Date(league.end_date).toLocaleDateString(undefined, {year: 'numeric', month: 'numeric', day: 'numeric'}), type: 'date'},
           id: {text: league._id, type: 'hidden'}
