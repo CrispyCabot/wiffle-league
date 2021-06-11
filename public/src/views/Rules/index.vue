@@ -1,7 +1,7 @@
 <template>
   <div class="rules-container">
     <h1 class="site-title">Rules</h1>
-    <div class="contact-card white_card_background">
+    <div class="league-rules-card white_card_background">
       <h2>League Rules</h2>
       <p>You can get in contact with us through the following things:</p>
       <ul>
@@ -9,7 +9,7 @@
         <li>Thing 2</li>
       </ul>
     </div>
-    <div class="contact-card white_card_background">
+    <div class="game-rules-card white_card_background">
       <h2>Gameplay Rules</h2>
       <p>You can get in contact with us through the following things:</p>
       <ul>
