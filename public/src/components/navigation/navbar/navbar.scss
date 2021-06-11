@@ -62,6 +62,10 @@
       transition: all 0.3s;
     }
   }
+
+  &_profile {
+    cursor: pointer;
+  }
 }
 
 // Extra small devices (portrait phones, less than 576px)

@@ -1,751 +1,801 @@
 [
 {
     "_id": {
-        "$oid": "8d5374835b1af7df1e733bbd"
+        "$oid": "67783d88eff9cb4fad1d41c8"
     },
-    "league_id": { "$oid": "baac2cc4b12ba94c824eba25" },
-    "team_1_ids": [{ "$oid": "bef61b8e34dca1a94fb1a4df" }],
-    "team_2_ids": [{ "$oid": "bef61b8e34dca1a94fb1a4df" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1625200000000"
-        }
-    },
-    "game_location": "Unit 1177 Box 0398DPO AP 61983",
-    "player_stats": [{ "player_id": { "$oid": "bef61b8e34dca1a94fb1a4df" },"stats": {"hits": 0,"singles": 3,"doubles": 1,"triples": 2,"homeruns": 1,"plate_appearances": 0,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "bef61b8e34dca1a94fb1a4df" },"stats": {"hits": 1,"singles": 1,"doubles": 3,"triples": 2,"homeruns": 3,"plate_appearances": 1,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 9} }]
-},
-{
-    "_id": {
-        "$oid": "3f3238b14288a7a8bfdadc3a"
-    },
-    "league_id": { "$oid": "baac2cc4b12ba94c824eba25" },
-    "team_1_ids": [{ "$oid": "c74c3cde23fb6d29c331ab2f" },{ "$oid": "ffb5e9a6d482baebbcbe5f19" }],
-    "team_2_ids": [{ "$oid": "8717d55b8ea4aedbd8435e1b" },{ "$oid": "26da15df14bee2b21c241eb7" }],
+    "league_id": { "$oid": "61fb7d43d69ffec714495ff7" },
+    "team_1_ids": [{ "$oid": "ed827e48e76e3c8ec1185127" }],
+    "team_2_ids": [{ "$oid": "dc85522eaa1ef8c4cc685ca9" }],
     "game_date": {
         "$date": {
             "$numberLong": "1630700000000"
         }
     },
-    "game_location": "419 Marcus PointsSouth Chloeborough, AZ 83152",
-    "player_stats": [{ "player_id": { "$oid": "c74c3cde23fb6d29c331ab2f" },"stats": {"hits": 0,"singles": 0,"doubles": 3,"triples": 3,"homeruns": 2,"plate_appearances": 1,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "ffb5e9a6d482baebbcbe5f19" },"stats": {"hits": 1,"singles": 2,"doubles": 1,"triples": 3,"homeruns": 1,"plate_appearances": 1,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "8717d55b8ea4aedbd8435e1b" },"stats": {"hits": 2,"singles": 0,"doubles": 1,"triples": 0,"homeruns": 2,"plate_appearances": 3,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "26da15df14bee2b21c241eb7" },"stats": {"hits": 0,"singles": 2,"doubles": 0,"triples": 3,"homeruns": 1,"plate_appearances": 0,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 3} }]
+    "game_location": "9726 Rivera Road Suite 695South Ashley, MS 41785",
+    "player_stats": [{ "player_id": { "$oid": "ed827e48e76e3c8ec1185127" },"stats": {"hits": 1,"singles": 0,"doubles": 2,"triples": 2,"homeruns": 0,"plate_appearances": 2,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "dc85522eaa1ef8c4cc685ca9" },"stats": {"hits": 1,"singles": 1,"doubles": 0,"triples": 0,"homeruns": 2,"plate_appearances": 0,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 6} }],
+    "completed": false
 },
 {
     "_id": {
-        "$oid": "bf3a521dc7bdffb74e9a8ac8"
+        "$oid": "6b9ce7d4c1155a79b17525f7"
     },
-    "league_id": { "$oid": "e597ec72e288b5da29d1645d" },
-    "team_1_ids": [{ "$oid": "6d181556a98412a3b72c184b" },{ "$oid": "a43d2bb15b2db7c8d42ed2de" },{ "$oid": "72e47b9c8c6d62a1d7f34c57" }],
-    "team_2_ids": [{ "$oid": "a43d2bb15b2db7c8d42ed2de" },{ "$oid": "8717d55b8ea4aedbd8435e1b" },{ "$oid": "59469d3f496eff85d96df698" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1626300000000"
-        }
-    },
-    "game_location": "04144 Pierce Isle Apt. 056Lake Jacobport, UT 29486",
-    "player_stats": [{ "player_id": { "$oid": "6d181556a98412a3b72c184b" },"stats": {"hits": 0,"singles": 1,"doubles": 2,"triples": 0,"homeruns": 0,"plate_appearances": 0,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "a43d2bb15b2db7c8d42ed2de" },"stats": {"hits": 0,"singles": 3,"doubles": 1,"triples": 3,"homeruns": 3,"plate_appearances": 1,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "72e47b9c8c6d62a1d7f34c57" },"stats": {"hits": 1,"singles": 2,"doubles": 3,"triples": 2,"homeruns": 1,"plate_appearances": 3,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "a43d2bb15b2db7c8d42ed2de" },"stats": {"hits": 3,"singles": 2,"doubles": 3,"triples": 1,"homeruns": 3,"plate_appearances": 2,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "8717d55b8ea4aedbd8435e1b" },"stats": {"hits": 0,"singles": 1,"doubles": 2,"triples": 2,"homeruns": 1,"plate_appearances": 3,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "59469d3f496eff85d96df698" },"stats": {"hits": 0,"singles": 3,"doubles": 1,"triples": 2,"homeruns": 3,"plate_appearances": 1,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 2} }]
-},
-{
-    "_id": {
-        "$oid": "f4ef1b68cca32e6115dbddb5"
-    },
-    "league_id": { "$oid": "9a4f98f449b2d65a85172d2b" },
-    "team_1_ids": [{ "$oid": "ca135efa682acec9334292ca" }],
-    "team_2_ids": [{ "$oid": "ca135efa682acec9334292ca" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1625300000000"
-        }
-    },
-    "game_location": "USS BallardFPO AA 96694",
-    "player_stats": [{ "player_id": { "$oid": "ca135efa682acec9334292ca" },"stats": {"hits": 3,"singles": 3,"doubles": 3,"triples": 1,"homeruns": 3,"plate_appearances": 2,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "ca135efa682acec9334292ca" },"stats": {"hits": 3,"singles": 1,"doubles": 2,"triples": 1,"homeruns": 2,"plate_appearances": 0,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 3} }]
-},
-{
-    "_id": {
-        "$oid": "c52df8aff4178f6ecebd14e2"
-    },
-    "league_id": { "$oid": "bb74a8b9adec2b77e8339967" },
-    "team_1_ids": [{ "$oid": "df6dde62b99667aa71adee1a" }],
-    "team_2_ids": [{ "$oid": "bef61b8e34dca1a94fb1a4df" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1624900000000"
-        }
-    },
-    "game_location": "98598 Massey Springs Suite 325Port Heidi, CA 14376",
-    "player_stats": [{ "player_id": { "$oid": "df6dde62b99667aa71adee1a" },"stats": {"hits": 0,"singles": 3,"doubles": 1,"triples": 3,"homeruns": 3,"plate_appearances": 0,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "bef61b8e34dca1a94fb1a4df" },"stats": {"hits": 2,"singles": 1,"doubles": 3,"triples": 1,"homeruns": 1,"plate_appearances": 0,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 0} }]
-},
-{
-    "_id": {
-        "$oid": "8bc8e4994d847b735b16caea"
-    },
-    "league_id": { "$oid": "9a4f98f449b2d65a85172d2b" },
-    "team_1_ids": [{ "$oid": "3637e9b9ecf1795ff3fdd4b1" },{ "$oid": "6599d7e4e83f29d7fcc6dc89" }],
-    "team_2_ids": [{ "$oid": "ae6956d4915e82d83b66a4ec" },{ "$oid": "1583ec3fdae76fd48ae322cc" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1627000000000"
-        }
-    },
-    "game_location": "657 Johnston RidgePort Jasonberg, NY 58466",
-    "player_stats": [{ "player_id": { "$oid": "3637e9b9ecf1795ff3fdd4b1" },"stats": {"hits": 0,"singles": 0,"doubles": 3,"triples": 0,"homeruns": 3,"plate_appearances": 3,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "6599d7e4e83f29d7fcc6dc89" },"stats": {"hits": 3,"singles": 2,"doubles": 2,"triples": 2,"homeruns": 0,"plate_appearances": 1,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "ae6956d4915e82d83b66a4ec" },"stats": {"hits": 3,"singles": 1,"doubles": 0,"triples": 0,"homeruns": 0,"plate_appearances": 0,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "1583ec3fdae76fd48ae322cc" },"stats": {"hits": 2,"singles": 3,"doubles": 3,"triples": 2,"homeruns": 2,"plate_appearances": 0,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 5} }]
-},
-{
-    "_id": {
-        "$oid": "a723888da3cdfecfbc9dcf1f"
-    },
-    "league_id": { "$oid": "8494bf95571c3582f6bef9e8" },
-    "team_1_ids": [{ "$oid": "a4b73a75de9ca7cf972a1c4e" },{ "$oid": "6599d7e4e83f29d7fcc6dc89" }],
-    "team_2_ids": [{ "$oid": "26da15df14bee2b21c241eb7" },{ "$oid": "d549a9825e169e1a3fc8eebd" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1631800000000"
-        }
-    },
-    "game_location": "227 Maldonado TunnelKristenport, IL 68991",
-    "player_stats": [{ "player_id": { "$oid": "a4b73a75de9ca7cf972a1c4e" },"stats": {"hits": 2,"singles": 2,"doubles": 2,"triples": 3,"homeruns": 3,"plate_appearances": 3,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "6599d7e4e83f29d7fcc6dc89" },"stats": {"hits": 2,"singles": 1,"doubles": 1,"triples": 0,"homeruns": 1,"plate_appearances": 3,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "26da15df14bee2b21c241eb7" },"stats": {"hits": 1,"singles": 1,"doubles": 3,"triples": 0,"homeruns": 2,"plate_appearances": 3,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "d549a9825e169e1a3fc8eebd" },"stats": {"hits": 1,"singles": 2,"doubles": 2,"triples": 0,"homeruns": 1,"plate_appearances": 0,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 10} }]
-},
-{
-    "_id": {
-        "$oid": "bb89fe9befee29cc629e8c4b"
-    },
-    "league_id": { "$oid": "fca4e8ecc4b486a13797bfe1" },
-    "team_1_ids": [{ "$oid": "ae6956d4915e82d83b66a4ec" },{ "$oid": "c74c3cde23fb6d29c331ab2f" },{ "$oid": "ffb5e9a6d482baebbcbe5f19" }],
-    "team_2_ids": [{ "$oid": "d549a9825e169e1a3fc8eebd" },{ "$oid": "641655d7ff8861dc5c74accc" },{ "$oid": "94ca9287ebcd4d8d1f3cce36" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1629800000000"
-        }
-    },
-    "game_location": "675 John Street Apt. 957West Tyler, ME 49783",
-    "player_stats": [{ "player_id": { "$oid": "ae6956d4915e82d83b66a4ec" },"stats": {"hits": 3,"singles": 1,"doubles": 1,"triples": 0,"homeruns": 0,"plate_appearances": 2,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "c74c3cde23fb6d29c331ab2f" },"stats": {"hits": 2,"singles": 1,"doubles": 1,"triples": 3,"homeruns": 3,"plate_appearances": 1,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "ffb5e9a6d482baebbcbe5f19" },"stats": {"hits": 2,"singles": 0,"doubles": 3,"triples": 1,"homeruns": 3,"plate_appearances": 1,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "d549a9825e169e1a3fc8eebd" },"stats": {"hits": 1,"singles": 0,"doubles": 3,"triples": 3,"homeruns": 1,"plate_appearances": 0,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "641655d7ff8861dc5c74accc" },"stats": {"hits": 2,"singles": 0,"doubles": 2,"triples": 1,"homeruns": 0,"plate_appearances": 0,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "94ca9287ebcd4d8d1f3cce36" },"stats": {"hits": 1,"singles": 0,"doubles": 0,"triples": 2,"homeruns": 3,"plate_appearances": 3,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 2} }]
-},
-{
-    "_id": {
-        "$oid": "fc4bbcc6614c9e7a23f91b75"
-    },
-    "league_id": { "$oid": "e597ec72e288b5da29d1645d" },
-    "team_1_ids": [{ "$oid": "6599d7e4e83f29d7fcc6dc89" },{ "$oid": "3fcb9e6e39de796f5bfd193d" },{ "$oid": "8717d55b8ea4aedbd8435e1b" }],
-    "team_2_ids": [{ "$oid": "59469d3f496eff85d96df698" },{ "$oid": "ae6956d4915e82d83b66a4ec" },{ "$oid": "72e47b9c8c6d62a1d7f34c57" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1627200000000"
-        }
-    },
-    "game_location": "Unit 1573 Box 4330DPO AE 17405",
-    "player_stats": [{ "player_id": { "$oid": "6599d7e4e83f29d7fcc6dc89" },"stats": {"hits": 3,"singles": 3,"doubles": 3,"triples": 1,"homeruns": 2,"plate_appearances": 2,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "3fcb9e6e39de796f5bfd193d" },"stats": {"hits": 0,"singles": 0,"doubles": 2,"triples": 0,"homeruns": 1,"plate_appearances": 2,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "8717d55b8ea4aedbd8435e1b" },"stats": {"hits": 1,"singles": 2,"doubles": 3,"triples": 3,"homeruns": 1,"plate_appearances": 3,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "59469d3f496eff85d96df698" },"stats": {"hits": 0,"singles": 0,"doubles": 3,"triples": 3,"homeruns": 0,"plate_appearances": 2,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "ae6956d4915e82d83b66a4ec" },"stats": {"hits": 1,"singles": 2,"doubles": 0,"triples": 3,"homeruns": 1,"plate_appearances": 2,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "72e47b9c8c6d62a1d7f34c57" },"stats": {"hits": 2,"singles": 1,"doubles": 1,"triples": 3,"homeruns": 2,"plate_appearances": 2,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 5} }]
-},
-{
-    "_id": {
-        "$oid": "4d158c2edccb2e79fef8e2a1"
-    },
-    "league_id": { "$oid": "e597ec72e288b5da29d1645d" },
-    "team_1_ids": [{ "$oid": "94ca9287ebcd4d8d1f3cce36" },{ "$oid": "ca135efa682acec9334292ca" },{ "$oid": "a4b73a75de9ca7cf972a1c4e" }],
-    "team_2_ids": [{ "$oid": "1179c3fb644a6b1fdb5b8ec4" },{ "$oid": "6599d7e4e83f29d7fcc6dc89" },{ "$oid": "df6dde62b99667aa71adee1a" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1626000000000"
-        }
-    },
-    "game_location": "02227 Kimberly Points Apt. 323Jamesfurt, OH 45055",
-    "player_stats": [{ "player_id": { "$oid": "94ca9287ebcd4d8d1f3cce36" },"stats": {"hits": 0,"singles": 3,"doubles": 1,"triples": 0,"homeruns": 0,"plate_appearances": 3,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "ca135efa682acec9334292ca" },"stats": {"hits": 0,"singles": 3,"doubles": 1,"triples": 3,"homeruns": 2,"plate_appearances": 0,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "a4b73a75de9ca7cf972a1c4e" },"stats": {"hits": 3,"singles": 3,"doubles": 0,"triples": 3,"homeruns": 3,"plate_appearances": 0,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "1179c3fb644a6b1fdb5b8ec4" },"stats": {"hits": 0,"singles": 1,"doubles": 1,"triples": 2,"homeruns": 1,"plate_appearances": 0,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "6599d7e4e83f29d7fcc6dc89" },"stats": {"hits": 0,"singles": 1,"doubles": 0,"triples": 1,"homeruns": 1,"plate_appearances": 1,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "df6dde62b99667aa71adee1a" },"stats": {"hits": 0,"singles": 2,"doubles": 2,"triples": 3,"homeruns": 0,"plate_appearances": 2,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 5} }]
-},
-{
-    "_id": {
-        "$oid": "fc9db8cbee8eed7dfaf4db9b"
-    },
-    "league_id": { "$oid": "83b1ce42cbf72a4165c19eb4" },
-    "team_1_ids": [{ "$oid": "ffb5e9a6d482baebbcbe5f19" },{ "$oid": "8717d55b8ea4aedbd8435e1b" }],
-    "team_2_ids": [{ "$oid": "df6dde62b99667aa71adee1a" },{ "$oid": "e93a2bae7c94cc839fbff7de" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1630100000000"
-        }
-    },
-    "game_location": "20508 Brenda Mews Suite 010North Jonathanburgh, VT 66473",
-    "player_stats": [{ "player_id": { "$oid": "ffb5e9a6d482baebbcbe5f19" },"stats": {"hits": 0,"singles": 2,"doubles": 3,"triples": 0,"homeruns": 1,"plate_appearances": 3,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "8717d55b8ea4aedbd8435e1b" },"stats": {"hits": 2,"singles": 1,"doubles": 1,"triples": 0,"homeruns": 1,"plate_appearances": 3,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "df6dde62b99667aa71adee1a" },"stats": {"hits": 0,"singles": 0,"doubles": 3,"triples": 3,"homeruns": 2,"plate_appearances": 2,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "e93a2bae7c94cc839fbff7de" },"stats": {"hits": 1,"singles": 1,"doubles": 3,"triples": 0,"homeruns": 2,"plate_appearances": 3,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 4} }]
-},
-{
-    "_id": {
-        "$oid": "cbd4e5a1aafcdfcfdf5d5596"
-    },
-    "league_id": { "$oid": "bc4e4a99d48dbb1dafdfc822" },
-    "team_1_ids": [{ "$oid": "4eeedbfeec6f2bb66277d2de" },{ "$oid": "fabfefbdfcb3dfd8b4b26e79" },{ "$oid": "d22aa8deabd389e686fd5c1e" },{ "$oid": "6d181556a98412a3b72c184b" }],
-    "team_2_ids": [{ "$oid": "6599d7e4e83f29d7fcc6dc89" },{ "$oid": "ae6956d4915e82d83b66a4ec" },{ "$oid": "6d181556a98412a3b72c184b" },{ "$oid": "ca135efa682acec9334292ca" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1625000000000"
-        }
-    },
-    "game_location": "1665 Simon SummitEast Jared, CO 77164",
-    "player_stats": [{ "player_id": { "$oid": "4eeedbfeec6f2bb66277d2de" },"stats": {"hits": 0,"singles": 1,"doubles": 0,"triples": 2,"homeruns": 2,"plate_appearances": 0,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "fabfefbdfcb3dfd8b4b26e79" },"stats": {"hits": 2,"singles": 3,"doubles": 3,"triples": 0,"homeruns": 0,"plate_appearances": 2,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "d22aa8deabd389e686fd5c1e" },"stats": {"hits": 2,"singles": 1,"doubles": 1,"triples": 2,"homeruns": 0,"plate_appearances": 3,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "6d181556a98412a3b72c184b" },"stats": {"hits": 1,"singles": 0,"doubles": 3,"triples": 2,"homeruns": 2,"plate_appearances": 3,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "6599d7e4e83f29d7fcc6dc89" },"stats": {"hits": 0,"singles": 1,"doubles": 2,"triples": 3,"homeruns": 3,"plate_appearances": 0,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "ae6956d4915e82d83b66a4ec" },"stats": {"hits": 1,"singles": 1,"doubles": 1,"triples": 3,"homeruns": 0,"plate_appearances": 0,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "6d181556a98412a3b72c184b" },"stats": {"hits": 1,"singles": 0,"doubles": 3,"triples": 1,"homeruns": 3,"plate_appearances": 3,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "ca135efa682acec9334292ca" },"stats": {"hits": 1,"singles": 0,"doubles": 0,"triples": 3,"homeruns": 1,"plate_appearances": 0,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 8} }]
-},
-{
-    "_id": {
-        "$oid": "62e3fe1aed661822af25ba7d"
-    },
-    "league_id": { "$oid": "fca4e8ecc4b486a13797bfe1" },
-    "team_1_ids": [{ "$oid": "d549a9825e169e1a3fc8eebd" },{ "$oid": "e93a2bae7c94cc839fbff7de" },{ "$oid": "a4b73a75de9ca7cf972a1c4e" },{ "$oid": "26da15df14bee2b21c241eb7" }],
-    "team_2_ids": [{ "$oid": "94ca9287ebcd4d8d1f3cce36" },{ "$oid": "b9e5eb3b3f7d6b4da85ad817" },{ "$oid": "a4b73a75de9ca7cf972a1c4e" },{ "$oid": "72e47b9c8c6d62a1d7f34c57" }],
+    "league_id": { "$oid": "92b58d517bd223e4e5afeca7" },
+    "team_1_ids": [{ "$oid": "ba51ce7dbbcf656f2455d26e" },{ "$oid": "ffc8f24ecfc84dd2ae24cadf" },{ "$oid": "bdbdee32cfc9eb36c2ab1ac6" }],
+    "team_2_ids": [{ "$oid": "4c3aa145d1eb16dfaa218cf2" },{ "$oid": "5b8b1d6b8662ddc633dd48cd" },{ "$oid": "ffc8f24ecfc84dd2ae24cadf" }],
     "game_date": {
         "$date": {
             "$numberLong": "1627400000000"
         }
     },
-    "game_location": "8578 Lisa Light Apt. 177West Dennisberg, NM 06470",
-    "player_stats": [{ "player_id": { "$oid": "d549a9825e169e1a3fc8eebd" },"stats": {"hits": 3,"singles": 2,"doubles": 0,"triples": 1,"homeruns": 2,"plate_appearances": 3,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "e93a2bae7c94cc839fbff7de" },"stats": {"hits": 2,"singles": 2,"doubles": 3,"triples": 3,"homeruns": 1,"plate_appearances": 3,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "a4b73a75de9ca7cf972a1c4e" },"stats": {"hits": 0,"singles": 1,"doubles": 2,"triples": 1,"homeruns": 2,"plate_appearances": 3,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "26da15df14bee2b21c241eb7" },"stats": {"hits": 2,"singles": 0,"doubles": 0,"triples": 3,"homeruns": 3,"plate_appearances": 0,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "94ca9287ebcd4d8d1f3cce36" },"stats": {"hits": 1,"singles": 1,"doubles": 3,"triples": 3,"homeruns": 2,"plate_appearances": 1,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "b9e5eb3b3f7d6b4da85ad817" },"stats": {"hits": 0,"singles": 0,"doubles": 2,"triples": 1,"homeruns": 0,"plate_appearances": 2,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "a4b73a75de9ca7cf972a1c4e" },"stats": {"hits": 1,"singles": 3,"doubles": 1,"triples": 1,"homeruns": 3,"plate_appearances": 1,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "72e47b9c8c6d62a1d7f34c57" },"stats": {"hits": 0,"singles": 1,"doubles": 3,"triples": 1,"homeruns": 1,"plate_appearances": 1,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 8} }]
+    "game_location": "USS WellsFPO AP 28711",
+    "player_stats": [{ "player_id": { "$oid": "ba51ce7dbbcf656f2455d26e" },"stats": {"hits": 2,"singles": 0,"doubles": 1,"triples": 1,"homeruns": 1,"plate_appearances": 1,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "ffc8f24ecfc84dd2ae24cadf" },"stats": {"hits": 1,"singles": 1,"doubles": 1,"triples": 1,"homeruns": 1,"plate_appearances": 0,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "bdbdee32cfc9eb36c2ab1ac6" },"stats": {"hits": 2,"singles": 2,"doubles": 0,"triples": 1,"homeruns": 3,"plate_appearances": 3,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "4c3aa145d1eb16dfaa218cf2" },"stats": {"hits": 3,"singles": 1,"doubles": 0,"triples": 1,"homeruns": 2,"plate_appearances": 2,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "5b8b1d6b8662ddc633dd48cd" },"stats": {"hits": 0,"singles": 3,"doubles": 3,"triples": 0,"homeruns": 2,"plate_appearances": 3,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "ffc8f24ecfc84dd2ae24cadf" },"stats": {"hits": 0,"singles": 2,"doubles": 3,"triples": 3,"homeruns": 1,"plate_appearances": 3,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 0} }],
+    "completed": false
 },
 {
     "_id": {
-        "$oid": "ccace3ec8c32ee7ac22cb2bf"
+        "$oid": "f25ddda97efd985a5fae4f91"
     },
-    "league_id": { "$oid": "baac2cc4b12ba94c824eba25" },
-    "team_1_ids": [{ "$oid": "1583ec3fdae76fd48ae322cc" },{ "$oid": "ae6956d4915e82d83b66a4ec" },{ "$oid": "3637e9b9ecf1795ff3fdd4b1" }],
-    "team_2_ids": [{ "$oid": "e93a2bae7c94cc839fbff7de" },{ "$oid": "1583ec3fdae76fd48ae322cc" },{ "$oid": "72e47b9c8c6d62a1d7f34c57" }],
+    "league_id": { "$oid": "94b44e3bab43d8a6b46f9d24" },
+    "team_1_ids": [{ "$oid": "b44ede5d5d4596fbce96f6dc" },{ "$oid": "e34b66e2a2724ca9bdd87f4d" }],
+    "team_2_ids": [{ "$oid": "4c3aa145d1eb16dfaa218cf2" },{ "$oid": "bdbdee32cfc9eb36c2ab1ac6" }],
     "game_date": {
         "$date": {
-            "$numberLong": "1630300000000"
+            "$numberLong": "1630700000000"
         }
     },
-    "game_location": "39198 Barbara LodgeNorth Marcustown, ND 48840",
-    "player_stats": [{ "player_id": { "$oid": "1583ec3fdae76fd48ae322cc" },"stats": {"hits": 3,"singles": 1,"doubles": 0,"triples": 0,"homeruns": 1,"plate_appearances": 1,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "ae6956d4915e82d83b66a4ec" },"stats": {"hits": 2,"singles": 0,"doubles": 1,"triples": 1,"homeruns": 3,"plate_appearances": 0,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "3637e9b9ecf1795ff3fdd4b1" },"stats": {"hits": 3,"singles": 1,"doubles": 1,"triples": 2,"homeruns": 0,"plate_appearances": 1,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "e93a2bae7c94cc839fbff7de" },"stats": {"hits": 2,"singles": 3,"doubles": 3,"triples": 3,"homeruns": 1,"plate_appearances": 0,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "1583ec3fdae76fd48ae322cc" },"stats": {"hits": 3,"singles": 0,"doubles": 1,"triples": 2,"homeruns": 2,"plate_appearances": 0,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "72e47b9c8c6d62a1d7f34c57" },"stats": {"hits": 3,"singles": 3,"doubles": 0,"triples": 0,"homeruns": 3,"plate_appearances": 3,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 3} }]
+    "game_location": "26456 Bradley Extensions Suite 047Fowlerstad, TN 63400",
+    "player_stats": [{ "player_id": { "$oid": "b44ede5d5d4596fbce96f6dc" },"stats": {"hits": 3,"singles": 3,"doubles": 3,"triples": 1,"homeruns": 3,"plate_appearances": 3,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "e34b66e2a2724ca9bdd87f4d" },"stats": {"hits": 1,"singles": 3,"doubles": 0,"triples": 1,"homeruns": 1,"plate_appearances": 1,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "4c3aa145d1eb16dfaa218cf2" },"stats": {"hits": 2,"singles": 3,"doubles": 3,"triples": 2,"homeruns": 0,"plate_appearances": 1,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "bdbdee32cfc9eb36c2ab1ac6" },"stats": {"hits": 1,"singles": 3,"doubles": 0,"triples": 2,"homeruns": 2,"plate_appearances": 3,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 2} }],
+    "completed": false
 },
 {
     "_id": {
-        "$oid": "ad6e114cbbf438aa275e6a5e"
+        "$oid": "eb29cac25914d9e3f2bb64aa"
     },
-    "league_id": { "$oid": "e597ec72e288b5da29d1645d" },
-    "team_1_ids": [{ "$oid": "fabfefbdfcb3dfd8b4b26e79" }],
-    "team_2_ids": [{ "$oid": "1583ec3fdae76fd48ae322cc" }],
+    "league_id": { "$oid": "dc62c7cc8a342e81dfd3a9c8" },
+    "team_1_ids": [{ "$oid": "dc85522eaa1ef8c4cc685ca9" },{ "$oid": "f47b7e18ed14c97f88ec3a46" },{ "$oid": "ed827e48e76e3c8ec1185127" }],
+    "team_2_ids": [{ "$oid": "839c62bc8de8a5c6dbef1fbb" },{ "$oid": "2c7a8a8b28d2262b5d8deb93" },{ "$oid": "3fefc5f38a5f9c91bbaff78e" }],
     "game_date": {
         "$date": {
-            "$numberLong": "1631400000000"
+            "$numberLong": "1627300000000"
         }
     },
-    "game_location": "803 Kim OrchardSouth Monica, LA 08357",
-    "player_stats": [{ "player_id": { "$oid": "fabfefbdfcb3dfd8b4b26e79" },"stats": {"hits": 1,"singles": 2,"doubles": 3,"triples": 2,"homeruns": 1,"plate_appearances": 1,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "1583ec3fdae76fd48ae322cc" },"stats": {"hits": 0,"singles": 1,"doubles": 1,"triples": 3,"homeruns": 3,"plate_appearances": 1,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 2} }]
+    "game_location": "03357 Martinez Cape Suite 618Kimberlystad, MN 90715",
+    "player_stats": [{ "player_id": { "$oid": "dc85522eaa1ef8c4cc685ca9" },"stats": {"hits": 1,"singles": 3,"doubles": 1,"triples": 1,"homeruns": 3,"plate_appearances": 3,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "f47b7e18ed14c97f88ec3a46" },"stats": {"hits": 2,"singles": 0,"doubles": 0,"triples": 2,"homeruns": 3,"plate_appearances": 1,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "ed827e48e76e3c8ec1185127" },"stats": {"hits": 0,"singles": 3,"doubles": 0,"triples": 0,"homeruns": 0,"plate_appearances": 0,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "839c62bc8de8a5c6dbef1fbb" },"stats": {"hits": 3,"singles": 0,"doubles": 1,"triples": 1,"homeruns": 0,"plate_appearances": 1,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "2c7a8a8b28d2262b5d8deb93" },"stats": {"hits": 2,"singles": 1,"doubles": 1,"triples": 0,"homeruns": 2,"plate_appearances": 2,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "3fefc5f38a5f9c91bbaff78e" },"stats": {"hits": 2,"singles": 3,"doubles": 1,"triples": 2,"homeruns": 2,"plate_appearances": 2,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 2} }],
+    "completed": false
 },
 {
     "_id": {
-        "$oid": "3ee2fdb39ccce22da4918a65"
-    },
-    "league_id": { "$oid": "bb74a8b9adec2b77e8339967" },
-    "team_1_ids": [{ "$oid": "ae6956d4915e82d83b66a4ec" },{ "$oid": "ffb5e9a6d482baebbcbe5f19" },{ "$oid": "df6dde62b99667aa71adee1a" },{ "$oid": "1583ec3fdae76fd48ae322cc" }],
-    "team_2_ids": [{ "$oid": "c74c3cde23fb6d29c331ab2f" },{ "$oid": "ca135efa682acec9334292ca" },{ "$oid": "1179c3fb644a6b1fdb5b8ec4" },{ "$oid": "3fcb9e6e39de796f5bfd193d" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1629400000000"
-        }
-    },
-    "game_location": "76801 Richard Roads Apt. 895New Julieside, GA 14652",
-    "player_stats": [{ "player_id": { "$oid": "ae6956d4915e82d83b66a4ec" },"stats": {"hits": 0,"singles": 2,"doubles": 2,"triples": 2,"homeruns": 0,"plate_appearances": 1,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "ffb5e9a6d482baebbcbe5f19" },"stats": {"hits": 3,"singles": 0,"doubles": 2,"triples": 2,"homeruns": 0,"plate_appearances": 2,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "df6dde62b99667aa71adee1a" },"stats": {"hits": 2,"singles": 3,"doubles": 2,"triples": 0,"homeruns": 3,"plate_appearances": 3,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "1583ec3fdae76fd48ae322cc" },"stats": {"hits": 0,"singles": 2,"doubles": 0,"triples": 0,"homeruns": 0,"plate_appearances": 0,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "c74c3cde23fb6d29c331ab2f" },"stats": {"hits": 0,"singles": 3,"doubles": 0,"triples": 3,"homeruns": 1,"plate_appearances": 3,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "ca135efa682acec9334292ca" },"stats": {"hits": 1,"singles": 2,"doubles": 3,"triples": 2,"homeruns": 3,"plate_appearances": 2,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "1179c3fb644a6b1fdb5b8ec4" },"stats": {"hits": 3,"singles": 1,"doubles": 0,"triples": 3,"homeruns": 1,"plate_appearances": 2,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "3fcb9e6e39de796f5bfd193d" },"stats": {"hits": 3,"singles": 2,"doubles": 2,"triples": 0,"homeruns": 2,"plate_appearances": 2,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 3} }]
-},
-{
-    "_id": {
-        "$oid": "2fce9bd9745fc263c13bf989"
-    },
-    "league_id": { "$oid": "9a4f98f449b2d65a85172d2b" },
-    "team_1_ids": [{ "$oid": "94ca9287ebcd4d8d1f3cce36" }],
-    "team_2_ids": [{ "$oid": "e93a2bae7c94cc839fbff7de" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1632000000000"
-        }
-    },
-    "game_location": "99552 Frazier Divide Apt. 765South Staceyview, GA 52687",
-    "player_stats": [{ "player_id": { "$oid": "94ca9287ebcd4d8d1f3cce36" },"stats": {"hits": 0,"singles": 2,"doubles": 3,"triples": 2,"homeruns": 0,"plate_appearances": 2,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "e93a2bae7c94cc839fbff7de" },"stats": {"hits": 2,"singles": 1,"doubles": 1,"triples": 0,"homeruns": 1,"plate_appearances": 3,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 3} }]
-},
-{
-    "_id": {
-        "$oid": "dae89a8c24eca285c5b4b9f9"
-    },
-    "league_id": { "$oid": "9a4f98f449b2d65a85172d2b" },
-    "team_1_ids": [{ "$oid": "fabfefbdfcb3dfd8b4b26e79" }],
-    "team_2_ids": [{ "$oid": "ae6956d4915e82d83b66a4ec" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1627600000000"
-        }
-    },
-    "game_location": "99576 Gregory Light Suite 194South Douglas, ME 90776",
-    "player_stats": [{ "player_id": { "$oid": "fabfefbdfcb3dfd8b4b26e79" },"stats": {"hits": 3,"singles": 1,"doubles": 3,"triples": 0,"homeruns": 1,"plate_appearances": 3,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "ae6956d4915e82d83b66a4ec" },"stats": {"hits": 3,"singles": 3,"doubles": 1,"triples": 2,"homeruns": 3,"plate_appearances": 1,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 1} }]
-},
-{
-    "_id": {
-        "$oid": "6b58437f18fc5bf1cc8286bb"
-    },
-    "league_id": { "$oid": "8494bf95571c3582f6bef9e8" },
-    "team_1_ids": [{ "$oid": "9d7f1ddbdce49afaf82a53f6" }],
-    "team_2_ids": [{ "$oid": "e93a2bae7c94cc839fbff7de" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1627200000000"
-        }
-    },
-    "game_location": "0602 Wood CenterPort Deannaburgh, NH 29492",
-    "player_stats": [{ "player_id": { "$oid": "9d7f1ddbdce49afaf82a53f6" },"stats": {"hits": 1,"singles": 1,"doubles": 1,"triples": 3,"homeruns": 0,"plate_appearances": 2,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "e93a2bae7c94cc839fbff7de" },"stats": {"hits": 1,"singles": 3,"doubles": 0,"triples": 3,"homeruns": 3,"plate_appearances": 2,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 5} }]
-},
-{
-    "_id": {
-        "$oid": "1caa6e2193e52eb6a5ed4ac2"
-    },
-    "league_id": { "$oid": "e597ec72e288b5da29d1645d" },
-    "team_1_ids": [{ "$oid": "bef61b8e34dca1a94fb1a4df" }],
-    "team_2_ids": [{ "$oid": "9d7f1ddbdce49afaf82a53f6" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1626100000000"
-        }
-    },
-    "game_location": "7855 Krystal Mission Apt. 353Port Richard, ND 10361",
-    "player_stats": [{ "player_id": { "$oid": "bef61b8e34dca1a94fb1a4df" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"plate_appearances": 1,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "9d7f1ddbdce49afaf82a53f6" },"stats": {"hits": 3,"singles": 2,"doubles": 3,"triples": 2,"homeruns": 1,"plate_appearances": 0,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 0} }]
-},
-{
-    "_id": {
-        "$oid": "55ae5546a518e266de37abb9"
-    },
-    "league_id": { "$oid": "baac2cc4b12ba94c824eba25" },
-    "team_1_ids": [{ "$oid": "df6dde62b99667aa71adee1a" },{ "$oid": "3fcb9e6e39de796f5bfd193d" },{ "$oid": "ffb5e9a6d482baebbcbe5f19" }],
-    "team_2_ids": [{ "$oid": "d22aa8deabd389e686fd5c1e" },{ "$oid": "c3f7c72db61ba3af2bcce9e8" },{ "$oid": "ffb5e9a6d482baebbcbe5f19" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1632200000000"
-        }
-    },
-    "game_location": "56291 Sarah Fall Suite 533Mercadoville, WV 76517",
-    "player_stats": [{ "player_id": { "$oid": "df6dde62b99667aa71adee1a" },"stats": {"hits": 3,"singles": 2,"doubles": 1,"triples": 3,"homeruns": 3,"plate_appearances": 2,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "3fcb9e6e39de796f5bfd193d" },"stats": {"hits": 0,"singles": 2,"doubles": 1,"triples": 1,"homeruns": 1,"plate_appearances": 3,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "ffb5e9a6d482baebbcbe5f19" },"stats": {"hits": 1,"singles": 3,"doubles": 2,"triples": 2,"homeruns": 2,"plate_appearances": 3,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "d22aa8deabd389e686fd5c1e" },"stats": {"hits": 0,"singles": 0,"doubles": 2,"triples": 3,"homeruns": 3,"plate_appearances": 0,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "c3f7c72db61ba3af2bcce9e8" },"stats": {"hits": 3,"singles": 3,"doubles": 3,"triples": 2,"homeruns": 3,"plate_appearances": 2,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "ffb5e9a6d482baebbcbe5f19" },"stats": {"hits": 1,"singles": 0,"doubles": 0,"triples": 1,"homeruns": 3,"plate_appearances": 2,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 6} }]
-},
-{
-    "_id": {
-        "$oid": "8c5759bc2f6efcfd46995acb"
-    },
-    "league_id": { "$oid": "e597ec72e288b5da29d1645d" },
-    "team_1_ids": [{ "$oid": "3637e9b9ecf1795ff3fdd4b1" },{ "$oid": "1179c3fb644a6b1fdb5b8ec4" },{ "$oid": "d549a9825e169e1a3fc8eebd" },{ "$oid": "8717d55b8ea4aedbd8435e1b" }],
-    "team_2_ids": [{ "$oid": "c5298ec288694e3d9798a1f8" },{ "$oid": "641655d7ff8861dc5c74accc" },{ "$oid": "3fcb9e6e39de796f5bfd193d" },{ "$oid": "72e47b9c8c6d62a1d7f34c57" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1628100000000"
-        }
-    },
-    "game_location": "Unit 9273 Box 2592DPO AA 05301",
-    "player_stats": [{ "player_id": { "$oid": "3637e9b9ecf1795ff3fdd4b1" },"stats": {"hits": 1,"singles": 1,"doubles": 0,"triples": 1,"homeruns": 1,"plate_appearances": 3,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "1179c3fb644a6b1fdb5b8ec4" },"stats": {"hits": 0,"singles": 3,"doubles": 3,"triples": 3,"homeruns": 2,"plate_appearances": 2,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "d549a9825e169e1a3fc8eebd" },"stats": {"hits": 1,"singles": 2,"doubles": 0,"triples": 1,"homeruns": 3,"plate_appearances": 0,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "8717d55b8ea4aedbd8435e1b" },"stats": {"hits": 2,"singles": 1,"doubles": 1,"triples": 3,"homeruns": 0,"plate_appearances": 0,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "c5298ec288694e3d9798a1f8" },"stats": {"hits": 0,"singles": 1,"doubles": 3,"triples": 3,"homeruns": 0,"plate_appearances": 2,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "641655d7ff8861dc5c74accc" },"stats": {"hits": 2,"singles": 2,"doubles": 1,"triples": 3,"homeruns": 0,"plate_appearances": 2,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "3fcb9e6e39de796f5bfd193d" },"stats": {"hits": 1,"singles": 2,"doubles": 2,"triples": 0,"homeruns": 2,"plate_appearances": 3,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "72e47b9c8c6d62a1d7f34c57" },"stats": {"hits": 3,"singles": 3,"doubles": 0,"triples": 1,"homeruns": 0,"plate_appearances": 0,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 1} }]
-},
-{
-    "_id": {
-        "$oid": "b2acbaa368dab9b53cdc71b4"
-    },
-    "league_id": { "$oid": "83b1ce42cbf72a4165c19eb4" },
-    "team_1_ids": [{ "$oid": "c5298ec288694e3d9798a1f8" },{ "$oid": "72e47b9c8c6d62a1d7f34c57" }],
-    "team_2_ids": [{ "$oid": "c3f7c72db61ba3af2bcce9e8" },{ "$oid": "b9e5eb3b3f7d6b4da85ad817" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1626500000000"
-        }
-    },
-    "game_location": "85976 Hicks Alley Suite 097Randyside, MN 19003",
-    "player_stats": [{ "player_id": { "$oid": "c5298ec288694e3d9798a1f8" },"stats": {"hits": 1,"singles": 2,"doubles": 3,"triples": 1,"homeruns": 1,"plate_appearances": 1,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "72e47b9c8c6d62a1d7f34c57" },"stats": {"hits": 1,"singles": 1,"doubles": 0,"triples": 2,"homeruns": 2,"plate_appearances": 2,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "c3f7c72db61ba3af2bcce9e8" },"stats": {"hits": 3,"singles": 2,"doubles": 0,"triples": 1,"homeruns": 0,"plate_appearances": 1,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "b9e5eb3b3f7d6b4da85ad817" },"stats": {"hits": 1,"singles": 3,"doubles": 1,"triples": 2,"homeruns": 2,"plate_appearances": 0,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 7} }]
-},
-{
-    "_id": {
-        "$oid": "ec7ba9ba6af7834caed9313a"
-    },
-    "league_id": { "$oid": "8494bf95571c3582f6bef9e8" },
-    "team_1_ids": [{ "$oid": "fabfefbdfcb3dfd8b4b26e79" },{ "$oid": "ae6956d4915e82d83b66a4ec" },{ "$oid": "6d181556a98412a3b72c184b" }],
-    "team_2_ids": [{ "$oid": "bef61b8e34dca1a94fb1a4df" },{ "$oid": "59469d3f496eff85d96df698" },{ "$oid": "a43d2bb15b2db7c8d42ed2de" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1631400000000"
-        }
-    },
-    "game_location": "76480 Bryan RampAlvaradoburgh, AR 79656",
-    "player_stats": [{ "player_id": { "$oid": "fabfefbdfcb3dfd8b4b26e79" },"stats": {"hits": 0,"singles": 3,"doubles": 3,"triples": 1,"homeruns": 3,"plate_appearances": 1,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "ae6956d4915e82d83b66a4ec" },"stats": {"hits": 3,"singles": 0,"doubles": 1,"triples": 0,"homeruns": 1,"plate_appearances": 0,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "6d181556a98412a3b72c184b" },"stats": {"hits": 3,"singles": 1,"doubles": 1,"triples": 1,"homeruns": 3,"plate_appearances": 0,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "bef61b8e34dca1a94fb1a4df" },"stats": {"hits": 3,"singles": 0,"doubles": 3,"triples": 1,"homeruns": 2,"plate_appearances": 3,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "59469d3f496eff85d96df698" },"stats": {"hits": 2,"singles": 3,"doubles": 2,"triples": 2,"homeruns": 3,"plate_appearances": 2,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "a43d2bb15b2db7c8d42ed2de" },"stats": {"hits": 1,"singles": 3,"doubles": 3,"triples": 2,"homeruns": 2,"plate_appearances": 2,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 6} }]
-},
-{
-    "_id": {
-        "$oid": "2213bb13b8982befcf9fedbc"
-    },
-    "league_id": { "$oid": "83b1ce42cbf72a4165c19eb4" },
-    "team_1_ids": [{ "$oid": "bef61b8e34dca1a94fb1a4df" }],
-    "team_2_ids": [{ "$oid": "828def315ebb9ab928b4d5ee" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1625000000000"
-        }
-    },
-    "game_location": "4400 Jennifer Pike Apt. 484West Heather, SC 12036",
-    "player_stats": [{ "player_id": { "$oid": "bef61b8e34dca1a94fb1a4df" },"stats": {"hits": 3,"singles": 1,"doubles": 1,"triples": 3,"homeruns": 3,"plate_appearances": 2,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "828def315ebb9ab928b4d5ee" },"stats": {"hits": 2,"singles": 0,"doubles": 3,"triples": 1,"homeruns": 2,"plate_appearances": 1,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 8} }]
-},
-{
-    "_id": {
-        "$oid": "2717954fd11f9f7f857fdf55"
-    },
-    "league_id": { "$oid": "83b1ce42cbf72a4165c19eb4" },
-    "team_1_ids": [{ "$oid": "8717d55b8ea4aedbd8435e1b" }],
-    "team_2_ids": [{ "$oid": "b9e5eb3b3f7d6b4da85ad817" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1627000000000"
-        }
-    },
-    "game_location": "0252 Summers StreamPort Lauraville, UT 16648",
-    "player_stats": [{ "player_id": { "$oid": "8717d55b8ea4aedbd8435e1b" },"stats": {"hits": 1,"singles": 3,"doubles": 2,"triples": 2,"homeruns": 2,"plate_appearances": 2,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "b9e5eb3b3f7d6b4da85ad817" },"stats": {"hits": 3,"singles": 2,"doubles": 0,"triples": 2,"homeruns": 3,"plate_appearances": 1,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 9} }]
-},
-{
-    "_id": {
-        "$oid": "b5ddfddcda5ad769d212c565"
-    },
-    "league_id": { "$oid": "bc4e4a99d48dbb1dafdfc822" },
-    "team_1_ids": [{ "$oid": "e93a2bae7c94cc839fbff7de" },{ "$oid": "d549a9825e169e1a3fc8eebd" }],
-    "team_2_ids": [{ "$oid": "94ca9287ebcd4d8d1f3cce36" },{ "$oid": "d22aa8deabd389e686fd5c1e" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1628000000000"
-        }
-    },
-    "game_location": "4352 Thomas RoadGonzalezland, NY 44524",
-    "player_stats": [{ "player_id": { "$oid": "e93a2bae7c94cc839fbff7de" },"stats": {"hits": 3,"singles": 2,"doubles": 1,"triples": 3,"homeruns": 0,"plate_appearances": 2,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "d549a9825e169e1a3fc8eebd" },"stats": {"hits": 1,"singles": 1,"doubles": 2,"triples": 3,"homeruns": 2,"plate_appearances": 3,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "94ca9287ebcd4d8d1f3cce36" },"stats": {"hits": 2,"singles": 1,"doubles": 3,"triples": 3,"homeruns": 1,"plate_appearances": 1,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "d22aa8deabd389e686fd5c1e" },"stats": {"hits": 2,"singles": 0,"doubles": 3,"triples": 0,"homeruns": 3,"plate_appearances": 1,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 4} }]
-},
-{
-    "_id": {
-        "$oid": "bf53ad62dbe75546ef7f2aba"
-    },
-    "league_id": { "$oid": "8494bf95571c3582f6bef9e8" },
-    "team_1_ids": [{ "$oid": "3637e9b9ecf1795ff3fdd4b1" },{ "$oid": "72e47b9c8c6d62a1d7f34c57" },{ "$oid": "4eeedbfeec6f2bb66277d2de" },{ "$oid": "3fcb9e6e39de796f5bfd193d" }],
-    "team_2_ids": [{ "$oid": "94ca9287ebcd4d8d1f3cce36" },{ "$oid": "26da15df14bee2b21c241eb7" },{ "$oid": "ca135efa682acec9334292ca" },{ "$oid": "d549a9825e169e1a3fc8eebd" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1629900000000"
-        }
-    },
-    "game_location": "486 Carter Port Apt. 329Hernandezburgh, WI 10574",
-    "player_stats": [{ "player_id": { "$oid": "3637e9b9ecf1795ff3fdd4b1" },"stats": {"hits": 0,"singles": 1,"doubles": 3,"triples": 1,"homeruns": 1,"plate_appearances": 1,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "72e47b9c8c6d62a1d7f34c57" },"stats": {"hits": 1,"singles": 3,"doubles": 1,"triples": 1,"homeruns": 0,"plate_appearances": 3,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "4eeedbfeec6f2bb66277d2de" },"stats": {"hits": 1,"singles": 2,"doubles": 3,"triples": 3,"homeruns": 0,"plate_appearances": 1,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "3fcb9e6e39de796f5bfd193d" },"stats": {"hits": 2,"singles": 0,"doubles": 1,"triples": 0,"homeruns": 1,"plate_appearances": 2,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "94ca9287ebcd4d8d1f3cce36" },"stats": {"hits": 0,"singles": 1,"doubles": 0,"triples": 2,"homeruns": 3,"plate_appearances": 3,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "26da15df14bee2b21c241eb7" },"stats": {"hits": 2,"singles": 2,"doubles": 1,"triples": 0,"homeruns": 0,"plate_appearances": 0,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "ca135efa682acec9334292ca" },"stats": {"hits": 2,"singles": 1,"doubles": 3,"triples": 0,"homeruns": 1,"plate_appearances": 0,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "d549a9825e169e1a3fc8eebd" },"stats": {"hits": 2,"singles": 2,"doubles": 2,"triples": 3,"homeruns": 0,"plate_appearances": 0,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 5} }]
-},
-{
-    "_id": {
-        "$oid": "eeaa1c5fc96d8cf5eccc4a11"
-    },
-    "league_id": { "$oid": "bc4e4a99d48dbb1dafdfc822" },
-    "team_1_ids": [{ "$oid": "bef61b8e34dca1a94fb1a4df" },{ "$oid": "d549a9825e169e1a3fc8eebd" },{ "$oid": "d549a9825e169e1a3fc8eebd" },{ "$oid": "a4b73a75de9ca7cf972a1c4e" }],
-    "team_2_ids": [{ "$oid": "8717d55b8ea4aedbd8435e1b" },{ "$oid": "ffb5e9a6d482baebbcbe5f19" },{ "$oid": "ffb5e9a6d482baebbcbe5f19" },{ "$oid": "6d181556a98412a3b72c184b" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1631100000000"
-        }
-    },
-    "game_location": "791 Fuller Camp Apt. 143South Christopherfurt, KS 83427",
-    "player_stats": [{ "player_id": { "$oid": "bef61b8e34dca1a94fb1a4df" },"stats": {"hits": 1,"singles": 1,"doubles": 3,"triples": 0,"homeruns": 1,"plate_appearances": 3,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "d549a9825e169e1a3fc8eebd" },"stats": {"hits": 3,"singles": 3,"doubles": 2,"triples": 0,"homeruns": 3,"plate_appearances": 1,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "d549a9825e169e1a3fc8eebd" },"stats": {"hits": 1,"singles": 1,"doubles": 2,"triples": 2,"homeruns": 2,"plate_appearances": 0,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "a4b73a75de9ca7cf972a1c4e" },"stats": {"hits": 3,"singles": 1,"doubles": 0,"triples": 3,"homeruns": 2,"plate_appearances": 2,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "8717d55b8ea4aedbd8435e1b" },"stats": {"hits": 2,"singles": 0,"doubles": 3,"triples": 2,"homeruns": 0,"plate_appearances": 2,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "ffb5e9a6d482baebbcbe5f19" },"stats": {"hits": 1,"singles": 0,"doubles": 1,"triples": 2,"homeruns": 0,"plate_appearances": 2,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "ffb5e9a6d482baebbcbe5f19" },"stats": {"hits": 1,"singles": 3,"doubles": 2,"triples": 1,"homeruns": 1,"plate_appearances": 1,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "6d181556a98412a3b72c184b" },"stats": {"hits": 1,"singles": 0,"doubles": 3,"triples": 3,"homeruns": 3,"plate_appearances": 3,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 10} }]
-},
-{
-    "_id": {
-        "$oid": "4cdd9a34fe73bdfa42aaafc3"
-    },
-    "league_id": { "$oid": "83b1ce42cbf72a4165c19eb4" },
-    "team_1_ids": [{ "$oid": "ae6956d4915e82d83b66a4ec" },{ "$oid": "1583ec3fdae76fd48ae322cc" },{ "$oid": "fabfefbdfcb3dfd8b4b26e79" }],
-    "team_2_ids": [{ "$oid": "72e47b9c8c6d62a1d7f34c57" },{ "$oid": "72e47b9c8c6d62a1d7f34c57" },{ "$oid": "59469d3f496eff85d96df698" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1629700000000"
-        }
-    },
-    "game_location": "636 Donna Estate Apt. 389Christineport, CA 75705",
-    "player_stats": [{ "player_id": { "$oid": "ae6956d4915e82d83b66a4ec" },"stats": {"hits": 3,"singles": 1,"doubles": 0,"triples": 2,"homeruns": 1,"plate_appearances": 1,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "1583ec3fdae76fd48ae322cc" },"stats": {"hits": 1,"singles": 3,"doubles": 0,"triples": 3,"homeruns": 1,"plate_appearances": 1,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "fabfefbdfcb3dfd8b4b26e79" },"stats": {"hits": 1,"singles": 1,"doubles": 3,"triples": 3,"homeruns": 0,"plate_appearances": 1,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "72e47b9c8c6d62a1d7f34c57" },"stats": {"hits": 2,"singles": 1,"doubles": 0,"triples": 2,"homeruns": 3,"plate_appearances": 0,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "72e47b9c8c6d62a1d7f34c57" },"stats": {"hits": 0,"singles": 1,"doubles": 2,"triples": 1,"homeruns": 0,"plate_appearances": 2,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "59469d3f496eff85d96df698" },"stats": {"hits": 1,"singles": 2,"doubles": 1,"triples": 2,"homeruns": 2,"plate_appearances": 1,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 3} }]
-},
-{
-    "_id": {
-        "$oid": "6aa69facead3dbd946dd9e28"
-    },
-    "league_id": { "$oid": "fca4e8ecc4b486a13797bfe1" },
-    "team_1_ids": [{ "$oid": "828def315ebb9ab928b4d5ee" },{ "$oid": "4eeedbfeec6f2bb66277d2de" },{ "$oid": "bef61b8e34dca1a94fb1a4df" }],
-    "team_2_ids": [{ "$oid": "828def315ebb9ab928b4d5ee" },{ "$oid": "3637e9b9ecf1795ff3fdd4b1" },{ "$oid": "6599d7e4e83f29d7fcc6dc89" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1625500000000"
-        }
-    },
-    "game_location": "581 David TunnelNew Thomas, TX 13632",
-    "player_stats": [{ "player_id": { "$oid": "828def315ebb9ab928b4d5ee" },"stats": {"hits": 1,"singles": 0,"doubles": 0,"triples": 1,"homeruns": 3,"plate_appearances": 1,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "4eeedbfeec6f2bb66277d2de" },"stats": {"hits": 1,"singles": 3,"doubles": 2,"triples": 3,"homeruns": 0,"plate_appearances": 0,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "bef61b8e34dca1a94fb1a4df" },"stats": {"hits": 1,"singles": 2,"doubles": 0,"triples": 1,"homeruns": 2,"plate_appearances": 3,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "828def315ebb9ab928b4d5ee" },"stats": {"hits": 1,"singles": 0,"doubles": 3,"triples": 0,"homeruns": 0,"plate_appearances": 1,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "3637e9b9ecf1795ff3fdd4b1" },"stats": {"hits": 1,"singles": 2,"doubles": 3,"triples": 1,"homeruns": 0,"plate_appearances": 0,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "6599d7e4e83f29d7fcc6dc89" },"stats": {"hits": 1,"singles": 2,"doubles": 2,"triples": 3,"homeruns": 3,"plate_appearances": 3,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 6} }]
-},
-{
-    "_id": {
-        "$oid": "43be1891c3a9f8e31dbdff26"
-    },
-    "league_id": { "$oid": "bb74a8b9adec2b77e8339967" },
-    "team_1_ids": [{ "$oid": "4eeedbfeec6f2bb66277d2de" }],
-    "team_2_ids": [{ "$oid": "ae6956d4915e82d83b66a4ec" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1631100000000"
-        }
-    },
-    "game_location": "311 Booker MillPort Amanda, NY 23859",
-    "player_stats": [{ "player_id": { "$oid": "4eeedbfeec6f2bb66277d2de" },"stats": {"hits": 3,"singles": 2,"doubles": 2,"triples": 3,"homeruns": 3,"plate_appearances": 3,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "ae6956d4915e82d83b66a4ec" },"stats": {"hits": 3,"singles": 2,"doubles": 0,"triples": 2,"homeruns": 1,"plate_appearances": 2,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 6} }]
-},
-{
-    "_id": {
-        "$oid": "bd73aa987ef19cf88eed8b75"
-    },
-    "league_id": { "$oid": "fca4e8ecc4b486a13797bfe1" },
-    "team_1_ids": [{ "$oid": "59469d3f496eff85d96df698" },{ "$oid": "ffb5e9a6d482baebbcbe5f19" },{ "$oid": "ae6956d4915e82d83b66a4ec" },{ "$oid": "3637e9b9ecf1795ff3fdd4b1" }],
-    "team_2_ids": [{ "$oid": "a43d2bb15b2db7c8d42ed2de" },{ "$oid": "641655d7ff8861dc5c74accc" },{ "$oid": "8717d55b8ea4aedbd8435e1b" },{ "$oid": "1179c3fb644a6b1fdb5b8ec4" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1628900000000"
-        }
-    },
-    "game_location": "65171 Susan RestLaurentown, NH 54491",
-    "player_stats": [{ "player_id": { "$oid": "59469d3f496eff85d96df698" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 1,"homeruns": 0,"plate_appearances": 3,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "ffb5e9a6d482baebbcbe5f19" },"stats": {"hits": 2,"singles": 1,"doubles": 1,"triples": 2,"homeruns": 1,"plate_appearances": 2,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "ae6956d4915e82d83b66a4ec" },"stats": {"hits": 2,"singles": 0,"doubles": 3,"triples": 3,"homeruns": 3,"plate_appearances": 3,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "3637e9b9ecf1795ff3fdd4b1" },"stats": {"hits": 2,"singles": 1,"doubles": 3,"triples": 0,"homeruns": 0,"plate_appearances": 3,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "a43d2bb15b2db7c8d42ed2de" },"stats": {"hits": 0,"singles": 0,"doubles": 2,"triples": 3,"homeruns": 1,"plate_appearances": 2,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "641655d7ff8861dc5c74accc" },"stats": {"hits": 0,"singles": 3,"doubles": 2,"triples": 1,"homeruns": 0,"plate_appearances": 0,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "8717d55b8ea4aedbd8435e1b" },"stats": {"hits": 2,"singles": 1,"doubles": 0,"triples": 3,"homeruns": 2,"plate_appearances": 0,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "1179c3fb644a6b1fdb5b8ec4" },"stats": {"hits": 2,"singles": 0,"doubles": 3,"triples": 1,"homeruns": 3,"plate_appearances": 0,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 8} }]
-},
-{
-    "_id": {
-        "$oid": "fab79b4383ba5624a467d6dd"
-    },
-    "league_id": { "$oid": "baac2cc4b12ba94c824eba25" },
-    "team_1_ids": [{ "$oid": "6599d7e4e83f29d7fcc6dc89" }],
-    "team_2_ids": [{ "$oid": "a4b73a75de9ca7cf972a1c4e" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1631900000000"
-        }
-    },
-    "game_location": "49835 Brittany IslandsLake Jessicashire, WY 01278",
-    "player_stats": [{ "player_id": { "$oid": "6599d7e4e83f29d7fcc6dc89" },"stats": {"hits": 1,"singles": 1,"doubles": 1,"triples": 1,"homeruns": 2,"plate_appearances": 0,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "a4b73a75de9ca7cf972a1c4e" },"stats": {"hits": 0,"singles": 0,"doubles": 3,"triples": 0,"homeruns": 1,"plate_appearances": 1,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 5} }]
-},
-{
-    "_id": {
-        "$oid": "74e76e46a9c79fc3f9d84291"
-    },
-    "league_id": { "$oid": "e597ec72e288b5da29d1645d" },
-    "team_1_ids": [{ "$oid": "bef61b8e34dca1a94fb1a4df" },{ "$oid": "c5298ec288694e3d9798a1f8" }],
-    "team_2_ids": [{ "$oid": "c74c3cde23fb6d29c331ab2f" },{ "$oid": "1179c3fb644a6b1fdb5b8ec4" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1626800000000"
-        }
-    },
-    "game_location": "76506 Jose GreenLake Malloryborough, NH 19241",
-    "player_stats": [{ "player_id": { "$oid": "bef61b8e34dca1a94fb1a4df" },"stats": {"hits": 1,"singles": 3,"doubles": 2,"triples": 3,"homeruns": 2,"plate_appearances": 2,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "c5298ec288694e3d9798a1f8" },"stats": {"hits": 0,"singles": 2,"doubles": 0,"triples": 0,"homeruns": 3,"plate_appearances": 2,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "c74c3cde23fb6d29c331ab2f" },"stats": {"hits": 1,"singles": 3,"doubles": 3,"triples": 2,"homeruns": 0,"plate_appearances": 3,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "1179c3fb644a6b1fdb5b8ec4" },"stats": {"hits": 0,"singles": 1,"doubles": 0,"triples": 0,"homeruns": 2,"plate_appearances": 0,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 0} }]
-},
-{
-    "_id": {
-        "$oid": "94b994c9b39aa3ff5f522b34"
-    },
-    "league_id": { "$oid": "bc4e4a99d48dbb1dafdfc822" },
-    "team_1_ids": [{ "$oid": "6d181556a98412a3b72c184b" },{ "$oid": "26da15df14bee2b21c241eb7" },{ "$oid": "3fcb9e6e39de796f5bfd193d" }],
-    "team_2_ids": [{ "$oid": "fabfefbdfcb3dfd8b4b26e79" },{ "$oid": "8717d55b8ea4aedbd8435e1b" },{ "$oid": "4eeedbfeec6f2bb66277d2de" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1627900000000"
-        }
-    },
-    "game_location": "28730 Sanders Oval Suite 683Kleinberg, LA 07643",
-    "player_stats": [{ "player_id": { "$oid": "6d181556a98412a3b72c184b" },"stats": {"hits": 2,"singles": 0,"doubles": 1,"triples": 0,"homeruns": 3,"plate_appearances": 3,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "26da15df14bee2b21c241eb7" },"stats": {"hits": 0,"singles": 1,"doubles": 2,"triples": 1,"homeruns": 1,"plate_appearances": 0,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "3fcb9e6e39de796f5bfd193d" },"stats": {"hits": 0,"singles": 1,"doubles": 3,"triples": 1,"homeruns": 1,"plate_appearances": 3,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "fabfefbdfcb3dfd8b4b26e79" },"stats": {"hits": 3,"singles": 0,"doubles": 2,"triples": 3,"homeruns": 2,"plate_appearances": 3,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "8717d55b8ea4aedbd8435e1b" },"stats": {"hits": 0,"singles": 2,"doubles": 1,"triples": 3,"homeruns": 0,"plate_appearances": 0,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "4eeedbfeec6f2bb66277d2de" },"stats": {"hits": 0,"singles": 2,"doubles": 2,"triples": 3,"homeruns": 1,"plate_appearances": 3,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 9} }]
-},
-{
-    "_id": {
-        "$oid": "2eb1ac12ea6ca2e2cfce4c3c"
-    },
-    "league_id": { "$oid": "bb74a8b9adec2b77e8339967" },
-    "team_1_ids": [{ "$oid": "d549a9825e169e1a3fc8eebd" }],
-    "team_2_ids": [{ "$oid": "c74c3cde23fb6d29c331ab2f" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1626100000000"
-        }
-    },
-    "game_location": "33977 Robert FordWest Heatherfort, WI 76791",
-    "player_stats": [{ "player_id": { "$oid": "d549a9825e169e1a3fc8eebd" },"stats": {"hits": 0,"singles": 0,"doubles": 1,"triples": 2,"homeruns": 1,"plate_appearances": 2,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "c74c3cde23fb6d29c331ab2f" },"stats": {"hits": 1,"singles": 3,"doubles": 0,"triples": 1,"homeruns": 2,"plate_appearances": 0,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 4} }]
-},
-{
-    "_id": {
-        "$oid": "ae52f53f72848e9f676aabce"
-    },
-    "league_id": { "$oid": "e597ec72e288b5da29d1645d" },
-    "team_1_ids": [{ "$oid": "df6dde62b99667aa71adee1a" },{ "$oid": "26da15df14bee2b21c241eb7" },{ "$oid": "26da15df14bee2b21c241eb7" },{ "$oid": "a4b73a75de9ca7cf972a1c4e" }],
-    "team_2_ids": [{ "$oid": "1179c3fb644a6b1fdb5b8ec4" },{ "$oid": "e93a2bae7c94cc839fbff7de" },{ "$oid": "c3f7c72db61ba3af2bcce9e8" },{ "$oid": "59469d3f496eff85d96df698" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1629100000000"
-        }
-    },
-    "game_location": "34943 Mark GroveHestertown, NH 28814",
-    "player_stats": [{ "player_id": { "$oid": "df6dde62b99667aa71adee1a" },"stats": {"hits": 0,"singles": 1,"doubles": 1,"triples": 3,"homeruns": 1,"plate_appearances": 1,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "26da15df14bee2b21c241eb7" },"stats": {"hits": 0,"singles": 0,"doubles": 3,"triples": 0,"homeruns": 3,"plate_appearances": 2,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "26da15df14bee2b21c241eb7" },"stats": {"hits": 3,"singles": 1,"doubles": 1,"triples": 3,"homeruns": 3,"plate_appearances": 2,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "a4b73a75de9ca7cf972a1c4e" },"stats": {"hits": 0,"singles": 2,"doubles": 0,"triples": 1,"homeruns": 0,"plate_appearances": 2,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "1179c3fb644a6b1fdb5b8ec4" },"stats": {"hits": 0,"singles": 1,"doubles": 2,"triples": 0,"homeruns": 0,"plate_appearances": 0,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "e93a2bae7c94cc839fbff7de" },"stats": {"hits": 1,"singles": 0,"doubles": 1,"triples": 2,"homeruns": 0,"plate_appearances": 3,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "c3f7c72db61ba3af2bcce9e8" },"stats": {"hits": 0,"singles": 2,"doubles": 1,"triples": 1,"homeruns": 3,"plate_appearances": 1,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "59469d3f496eff85d96df698" },"stats": {"hits": 0,"singles": 1,"doubles": 1,"triples": 1,"homeruns": 0,"plate_appearances": 3,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 4} }]
-},
-{
-    "_id": {
-        "$oid": "6af1dd1bd24f6ae19715d4e9"
-    },
-    "league_id": { "$oid": "baac2cc4b12ba94c824eba25" },
-    "team_1_ids": [{ "$oid": "c5298ec288694e3d9798a1f8" },{ "$oid": "ae6956d4915e82d83b66a4ec" },{ "$oid": "26da15df14bee2b21c241eb7" },{ "$oid": "d22aa8deabd389e686fd5c1e" }],
-    "team_2_ids": [{ "$oid": "72e47b9c8c6d62a1d7f34c57" },{ "$oid": "6d181556a98412a3b72c184b" },{ "$oid": "fabfefbdfcb3dfd8b4b26e79" },{ "$oid": "9d7f1ddbdce49afaf82a53f6" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1631700000000"
-        }
-    },
-    "game_location": "08885 Emma WellShaneshire, CO 22694",
-    "player_stats": [{ "player_id": { "$oid": "c5298ec288694e3d9798a1f8" },"stats": {"hits": 2,"singles": 0,"doubles": 1,"triples": 3,"homeruns": 2,"plate_appearances": 3,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "ae6956d4915e82d83b66a4ec" },"stats": {"hits": 1,"singles": 2,"doubles": 2,"triples": 2,"homeruns": 2,"plate_appearances": 3,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "26da15df14bee2b21c241eb7" },"stats": {"hits": 3,"singles": 3,"doubles": 3,"triples": 3,"homeruns": 1,"plate_appearances": 1,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "d22aa8deabd389e686fd5c1e" },"stats": {"hits": 1,"singles": 1,"doubles": 0,"triples": 0,"homeruns": 1,"plate_appearances": 3,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "72e47b9c8c6d62a1d7f34c57" },"stats": {"hits": 2,"singles": 0,"doubles": 3,"triples": 3,"homeruns": 2,"plate_appearances": 3,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "6d181556a98412a3b72c184b" },"stats": {"hits": 3,"singles": 0,"doubles": 0,"triples": 3,"homeruns": 3,"plate_appearances": 1,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "fabfefbdfcb3dfd8b4b26e79" },"stats": {"hits": 3,"singles": 1,"doubles": 2,"triples": 1,"homeruns": 1,"plate_appearances": 0,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "9d7f1ddbdce49afaf82a53f6" },"stats": {"hits": 1,"singles": 0,"doubles": 2,"triples": 3,"homeruns": 0,"plate_appearances": 2,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 5} }]
-},
-{
-    "_id": {
-        "$oid": "1accd6fe1c23aebfb5846ead"
-    },
-    "league_id": { "$oid": "fca4e8ecc4b486a13797bfe1" },
-    "team_1_ids": [{ "$oid": "c74c3cde23fb6d29c331ab2f" },{ "$oid": "72e47b9c8c6d62a1d7f34c57" },{ "$oid": "d22aa8deabd389e686fd5c1e" },{ "$oid": "a4b73a75de9ca7cf972a1c4e" }],
-    "team_2_ids": [{ "$oid": "df6dde62b99667aa71adee1a" },{ "$oid": "6d181556a98412a3b72c184b" },{ "$oid": "ae6956d4915e82d83b66a4ec" },{ "$oid": "94ca9287ebcd4d8d1f3cce36" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1627900000000"
-        }
-    },
-    "game_location": "USS MillerFPO AE 95542",
-    "player_stats": [{ "player_id": { "$oid": "c74c3cde23fb6d29c331ab2f" },"stats": {"hits": 3,"singles": 0,"doubles": 2,"triples": 1,"homeruns": 2,"plate_appearances": 0,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "72e47b9c8c6d62a1d7f34c57" },"stats": {"hits": 0,"singles": 2,"doubles": 1,"triples": 3,"homeruns": 0,"plate_appearances": 2,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "d22aa8deabd389e686fd5c1e" },"stats": {"hits": 3,"singles": 1,"doubles": 3,"triples": 1,"homeruns": 0,"plate_appearances": 3,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "a4b73a75de9ca7cf972a1c4e" },"stats": {"hits": 2,"singles": 1,"doubles": 0,"triples": 1,"homeruns": 3,"plate_appearances": 1,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "df6dde62b99667aa71adee1a" },"stats": {"hits": 2,"singles": 2,"doubles": 0,"triples": 1,"homeruns": 2,"plate_appearances": 2,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "6d181556a98412a3b72c184b" },"stats": {"hits": 0,"singles": 2,"doubles": 2,"triples": 2,"homeruns": 3,"plate_appearances": 1,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "ae6956d4915e82d83b66a4ec" },"stats": {"hits": 0,"singles": 1,"doubles": 2,"triples": 1,"homeruns": 0,"plate_appearances": 2,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "94ca9287ebcd4d8d1f3cce36" },"stats": {"hits": 0,"singles": 2,"doubles": 3,"triples": 1,"homeruns": 3,"plate_appearances": 0,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 8} }]
-},
-{
-    "_id": {
-        "$oid": "dec3cccb84bfcfbe33da64df"
-    },
-    "league_id": { "$oid": "fca4e8ecc4b486a13797bfe1" },
-    "team_1_ids": [{ "$oid": "d22aa8deabd389e686fd5c1e" },{ "$oid": "26da15df14bee2b21c241eb7" }],
-    "team_2_ids": [{ "$oid": "3fcb9e6e39de796f5bfd193d" },{ "$oid": "df6dde62b99667aa71adee1a" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1626000000000"
-        }
-    },
-    "game_location": "6713 Smith StreetHenryport, VA 40549",
-    "player_stats": [{ "player_id": { "$oid": "d22aa8deabd389e686fd5c1e" },"stats": {"hits": 3,"singles": 3,"doubles": 2,"triples": 1,"homeruns": 0,"plate_appearances": 0,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "26da15df14bee2b21c241eb7" },"stats": {"hits": 0,"singles": 1,"doubles": 0,"triples": 3,"homeruns": 0,"plate_appearances": 3,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "3fcb9e6e39de796f5bfd193d" },"stats": {"hits": 2,"singles": 2,"doubles": 1,"triples": 2,"homeruns": 1,"plate_appearances": 3,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "df6dde62b99667aa71adee1a" },"stats": {"hits": 3,"singles": 0,"doubles": 0,"triples": 1,"homeruns": 1,"plate_appearances": 0,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 0} }]
-},
-{
-    "_id": {
-        "$oid": "1a1acadda3f1aacde7a47dca"
-    },
-    "league_id": { "$oid": "e597ec72e288b5da29d1645d" },
-    "team_1_ids": [{ "$oid": "9d7f1ddbdce49afaf82a53f6" },{ "$oid": "df6dde62b99667aa71adee1a" },{ "$oid": "641655d7ff8861dc5c74accc" },{ "$oid": "4eeedbfeec6f2bb66277d2de" }],
-    "team_2_ids": [{ "$oid": "641655d7ff8861dc5c74accc" },{ "$oid": "e93a2bae7c94cc839fbff7de" },{ "$oid": "ffb5e9a6d482baebbcbe5f19" },{ "$oid": "1179c3fb644a6b1fdb5b8ec4" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1627500000000"
-        }
-    },
-    "game_location": "Unit 4097 Box 6993DPO AE 21761",
-    "player_stats": [{ "player_id": { "$oid": "9d7f1ddbdce49afaf82a53f6" },"stats": {"hits": 1,"singles": 3,"doubles": 0,"triples": 3,"homeruns": 1,"plate_appearances": 0,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "df6dde62b99667aa71adee1a" },"stats": {"hits": 3,"singles": 3,"doubles": 1,"triples": 1,"homeruns": 2,"plate_appearances": 3,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "641655d7ff8861dc5c74accc" },"stats": {"hits": 2,"singles": 1,"doubles": 3,"triples": 2,"homeruns": 3,"plate_appearances": 0,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "4eeedbfeec6f2bb66277d2de" },"stats": {"hits": 0,"singles": 2,"doubles": 2,"triples": 2,"homeruns": 0,"plate_appearances": 0,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "641655d7ff8861dc5c74accc" },"stats": {"hits": 3,"singles": 3,"doubles": 3,"triples": 3,"homeruns": 2,"plate_appearances": 1,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "e93a2bae7c94cc839fbff7de" },"stats": {"hits": 2,"singles": 0,"doubles": 1,"triples": 3,"homeruns": 1,"plate_appearances": 3,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "ffb5e9a6d482baebbcbe5f19" },"stats": {"hits": 2,"singles": 2,"doubles": 0,"triples": 1,"homeruns": 2,"plate_appearances": 2,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "1179c3fb644a6b1fdb5b8ec4" },"stats": {"hits": 2,"singles": 2,"doubles": 3,"triples": 3,"homeruns": 3,"plate_appearances": 0,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 5} }]
-},
-{
-    "_id": {
-        "$oid": "1596c167b181c54b1ab7ffe6"
-    },
-    "league_id": { "$oid": "bc4e4a99d48dbb1dafdfc822" },
-    "team_1_ids": [{ "$oid": "e93a2bae7c94cc839fbff7de" }],
-    "team_2_ids": [{ "$oid": "72e47b9c8c6d62a1d7f34c57" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1630800000000"
-        }
-    },
-    "game_location": "255 Phillip Corner Suite 229Youngberg, NC 85258",
-    "player_stats": [{ "player_id": { "$oid": "e93a2bae7c94cc839fbff7de" },"stats": {"hits": 1,"singles": 3,"doubles": 2,"triples": 3,"homeruns": 1,"plate_appearances": 1,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "72e47b9c8c6d62a1d7f34c57" },"stats": {"hits": 0,"singles": 2,"doubles": 3,"triples": 0,"homeruns": 1,"plate_appearances": 0,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 3} }]
-},
-{
-    "_id": {
-        "$oid": "858bcf7ccd284db8fdf42cc7"
-    },
-    "league_id": { "$oid": "83b1ce42cbf72a4165c19eb4" },
-    "team_1_ids": [{ "$oid": "c5298ec288694e3d9798a1f8" },{ "$oid": "94ca9287ebcd4d8d1f3cce36" }],
-    "team_2_ids": [{ "$oid": "d549a9825e169e1a3fc8eebd" },{ "$oid": "26da15df14bee2b21c241eb7" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1629100000000"
-        }
-    },
-    "game_location": "4413 Allen Brooks Apt. 982Gonzalezmouth, AL 88258",
-    "player_stats": [{ "player_id": { "$oid": "c5298ec288694e3d9798a1f8" },"stats": {"hits": 1,"singles": 1,"doubles": 3,"triples": 1,"homeruns": 2,"plate_appearances": 2,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "94ca9287ebcd4d8d1f3cce36" },"stats": {"hits": 0,"singles": 2,"doubles": 2,"triples": 1,"homeruns": 1,"plate_appearances": 3,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "d549a9825e169e1a3fc8eebd" },"stats": {"hits": 0,"singles": 0,"doubles": 3,"triples": 0,"homeruns": 3,"plate_appearances": 0,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "26da15df14bee2b21c241eb7" },"stats": {"hits": 1,"singles": 3,"doubles": 1,"triples": 1,"homeruns": 2,"plate_appearances": 2,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 7} }]
-},
-{
-    "_id": {
-        "$oid": "53283c7a5feacf2dd8676ca5"
-    },
-    "league_id": { "$oid": "83b1ce42cbf72a4165c19eb4" },
-    "team_1_ids": [{ "$oid": "ca135efa682acec9334292ca" },{ "$oid": "fabfefbdfcb3dfd8b4b26e79" },{ "$oid": "94ca9287ebcd4d8d1f3cce36" }],
-    "team_2_ids": [{ "$oid": "8717d55b8ea4aedbd8435e1b" },{ "$oid": "ffb5e9a6d482baebbcbe5f19" },{ "$oid": "df6dde62b99667aa71adee1a" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1631100000000"
-        }
-    },
-    "game_location": "3439 Allen Stravenue Apt. 751Boyermouth, TN 30162",
-    "player_stats": [{ "player_id": { "$oid": "ca135efa682acec9334292ca" },"stats": {"hits": 3,"singles": 3,"doubles": 2,"triples": 2,"homeruns": 1,"plate_appearances": 1,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "fabfefbdfcb3dfd8b4b26e79" },"stats": {"hits": 3,"singles": 3,"doubles": 2,"triples": 2,"homeruns": 3,"plate_appearances": 1,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "94ca9287ebcd4d8d1f3cce36" },"stats": {"hits": 1,"singles": 0,"doubles": 2,"triples": 0,"homeruns": 0,"plate_appearances": 0,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "8717d55b8ea4aedbd8435e1b" },"stats": {"hits": 2,"singles": 2,"doubles": 2,"triples": 1,"homeruns": 0,"plate_appearances": 1,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "ffb5e9a6d482baebbcbe5f19" },"stats": {"hits": 3,"singles": 2,"doubles": 2,"triples": 0,"homeruns": 2,"plate_appearances": 1,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "df6dde62b99667aa71adee1a" },"stats": {"hits": 0,"singles": 3,"doubles": 3,"triples": 1,"homeruns": 0,"plate_appearances": 3,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 6} }]
-},
-{
-    "_id": {
-        "$oid": "34b4adbc4796647626af8adb"
-    },
-    "league_id": { "$oid": "bc4e4a99d48dbb1dafdfc822" },
-    "team_1_ids": [{ "$oid": "1179c3fb644a6b1fdb5b8ec4" },{ "$oid": "6d181556a98412a3b72c184b" }],
-    "team_2_ids": [{ "$oid": "828def315ebb9ab928b4d5ee" },{ "$oid": "6599d7e4e83f29d7fcc6dc89" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1629700000000"
-        }
-    },
-    "game_location": "03206 Jenna LoafDavidmouth, WA 48372",
-    "player_stats": [{ "player_id": { "$oid": "1179c3fb644a6b1fdb5b8ec4" },"stats": {"hits": 2,"singles": 3,"doubles": 3,"triples": 3,"homeruns": 2,"plate_appearances": 2,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "6d181556a98412a3b72c184b" },"stats": {"hits": 2,"singles": 0,"doubles": 2,"triples": 2,"homeruns": 2,"plate_appearances": 3,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "828def315ebb9ab928b4d5ee" },"stats": {"hits": 2,"singles": 0,"doubles": 1,"triples": 0,"homeruns": 2,"plate_appearances": 1,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "6599d7e4e83f29d7fcc6dc89" },"stats": {"hits": 2,"singles": 1,"doubles": 0,"triples": 0,"homeruns": 1,"plate_appearances": 1,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 0} }]
-},
-{
-    "_id": {
-        "$oid": "b4e6c5992d6a7c4e7badd736"
-    },
-    "league_id": { "$oid": "9a4f98f449b2d65a85172d2b" },
-    "team_1_ids": [{ "$oid": "1179c3fb644a6b1fdb5b8ec4" },{ "$oid": "ffb5e9a6d482baebbcbe5f19" }],
-    "team_2_ids": [{ "$oid": "3fcb9e6e39de796f5bfd193d" },{ "$oid": "c5298ec288694e3d9798a1f8" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1627000000000"
-        }
-    },
-    "game_location": "6499 Smith Stream Apt. 786Rebeccachester, NM 33266",
-    "player_stats": [{ "player_id": { "$oid": "1179c3fb644a6b1fdb5b8ec4" },"stats": {"hits": 0,"singles": 3,"doubles": 2,"triples": 2,"homeruns": 0,"plate_appearances": 1,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "ffb5e9a6d482baebbcbe5f19" },"stats": {"hits": 2,"singles": 0,"doubles": 3,"triples": 0,"homeruns": 2,"plate_appearances": 1,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "3fcb9e6e39de796f5bfd193d" },"stats": {"hits": 3,"singles": 2,"doubles": 1,"triples": 3,"homeruns": 3,"plate_appearances": 3,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "c5298ec288694e3d9798a1f8" },"stats": {"hits": 0,"singles": 0,"doubles": 3,"triples": 2,"homeruns": 3,"plate_appearances": 3,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 5} }]
-},
-{
-    "_id": {
-        "$oid": "f28cacac92ef8eefa1ddfc63"
-    },
-    "league_id": { "$oid": "83b1ce42cbf72a4165c19eb4" },
-    "team_1_ids": [{ "$oid": "a4b73a75de9ca7cf972a1c4e" },{ "$oid": "c74c3cde23fb6d29c331ab2f" },{ "$oid": "8717d55b8ea4aedbd8435e1b" },{ "$oid": "828def315ebb9ab928b4d5ee" }],
-    "team_2_ids": [{ "$oid": "d22aa8deabd389e686fd5c1e" },{ "$oid": "641655d7ff8861dc5c74accc" },{ "$oid": "6d181556a98412a3b72c184b" },{ "$oid": "828def315ebb9ab928b4d5ee" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1627400000000"
-        }
-    },
-    "game_location": "6276 John CliffsMooretown, TX 48490",
-    "player_stats": [{ "player_id": { "$oid": "a4b73a75de9ca7cf972a1c4e" },"stats": {"hits": 3,"singles": 2,"doubles": 3,"triples": 1,"homeruns": 0,"plate_appearances": 1,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "c74c3cde23fb6d29c331ab2f" },"stats": {"hits": 2,"singles": 2,"doubles": 2,"triples": 1,"homeruns": 0,"plate_appearances": 3,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "8717d55b8ea4aedbd8435e1b" },"stats": {"hits": 1,"singles": 3,"doubles": 1,"triples": 0,"homeruns": 0,"plate_appearances": 2,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "828def315ebb9ab928b4d5ee" },"stats": {"hits": 0,"singles": 0,"doubles": 1,"triples": 1,"homeruns": 1,"plate_appearances": 0,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "d22aa8deabd389e686fd5c1e" },"stats": {"hits": 3,"singles": 1,"doubles": 0,"triples": 0,"homeruns": 3,"plate_appearances": 3,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "641655d7ff8861dc5c74accc" },"stats": {"hits": 2,"singles": 2,"doubles": 2,"triples": 0,"homeruns": 1,"plate_appearances": 2,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "6d181556a98412a3b72c184b" },"stats": {"hits": 2,"singles": 1,"doubles": 0,"triples": 1,"homeruns": 3,"plate_appearances": 1,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "828def315ebb9ab928b4d5ee" },"stats": {"hits": 3,"singles": 2,"doubles": 0,"triples": 2,"homeruns": 2,"plate_appearances": 0,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 3} }]
-},
-{
-    "_id": {
-        "$oid": "85e67efb7cbf45fefae539bb"
-    },
-    "league_id": { "$oid": "e597ec72e288b5da29d1645d" },
-    "team_1_ids": [{ "$oid": "8717d55b8ea4aedbd8435e1b" },{ "$oid": "c3f7c72db61ba3af2bcce9e8" },{ "$oid": "ae6956d4915e82d83b66a4ec" }],
-    "team_2_ids": [{ "$oid": "ffb5e9a6d482baebbcbe5f19" },{ "$oid": "ca135efa682acec9334292ca" },{ "$oid": "8717d55b8ea4aedbd8435e1b" }],
-    "game_date": {
-        "$date": {
-            "$numberLong": "1627000000000"
-        }
-    },
-    "game_location": "PSC 5790, Box 8712APO AA 09395",
-    "player_stats": [{ "player_id": { "$oid": "8717d55b8ea4aedbd8435e1b" },"stats": {"hits": 1,"singles": 3,"doubles": 3,"triples": 0,"homeruns": 2,"plate_appearances": 2,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "c3f7c72db61ba3af2bcce9e8" },"stats": {"hits": 3,"singles": 1,"doubles": 0,"triples": 1,"homeruns": 2,"plate_appearances": 3,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "ae6956d4915e82d83b66a4ec" },"stats": {"hits": 1,"singles": 3,"doubles": 1,"triples": 3,"homeruns": 0,"plate_appearances": 2,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "ffb5e9a6d482baebbcbe5f19" },"stats": {"hits": 1,"singles": 1,"doubles": 0,"triples": 1,"homeruns": 1,"plate_appearances": 2,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "ca135efa682acec9334292ca" },"stats": {"hits": 3,"singles": 1,"doubles": 2,"triples": 3,"homeruns": 0,"plate_appearances": 3,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "8717d55b8ea4aedbd8435e1b" },"stats": {"hits": 1,"singles": 3,"doubles": 3,"triples": 3,"homeruns": 2,"plate_appearances": 0,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 10} }]
-},
-{
-    "_id": {
-        "$oid": "aaee9d2dcc6ccbbb79a312d4"
-    },
-    "league_id": { "$oid": "83b1ce42cbf72a4165c19eb4" },
-    "team_1_ids": [{ "$oid": "3fcb9e6e39de796f5bfd193d" }],
-    "team_2_ids": [{ "$oid": "bef61b8e34dca1a94fb1a4df" }],
+        "$oid": "aef1c479d7dfb37f32b2f583"
+    },
+    "league_id": { "$oid": "92b58d517bd223e4e5afeca7" },
+    "team_1_ids": [{ "$oid": "ccffacddba24fb7e1dd9b4e4" }],
+    "team_2_ids": [{ "$oid": "e34b66e2a2724ca9bdd87f4d" }],
     "game_date": {
         "$date": {
             "$numberLong": "1632100000000"
         }
     },
-    "game_location": "173 Robert Drive Apt. 553Freemanport, WV 70351",
-    "player_stats": [{ "player_id": { "$oid": "3fcb9e6e39de796f5bfd193d" },"stats": {"hits": 2,"singles": 0,"doubles": 3,"triples": 2,"homeruns": 1,"plate_appearances": 3,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "bef61b8e34dca1a94fb1a4df" },"stats": {"hits": 0,"singles": 1,"doubles": 1,"triples": 1,"homeruns": 0,"plate_appearances": 3,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 2} }]
+    "game_location": "564 Sheppard Village Suite 594Tannerville, SD 13492",
+    "player_stats": [{ "player_id": { "$oid": "ccffacddba24fb7e1dd9b4e4" },"stats": {"hits": 3,"singles": 1,"doubles": 1,"triples": 2,"homeruns": 2,"plate_appearances": 2,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "e34b66e2a2724ca9bdd87f4d" },"stats": {"hits": 3,"singles": 3,"doubles": 2,"triples": 3,"homeruns": 2,"plate_appearances": 0,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 7} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "f29a46ee23a4fca81bdc855b"
+    },
+    "league_id": { "$oid": "92b58d517bd223e4e5afeca7" },
+    "team_1_ids": [{ "$oid": "cda75dfd26debe215ecef6af" }],
+    "team_2_ids": [{ "$oid": "ccffacddba24fb7e1dd9b4e4" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1626600000000"
+        }
+    },
+    "game_location": "USCGC PerezFPO AE 88519",
+    "player_stats": [{ "player_id": { "$oid": "cda75dfd26debe215ecef6af" },"stats": {"hits": 0,"singles": 2,"doubles": 0,"triples": 1,"homeruns": 0,"plate_appearances": 3,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "ccffacddba24fb7e1dd9b4e4" },"stats": {"hits": 3,"singles": 0,"doubles": 0,"triples": 3,"homeruns": 3,"plate_appearances": 0,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 6} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "47ccfecb8566e1868395afdf"
+    },
+    "league_id": { "$oid": "92b58d517bd223e4e5afeca7" },
+    "team_1_ids": [{ "$oid": "217ffcaae19c1d5f214c8378" },{ "$oid": "af37aa99e145da41dceecd75" }],
+    "team_2_ids": [{ "$oid": "6d4adcebec6cffddd2c1f4ad" },{ "$oid": "b44ede5d5d4596fbce96f6dc" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1626600000000"
+        }
+    },
+    "game_location": "9969 Laura HeightsKellytown, MO 79227",
+    "player_stats": [{ "player_id": { "$oid": "217ffcaae19c1d5f214c8378" },"stats": {"hits": 2,"singles": 2,"doubles": 0,"triples": 0,"homeruns": 0,"plate_appearances": 2,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "af37aa99e145da41dceecd75" },"stats": {"hits": 0,"singles": 1,"doubles": 1,"triples": 3,"homeruns": 0,"plate_appearances": 3,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "6d4adcebec6cffddd2c1f4ad" },"stats": {"hits": 1,"singles": 1,"doubles": 3,"triples": 0,"homeruns": 3,"plate_appearances": 1,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "b44ede5d5d4596fbce96f6dc" },"stats": {"hits": 2,"singles": 2,"doubles": 1,"triples": 2,"homeruns": 2,"plate_appearances": 0,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 1} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "c448bc4df3d9c19cb36731ae"
+    },
+    "league_id": { "$oid": "bc2f892bdb94d2a2dca2e16e" },
+    "team_1_ids": [{ "$oid": "6d4adcebec6cffddd2c1f4ad" },{ "$oid": "2c7a8a8b28d2262b5d8deb93" }],
+    "team_2_ids": [{ "$oid": "ee5de48c8c9dac9173a23c24" },{ "$oid": "5b8b1d6b8662ddc633dd48cd" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1625500000000"
+        }
+    },
+    "game_location": "7724 Mike SpringsJohnstad, MS 12003",
+    "player_stats": [{ "player_id": { "$oid": "6d4adcebec6cffddd2c1f4ad" },"stats": {"hits": 2,"singles": 0,"doubles": 0,"triples": 2,"homeruns": 1,"plate_appearances": 0,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "2c7a8a8b28d2262b5d8deb93" },"stats": {"hits": 3,"singles": 0,"doubles": 3,"triples": 2,"homeruns": 2,"plate_appearances": 1,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "ee5de48c8c9dac9173a23c24" },"stats": {"hits": 2,"singles": 1,"doubles": 3,"triples": 1,"homeruns": 3,"plate_appearances": 0,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "5b8b1d6b8662ddc633dd48cd" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 3,"homeruns": 0,"plate_appearances": 0,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 2} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "d5edbfc2c86af8acdac5b3fe"
+    },
+    "league_id": { "$oid": "dff96366bc7cc598f7f27452" },
+    "team_1_ids": [{ "$oid": "af37aa99e145da41dceecd75" },{ "$oid": "cda75dfd26debe215ecef6af" }],
+    "team_2_ids": [{ "$oid": "af37aa99e145da41dceecd75" },{ "$oid": "ba51ce7dbbcf656f2455d26e" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1629700000000"
+        }
+    },
+    "game_location": "90824 Harrison LodgePort Johnborough, MO 53571",
+    "player_stats": [{ "player_id": { "$oid": "af37aa99e145da41dceecd75" },"stats": {"hits": 1,"singles": 0,"doubles": 1,"triples": 1,"homeruns": 2,"plate_appearances": 0,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "cda75dfd26debe215ecef6af" },"stats": {"hits": 0,"singles": 2,"doubles": 1,"triples": 0,"homeruns": 3,"plate_appearances": 1,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "af37aa99e145da41dceecd75" },"stats": {"hits": 1,"singles": 0,"doubles": 0,"triples": 1,"homeruns": 3,"plate_appearances": 0,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "ba51ce7dbbcf656f2455d26e" },"stats": {"hits": 0,"singles": 3,"doubles": 2,"triples": 3,"homeruns": 0,"plate_appearances": 1,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 3} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "cc3833949ae61bb34cf11b8a"
+    },
+    "league_id": { "$oid": "dc62c7cc8a342e81dfd3a9c8" },
+    "team_1_ids": [{ "$oid": "f47b7e18ed14c97f88ec3a46" }],
+    "team_2_ids": [{ "$oid": "cda75dfd26debe215ecef6af" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1631800000000"
+        }
+    },
+    "game_location": "0924 Turner SummitLake Davidtown, MO 09976",
+    "player_stats": [{ "player_id": { "$oid": "f47b7e18ed14c97f88ec3a46" },"stats": {"hits": 1,"singles": 3,"doubles": 1,"triples": 0,"homeruns": 2,"plate_appearances": 1,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "cda75dfd26debe215ecef6af" },"stats": {"hits": 0,"singles": 2,"doubles": 0,"triples": 3,"homeruns": 3,"plate_appearances": 3,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 1} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "eea1bcc5e86b86ed7a815175"
+    },
+    "league_id": { "$oid": "94b44e3bab43d8a6b46f9d24" },
+    "team_1_ids": [{ "$oid": "ce8cfe754a22c7f3c534bab8" },{ "$oid": "9eeb9528fb656fc8b75453b6" }],
+    "team_2_ids": [{ "$oid": "d61b19816fa98abcd6fd81f6" },{ "$oid": "ccffacddba24fb7e1dd9b4e4" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1630600000000"
+        }
+    },
+    "game_location": "552 Samantha HarborTonishire, MI 92893",
+    "player_stats": [{ "player_id": { "$oid": "ce8cfe754a22c7f3c534bab8" },"stats": {"hits": 0,"singles": 0,"doubles": 1,"triples": 0,"homeruns": 3,"plate_appearances": 0,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "9eeb9528fb656fc8b75453b6" },"stats": {"hits": 0,"singles": 1,"doubles": 0,"triples": 0,"homeruns": 3,"plate_appearances": 1,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "d61b19816fa98abcd6fd81f6" },"stats": {"hits": 0,"singles": 2,"doubles": 3,"triples": 3,"homeruns": 2,"plate_appearances": 0,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "ccffacddba24fb7e1dd9b4e4" },"stats": {"hits": 3,"singles": 1,"doubles": 0,"triples": 3,"homeruns": 1,"plate_appearances": 3,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 2} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "aa2821576fcff896821ef31d"
+    },
+    "league_id": { "$oid": "61fb7d43d69ffec714495ff7" },
+    "team_1_ids": [{ "$oid": "217ffcaae19c1d5f214c8378" },{ "$oid": "217ffcaae19c1d5f214c8378" },{ "$oid": "ee5de48c8c9dac9173a23c24" },{ "$oid": "f47b7e18ed14c97f88ec3a46" }],
+    "team_2_ids": [{ "$oid": "ba51ce7dbbcf656f2455d26e" },{ "$oid": "8f4dfa6cee976912e798fdf4" },{ "$oid": "2c7a8a8b28d2262b5d8deb93" },{ "$oid": "6d4adcebec6cffddd2c1f4ad" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1631300000000"
+        }
+    },
+    "game_location": "76954 Francis ShoalsEast Elizabethville, RI 53256",
+    "player_stats": [{ "player_id": { "$oid": "217ffcaae19c1d5f214c8378" },"stats": {"hits": 1,"singles": 2,"doubles": 2,"triples": 0,"homeruns": 2,"plate_appearances": 2,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "217ffcaae19c1d5f214c8378" },"stats": {"hits": 3,"singles": 3,"doubles": 2,"triples": 3,"homeruns": 3,"plate_appearances": 3,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "ee5de48c8c9dac9173a23c24" },"stats": {"hits": 1,"singles": 3,"doubles": 2,"triples": 0,"homeruns": 2,"plate_appearances": 2,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "f47b7e18ed14c97f88ec3a46" },"stats": {"hits": 0,"singles": 3,"doubles": 2,"triples": 1,"homeruns": 1,"plate_appearances": 0,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "ba51ce7dbbcf656f2455d26e" },"stats": {"hits": 0,"singles": 0,"doubles": 2,"triples": 3,"homeruns": 2,"plate_appearances": 2,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "8f4dfa6cee976912e798fdf4" },"stats": {"hits": 0,"singles": 3,"doubles": 1,"triples": 2,"homeruns": 2,"plate_appearances": 2,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "2c7a8a8b28d2262b5d8deb93" },"stats": {"hits": 1,"singles": 1,"doubles": 1,"triples": 2,"homeruns": 0,"plate_appearances": 3,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "6d4adcebec6cffddd2c1f4ad" },"stats": {"hits": 0,"singles": 1,"doubles": 2,"triples": 0,"homeruns": 2,"plate_appearances": 1,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 7} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "62836eabbb3cd222d4abeb45"
+    },
+    "league_id": { "$oid": "bc2f892bdb94d2a2dca2e16e" },
+    "team_1_ids": [{ "$oid": "5b8b1d6b8662ddc633dd48cd" },{ "$oid": "ed827e48e76e3c8ec1185127" },{ "$oid": "ce66173e4c52a3227c128d2a" },{ "$oid": "cda75dfd26debe215ecef6af" }],
+    "team_2_ids": [{ "$oid": "af37aa99e145da41dceecd75" },{ "$oid": "ffc8f24ecfc84dd2ae24cadf" },{ "$oid": "6d4adcebec6cffddd2c1f4ad" },{ "$oid": "2c7a8a8b28d2262b5d8deb93" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1631600000000"
+        }
+    },
+    "game_location": "PSC 2647, Box 8541APO AA 51573",
+    "player_stats": [{ "player_id": { "$oid": "5b8b1d6b8662ddc633dd48cd" },"stats": {"hits": 3,"singles": 1,"doubles": 1,"triples": 0,"homeruns": 1,"plate_appearances": 2,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "ed827e48e76e3c8ec1185127" },"stats": {"hits": 3,"singles": 1,"doubles": 1,"triples": 2,"homeruns": 2,"plate_appearances": 2,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "ce66173e4c52a3227c128d2a" },"stats": {"hits": 3,"singles": 3,"doubles": 3,"triples": 1,"homeruns": 0,"plate_appearances": 0,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "cda75dfd26debe215ecef6af" },"stats": {"hits": 2,"singles": 3,"doubles": 3,"triples": 1,"homeruns": 2,"plate_appearances": 0,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "af37aa99e145da41dceecd75" },"stats": {"hits": 2,"singles": 0,"doubles": 0,"triples": 2,"homeruns": 0,"plate_appearances": 3,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "ffc8f24ecfc84dd2ae24cadf" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 2,"homeruns": 3,"plate_appearances": 0,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "6d4adcebec6cffddd2c1f4ad" },"stats": {"hits": 2,"singles": 2,"doubles": 3,"triples": 1,"homeruns": 3,"plate_appearances": 3,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "2c7a8a8b28d2262b5d8deb93" },"stats": {"hits": 2,"singles": 0,"doubles": 3,"triples": 1,"homeruns": 2,"plate_appearances": 0,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 4} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "4a1fa6d534dd7544c177ff37"
+    },
+    "league_id": { "$oid": "bc2f892bdb94d2a2dca2e16e" },
+    "team_1_ids": [{ "$oid": "8f4dfa6cee976912e798fdf4" },{ "$oid": "8f4dfa6cee976912e798fdf4" },{ "$oid": "ce66173e4c52a3227c128d2a" },{ "$oid": "dc85522eaa1ef8c4cc685ca9" }],
+    "team_2_ids": [{ "$oid": "f47b7e18ed14c97f88ec3a46" },{ "$oid": "b44ede5d5d4596fbce96f6dc" },{ "$oid": "ce8cfe754a22c7f3c534bab8" },{ "$oid": "ed827e48e76e3c8ec1185127" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1630300000000"
+        }
+    },
+    "game_location": "8005 Barrera PlazaSilvaland, HI 76438",
+    "player_stats": [{ "player_id": { "$oid": "8f4dfa6cee976912e798fdf4" },"stats": {"hits": 0,"singles": 2,"doubles": 1,"triples": 1,"homeruns": 1,"plate_appearances": 1,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "8f4dfa6cee976912e798fdf4" },"stats": {"hits": 2,"singles": 0,"doubles": 3,"triples": 2,"homeruns": 2,"plate_appearances": 2,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "ce66173e4c52a3227c128d2a" },"stats": {"hits": 0,"singles": 1,"doubles": 1,"triples": 2,"homeruns": 0,"plate_appearances": 3,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "dc85522eaa1ef8c4cc685ca9" },"stats": {"hits": 3,"singles": 0,"doubles": 1,"triples": 3,"homeruns": 0,"plate_appearances": 2,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "f47b7e18ed14c97f88ec3a46" },"stats": {"hits": 0,"singles": 3,"doubles": 0,"triples": 2,"homeruns": 2,"plate_appearances": 3,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "b44ede5d5d4596fbce96f6dc" },"stats": {"hits": 2,"singles": 1,"doubles": 2,"triples": 0,"homeruns": 1,"plate_appearances": 1,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "ce8cfe754a22c7f3c534bab8" },"stats": {"hits": 3,"singles": 0,"doubles": 2,"triples": 1,"homeruns": 0,"plate_appearances": 1,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "ed827e48e76e3c8ec1185127" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 1,"homeruns": 2,"plate_appearances": 0,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 8} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "edbfda1bb6f895fa377d4d3d"
+    },
+    "league_id": { "$oid": "49fedaa863e11a81bcd6f4d1" },
+    "team_1_ids": [{ "$oid": "cda75dfd26debe215ecef6af" }],
+    "team_2_ids": [{ "$oid": "839c62bc8de8a5c6dbef1fbb" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1632100000000"
+        }
+    },
+    "game_location": "816 Williams Gardens Suite 862Silvahaven, MO 01728",
+    "player_stats": [{ "player_id": { "$oid": "cda75dfd26debe215ecef6af" },"stats": {"hits": 0,"singles": 0,"doubles": 1,"triples": 3,"homeruns": 3,"plate_appearances": 1,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "839c62bc8de8a5c6dbef1fbb" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 3,"homeruns": 0,"plate_appearances": 0,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 2} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "613b8e5bd5f67abf364f9d2c"
+    },
+    "league_id": { "$oid": "92b58d517bd223e4e5afeca7" },
+    "team_1_ids": [{ "$oid": "dc85522eaa1ef8c4cc685ca9" },{ "$oid": "f47b7e18ed14c97f88ec3a46" },{ "$oid": "9eeb9528fb656fc8b75453b6" },{ "$oid": "e34b66e2a2724ca9bdd87f4d" }],
+    "team_2_ids": [{ "$oid": "ffc8f24ecfc84dd2ae24cadf" },{ "$oid": "839c62bc8de8a5c6dbef1fbb" },{ "$oid": "4c3aa145d1eb16dfaa218cf2" },{ "$oid": "8f4dfa6cee976912e798fdf4" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1631100000000"
+        }
+    },
+    "game_location": "206 Monica CourtBarnettton, MO 46179",
+    "player_stats": [{ "player_id": { "$oid": "dc85522eaa1ef8c4cc685ca9" },"stats": {"hits": 1,"singles": 2,"doubles": 3,"triples": 2,"homeruns": 1,"plate_appearances": 0,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "f47b7e18ed14c97f88ec3a46" },"stats": {"hits": 0,"singles": 3,"doubles": 3,"triples": 0,"homeruns": 3,"plate_appearances": 1,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "9eeb9528fb656fc8b75453b6" },"stats": {"hits": 1,"singles": 2,"doubles": 0,"triples": 3,"homeruns": 3,"plate_appearances": 3,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "e34b66e2a2724ca9bdd87f4d" },"stats": {"hits": 2,"singles": 0,"doubles": 1,"triples": 0,"homeruns": 3,"plate_appearances": 1,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "ffc8f24ecfc84dd2ae24cadf" },"stats": {"hits": 1,"singles": 1,"doubles": 1,"triples": 3,"homeruns": 3,"plate_appearances": 0,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "839c62bc8de8a5c6dbef1fbb" },"stats": {"hits": 0,"singles": 1,"doubles": 1,"triples": 3,"homeruns": 0,"plate_appearances": 3,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "4c3aa145d1eb16dfaa218cf2" },"stats": {"hits": 2,"singles": 3,"doubles": 3,"triples": 2,"homeruns": 1,"plate_appearances": 2,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "8f4dfa6cee976912e798fdf4" },"stats": {"hits": 0,"singles": 3,"doubles": 0,"triples": 3,"homeruns": 1,"plate_appearances": 2,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 7} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "cbbd3c217e67b94db52572b6"
+    },
+    "league_id": { "$oid": "92b58d517bd223e4e5afeca7" },
+    "team_1_ids": [{ "$oid": "3fefc5f38a5f9c91bbaff78e" },{ "$oid": "bdbdee32cfc9eb36c2ab1ac6" },{ "$oid": "ce66173e4c52a3227c128d2a" },{ "$oid": "cda75dfd26debe215ecef6af" }],
+    "team_2_ids": [{ "$oid": "dc85522eaa1ef8c4cc685ca9" },{ "$oid": "e34b66e2a2724ca9bdd87f4d" },{ "$oid": "cda75dfd26debe215ecef6af" },{ "$oid": "ee5de48c8c9dac9173a23c24" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1629500000000"
+        }
+    },
+    "game_location": "875 Huber LockRamosview, NJ 81218",
+    "player_stats": [{ "player_id": { "$oid": "3fefc5f38a5f9c91bbaff78e" },"stats": {"hits": 2,"singles": 0,"doubles": 0,"triples": 1,"homeruns": 2,"plate_appearances": 1,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "bdbdee32cfc9eb36c2ab1ac6" },"stats": {"hits": 1,"singles": 0,"doubles": 2,"triples": 1,"homeruns": 1,"plate_appearances": 1,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "ce66173e4c52a3227c128d2a" },"stats": {"hits": 0,"singles": 0,"doubles": 2,"triples": 3,"homeruns": 1,"plate_appearances": 0,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "cda75dfd26debe215ecef6af" },"stats": {"hits": 1,"singles": 0,"doubles": 1,"triples": 3,"homeruns": 2,"plate_appearances": 3,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "dc85522eaa1ef8c4cc685ca9" },"stats": {"hits": 0,"singles": 3,"doubles": 1,"triples": 2,"homeruns": 0,"plate_appearances": 1,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "e34b66e2a2724ca9bdd87f4d" },"stats": {"hits": 1,"singles": 3,"doubles": 2,"triples": 1,"homeruns": 3,"plate_appearances": 0,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "cda75dfd26debe215ecef6af" },"stats": {"hits": 0,"singles": 2,"doubles": 2,"triples": 1,"homeruns": 2,"plate_appearances": 3,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "ee5de48c8c9dac9173a23c24" },"stats": {"hits": 0,"singles": 3,"doubles": 3,"triples": 1,"homeruns": 1,"plate_appearances": 3,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 7} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "ae99c6ffd232c5d95da1c1fa"
+    },
+    "league_id": { "$oid": "94b44e3bab43d8a6b46f9d24" },
+    "team_1_ids": [{ "$oid": "9eeb9528fb656fc8b75453b6" },{ "$oid": "ccffacddba24fb7e1dd9b4e4" }],
+    "team_2_ids": [{ "$oid": "7cbcb7be999ca6dccdc5f1ef" },{ "$oid": "d61b19816fa98abcd6fd81f6" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1630600000000"
+        }
+    },
+    "game_location": "91957 Marshall Harbors Apt. 623Lake Sherylport, PA 97330",
+    "player_stats": [{ "player_id": { "$oid": "9eeb9528fb656fc8b75453b6" },"stats": {"hits": 1,"singles": 0,"doubles": 1,"triples": 3,"homeruns": 1,"plate_appearances": 1,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "ccffacddba24fb7e1dd9b4e4" },"stats": {"hits": 0,"singles": 2,"doubles": 2,"triples": 3,"homeruns": 3,"plate_appearances": 1,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "7cbcb7be999ca6dccdc5f1ef" },"stats": {"hits": 1,"singles": 2,"doubles": 0,"triples": 1,"homeruns": 2,"plate_appearances": 0,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "d61b19816fa98abcd6fd81f6" },"stats": {"hits": 0,"singles": 1,"doubles": 2,"triples": 1,"homeruns": 1,"plate_appearances": 2,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 10} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "2e9ffa432fdb6e8ec65f1f27"
+    },
+    "league_id": { "$oid": "61fb7d43d69ffec714495ff7" },
+    "team_1_ids": [{ "$oid": "5b8b1d6b8662ddc633dd48cd" }],
+    "team_2_ids": [{ "$oid": "b44ede5d5d4596fbce96f6dc" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1628900000000"
+        }
+    },
+    "game_location": "6114 Cindy NeckHannamouth, CT 48383",
+    "player_stats": [{ "player_id": { "$oid": "5b8b1d6b8662ddc633dd48cd" },"stats": {"hits": 3,"singles": 2,"doubles": 3,"triples": 1,"homeruns": 1,"plate_appearances": 0,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "b44ede5d5d4596fbce96f6dc" },"stats": {"hits": 1,"singles": 3,"doubles": 1,"triples": 1,"homeruns": 1,"plate_appearances": 2,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 7} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "a749eb6fc545d4a46ededb57"
+    },
+    "league_id": { "$oid": "49fedaa863e11a81bcd6f4d1" },
+    "team_1_ids": [{ "$oid": "9eeb9528fb656fc8b75453b6" },{ "$oid": "ce8cfe754a22c7f3c534bab8" },{ "$oid": "7cbcb7be999ca6dccdc5f1ef" },{ "$oid": "6d4adcebec6cffddd2c1f4ad" }],
+    "team_2_ids": [{ "$oid": "ee5de48c8c9dac9173a23c24" },{ "$oid": "ee5de48c8c9dac9173a23c24" },{ "$oid": "2c7a8a8b28d2262b5d8deb93" },{ "$oid": "9eeb9528fb656fc8b75453b6" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1631400000000"
+        }
+    },
+    "game_location": "USCGC PeckFPO AA 79938",
+    "player_stats": [{ "player_id": { "$oid": "9eeb9528fb656fc8b75453b6" },"stats": {"hits": 2,"singles": 3,"doubles": 3,"triples": 1,"homeruns": 3,"plate_appearances": 2,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "ce8cfe754a22c7f3c534bab8" },"stats": {"hits": 1,"singles": 2,"doubles": 0,"triples": 1,"homeruns": 1,"plate_appearances": 1,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "7cbcb7be999ca6dccdc5f1ef" },"stats": {"hits": 3,"singles": 3,"doubles": 1,"triples": 3,"homeruns": 3,"plate_appearances": 2,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "6d4adcebec6cffddd2c1f4ad" },"stats": {"hits": 3,"singles": 3,"doubles": 1,"triples": 2,"homeruns": 1,"plate_appearances": 2,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "ee5de48c8c9dac9173a23c24" },"stats": {"hits": 1,"singles": 2,"doubles": 3,"triples": 1,"homeruns": 2,"plate_appearances": 1,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "ee5de48c8c9dac9173a23c24" },"stats": {"hits": 3,"singles": 3,"doubles": 3,"triples": 2,"homeruns": 0,"plate_appearances": 0,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "2c7a8a8b28d2262b5d8deb93" },"stats": {"hits": 3,"singles": 1,"doubles": 3,"triples": 2,"homeruns": 1,"plate_appearances": 1,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "9eeb9528fb656fc8b75453b6" },"stats": {"hits": 0,"singles": 1,"doubles": 0,"triples": 2,"homeruns": 0,"plate_appearances": 3,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 1} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "6e834c34d9e2fe893a56e99c"
+    },
+    "league_id": { "$oid": "dc62c7cc8a342e81dfd3a9c8" },
+    "team_1_ids": [{ "$oid": "e34b66e2a2724ca9bdd87f4d" },{ "$oid": "51b9c4369ea44fdfa643d93d" },{ "$oid": "7cbcb7be999ca6dccdc5f1ef" }],
+    "team_2_ids": [{ "$oid": "1e59dd361fcd4eef4b54f62b" },{ "$oid": "1e59dd361fcd4eef4b54f62b" },{ "$oid": "e34b66e2a2724ca9bdd87f4d" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1629700000000"
+        }
+    },
+    "game_location": "765 Vaughn Inlet Apt. 114Christianmouth, OH 75183",
+    "player_stats": [{ "player_id": { "$oid": "e34b66e2a2724ca9bdd87f4d" },"stats": {"hits": 0,"singles": 2,"doubles": 3,"triples": 0,"homeruns": 0,"plate_appearances": 2,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "51b9c4369ea44fdfa643d93d" },"stats": {"hits": 3,"singles": 2,"doubles": 1,"triples": 0,"homeruns": 1,"plate_appearances": 1,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "7cbcb7be999ca6dccdc5f1ef" },"stats": {"hits": 3,"singles": 1,"doubles": 2,"triples": 2,"homeruns": 0,"plate_appearances": 0,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "1e59dd361fcd4eef4b54f62b" },"stats": {"hits": 0,"singles": 2,"doubles": 2,"triples": 0,"homeruns": 0,"plate_appearances": 1,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "1e59dd361fcd4eef4b54f62b" },"stats": {"hits": 1,"singles": 3,"doubles": 0,"triples": 2,"homeruns": 1,"plate_appearances": 0,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "e34b66e2a2724ca9bdd87f4d" },"stats": {"hits": 1,"singles": 2,"doubles": 3,"triples": 1,"homeruns": 1,"plate_appearances": 0,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 1} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "3e8f1cbcdb9d82fe8cb2f941"
+    },
+    "league_id": { "$oid": "c1c63aec5eedd6e567ddffba" },
+    "team_1_ids": [{ "$oid": "d61b19816fa98abcd6fd81f6" },{ "$oid": "ed827e48e76e3c8ec1185127" }],
+    "team_2_ids": [{ "$oid": "f47b7e18ed14c97f88ec3a46" },{ "$oid": "8f4dfa6cee976912e798fdf4" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1626300000000"
+        }
+    },
+    "game_location": "20270 Darryl Hollow Suite 063North Kathy, ID 06156",
+    "player_stats": [{ "player_id": { "$oid": "d61b19816fa98abcd6fd81f6" },"stats": {"hits": 2,"singles": 0,"doubles": 3,"triples": 0,"homeruns": 2,"plate_appearances": 1,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "ed827e48e76e3c8ec1185127" },"stats": {"hits": 1,"singles": 3,"doubles": 2,"triples": 1,"homeruns": 3,"plate_appearances": 3,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "f47b7e18ed14c97f88ec3a46" },"stats": {"hits": 3,"singles": 1,"doubles": 3,"triples": 2,"homeruns": 0,"plate_appearances": 2,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "8f4dfa6cee976912e798fdf4" },"stats": {"hits": 1,"singles": 3,"doubles": 0,"triples": 2,"homeruns": 0,"plate_appearances": 2,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 7} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "815ddde5f9c25a171d48f34a"
+    },
+    "league_id": { "$oid": "dff96366bc7cc598f7f27452" },
+    "team_1_ids": [{ "$oid": "bdbdee32cfc9eb36c2ab1ac6" },{ "$oid": "1e59dd361fcd4eef4b54f62b" }],
+    "team_2_ids": [{ "$oid": "dc85522eaa1ef8c4cc685ca9" },{ "$oid": "ed827e48e76e3c8ec1185127" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1628400000000"
+        }
+    },
+    "game_location": "50655 Mitchell WalksEast Jamesberg, MA 87337",
+    "player_stats": [{ "player_id": { "$oid": "bdbdee32cfc9eb36c2ab1ac6" },"stats": {"hits": 3,"singles": 2,"doubles": 2,"triples": 3,"homeruns": 1,"plate_appearances": 3,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "1e59dd361fcd4eef4b54f62b" },"stats": {"hits": 0,"singles": 0,"doubles": 2,"triples": 2,"homeruns": 3,"plate_appearances": 1,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "dc85522eaa1ef8c4cc685ca9" },"stats": {"hits": 2,"singles": 3,"doubles": 2,"triples": 2,"homeruns": 2,"plate_appearances": 2,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "ed827e48e76e3c8ec1185127" },"stats": {"hits": 1,"singles": 3,"doubles": 2,"triples": 1,"homeruns": 1,"plate_appearances": 0,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 0} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "a744fde3ba55fad4ebca18e6"
+    },
+    "league_id": { "$oid": "49fedaa863e11a81bcd6f4d1" },
+    "team_1_ids": [{ "$oid": "62a89bb97cb9458d28688bee" },{ "$oid": "2c7a8a8b28d2262b5d8deb93" }],
+    "team_2_ids": [{ "$oid": "dc85522eaa1ef8c4cc685ca9" },{ "$oid": "9eeb9528fb656fc8b75453b6" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1627900000000"
+        }
+    },
+    "game_location": "3583 Anthony PlaceLake James, PA 07915",
+    "player_stats": [{ "player_id": { "$oid": "62a89bb97cb9458d28688bee" },"stats": {"hits": 3,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 3,"plate_appearances": 0,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "2c7a8a8b28d2262b5d8deb93" },"stats": {"hits": 2,"singles": 0,"doubles": 2,"triples": 2,"homeruns": 3,"plate_appearances": 0,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "dc85522eaa1ef8c4cc685ca9" },"stats": {"hits": 0,"singles": 2,"doubles": 1,"triples": 1,"homeruns": 3,"plate_appearances": 2,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "9eeb9528fb656fc8b75453b6" },"stats": {"hits": 0,"singles": 1,"doubles": 2,"triples": 1,"homeruns": 3,"plate_appearances": 2,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 9} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "97af46d82b316f38f341ba21"
+    },
+    "league_id": { "$oid": "dff96366bc7cc598f7f27452" },
+    "team_1_ids": [{ "$oid": "dc85522eaa1ef8c4cc685ca9" }],
+    "team_2_ids": [{ "$oid": "1e59dd361fcd4eef4b54f62b" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1629300000000"
+        }
+    },
+    "game_location": "547 Jones Villages Apt. 509Joseview, HI 28448",
+    "player_stats": [{ "player_id": { "$oid": "dc85522eaa1ef8c4cc685ca9" },"stats": {"hits": 1,"singles": 1,"doubles": 2,"triples": 1,"homeruns": 1,"plate_appearances": 1,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "1e59dd361fcd4eef4b54f62b" },"stats": {"hits": 1,"singles": 1,"doubles": 2,"triples": 2,"homeruns": 2,"plate_appearances": 1,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 2} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "ed5ec695bcc9fb347cd999aa"
+    },
+    "league_id": { "$oid": "dc62c7cc8a342e81dfd3a9c8" },
+    "team_1_ids": [{ "$oid": "2c7a8a8b28d2262b5d8deb93" },{ "$oid": "1e59dd361fcd4eef4b54f62b" }],
+    "team_2_ids": [{ "$oid": "62a89bb97cb9458d28688bee" },{ "$oid": "6d4adcebec6cffddd2c1f4ad" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1626100000000"
+        }
+    },
+    "game_location": "7275 Brown TurnpikeMichaelfurt, MD 96699",
+    "player_stats": [{ "player_id": { "$oid": "2c7a8a8b28d2262b5d8deb93" },"stats": {"hits": 3,"singles": 1,"doubles": 2,"triples": 3,"homeruns": 1,"plate_appearances": 3,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "1e59dd361fcd4eef4b54f62b" },"stats": {"hits": 0,"singles": 2,"doubles": 1,"triples": 3,"homeruns": 3,"plate_appearances": 0,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "62a89bb97cb9458d28688bee" },"stats": {"hits": 1,"singles": 0,"doubles": 3,"triples": 3,"homeruns": 2,"plate_appearances": 1,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "6d4adcebec6cffddd2c1f4ad" },"stats": {"hits": 2,"singles": 3,"doubles": 1,"triples": 0,"homeruns": 3,"plate_appearances": 2,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 1} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "b171df533cffc71dbad631d3"
+    },
+    "league_id": { "$oid": "dff96366bc7cc598f7f27452" },
+    "team_1_ids": [{ "$oid": "62a89bb97cb9458d28688bee" },{ "$oid": "f47b7e18ed14c97f88ec3a46" }],
+    "team_2_ids": [{ "$oid": "dc85522eaa1ef8c4cc685ca9" },{ "$oid": "ce8cfe754a22c7f3c534bab8" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1625000000000"
+        }
+    },
+    "game_location": "324 Kelly Island Suite 271Rodneyfurt, NY 49218",
+    "player_stats": [{ "player_id": { "$oid": "62a89bb97cb9458d28688bee" },"stats": {"hits": 2,"singles": 3,"doubles": 2,"triples": 2,"homeruns": 2,"plate_appearances": 1,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "f47b7e18ed14c97f88ec3a46" },"stats": {"hits": 0,"singles": 1,"doubles": 0,"triples": 1,"homeruns": 0,"plate_appearances": 2,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "dc85522eaa1ef8c4cc685ca9" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 3,"homeruns": 3,"plate_appearances": 2,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "ce8cfe754a22c7f3c534bab8" },"stats": {"hits": 3,"singles": 3,"doubles": 0,"triples": 1,"homeruns": 0,"plate_appearances": 0,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 4} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "9e4bb5b65a353d6fe5cffe2a"
+    },
+    "league_id": { "$oid": "c1c63aec5eedd6e567ddffba" },
+    "team_1_ids": [{ "$oid": "5b8b1d6b8662ddc633dd48cd" }],
+    "team_2_ids": [{ "$oid": "2c7a8a8b28d2262b5d8deb93" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1628400000000"
+        }
+    },
+    "game_location": "2993 Jennings LocksPort Donaldshire, NY 60460",
+    "player_stats": [{ "player_id": { "$oid": "5b8b1d6b8662ddc633dd48cd" },"stats": {"hits": 1,"singles": 2,"doubles": 2,"triples": 1,"homeruns": 3,"plate_appearances": 1,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "2c7a8a8b28d2262b5d8deb93" },"stats": {"hits": 1,"singles": 1,"doubles": 1,"triples": 3,"homeruns": 2,"plate_appearances": 0,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 1} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "86f1abcdc68815d8e18f7d8f"
+    },
+    "league_id": { "$oid": "92b58d517bd223e4e5afeca7" },
+    "team_1_ids": [{ "$oid": "5b8b1d6b8662ddc633dd48cd" },{ "$oid": "b44ede5d5d4596fbce96f6dc" },{ "$oid": "d61b19816fa98abcd6fd81f6" },{ "$oid": "dc85522eaa1ef8c4cc685ca9" }],
+    "team_2_ids": [{ "$oid": "dc85522eaa1ef8c4cc685ca9" },{ "$oid": "51b9c4369ea44fdfa643d93d" },{ "$oid": "6d4adcebec6cffddd2c1f4ad" },{ "$oid": "ce8cfe754a22c7f3c534bab8" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1627500000000"
+        }
+    },
+    "game_location": "45416 Virginia Tunnel Apt. 199Millerberg, WV 35527",
+    "player_stats": [{ "player_id": { "$oid": "5b8b1d6b8662ddc633dd48cd" },"stats": {"hits": 3,"singles": 2,"doubles": 1,"triples": 0,"homeruns": 3,"plate_appearances": 3,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "b44ede5d5d4596fbce96f6dc" },"stats": {"hits": 1,"singles": 2,"doubles": 3,"triples": 1,"homeruns": 1,"plate_appearances": 0,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "d61b19816fa98abcd6fd81f6" },"stats": {"hits": 0,"singles": 1,"doubles": 0,"triples": 1,"homeruns": 1,"plate_appearances": 3,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "dc85522eaa1ef8c4cc685ca9" },"stats": {"hits": 3,"singles": 1,"doubles": 3,"triples": 3,"homeruns": 0,"plate_appearances": 3,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "dc85522eaa1ef8c4cc685ca9" },"stats": {"hits": 2,"singles": 0,"doubles": 0,"triples": 2,"homeruns": 0,"plate_appearances": 1,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "51b9c4369ea44fdfa643d93d" },"stats": {"hits": 0,"singles": 2,"doubles": 3,"triples": 1,"homeruns": 1,"plate_appearances": 0,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "6d4adcebec6cffddd2c1f4ad" },"stats": {"hits": 3,"singles": 0,"doubles": 0,"triples": 1,"homeruns": 1,"plate_appearances": 3,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "ce8cfe754a22c7f3c534bab8" },"stats": {"hits": 1,"singles": 0,"doubles": 1,"triples": 3,"homeruns": 3,"plate_appearances": 3,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 5} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "cb8f2e4864d8cfec4342cdde"
+    },
+    "league_id": { "$oid": "bc2f892bdb94d2a2dca2e16e" },
+    "team_1_ids": [{ "$oid": "9eeb9528fb656fc8b75453b6" },{ "$oid": "9d2d9aed7f4c2bbc221e6edf" },{ "$oid": "ed827e48e76e3c8ec1185127" }],
+    "team_2_ids": [{ "$oid": "ee5de48c8c9dac9173a23c24" },{ "$oid": "3fefc5f38a5f9c91bbaff78e" },{ "$oid": "6d4adcebec6cffddd2c1f4ad" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1632300000000"
+        }
+    },
+    "game_location": "1753 Stephens Path Apt. 459Lake Benjaminchester, MI 05168",
+    "player_stats": [{ "player_id": { "$oid": "9eeb9528fb656fc8b75453b6" },"stats": {"hits": 1,"singles": 2,"doubles": 2,"triples": 3,"homeruns": 1,"plate_appearances": 1,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "9d2d9aed7f4c2bbc221e6edf" },"stats": {"hits": 0,"singles": 3,"doubles": 0,"triples": 0,"homeruns": 3,"plate_appearances": 1,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "ed827e48e76e3c8ec1185127" },"stats": {"hits": 1,"singles": 3,"doubles": 0,"triples": 0,"homeruns": 0,"plate_appearances": 1,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "ee5de48c8c9dac9173a23c24" },"stats": {"hits": 2,"singles": 1,"doubles": 2,"triples": 3,"homeruns": 1,"plate_appearances": 3,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "3fefc5f38a5f9c91bbaff78e" },"stats": {"hits": 2,"singles": 2,"doubles": 1,"triples": 0,"homeruns": 1,"plate_appearances": 1,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "6d4adcebec6cffddd2c1f4ad" },"stats": {"hits": 0,"singles": 1,"doubles": 1,"triples": 1,"homeruns": 3,"plate_appearances": 0,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 6} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "4eccfe2459dcafde6b28f99b"
+    },
+    "league_id": { "$oid": "94b44e3bab43d8a6b46f9d24" },
+    "team_1_ids": [{ "$oid": "bdbdee32cfc9eb36c2ab1ac6" }],
+    "team_2_ids": [{ "$oid": "4c3aa145d1eb16dfaa218cf2" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1626500000000"
+        }
+    },
+    "game_location": "Unit 4323 Box 4205DPO AE 07512",
+    "player_stats": [{ "player_id": { "$oid": "bdbdee32cfc9eb36c2ab1ac6" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 3,"plate_appearances": 3,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "4c3aa145d1eb16dfaa218cf2" },"stats": {"hits": 3,"singles": 1,"doubles": 3,"triples": 0,"homeruns": 0,"plate_appearances": 1,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 4} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "1f6b9218a52174aa388ab7bf"
+    },
+    "league_id": { "$oid": "c1c63aec5eedd6e567ddffba" },
+    "team_1_ids": [{ "$oid": "ffc8f24ecfc84dd2ae24cadf" },{ "$oid": "3fefc5f38a5f9c91bbaff78e" },{ "$oid": "ba51ce7dbbcf656f2455d26e" },{ "$oid": "62a89bb97cb9458d28688bee" }],
+    "team_2_ids": [{ "$oid": "4c3aa145d1eb16dfaa218cf2" },{ "$oid": "1e59dd361fcd4eef4b54f62b" },{ "$oid": "62a89bb97cb9458d28688bee" },{ "$oid": "ffc8f24ecfc84dd2ae24cadf" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1625700000000"
+        }
+    },
+    "game_location": "326 Stone Manors Suite 563Evansfurt, ID 31856",
+    "player_stats": [{ "player_id": { "$oid": "ffc8f24ecfc84dd2ae24cadf" },"stats": {"hits": 3,"singles": 1,"doubles": 0,"triples": 1,"homeruns": 2,"plate_appearances": 0,"at_bats": 0,"games": 0,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "3fefc5f38a5f9c91bbaff78e" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 3,"plate_appearances": 3,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "ba51ce7dbbcf656f2455d26e" },"stats": {"hits": 2,"singles": 0,"doubles": 3,"triples": 1,"homeruns": 2,"plate_appearances": 1,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "62a89bb97cb9458d28688bee" },"stats": {"hits": 1,"singles": 0,"doubles": 3,"triples": 0,"homeruns": 3,"plate_appearances": 1,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "4c3aa145d1eb16dfaa218cf2" },"stats": {"hits": 2,"singles": 0,"doubles": 1,"triples": 2,"homeruns": 2,"plate_appearances": 1,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "1e59dd361fcd4eef4b54f62b" },"stats": {"hits": 0,"singles": 1,"doubles": 1,"triples": 1,"homeruns": 2,"plate_appearances": 1,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "62a89bb97cb9458d28688bee" },"stats": {"hits": 3,"singles": 2,"doubles": 0,"triples": 0,"homeruns": 3,"plate_appearances": 0,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "ffc8f24ecfc84dd2ae24cadf" },"stats": {"hits": 3,"singles": 2,"doubles": 3,"triples": 0,"homeruns": 3,"plate_appearances": 3,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 4} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "b6b8784f6ab8bba5d65ae99a"
+    },
+    "league_id": { "$oid": "94b44e3bab43d8a6b46f9d24" },
+    "team_1_ids": [{ "$oid": "b44ede5d5d4596fbce96f6dc" },{ "$oid": "bdbdee32cfc9eb36c2ab1ac6" },{ "$oid": "ce8cfe754a22c7f3c534bab8" }],
+    "team_2_ids": [{ "$oid": "b44ede5d5d4596fbce96f6dc" },{ "$oid": "8f4dfa6cee976912e798fdf4" },{ "$oid": "d61b19816fa98abcd6fd81f6" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1628600000000"
+        }
+    },
+    "game_location": "36166 Simon Divide Suite 231South Brandonmouth, KY 19119",
+    "player_stats": [{ "player_id": { "$oid": "b44ede5d5d4596fbce96f6dc" },"stats": {"hits": 3,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 3,"plate_appearances": 1,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "bdbdee32cfc9eb36c2ab1ac6" },"stats": {"hits": 1,"singles": 1,"doubles": 3,"triples": 3,"homeruns": 3,"plate_appearances": 1,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "ce8cfe754a22c7f3c534bab8" },"stats": {"hits": 1,"singles": 2,"doubles": 2,"triples": 0,"homeruns": 3,"plate_appearances": 2,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "b44ede5d5d4596fbce96f6dc" },"stats": {"hits": 0,"singles": 1,"doubles": 1,"triples": 1,"homeruns": 0,"plate_appearances": 0,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "8f4dfa6cee976912e798fdf4" },"stats": {"hits": 3,"singles": 3,"doubles": 2,"triples": 0,"homeruns": 2,"plate_appearances": 0,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "d61b19816fa98abcd6fd81f6" },"stats": {"hits": 1,"singles": 0,"doubles": 1,"triples": 3,"homeruns": 2,"plate_appearances": 0,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 9} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "f81d7dd77edb1c5e6bfdc2ac"
+    },
+    "league_id": { "$oid": "61fb7d43d69ffec714495ff7" },
+    "team_1_ids": [{ "$oid": "ba51ce7dbbcf656f2455d26e" },{ "$oid": "ed827e48e76e3c8ec1185127" }],
+    "team_2_ids": [{ "$oid": "3fefc5f38a5f9c91bbaff78e" },{ "$oid": "ffc8f24ecfc84dd2ae24cadf" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1627400000000"
+        }
+    },
+    "game_location": "2684 Eric Haven Suite 421Franciscofort, NE 91842",
+    "player_stats": [{ "player_id": { "$oid": "ba51ce7dbbcf656f2455d26e" },"stats": {"hits": 1,"singles": 3,"doubles": 0,"triples": 3,"homeruns": 0,"plate_appearances": 2,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "ed827e48e76e3c8ec1185127" },"stats": {"hits": 3,"singles": 2,"doubles": 2,"triples": 3,"homeruns": 0,"plate_appearances": 0,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "3fefc5f38a5f9c91bbaff78e" },"stats": {"hits": 3,"singles": 3,"doubles": 0,"triples": 2,"homeruns": 3,"plate_appearances": 0,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "ffc8f24ecfc84dd2ae24cadf" },"stats": {"hits": 3,"singles": 0,"doubles": 2,"triples": 2,"homeruns": 2,"plate_appearances": 2,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 3} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "5ec8b562bedf839a6589eeee"
+    },
+    "league_id": { "$oid": "dc62c7cc8a342e81dfd3a9c8" },
+    "team_1_ids": [{ "$oid": "6d4adcebec6cffddd2c1f4ad" },{ "$oid": "bdbdee32cfc9eb36c2ab1ac6" }],
+    "team_2_ids": [{ "$oid": "2c7a8a8b28d2262b5d8deb93" },{ "$oid": "51b9c4369ea44fdfa643d93d" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1625300000000"
+        }
+    },
+    "game_location": "16401 Shea Park Suite 876South Jamesshire, AL 30053",
+    "player_stats": [{ "player_id": { "$oid": "6d4adcebec6cffddd2c1f4ad" },"stats": {"hits": 0,"singles": 0,"doubles": 1,"triples": 3,"homeruns": 0,"plate_appearances": 2,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "bdbdee32cfc9eb36c2ab1ac6" },"stats": {"hits": 1,"singles": 1,"doubles": 2,"triples": 0,"homeruns": 0,"plate_appearances": 0,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "2c7a8a8b28d2262b5d8deb93" },"stats": {"hits": 0,"singles": 3,"doubles": 1,"triples": 3,"homeruns": 2,"plate_appearances": 3,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "51b9c4369ea44fdfa643d93d" },"stats": {"hits": 0,"singles": 1,"doubles": 1,"triples": 2,"homeruns": 1,"plate_appearances": 0,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 7} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "d5efc961aeae3b63d8c44542"
+    },
+    "league_id": { "$oid": "dc62c7cc8a342e81dfd3a9c8" },
+    "team_1_ids": [{ "$oid": "6d4adcebec6cffddd2c1f4ad" },{ "$oid": "839c62bc8de8a5c6dbef1fbb" },{ "$oid": "ce8cfe754a22c7f3c534bab8" }],
+    "team_2_ids": [{ "$oid": "ba51ce7dbbcf656f2455d26e" },{ "$oid": "62a89bb97cb9458d28688bee" },{ "$oid": "6d4adcebec6cffddd2c1f4ad" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1627300000000"
+        }
+    },
+    "game_location": "992 Brittany Walk Apt. 117Port Kayla, DE 97680",
+    "player_stats": [{ "player_id": { "$oid": "6d4adcebec6cffddd2c1f4ad" },"stats": {"hits": 3,"singles": 0,"doubles": 2,"triples": 2,"homeruns": 2,"plate_appearances": 2,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "839c62bc8de8a5c6dbef1fbb" },"stats": {"hits": 1,"singles": 2,"doubles": 1,"triples": 1,"homeruns": 1,"plate_appearances": 2,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "ce8cfe754a22c7f3c534bab8" },"stats": {"hits": 1,"singles": 3,"doubles": 0,"triples": 0,"homeruns": 2,"plate_appearances": 0,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "ba51ce7dbbcf656f2455d26e" },"stats": {"hits": 2,"singles": 1,"doubles": 3,"triples": 2,"homeruns": 1,"plate_appearances": 0,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "62a89bb97cb9458d28688bee" },"stats": {"hits": 1,"singles": 3,"doubles": 0,"triples": 0,"homeruns": 2,"plate_appearances": 0,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "6d4adcebec6cffddd2c1f4ad" },"stats": {"hits": 0,"singles": 0,"doubles": 1,"triples": 0,"homeruns": 0,"plate_appearances": 2,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 0} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "eefe6f2a28b7bd521e12f93b"
+    },
+    "league_id": { "$oid": "dc62c7cc8a342e81dfd3a9c8" },
+    "team_1_ids": [{ "$oid": "ccffacddba24fb7e1dd9b4e4" },{ "$oid": "b44ede5d5d4596fbce96f6dc" },{ "$oid": "ed827e48e76e3c8ec1185127" },{ "$oid": "af37aa99e145da41dceecd75" }],
+    "team_2_ids": [{ "$oid": "62a89bb97cb9458d28688bee" },{ "$oid": "62a89bb97cb9458d28688bee" },{ "$oid": "b44ede5d5d4596fbce96f6dc" },{ "$oid": "3fefc5f38a5f9c91bbaff78e" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1626900000000"
+        }
+    },
+    "game_location": "2585 Campbell PikeNorth Jessica, FL 60589",
+    "player_stats": [{ "player_id": { "$oid": "ccffacddba24fb7e1dd9b4e4" },"stats": {"hits": 1,"singles": 0,"doubles": 0,"triples": 2,"homeruns": 0,"plate_appearances": 1,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "b44ede5d5d4596fbce96f6dc" },"stats": {"hits": 3,"singles": 1,"doubles": 1,"triples": 2,"homeruns": 1,"plate_appearances": 2,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "ed827e48e76e3c8ec1185127" },"stats": {"hits": 0,"singles": 2,"doubles": 2,"triples": 3,"homeruns": 0,"plate_appearances": 0,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "af37aa99e145da41dceecd75" },"stats": {"hits": 0,"singles": 1,"doubles": 0,"triples": 2,"homeruns": 3,"plate_appearances": 2,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "62a89bb97cb9458d28688bee" },"stats": {"hits": 3,"singles": 0,"doubles": 1,"triples": 3,"homeruns": 1,"plate_appearances": 1,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "62a89bb97cb9458d28688bee" },"stats": {"hits": 2,"singles": 3,"doubles": 1,"triples": 1,"homeruns": 2,"plate_appearances": 2,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "b44ede5d5d4596fbce96f6dc" },"stats": {"hits": 0,"singles": 2,"doubles": 1,"triples": 3,"homeruns": 1,"plate_appearances": 3,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "3fefc5f38a5f9c91bbaff78e" },"stats": {"hits": 0,"singles": 2,"doubles": 1,"triples": 1,"homeruns": 3,"plate_appearances": 2,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 10} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "f941e23f174f2db262b8fec6"
+    },
+    "league_id": { "$oid": "61fb7d43d69ffec714495ff7" },
+    "team_1_ids": [{ "$oid": "7cbcb7be999ca6dccdc5f1ef" }],
+    "team_2_ids": [{ "$oid": "e9bec4af49c3af481acce1ae" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1630700000000"
+        }
+    },
+    "game_location": "35036 Rubio Valley Suite 356New Lisafort, OR 58629",
+    "player_stats": [{ "player_id": { "$oid": "7cbcb7be999ca6dccdc5f1ef" },"stats": {"hits": 2,"singles": 1,"doubles": 1,"triples": 0,"homeruns": 2,"plate_appearances": 3,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "e9bec4af49c3af481acce1ae" },"stats": {"hits": 2,"singles": 3,"doubles": 2,"triples": 0,"homeruns": 1,"plate_appearances": 2,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 6} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "4f95cd431ecc2bd7ab83ef82"
+    },
+    "league_id": { "$oid": "61fb7d43d69ffec714495ff7" },
+    "team_1_ids": [{ "$oid": "ce8cfe754a22c7f3c534bab8" },{ "$oid": "62a89bb97cb9458d28688bee" },{ "$oid": "e34b66e2a2724ca9bdd87f4d" },{ "$oid": "ce8cfe754a22c7f3c534bab8" }],
+    "team_2_ids": [{ "$oid": "cda75dfd26debe215ecef6af" },{ "$oid": "ffc8f24ecfc84dd2ae24cadf" },{ "$oid": "217ffcaae19c1d5f214c8378" },{ "$oid": "839c62bc8de8a5c6dbef1fbb" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1626300000000"
+        }
+    },
+    "game_location": "1427 Sarah FordsNew Brandon, NC 46677",
+    "player_stats": [{ "player_id": { "$oid": "ce8cfe754a22c7f3c534bab8" },"stats": {"hits": 2,"singles": 0,"doubles": 2,"triples": 3,"homeruns": 2,"plate_appearances": 3,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "62a89bb97cb9458d28688bee" },"stats": {"hits": 1,"singles": 3,"doubles": 0,"triples": 3,"homeruns": 1,"plate_appearances": 0,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "e34b66e2a2724ca9bdd87f4d" },"stats": {"hits": 3,"singles": 1,"doubles": 1,"triples": 1,"homeruns": 0,"plate_appearances": 1,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "ce8cfe754a22c7f3c534bab8" },"stats": {"hits": 3,"singles": 0,"doubles": 3,"triples": 0,"homeruns": 1,"plate_appearances": 2,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "cda75dfd26debe215ecef6af" },"stats": {"hits": 0,"singles": 1,"doubles": 3,"triples": 3,"homeruns": 0,"plate_appearances": 0,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "ffc8f24ecfc84dd2ae24cadf" },"stats": {"hits": 1,"singles": 1,"doubles": 3,"triples": 3,"homeruns": 2,"plate_appearances": 2,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "217ffcaae19c1d5f214c8378" },"stats": {"hits": 1,"singles": 3,"doubles": 1,"triples": 1,"homeruns": 3,"plate_appearances": 3,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "839c62bc8de8a5c6dbef1fbb" },"stats": {"hits": 2,"singles": 3,"doubles": 1,"triples": 1,"homeruns": 2,"plate_appearances": 0,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 10} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "62caa4865d1bfd5e7a316af5"
+    },
+    "league_id": { "$oid": "dc62c7cc8a342e81dfd3a9c8" },
+    "team_1_ids": [{ "$oid": "5b8b1d6b8662ddc633dd48cd" },{ "$oid": "217ffcaae19c1d5f214c8378" },{ "$oid": "5b8b1d6b8662ddc633dd48cd" }],
+    "team_2_ids": [{ "$oid": "5b8b1d6b8662ddc633dd48cd" },{ "$oid": "839c62bc8de8a5c6dbef1fbb" },{ "$oid": "2c7a8a8b28d2262b5d8deb93" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1630800000000"
+        }
+    },
+    "game_location": "8276 Payne Freeway Suite 802North Matthew, TX 14165",
+    "player_stats": [{ "player_id": { "$oid": "5b8b1d6b8662ddc633dd48cd" },"stats": {"hits": 2,"singles": 0,"doubles": 0,"triples": 1,"homeruns": 2,"plate_appearances": 2,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "217ffcaae19c1d5f214c8378" },"stats": {"hits": 2,"singles": 2,"doubles": 1,"triples": 1,"homeruns": 3,"plate_appearances": 2,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "5b8b1d6b8662ddc633dd48cd" },"stats": {"hits": 1,"singles": 3,"doubles": 3,"triples": 0,"homeruns": 2,"plate_appearances": 3,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "5b8b1d6b8662ddc633dd48cd" },"stats": {"hits": 2,"singles": 3,"doubles": 1,"triples": 2,"homeruns": 2,"plate_appearances": 2,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "839c62bc8de8a5c6dbef1fbb" },"stats": {"hits": 3,"singles": 3,"doubles": 1,"triples": 0,"homeruns": 1,"plate_appearances": 2,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "2c7a8a8b28d2262b5d8deb93" },"stats": {"hits": 1,"singles": 0,"doubles": 3,"triples": 3,"homeruns": 2,"plate_appearances": 1,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 5} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "89b5ccb3fba91b5854b5ecab"
+    },
+    "league_id": { "$oid": "94b44e3bab43d8a6b46f9d24" },
+    "team_1_ids": [{ "$oid": "f47b7e18ed14c97f88ec3a46" },{ "$oid": "6d4adcebec6cffddd2c1f4ad" },{ "$oid": "e9bec4af49c3af481acce1ae" }],
+    "team_2_ids": [{ "$oid": "ffc8f24ecfc84dd2ae24cadf" },{ "$oid": "217ffcaae19c1d5f214c8378" },{ "$oid": "2c7a8a8b28d2262b5d8deb93" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1630600000000"
+        }
+    },
+    "game_location": "198 Ann BrookKennedyburgh, TN 23087",
+    "player_stats": [{ "player_id": { "$oid": "f47b7e18ed14c97f88ec3a46" },"stats": {"hits": 3,"singles": 1,"doubles": 2,"triples": 1,"homeruns": 3,"plate_appearances": 3,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "6d4adcebec6cffddd2c1f4ad" },"stats": {"hits": 2,"singles": 0,"doubles": 2,"triples": 3,"homeruns": 0,"plate_appearances": 0,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "e9bec4af49c3af481acce1ae" },"stats": {"hits": 3,"singles": 1,"doubles": 3,"triples": 2,"homeruns": 1,"plate_appearances": 3,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "ffc8f24ecfc84dd2ae24cadf" },"stats": {"hits": 0,"singles": 2,"doubles": 3,"triples": 3,"homeruns": 0,"plate_appearances": 0,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "217ffcaae19c1d5f214c8378" },"stats": {"hits": 1,"singles": 2,"doubles": 1,"triples": 1,"homeruns": 1,"plate_appearances": 3,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "2c7a8a8b28d2262b5d8deb93" },"stats": {"hits": 1,"singles": 1,"doubles": 1,"triples": 0,"homeruns": 1,"plate_appearances": 2,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 3} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "8c5b955d9a6f35af9c5fb21f"
+    },
+    "league_id": { "$oid": "c1c63aec5eedd6e567ddffba" },
+    "team_1_ids": [{ "$oid": "f47b7e18ed14c97f88ec3a46" }],
+    "team_2_ids": [{ "$oid": "e34b66e2a2724ca9bdd87f4d" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1627900000000"
+        }
+    },
+    "game_location": "9002 Christensen Village Suite 935Johnsonfurt, DC 66627",
+    "player_stats": [{ "player_id": { "$oid": "f47b7e18ed14c97f88ec3a46" },"stats": {"hits": 2,"singles": 2,"doubles": 1,"triples": 0,"homeruns": 1,"plate_appearances": 3,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "e34b66e2a2724ca9bdd87f4d" },"stats": {"hits": 1,"singles": 3,"doubles": 3,"triples": 1,"homeruns": 2,"plate_appearances": 3,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 6} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "c3da3efd18d138a35e1adecd"
+    },
+    "league_id": { "$oid": "92b58d517bd223e4e5afeca7" },
+    "team_1_ids": [{ "$oid": "cda75dfd26debe215ecef6af" },{ "$oid": "51b9c4369ea44fdfa643d93d" }],
+    "team_2_ids": [{ "$oid": "8f4dfa6cee976912e798fdf4" },{ "$oid": "839c62bc8de8a5c6dbef1fbb" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1630000000000"
+        }
+    },
+    "game_location": "8372 Colleen Stravenue Apt. 060Markton, ID 43051",
+    "player_stats": [{ "player_id": { "$oid": "cda75dfd26debe215ecef6af" },"stats": {"hits": 0,"singles": 2,"doubles": 3,"triples": 0,"homeruns": 1,"plate_appearances": 2,"at_bats": 1,"games": 3,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "51b9c4369ea44fdfa643d93d" },"stats": {"hits": 2,"singles": 3,"doubles": 1,"triples": 1,"homeruns": 1,"plate_appearances": 1,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "8f4dfa6cee976912e798fdf4" },"stats": {"hits": 0,"singles": 1,"doubles": 2,"triples": 3,"homeruns": 2,"plate_appearances": 1,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "839c62bc8de8a5c6dbef1fbb" },"stats": {"hits": 1,"singles": 1,"doubles": 2,"triples": 1,"homeruns": 1,"plate_appearances": 2,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 1} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "e8261cd214cdba6d6ded8d3b"
+    },
+    "league_id": { "$oid": "49fedaa863e11a81bcd6f4d1" },
+    "team_1_ids": [{ "$oid": "5b8b1d6b8662ddc633dd48cd" },{ "$oid": "ce8cfe754a22c7f3c534bab8" },{ "$oid": "cda75dfd26debe215ecef6af" },{ "$oid": "51b9c4369ea44fdfa643d93d" }],
+    "team_2_ids": [{ "$oid": "d61b19816fa98abcd6fd81f6" },{ "$oid": "ba51ce7dbbcf656f2455d26e" },{ "$oid": "ce66173e4c52a3227c128d2a" },{ "$oid": "cda75dfd26debe215ecef6af" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1628000000000"
+        }
+    },
+    "game_location": "056 Jean Hollow Suite 295Port Luis, ME 96751",
+    "player_stats": [{ "player_id": { "$oid": "5b8b1d6b8662ddc633dd48cd" },"stats": {"hits": 1,"singles": 0,"doubles": 0,"triples": 3,"homeruns": 0,"plate_appearances": 1,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "ce8cfe754a22c7f3c534bab8" },"stats": {"hits": 3,"singles": 2,"doubles": 3,"triples": 3,"homeruns": 0,"plate_appearances": 0,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "cda75dfd26debe215ecef6af" },"stats": {"hits": 3,"singles": 0,"doubles": 1,"triples": 0,"homeruns": 0,"plate_appearances": 2,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 4} },{ "player_id": { "$oid": "51b9c4369ea44fdfa643d93d" },"stats": {"hits": 3,"singles": 3,"doubles": 0,"triples": 3,"homeruns": 3,"plate_appearances": 1,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "d61b19816fa98abcd6fd81f6" },"stats": {"hits": 1,"singles": 2,"doubles": 3,"triples": 2,"homeruns": 3,"plate_appearances": 0,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "ba51ce7dbbcf656f2455d26e" },"stats": {"hits": 0,"singles": 3,"doubles": 0,"triples": 1,"homeruns": 2,"plate_appearances": 0,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "ce66173e4c52a3227c128d2a" },"stats": {"hits": 1,"singles": 3,"doubles": 1,"triples": 2,"homeruns": 1,"plate_appearances": 3,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "cda75dfd26debe215ecef6af" },"stats": {"hits": 2,"singles": 3,"doubles": 3,"triples": 2,"homeruns": 2,"plate_appearances": 2,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 4} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "54e49798f14f6bc9588ac5eb"
+    },
+    "league_id": { "$oid": "dc62c7cc8a342e81dfd3a9c8" },
+    "team_1_ids": [{ "$oid": "8f4dfa6cee976912e798fdf4" },{ "$oid": "cda75dfd26debe215ecef6af" },{ "$oid": "9eeb9528fb656fc8b75453b6" },{ "$oid": "ce8cfe754a22c7f3c534bab8" }],
+    "team_2_ids": [{ "$oid": "839c62bc8de8a5c6dbef1fbb" },{ "$oid": "217ffcaae19c1d5f214c8378" },{ "$oid": "e9bec4af49c3af481acce1ae" },{ "$oid": "217ffcaae19c1d5f214c8378" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1628300000000"
+        }
+    },
+    "game_location": "68497 Julie Crescent Suite 731Nicoleview, FL 57991",
+    "player_stats": [{ "player_id": { "$oid": "8f4dfa6cee976912e798fdf4" },"stats": {"hits": 1,"singles": 0,"doubles": 1,"triples": 1,"homeruns": 0,"plate_appearances": 2,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "cda75dfd26debe215ecef6af" },"stats": {"hits": 2,"singles": 2,"doubles": 2,"triples": 2,"homeruns": 3,"plate_appearances": 1,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "9eeb9528fb656fc8b75453b6" },"stats": {"hits": 3,"singles": 2,"doubles": 0,"triples": 1,"homeruns": 1,"plate_appearances": 3,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "ce8cfe754a22c7f3c534bab8" },"stats": {"hits": 2,"singles": 1,"doubles": 1,"triples": 1,"homeruns": 2,"plate_appearances": 1,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "839c62bc8de8a5c6dbef1fbb" },"stats": {"hits": 3,"singles": 1,"doubles": 2,"triples": 0,"homeruns": 1,"plate_appearances": 0,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "217ffcaae19c1d5f214c8378" },"stats": {"hits": 1,"singles": 2,"doubles": 0,"triples": 0,"homeruns": 3,"plate_appearances": 0,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "e9bec4af49c3af481acce1ae" },"stats": {"hits": 2,"singles": 0,"doubles": 3,"triples": 3,"homeruns": 0,"plate_appearances": 1,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "217ffcaae19c1d5f214c8378" },"stats": {"hits": 3,"singles": 3,"doubles": 1,"triples": 1,"homeruns": 2,"plate_appearances": 1,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 5} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "fa486f3549f8ed384585b4ea"
+    },
+    "league_id": { "$oid": "dff96366bc7cc598f7f27452" },
+    "team_1_ids": [{ "$oid": "217ffcaae19c1d5f214c8378" }],
+    "team_2_ids": [{ "$oid": "ba51ce7dbbcf656f2455d26e" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1625900000000"
+        }
+    },
+    "game_location": "14778 Bailey VistaLake Kimberly, NH 35061",
+    "player_stats": [{ "player_id": { "$oid": "217ffcaae19c1d5f214c8378" },"stats": {"hits": 0,"singles": 2,"doubles": 3,"triples": 2,"homeruns": 3,"plate_appearances": 0,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 0} },{ "player_id": { "$oid": "ba51ce7dbbcf656f2455d26e" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 2,"homeruns": 2,"plate_appearances": 2,"at_bats": 1,"games": 0,"wins": -1,"losses": -1,"points": 9} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "a441af46abed3ff5f6b45a98"
+    },
+    "league_id": { "$oid": "bc2f892bdb94d2a2dca2e16e" },
+    "team_1_ids": [{ "$oid": "62a89bb97cb9458d28688bee" },{ "$oid": "ce66173e4c52a3227c128d2a" }],
+    "team_2_ids": [{ "$oid": "b44ede5d5d4596fbce96f6dc" },{ "$oid": "839c62bc8de8a5c6dbef1fbb" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1632300000000"
+        }
+    },
+    "game_location": "9857 Wagner Station Apt. 596Beverlyfurt, IN 33301",
+    "player_stats": [{ "player_id": { "$oid": "62a89bb97cb9458d28688bee" },"stats": {"hits": 2,"singles": 3,"doubles": 0,"triples": 1,"homeruns": 3,"plate_appearances": 1,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "ce66173e4c52a3227c128d2a" },"stats": {"hits": 3,"singles": 0,"doubles": 2,"triples": 3,"homeruns": 0,"plate_appearances": 0,"at_bats": 3,"games": 3,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "b44ede5d5d4596fbce96f6dc" },"stats": {"hits": 0,"singles": 0,"doubles": 3,"triples": 3,"homeruns": 0,"plate_appearances": 1,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "839c62bc8de8a5c6dbef1fbb" },"stats": {"hits": 0,"singles": 3,"doubles": 1,"triples": 1,"homeruns": 3,"plate_appearances": 0,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 1} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "22fc1db2a3b4f5faba4ee6f7"
+    },
+    "league_id": { "$oid": "dc62c7cc8a342e81dfd3a9c8" },
+    "team_1_ids": [{ "$oid": "217ffcaae19c1d5f214c8378" },{ "$oid": "ee5de48c8c9dac9173a23c24" },{ "$oid": "ce8cfe754a22c7f3c534bab8" },{ "$oid": "3fefc5f38a5f9c91bbaff78e" }],
+    "team_2_ids": [{ "$oid": "af37aa99e145da41dceecd75" },{ "$oid": "f47b7e18ed14c97f88ec3a46" },{ "$oid": "839c62bc8de8a5c6dbef1fbb" },{ "$oid": "cda75dfd26debe215ecef6af" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1626300000000"
+        }
+    },
+    "game_location": "440 Sandoval FieldsWest Christophermouth, NJ 88485",
+    "player_stats": [{ "player_id": { "$oid": "217ffcaae19c1d5f214c8378" },"stats": {"hits": 1,"singles": 1,"doubles": 2,"triples": 1,"homeruns": 1,"plate_appearances": 1,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "ee5de48c8c9dac9173a23c24" },"stats": {"hits": 1,"singles": 0,"doubles": 3,"triples": 2,"homeruns": 3,"plate_appearances": 0,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 5} },{ "player_id": { "$oid": "ce8cfe754a22c7f3c534bab8" },"stats": {"hits": 3,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 1,"plate_appearances": 2,"at_bats": 2,"games": 3,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "3fefc5f38a5f9c91bbaff78e" },"stats": {"hits": 0,"singles": 0,"doubles": 3,"triples": 3,"homeruns": 3,"plate_appearances": 2,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "af37aa99e145da41dceecd75" },"stats": {"hits": 2,"singles": 1,"doubles": 2,"triples": 2,"homeruns": 3,"plate_appearances": 2,"at_bats": 2,"games": 2,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "f47b7e18ed14c97f88ec3a46" },"stats": {"hits": 3,"singles": 0,"doubles": 2,"triples": 2,"homeruns": 3,"plate_appearances": 2,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 7} },{ "player_id": { "$oid": "839c62bc8de8a5c6dbef1fbb" },"stats": {"hits": 0,"singles": 3,"doubles": 2,"triples": 1,"homeruns": 3,"plate_appearances": 2,"at_bats": 3,"games": 0,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "cda75dfd26debe215ecef6af" },"stats": {"hits": 0,"singles": 3,"doubles": 3,"triples": 1,"homeruns": 3,"plate_appearances": 0,"at_bats": 0,"games": 2,"wins": -1,"losses": -1,"points": 7} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "1e3d885f36f8c1da37f61dcb"
+    },
+    "league_id": { "$oid": "dc62c7cc8a342e81dfd3a9c8" },
+    "team_1_ids": [{ "$oid": "cda75dfd26debe215ecef6af" },{ "$oid": "51b9c4369ea44fdfa643d93d" },{ "$oid": "b44ede5d5d4596fbce96f6dc" },{ "$oid": "4c3aa145d1eb16dfaa218cf2" }],
+    "team_2_ids": [{ "$oid": "62a89bb97cb9458d28688bee" },{ "$oid": "f47b7e18ed14c97f88ec3a46" },{ "$oid": "ce8cfe754a22c7f3c534bab8" },{ "$oid": "7cbcb7be999ca6dccdc5f1ef" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1628900000000"
+        }
+    },
+    "game_location": "26275 Kimberly Garden Apt. 404Lake Gina, WA 60467",
+    "player_stats": [{ "player_id": { "$oid": "cda75dfd26debe215ecef6af" },"stats": {"hits": 3,"singles": 0,"doubles": 1,"triples": 0,"homeruns": 2,"plate_appearances": 0,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "51b9c4369ea44fdfa643d93d" },"stats": {"hits": 2,"singles": 0,"doubles": 0,"triples": 1,"homeruns": 0,"plate_appearances": 2,"at_bats": 2,"games": 1,"wins": -1,"losses": -1,"points": 8} },{ "player_id": { "$oid": "b44ede5d5d4596fbce96f6dc" },"stats": {"hits": 2,"singles": 3,"doubles": 2,"triples": 3,"homeruns": 0,"plate_appearances": 2,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "4c3aa145d1eb16dfaa218cf2" },"stats": {"hits": 1,"singles": 3,"doubles": 1,"triples": 3,"homeruns": 1,"plate_appearances": 1,"at_bats": 0,"games": 1,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "62a89bb97cb9458d28688bee" },"stats": {"hits": 2,"singles": 3,"doubles": 2,"triples": 3,"homeruns": 1,"plate_appearances": 0,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "f47b7e18ed14c97f88ec3a46" },"stats": {"hits": 0,"singles": 3,"doubles": 1,"triples": 2,"homeruns": 2,"plate_appearances": 3,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "ce8cfe754a22c7f3c534bab8" },"stats": {"hits": 0,"singles": 1,"doubles": 0,"triples": 1,"homeruns": 0,"plate_appearances": 0,"at_bats": 3,"games": 1,"wins": -1,"losses": -1,"points": 3} },{ "player_id": { "$oid": "7cbcb7be999ca6dccdc5f1ef" },"stats": {"hits": 2,"singles": 2,"doubles": 0,"triples": 0,"homeruns": 0,"plate_appearances": 1,"at_bats": 3,"games": 2,"wins": -1,"losses": -1,"points": 3} }],
+    "completed": false
+},
+{
+    "_id": {
+        "$oid": "1e7ee9df5c7aead57ea83313"
+    },
+    "league_id": { "$oid": "dc62c7cc8a342e81dfd3a9c8" },
+    "team_1_ids": [{ "$oid": "f47b7e18ed14c97f88ec3a46" },{ "$oid": "cda75dfd26debe215ecef6af" },{ "$oid": "b44ede5d5d4596fbce96f6dc" }],
+    "team_2_ids": [{ "$oid": "9eeb9528fb656fc8b75453b6" },{ "$oid": "d61b19816fa98abcd6fd81f6" },{ "$oid": "ce66173e4c52a3227c128d2a" }],
+    "game_date": {
+        "$date": {
+            "$numberLong": "1628400000000"
+        }
+    },
+    "game_location": "510 Mark ClubWest Ryanstad, IL 01156",
+    "player_stats": [{ "player_id": { "$oid": "f47b7e18ed14c97f88ec3a46" },"stats": {"hits": 3,"singles": 0,"doubles": 1,"triples": 1,"homeruns": 1,"plate_appearances": 3,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 9} },{ "player_id": { "$oid": "cda75dfd26debe215ecef6af" },"stats": {"hits": 3,"singles": 1,"doubles": 1,"triples": 1,"homeruns": 3,"plate_appearances": 0,"at_bats": 0,"games": 3,"wins": -1,"losses": -1,"points": 2} },{ "player_id": { "$oid": "b44ede5d5d4596fbce96f6dc" },"stats": {"hits": 3,"singles": 3,"doubles": 1,"triples": 2,"homeruns": 1,"plate_appearances": 0,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 10} },{ "player_id": { "$oid": "9eeb9528fb656fc8b75453b6" },"stats": {"hits": 2,"singles": 1,"doubles": 1,"triples": 3,"homeruns": 1,"plate_appearances": 0,"at_bats": 1,"games": 1,"wins": -1,"losses": -1,"points": 1} },{ "player_id": { "$oid": "d61b19816fa98abcd6fd81f6" },"stats": {"hits": 2,"singles": 3,"doubles": 3,"triples": 0,"homeruns": 2,"plate_appearances": 2,"at_bats": 1,"games": 2,"wins": -1,"losses": -1,"points": 6} },{ "player_id": { "$oid": "ce66173e4c52a3227c128d2a" },"stats": {"hits": 3,"singles": 2,"doubles": 3,"triples": 3,"homeruns": 3,"plate_appearances": 1,"at_bats": 2,"games": 0,"wins": -1,"losses": -1,"points": 1} }],
+    "completed": false
 }]

@@ -1,6 +1,7 @@
 .simple-dropdown {
   position: relative;
   width: 100%;
+  cursor: pointer;
   &_label {
     text-align: left;
     font-size: .75rem;
@@ -50,6 +51,9 @@
         font-size: .75rem;
         text-align: left;
       }
+      &:hover {
+        background: $light_grey;
+      }
     }
     &-arrow {
       position: absolute;
@@ -75,6 +79,22 @@
         border-bottom: .75rem solid $off_white;
         border-top: none;
         z-index: 3;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .simple-dropdown {
+    &_content {
+      &_item {
+        background-color: $off_white;
+        &:nth-child(even) {
+          background-color: $off_white;
+        }
+        &:hover {
+          background: $light_grey;
+        }
       }
     }
   }

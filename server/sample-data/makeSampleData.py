@@ -27,7 +27,8 @@ leagueJSON = """
             "$numberLong": "deadline_placeholder"
         }
     },
-    "about_text": "about_placeholder"
+    "about_text": "about_placeholder",
+    "num_games_completed": gamesComplete_placeholder
 },"""
 
 playerJSON = """
@@ -66,7 +67,8 @@ gameJSON = """
         }
     },
     "game_location": "location_placeholder",
-    "player_stats": stats_placeholder
+    "player_stats": stats_placeholder,
+    "completed": false
 },"""
 
 from faker import Faker
@@ -258,6 +260,7 @@ def makeLeagues():
         temp = temp.replace("games_placeholder", showListAsOIDs(s))
         temp = temp.replace("numGames_placeholder", str(numGames))
         temp = temp.replace("size_placeholder", str(randint(1,4)))
+        temp = temp.replace("gamesComplete_placeholder", str(randint(0, numGames)))
         temp = temp.replace("about_placeholder", fake.text().replace("\n", " "))
         start = 16224 #May 30th 8 0s
         start += randint(1,100)

@@ -3,15 +3,15 @@
         text-align: center;
     }
     .contact-card {
-        background: $off_white;
-        margin: 1rem;
+        margin: 1rem auto;
         padding: 0.5rem;
-        border-radius: 5px;
+        text-align: center;
     }
     h2 {
         background: $accent_red;
         color: $off_white;
         padding: 0.4rem;
+        width: 100%;
     }
     p {
         padding: 0.4rem;

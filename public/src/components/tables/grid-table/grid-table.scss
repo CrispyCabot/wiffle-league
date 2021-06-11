@@ -111,8 +111,13 @@
     h6 {
       font-size: 1.5rem;
     }
-    p {
+  }
 
+  &_table_body_row {
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+      background: $light_grey;
     }
   }
 }

@@ -6,8 +6,6 @@
   justify-content: space-between;
   align-items: center;
   &_pagination {
-    &_page-size {
-    }
     &_page-index {
       display: flex;
       justify-content: center;
@@ -20,6 +18,7 @@
           color: $light_grey;
           pointer-events: none;
         }
+        cursor: pointer;
       }
       .indexs {
         display: flex;
@@ -33,6 +32,7 @@
           margin: 0 .25rem;
           font-weight: bold;
           color: $off_white;
+          cursor: pointer;
           &.active-page {
             background-color: $accent_red;
           }
