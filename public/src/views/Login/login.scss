@@ -27,9 +27,9 @@
         transform: translate(0, 50%);
       }
       .login-input {
-        width: 75%;
+        max-width: 25rem;
         position: relative;
-        margin: 1rem auto;
+        margin: .5rem auto;
         transition: .3s;
         &.extra-margin-top {
           margin-top: 2rem;
@@ -89,7 +89,7 @@
   button {
     display: block;
     margin: 2rem auto 2rem auto;
-    width: 35%;
+    width: 10rem;
     pointer-events: all;
     cursor: pointer;
     transition: .3s;
