@@ -30,6 +30,7 @@
     </div>
 
     <button class="btn red_btn" :class="{'disabled': !enabledLoginButton}" @click="login">Log in</button>
+    <p class="no_account_text" @click="redirect('/signup')">Don't have an account? Create one now</p>
   </div>
 </template>
 

@@ -1,7 +1,9 @@
 <template>
   <div class="profile">
-
-    <div class="profile-stats-table white_card_background ">
+    <div v-if="!getIsLoggedIn" class="profile_not_logged_in white_card_background ">
+      <p v-if="!getIsLoggedIn || getLoggedInPlayer == {}" @click="redirect('/login')">Sign in to view your profile</p>
+    </div>
+    <div v-if="getIsLoggedIn" class="profile-stats-table white_card_background ">
 
       <h1 v-if="getLoggedInPlayer && getLoggedInPlayer.firstname" class="profile-stats-table_firstname">{{getLoggedInPlayer.firstname}}</h1>
       <p v-if="getLoggedInPlayer && getLoggedInPlayer.nickname" class="profile-stats-table_nickname">

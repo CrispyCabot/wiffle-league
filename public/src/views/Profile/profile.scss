@@ -1,4 +1,10 @@
 .profile {
+  &_not_logged_in {
+    cursor: pointer;
+    &:hover {
+      background-color: $light-grey;
+    }
+  }
   .profile-stats-table {
     &_firstname {
       text-align: center;
@@ -89,6 +95,7 @@
         }
       }
       &_btn-cancel {
+        cursor: pointer;
         text-align: center;
         font-size: 1rem;
         margin: .25rem auto .75rem auto;

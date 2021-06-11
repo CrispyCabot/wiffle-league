@@ -152,6 +152,14 @@ export default defineComponent({
           this.fields.phone.value = newValue.filter(v => v != "").join('-')
         }
       }
+    },
+    redirect(link: string) {
+      if (link == "top") {
+        window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+      }
+      else {
+        this.$router.push(link)
+      }
     }
   },
   watch: {

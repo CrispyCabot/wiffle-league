@@ -56,6 +56,14 @@ export default defineComponent({
           this.$router.push('/')
         }
       }
+    },
+    redirect(link: string) {
+      if (link == "top") {
+        window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+      }
+      else {
+        this.$router.push(link)
+      }
     }
   }
 })

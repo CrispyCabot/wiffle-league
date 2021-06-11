@@ -5,6 +5,17 @@
     width: 50%;
   }
 
+  .no_account_text {
+    color: $light-grey;
+    width: max-content;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    cursor: pointer;
+    &:hover {
+      color: $accent_light_red;
+    }
+  }
+
   &_fields {
     &_field {
       &_label {
