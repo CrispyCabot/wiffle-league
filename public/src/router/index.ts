@@ -13,6 +13,8 @@ import Players from '../views/Players/index.vue'
 import TopStats from '../views/TopStats/index.vue'
 import CreateLeague from '../views/CreateLeague/index.vue'
 import Profile from '../views/Profile/index.vue'
+import Games from '../views/Games/index.vue'
+import GameSummary from '../views/GameSummary/index.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -36,6 +38,16 @@ const routes: Array<RouteRecordRaw> = [
     component: Profile
   },
   {
+    path: '/rules',
+    name: routeNames.Rules,
+    component: Rules
+  },
+  {
+    path: '/contact',
+    name: routeNames.Contact,
+    component: Contact
+  },
+  {
     path: '/leagues',
     name: routeNames.Leagues,
     component: Leagues
@@ -46,14 +58,9 @@ const routes: Array<RouteRecordRaw> = [
     component: League
   },
   {
-    path: '/rules',
-    name: routeNames.Rules,
-    component: Rules
-  },
-  {
-    path: '/contact',
-    name: routeNames.Contact,
-    component: Contact
+    path: '/league/:id/games',
+    name: routeNames.Games,
+    component: Games
   },
   {
     path: '/leagues/schedules',
@@ -74,6 +81,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/players/top-stats',
     name: routeNames.TopStats,
     component: TopStats
+  },
+  {
+    path: '/game-summary/:id',
+    name: routeNames.GameSummary,
+    component: GameSummary
   },
   // Catch All Routes
   {

@@ -207,7 +207,7 @@ export default defineComponent({
       // Should take you to create games pages
     },
     submitScores() {
-      // TODO
+      this.$router.push(`/league/${this.leagueData._id}/games`)
     },
     joinLeague() {
       // TODO

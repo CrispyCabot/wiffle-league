@@ -99,7 +99,7 @@ export default defineComponent({
       this.loadingGames = false
     },
     handleGameClick(e: any) {
-      this.$router.push(`/games/${e.id}`)
+      this.$router.push(`/game-summary/${e.id}`)
     },
     async setSelectedSchedules() {
       if (this.getLoggedInPlayer && this.getIsLoggedIn && this.getLoggedInPlayer._id) {

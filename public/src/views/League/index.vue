@@ -130,6 +130,7 @@
                 :disabled="!isSettingsEditing"
                 :placeholder="field.placeholder"
                 :name="field.name"
+                :rows="3"
                 v-model="field.value"
               ></textarea>
             </div>
