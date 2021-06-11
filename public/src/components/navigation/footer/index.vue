@@ -7,16 +7,17 @@
       <div class="rhs">
         <div class="links">
           <p class="link" @click="redirect('top')">Top</p>
-          <p class="link" @click="redirect('/')">Home</p>
           <p class="link" @click="redirect('/leagues')">Leagues</p>
+          <p class="link" @click="redirect('/')">Home</p>
           <p class="link" @click="redirect('/leagues/create')">Create League</p>
           <p class="link" @click="redirect('/leagues/schedules')">Schedules</p>
           <p class="link" @click="redirect('/rules')">Rules</p>
-          <p>|</p>
-          <p class="link" @click="redirect('/login')">Log In</p>
-          <p class="link" @click="redirect('/signup')">Sign Up</p>
         </div>
         <p class="tiny-stuff">Copyright Wiffle League 2021</p>
+      </div>
+      <div class="login-signup-links">
+        <p class="link" @click="redirect('/login')">Log In</p>
+        <p class="link" @click="redirect('/signup')">Sign Up</p>
       </div>
     </div>
   </div>

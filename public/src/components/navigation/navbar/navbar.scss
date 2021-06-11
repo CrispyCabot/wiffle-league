@@ -5,7 +5,7 @@
   padding: 1rem;
   color: $off_white;
   font-size: 1.75rem;
-  max-width: 120rem;
+  max-width: 80rem;
   margin: 0 auto;
 
   &_mobile {
@@ -77,14 +77,13 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   .navbar-container {
-    padding: 2rem;
+    padding: 2rem 0;
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .navbar-container {
-    padding: 2rem 3rem;
     &_desktop {
       img {
         margin-right: 1rem;
@@ -100,6 +99,6 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .navbar-container {
-    padding: 3rem;
+    padding: 3rem 0;
   }
 }
