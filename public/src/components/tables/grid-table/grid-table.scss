@@ -98,6 +98,17 @@
                 padding: .3rem .75rem;
               }
             }
+            &-disabled {
+              span {
+                button {
+                  margin: .5rem 0;
+                  font-size: .75rem;
+                  padding: .3rem .75rem;
+                  cursor: default;
+                  background-color: $light_grey;
+                }
+              }
+            }
           }
         }
       }

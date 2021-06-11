@@ -24,12 +24,14 @@
                 'location': col.type === 'location' || col.type == 'location-wrap',
                 'wrap': col.type === 'string-wrap' || col.type === 'date-wrap' || col.type === 'numeric-wrap' || col.type === 'location-wrap',
                 'button': col.type === 'button',
+                'button-disabled': col.type === 'button-disabled',
                 'hidden': col.type === 'hidden'
               }"
               :style="{'max-width': columns[index] ? columns[index].maxWidth : 'unset'}"
             >
-              <span v-if="col.type != 'button'">{{col.text}}</span>
-              <span v-if="col.type == 'button'"> <button class="btn red_btn" @click.stop="$emit('row-button-clicked', row, col)">{{col.text}}</button> </span>
+              <span v-if="col.type === 'location' || col.type === 'location-wrap'" @click.stop="locationClick(row, col)">{{col.text}}</span>
+              <span v-else-if="col.type !== 'button' && col.type !== 'button-disabled'">{{col.text}}</span>
+              <span v-else-if="col.type === 'button' || col.type === 'button-disabled'"> <button class="btn red_btn" @click.stop="$emit('row-button-clicked', row, col)">{{col.text}}</button> </span>
             </td>
           </tr>
         </tbody>

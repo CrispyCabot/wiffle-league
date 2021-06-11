@@ -30,6 +30,9 @@ export default defineComponent({
       if (this.canHideContent) {
         this.isContentOpen = !this.isContentOpen
       }
+    },
+    locationClick(row: any, col: any) {
+      window.open(`https://www.google.com/maps/search/${col.text.split(' ').join('+')}`)
     }
   }
 })
