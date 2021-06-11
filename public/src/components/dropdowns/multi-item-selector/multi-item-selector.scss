@@ -8,6 +8,7 @@
     font-weight: 600;
   }
   &_selector {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,6 +72,7 @@
         overflow-y: scroll;
         border-radius: .4rem;
         &_item {
+          cursor: pointer;
           padding: .5rem;
           display: flex;
           justify-content: space-between;

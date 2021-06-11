@@ -8,6 +8,7 @@
   border: 1px solid $light_grey;
   border-radius: .25rem;
   &_input {
+    width: 100%;
     outline: none;
     border: none;
     color: $dark_background;

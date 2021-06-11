@@ -49,11 +49,51 @@
 }
 
 
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default
 
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .footer-container {
+    .flex-container {
+      .logo {
+        img {
+          height: 3.5rem;
+          width: 3.5rem;
+        }
+      }
+      .rhs {
+        .links {
+          p {
+            font-size: 1rem;
+            margin: 6px;
+          }
+        }
+      }
+    }
+  }
+}
 
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .footer-container {
+    .flex-container {
+      .logo {
+        img {
+          height: 4rem;
+          width: 4rem;
+        }
+      }
+    }
+  }
+}
 
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  
+}
 
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
 
-
-
-
+}

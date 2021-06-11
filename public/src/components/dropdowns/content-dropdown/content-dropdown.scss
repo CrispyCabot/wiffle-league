@@ -1,6 +1,7 @@
 .content-dropdown {
   width: calc(100% - .55rem);
   &_label {
+    cursor: pointer;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;

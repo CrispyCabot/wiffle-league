@@ -13,8 +13,10 @@
           padding: 1rem 0;
         }
         &_link {
-          width: 90%;
-          margin: 0 auto;
+          cursor: pointer;
+          width: max-content;
+          margin: 0;
+          margin-left: 1rem;
           padding-bottom: 1rem;
           color: $accent_light_red;
           text-align: left;
