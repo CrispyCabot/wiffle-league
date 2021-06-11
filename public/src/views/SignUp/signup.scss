@@ -90,3 +90,43 @@
     }
   }
 }
+
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .signup-container {
+    img {
+      display: block;
+      margin: 2rem auto 2rem auto;
+      width: 40%;
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .signup-container {
+    img {
+      display: block;
+      margin: 2rem auto 2rem auto;
+      width: 30%;
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .signup-container {
+    img {
+      display: block;
+      margin: 2rem auto 2rem auto;
+      width: 20%;
+    }
+  }
+}
