@@ -1,4 +1,5 @@
 .user-popup-container {
+  cursor: initial;
   position: relative;
   &_arrow {
     position: absolute;
@@ -44,19 +45,24 @@
     }
     .logged_in_links {
       .link {
+        cursor: pointer;
         color: $dark_background;
         display: flex;
         justify-content: flex-start;
         align-items: center;
         font-size: 1rem;
-        margin: .75rem 0;
+        padding: .5rem .5rem;
         font-weight: 600;
         .icon {
           margin-right: .5rem;
           font-size: 1.25rem;
         }
+        &:hover {
+          background-color: $light_grey;
+        }
       }
       .signout-link {
+        cursor: pointer;
         position: absolute;
         bottom: 0.5rem;
         right: 0.5rem;
