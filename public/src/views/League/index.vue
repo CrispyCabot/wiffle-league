@@ -16,6 +16,7 @@
           :hasPagination="false"
           :hasSizeSelector="false"
           :canHideContent="true"
+          @row-clicked="playerClick"
         ></grid-table>
       </div>
       <div v-if="isLeagueStarted" class="content-section league-container_content_schedule">
@@ -29,6 +30,7 @@
           :hasPagination="false"
           :hasSizeSelector="false"
           :canHideContent="true"
+          @row-clicked="gameClick"
         ></grid-table>
       </div>
       <div v-if="isLeagueStarted" class="content-section league-container_content_overall-stats">
@@ -42,6 +44,7 @@
           :hasPagination="false"
           :hasSizeSelector="false"
           :canHideContent="true"
+          @row-clicked="playerClick"
         ></grid-table>
       </div>
 
@@ -72,7 +75,7 @@
               <td>{{ creator.firstname + ' ' + creator.lastname }}</td>
               <td>{{ new Date(leagueData.start_date).toLocaleDateString() }}</td>
               <td>{{ new Date(leagueData.end_date).toLocaleDateString() }}</td>
-              <td>{{ leagueData.num_games_completed ? leagueData.num_games_completed : 0 + '/' + leagueData.num_games }}</td>
+              <td>{{ (leagueData.num_games_completed ? leagueData.num_games_completed : 0) + '/' + leagueData.num_games }}</td>
             </tbody>
           </table>
         </div>

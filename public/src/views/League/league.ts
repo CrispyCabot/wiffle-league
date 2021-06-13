@@ -76,7 +76,10 @@ export default defineComponent({
     },
     statsRows(): Array<Object> {
       return this.players.map((player: any) => {
-        const stats: { [key: string]: any } =  { name: { text: player.firstname + ' ' + player.lastname, type: 'string' } } 
+        const stats: { [key: string]: any } =  { 
+          name: { text: player.firstname + ' ' + player.lastname, type: 'string' },
+          id: { text: player._id, type: 'hidden' }
+        } 
 
         if (player.player_stats) {
           Object.keys(player.player_stats).forEach((s: string) => {
@@ -142,7 +145,8 @@ export default defineComponent({
     // Column setup
     const overallStatsColumns = await this.fetchPlayerStatsTableColumns()
     const nameColumn = { columnLabel: 'Name', columnName: 'name', maxWidth: '33vw', isHidden: false }
-    this.overallStatsColumns = [ nameColumn, ...overallStatsColumns ]
+    const idColumn = { columnLabel: 'Id', columnName: 'id', maxWidth: '33vw', isHidden: true }
+    this.overallStatsColumns = [ nameColumn, ...overallStatsColumns, idColumn ]
     this.scheduleColumns = await this.fetchLeaguesScheduleTableColumns()
 
     await this.setupScheduleRows() 
@@ -278,6 +282,12 @@ export default defineComponent({
         this.fields.other.value = this.leagueData.about_text
         this.fields.gender.value = this.leagueData.gender
       }
+    },
+    playerClick(row: any) {
+      this.$router.push(`/player/${row.id.text}`)
+    },
+    gameClick(row: any) {
+      this.$router.push(`/game-summary/${row.id.text}`)
     }
   },
   watch: {

@@ -10,7 +10,7 @@ import Leagues from '../views/Leagues/index.vue'
 import League from '../views/League/index.vue'
 import Contact from '../views/Contact/index.vue'
 import Players from '../views/Players/index.vue'
-import TopStats from '../views/TopStats/index.vue'
+import Player from '../views/Player/index.vue'
 import CreateLeague from '../views/CreateLeague/index.vue'
 import Profile from '../views/Profile/index.vue'
 import Games from '../views/Games/index.vue'
@@ -78,9 +78,9 @@ const routes: Array<RouteRecordRaw> = [
     component: Players
   },
   {
-    path: '/players/top-stats',
-    name: routeNames.TopStats,
-    component: TopStats
+    path: '/player/:id',
+    name: routeNames.Player,
+    component: Player
   },
   {
     path: '/game-summary/:id',
