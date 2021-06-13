@@ -1,8 +1,9 @@
 const router = require("express").Router();
 const bcrypt = require('bcrypt');
 const authChecker = require("./utils/auth-checker");
+const gameScoreCalculation = require("./utils/game-score-calculation");
 
-// League Getters
+// League Mutators
 const Leagues = require('../models/league-model')
 router.route('/leagues/kick-player').put(authChecker, async (req, res) => {
   const { playerId, leagueId } = req.body
@@ -62,7 +63,7 @@ router.route('/leagues/edit-settings').put(authChecker, async (req, res) => {
   
 })
 
-// Player Getters
+// Player Mutators
 const Players = require('../models/player-model');
 router.route('/players/update-profile').put(authChecker, async (req, res) => {
   const { playerId, updates } = req.body
@@ -161,6 +162,43 @@ router.route('/players/:id/selected-schedules/remove').put(async (req, res) => {
   }
 })
 
-// Game Getters
+// Game Mutators
+const Games = require('../models/game-model');
+router.route('/games/:id/update-score').put(async (req, res) => {
+  const gameId = req.params.id
+  const { playerId, plate_appearances, at_bats, singles, doubles, triples, homeruns, team1Score, team2Score } = req.body
+  const gameStatKeys = {plate_appearances, at_bats, singles, doubles, triples, homeruns}
+
+  let game = await Games.findOne({_id: gameId})
+  if (!game) {
+    res.json({status: 400, message: 'Unsuccessfully found game with given id'})
+  }
+
+  if (game.player_stats.map(p => p.player_id).includes(playerId)) {
+    game.player_stats = game.player_stats.map(p => {
+      if (p.player_id == playerId) {
+        gameStatKeys.forEach((key, value) => {
+          p.stats[key] = value 
+        })
+        p.team1Score = team1Score 
+        p.team2Score = team2Score 
+      }
+      return p
+    })
+  } else {
+    game.player_stats.push({ player_id: playerId, team_1_score: team1Score, team_2_score: team2Score, stats: gameStatKeys })
+  }
+  const { team_1_score, team_2_score } = gameScoreCalculation(game)
+  game.team_1_score = team_1_score
+  game.team_2_score = team_2_score
+
+  await Games.findOneAndUpdate({_id: gameId}, game)
+  game = await Games.findOne({_id: gameId})
+  if (game) {
+    res.json({status: 200, message: 'Successfully updated game', game: game})
+  } else {
+    res.json({status: 400, message: 'Unsuccessfully updated game'})
+  }
+})
 
 module.exports = router

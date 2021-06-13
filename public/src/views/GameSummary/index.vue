@@ -40,12 +40,12 @@
             <input type="number" v-model="stat.value">
           </div>
         </div>
-        <button class="btn red_btn" :class="{'disabled': !canSubmitScores}">Submit</button>
+        <button class="btn red_btn" :class="{'disabled': !canSubmitScores}" @click="submitScores">Submit</button>
       </div>
       <div v-if="!gameIsCompleted && playerIsInGame && playerHasSubmittedScores" class="game-summary_summary_submission-has-submitted">
         <p>( Waiting for all players scores to be recorded... )</p>
         <h1>You have already submitted your scores for this game.</h1>
-        <button class="btn red_btn">Re-Submit</button>
+        <button class="btn red_btn" @click="reSubmit">Re-Submit</button>
       </div>
 
       <div v-if="gameIsCompleted" class="game-summary_summary_completed">

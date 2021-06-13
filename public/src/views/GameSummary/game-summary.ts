@@ -17,10 +17,11 @@ export default defineComponent({
       team2Score: null,
       fields: {
         plate_appearances: {text: 'Plate Appearances', value: null },
-        single: {text: 'Singles', value: null },
-        double: {text: 'Doubles', value: null },
-        triple: {text: 'Triples', value: null },
-        homerun: {text: 'Home Runs', value: null }
+        at_bats: {text: 'At bats', value: null },
+        singles: {text: 'Singles', value: null },
+        doubles: {text: 'Doubles', value: null },
+        triples: {text: 'Triples', value: null },
+        homeruns: {text: 'Home Runs', value: null }
       },
       overallStatsColumns: Array<any>()
     }
@@ -41,10 +42,11 @@ export default defineComponent({
     canSubmitScores(): Boolean {
       return Boolean(
         this.fields.plate_appearances.value &&
-        this.fields.single.value &&
-        this.fields.double.value &&
-        this.fields.triple.value &&
-        this.fields.homerun.value &&
+        this.fields.at_bats.value &&
+        this.fields.singles.value &&
+        this.fields.doubles.value &&
+        this.fields.triples.value &&
+        this.fields.homeruns.value &&
         this.team1Score &&
         this.team2Score
       )
@@ -83,6 +85,27 @@ export default defineComponent({
     }
   },
   methods: {
-    ...mapActions(['fetchGameById', 'fetchPlayerById', 'fetchPlayerStatsTableColumns'])
+    ...mapActions(['fetchGameById', 'fetchPlayerById', 'fetchPlayerStatsTableColumns', 'updateGameScoreByPlayerId']),
+    reSubmit() {
+      this.gameData.player_stats = this.gameData.player_stats.filter((p: any) => p.player_id !== this.getLoggedInPlayer._id)
+    },
+    async submitScores() {
+      const res = await this.updateGameScoreByPlayerId({
+        gameId: this.gameData._id,
+        playerId: this.getLoggedInPlayer._id,
+        plate_appearances: this.fields.plate_appearances.value,
+        at_bats: this.fields.at_bats.value,
+        singles: this.fields.singles.value,
+        doubles: this.fields.doubles.value,
+        triples: this.fields.triples.value,
+        homeruns: this.fields.homeruns.value,
+        team1Score: this.team1Score,
+        team2Score: this.team2Score
+      })
+
+      if (res.status === 200) {
+        this.gameData = res.game
+      }
+    }
   }
 })
