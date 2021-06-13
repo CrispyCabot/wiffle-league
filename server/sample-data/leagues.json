@@ -1,17 +1,79 @@
 [
 {
   "_id": {
-        "$oid": "c1c63aec5eedd6e567ddffba"
+        "$oid": "cd4fecd87a61f7778fb6ad1b"
     },
-    "name": "Research officer, political party",
-    "player_ids": [{ "$oid": "9eeb9528fb656fc8b75453b6" },{ "$oid": "9eeb9528fb656fc8b75453b6" },{ "$oid": "af37aa99e145da41dceecd75" },{ "$oid": "dc85522eaa1ef8c4cc685ca9" }],
-    "player_stats": [{ "player_id": { "$oid": "9eeb9528fb656fc8b75453b6" },"stats": {"hits": 44,"singles": 25,"doubles": 43,"triples": 7,"homeruns": 19,"plate_appearances": 1,"at_bats": 43,"games": 9,"wins": 15,"losses": 26,"points": 3} },{ "player_id": { "$oid": "9eeb9528fb656fc8b75453b6" },"stats": {"hits": 9,"singles": 38,"doubles": 42,"triples": 20,"homeruns": 11,"plate_appearances": 17,"at_bats": 33,"games": 35,"wins": 14,"losses": 24,"points": 16} },{ "player_id": { "$oid": "af37aa99e145da41dceecd75" },"stats": {"hits": 35,"singles": 5,"doubles": 44,"triples": 35,"homeruns": 34,"plate_appearances": 13,"at_bats": 42,"games": 16,"wins": 5,"losses": 9,"points": 32} },{ "player_id": { "$oid": "dc85522eaa1ef8c4cc685ca9" },"stats": {"hits": 23,"singles": 13,"doubles": 32,"triples": 22,"homeruns": 12,"plate_appearances": 19,"at_bats": 30,"games": 14,"wins": 3,"losses": 23,"points": 24} }],
-    "max_num_players": 4,
-    "league_creator_id": { "$oid": "9eeb9528fb656fc8b75453b6" },
-    "game_ids": [{ "$oid": "b171df533cffc71dbad631d3" },{ "$oid": "b6b8784f6ab8bba5d65ae99a" },{ "$oid": "d5edbfc2c86af8acdac5b3fe" },{ "$oid": "a749eb6fc545d4a46ededb57" },{ "$oid": "97af46d82b316f38f341ba21" },{ "$oid": "1f6b9218a52174aa388ab7bf" },{ "$oid": "a744fde3ba55fad4ebca18e6" },{ "$oid": "a744fde3ba55fad4ebca18e6" }],
-    "num_games": 8,
+    "name": "Chartered loss adjuster",
+    "player_ids": [{ "$oid": "55ec1ad3fa1edc81da2dbf46" },{ "$oid": "ac1665bcb7c3fef7b2ecfba9" },{ "$oid": "db38baf6cbaf4f7477dfa78f" },{ "$oid": "dfa95f28f7ebd74cefeeb3a5" }],
+    "player_stats": [{ "player_id": { "$oid": "55ec1ad3fa1edc81da2dbf46" },"stats": {"hits": 35,"singles": 25,"doubles": 26,"triples": 22,"homeruns": 29,"plate_appearances": 16,"at_bats": 36,"games": 48,"wins": 50,"losses": 24,"points": 38} },{ "player_id": { "$oid": "ac1665bcb7c3fef7b2ecfba9" },"stats": {"hits": 23,"singles": 13,"doubles": 48,"triples": 31,"homeruns": 24,"plate_appearances": 44,"at_bats": 6,"games": 45,"wins": 8,"losses": 28,"points": 29} },{ "player_id": { "$oid": "db38baf6cbaf4f7477dfa78f" },"stats": {"hits": 10,"singles": 14,"doubles": 42,"triples": 30,"homeruns": 44,"plate_appearances": 17,"at_bats": 15,"games": 17,"wins": 0,"losses": 15,"points": 7} },{ "player_id": { "$oid": "dfa95f28f7ebd74cefeeb3a5" },"stats": {"hits": 8,"singles": 7,"doubles": 24,"triples": 1,"homeruns": 36,"plate_appearances": 10,"at_bats": 17,"games": 20,"wins": 42,"losses": 42,"points": 14} }],
+    "max_num_players": 5,
+    "league_creator_id": { "$oid": "dfa95f28f7ebd74cefeeb3a5" },
+    "game_ids": [{ "$oid": "63dcd61aeff281f93d3f7dd3" },{ "$oid": "7eecfba9b9bce6c576fc6cc6" },{ "$oid": "d5ddab655facec8afa26dfd4" },{ "$oid": "d2c6deaf8215ae2c99b99b5e" },{ "$oid": "d42ad61aa73ac4c5d8fcdc1f" },{ "$oid": "c5bdbeaa7cdfaf284ec4a471" },{ "$oid": "862c33d9b3a38ddc9f629abb" },{ "$oid": "261d4384adb96415432cc6e5" },{ "$oid": "c6bfefaeb5c5db38b9fbee44" },{ "$oid": "5157cdfddce8bd8343a9ea84" },{ "$oid": "f25ed93eb9acbeab4815dbea" },{ "$oid": "ec2d426fd7743be3facb3d95" }],
+    "num_games": 12,
     "games_created": false,
-    "team_size": 3,
+    "team_size": 1,
+    "start_date": {
+        "$date": {
+            "$numberLong": "1622800000000"
+        }
+    },
+    "end_date": {
+        "$date": {
+            "$numberLong": "1625200000000"
+        }
+    },
+    "deadline_date": {
+        "$date": {
+            "$numberLong": "1622100000000"
+        }
+    },
+    "about_text": "Pretty need billion you ok push. Guess more truth business to ever as. Sense guess practice cause agent nation population.",
+    "num_games_completed": 5
+},
+{
+  "_id": {
+        "$oid": "aabc727fcfa1a8e8e5dfb25e"
+    },
+    "name": "Medical sales representative",
+    "player_ids": [{ "$oid": "6dc93da6b91dcda742ae7c98" },{ "$oid": "9afe9d81d9f4d4ad7fea755e" },{ "$oid": "13b16dc87af7913b7fc373a5" },{ "$oid": "e82ace4dbf5efed36698a3d6" },{ "$oid": "37a3a6af66acaa7e4a5decb5" },{ "$oid": "5bc7f79fae7cce577dedac8b" },{ "$oid": "fdb55b5a918ecdceeaea252f" },{ "$oid": "db38baf6cbaf4f7477dfa78f" },{ "$oid": "fd26af49fc48bd78752e1d87" },{ "$oid": "94a53ca3fe8ab62a3ea4f974" },{ "$oid": "db38baf6cbaf4f7477dfa78f" }],
+    "player_stats": [{ "player_id": { "$oid": "6dc93da6b91dcda742ae7c98" },"stats": {"hits": 49,"singles": 47,"doubles": 4,"triples": 24,"homeruns": 45,"plate_appearances": 18,"at_bats": 6,"games": 38,"wins": 18,"losses": 9,"points": 12} },{ "player_id": { "$oid": "9afe9d81d9f4d4ad7fea755e" },"stats": {"hits": 0,"singles": 49,"doubles": 34,"triples": 6,"homeruns": 12,"plate_appearances": 43,"at_bats": 12,"games": 31,"wins": 1,"losses": 1,"points": 21} },{ "player_id": { "$oid": "13b16dc87af7913b7fc373a5" },"stats": {"hits": 9,"singles": 8,"doubles": 24,"triples": 49,"homeruns": 11,"plate_appearances": 2,"at_bats": 4,"games": 47,"wins": 5,"losses": 31,"points": 2} },{ "player_id": { "$oid": "e82ace4dbf5efed36698a3d6" },"stats": {"hits": 47,"singles": 26,"doubles": 32,"triples": 32,"homeruns": 34,"plate_appearances": 50,"at_bats": 0,"games": 37,"wins": 41,"losses": 17,"points": 48} },{ "player_id": { "$oid": "37a3a6af66acaa7e4a5decb5" },"stats": {"hits": 26,"singles": 0,"doubles": 29,"triples": 45,"homeruns": 38,"plate_appearances": 30,"at_bats": 5,"games": 40,"wins": 48,"losses": 25,"points": 4} },{ "player_id": { "$oid": "5bc7f79fae7cce577dedac8b" },"stats": {"hits": 12,"singles": 11,"doubles": 5,"triples": 47,"homeruns": 6,"plate_appearances": 20,"at_bats": 7,"games": 5,"wins": 3,"losses": 28,"points": 0} },{ "player_id": { "$oid": "fdb55b5a918ecdceeaea252f" },"stats": {"hits": 46,"singles": 29,"doubles": 31,"triples": 9,"homeruns": 48,"plate_appearances": 12,"at_bats": 4,"games": 30,"wins": 15,"losses": 24,"points": 16} },{ "player_id": { "$oid": "db38baf6cbaf4f7477dfa78f" },"stats": {"hits": 22,"singles": 48,"doubles": 4,"triples": 12,"homeruns": 31,"plate_appearances": 17,"at_bats": 11,"games": 9,"wins": 49,"losses": 28,"points": 5} },{ "player_id": { "$oid": "fd26af49fc48bd78752e1d87" },"stats": {"hits": 42,"singles": 1,"doubles": 49,"triples": 47,"homeruns": 34,"plate_appearances": 49,"at_bats": 15,"games": 45,"wins": 4,"losses": 31,"points": 48} },{ "player_id": { "$oid": "94a53ca3fe8ab62a3ea4f974" },"stats": {"hits": 6,"singles": 34,"doubles": 6,"triples": 20,"homeruns": 30,"plate_appearances": 17,"at_bats": 3,"games": 7,"wins": 16,"losses": 39,"points": 2} },{ "player_id": { "$oid": "db38baf6cbaf4f7477dfa78f" },"stats": {"hits": 28,"singles": 2,"doubles": 38,"triples": 11,"homeruns": 50,"plate_appearances": 27,"at_bats": 12,"games": 5,"wins": 19,"losses": 42,"points": 31} }],
+    "max_num_players": 14,
+    "league_creator_id": { "$oid": "13b16dc87af7913b7fc373a5" },
+    "game_ids": [{ "$oid": "4b9e8d317a71db56aa96b4ba" },{ "$oid": "92ddc3b9a1392b6f1e46da6b" },{ "$oid": "3f19f6c813c2569da37be754" },{ "$oid": "261d4384adb96415432cc6e5" },{ "$oid": "261d4384adb96415432cc6e5" },{ "$oid": "8a9c51dcb46465777797aead" }],
+    "num_games": 6,
+    "games_created": false,
+    "team_size": 1,
+    "start_date": {
+        "$date": {
+            "$numberLong": "1630800000000"
+        }
+    },
+    "end_date": {
+        "$date": {
+            "$numberLong": "1633600000000"
+        }
+    },
+    "deadline_date": {
+        "$date": {
+            "$numberLong": "1630200000000"
+        }
+    },
+    "about_text": "Whatever act like resource return. Morning red include herself end us physical. Four may source per question thing that. Research strategy chair act. Home word without red.",
+    "num_games_completed": 0
+},
+{
+  "_id": {
+        "$oid": "abaddf1ebaefd67dcf96df3f"
+    },
+    "name": "Artist",
+    "player_ids": [{ "$oid": "6dc93da6b91dcda742ae7c98" },{ "$oid": "ac1665bcb7c3fef7b2ecfba9" },{ "$oid": "fd26af49fc48bd78752e1d87" },{ "$oid": "e437f664d3e84ad9ff3c8d18" },{ "$oid": "e314b1447eef3e5fb936fafc" },{ "$oid": "a8dd432fe6a7e78a3d7654d3" }],
+    "player_stats": [{ "player_id": { "$oid": "6dc93da6b91dcda742ae7c98" },"stats": {"hits": 22,"singles": 2,"doubles": 45,"triples": 23,"homeruns": 41,"plate_appearances": 22,"at_bats": 45,"games": 44,"wins": 50,"losses": 50,"points": 25} },{ "player_id": { "$oid": "ac1665bcb7c3fef7b2ecfba9" },"stats": {"hits": 22,"singles": 50,"doubles": 24,"triples": 38,"homeruns": 11,"plate_appearances": 30,"at_bats": 8,"games": 8,"wins": 35,"losses": 39,"points": 26} },{ "player_id": { "$oid": "fd26af49fc48bd78752e1d87" },"stats": {"hits": 28,"singles": 47,"doubles": 16,"triples": 13,"homeruns": 24,"plate_appearances": 25,"at_bats": 45,"games": 39,"wins": 32,"losses": 48,"points": 9} },{ "player_id": { "$oid": "e437f664d3e84ad9ff3c8d18" },"stats": {"hits": 43,"singles": 50,"doubles": 36,"triples": 10,"homeruns": 8,"plate_appearances": 45,"at_bats": 17,"games": 23,"wins": 7,"losses": 42,"points": 19} },{ "player_id": { "$oid": "e314b1447eef3e5fb936fafc" },"stats": {"hits": 34,"singles": 25,"doubles": 16,"triples": 45,"homeruns": 4,"plate_appearances": 11,"at_bats": 47,"games": 9,"wins": 15,"losses": 50,"points": 37} },{ "player_id": { "$oid": "a8dd432fe6a7e78a3d7654d3" },"stats": {"hits": 18,"singles": 30,"doubles": 44,"triples": 22,"homeruns": 21,"plate_appearances": 25,"at_bats": 45,"games": 4,"wins": 50,"losses": 44,"points": 17} }],
+    "max_num_players": 10,
+    "league_creator_id": { "$oid": "e437f664d3e84ad9ff3c8d18" },
+    "game_ids": [{ "$oid": "3f19f6c813c2569da37be754" },{ "$oid": "cf5b2e8fa1a3d41ae5fb3ec9" },{ "$oid": "6ddf3cb56ab835f75c45cb3f" },{ "$oid": "c6bfefaeb5c5db38b9fbee44" },{ "$oid": "63dcd61aeff281f93d3f7dd3" },{ "$oid": "5157cdfddce8bd8343a9ea84" },{ "$oid": "ebfd391debba6aeba7f5fb39" },{ "$oid": "d5ddab655facec8afa26dfd4" },{ "$oid": "d5a788a4c58f195dfaccddcd" },{ "$oid": "835e2dd32b4326b9d1b2b9ed" },{ "$oid": "63dcd61aeff281f93d3f7dd3" },{ "$oid": "2bfebdc5afcc9c24c2a23e49" },{ "$oid": "e8c4fbae7e4b653a23354f5a" },{ "$oid": "e75466eb36df716bc2aff8f4" },{ "$oid": "c5bdbeaa7cdfaf284ec4a471" },{ "$oid": "4e2d38a3dd8aec17cb721417" }],
+    "num_games": 16,
+    "games_created": false,
+    "team_size": 4,
     "start_date": {
         "$date": {
             "$numberLong": "1625300000000"
@@ -19,224 +81,100 @@
     },
     "end_date": {
         "$date": {
-            "$numberLong": "1628000000000"
+            "$numberLong": "1626600000000"
         }
     },
     "deadline_date": {
         "$date": {
-            "$numberLong": "1624800000000"
+            "$numberLong": "1624700000000"
         }
     },
-    "about_text": "Pm daughter not wide. Sign but it move old. Field bad win point politics. Respond party play event break. Onto tough country policy. Turn court data raise speech onto.",
-    "num_games_completed": 7
-},
-{
-  "_id": {
-        "$oid": "dc62c7cc8a342e81dfd3a9c8"
-    },
-    "name": "Designer, exhibition/display",
-    "player_ids": [{ "$oid": "2c7a8a8b28d2262b5d8deb93" },{ "$oid": "839c62bc8de8a5c6dbef1fbb" },{ "$oid": "5b8b1d6b8662ddc633dd48cd" }],
-    "player_stats": [{ "player_id": { "$oid": "2c7a8a8b28d2262b5d8deb93" },"stats": {"hits": 19,"singles": 1,"doubles": 10,"triples": 24,"homeruns": 4,"plate_appearances": 21,"at_bats": 5,"games": 10,"wins": 34,"losses": 30,"points": 27} },{ "player_id": { "$oid": "839c62bc8de8a5c6dbef1fbb" },"stats": {"hits": 48,"singles": 37,"doubles": 19,"triples": 11,"homeruns": 33,"plate_appearances": 15,"at_bats": 44,"games": 8,"wins": 0,"losses": 49,"points": 49} },{ "player_id": { "$oid": "5b8b1d6b8662ddc633dd48cd" },"stats": {"hits": 8,"singles": 17,"doubles": 16,"triples": 6,"homeruns": 6,"plate_appearances": 20,"at_bats": 20,"games": 48,"wins": 22,"losses": 20,"points": 40} }],
-    "max_num_players": 3,
-    "league_creator_id": { "$oid": "5b8b1d6b8662ddc633dd48cd" },
-    "game_ids": [{ "$oid": "1f6b9218a52174aa388ab7bf" },{ "$oid": "edbfda1bb6f895fa377d4d3d" },{ "$oid": "4f95cd431ecc2bd7ab83ef82" },{ "$oid": "aa2821576fcff896821ef31d" },{ "$oid": "47ccfecb8566e1868395afdf" },{ "$oid": "ae99c6ffd232c5d95da1c1fa" }],
-    "num_games": 6,
-    "games_created": false,
-    "team_size": 2,
-    "start_date": {
-        "$date": {
-            "$numberLong": "1625800000000"
-        }
-    },
-    "end_date": {
-        "$date": {
-            "$numberLong": "1629800000000"
-        }
-    },
-    "deadline_date": {
-        "$date": {
-            "$numberLong": "1625100000000"
-        }
-    },
-    "about_text": "It thank else view quickly. Law stand station sign water type information. Enter character knowledge season. Than land be find would. Dark agent response edge anything concern nearly.",
-    "num_games_completed": 3
-},
-{
-  "_id": {
-        "$oid": "61fb7d43d69ffec714495ff7"
-    },
-    "name": "Commissioning editor",
-    "player_ids": [{ "$oid": "217ffcaae19c1d5f214c8378" },{ "$oid": "ccffacddba24fb7e1dd9b4e4" },{ "$oid": "4c3aa145d1eb16dfaa218cf2" }],
-    "player_stats": [{ "player_id": { "$oid": "217ffcaae19c1d5f214c8378" },"stats": {"hits": 49,"singles": 1,"doubles": 42,"triples": 7,"homeruns": 24,"plate_appearances": 9,"at_bats": 48,"games": 14,"wins": 40,"losses": 0,"points": 49} },{ "player_id": { "$oid": "ccffacddba24fb7e1dd9b4e4" },"stats": {"hits": 15,"singles": 28,"doubles": 2,"triples": 42,"homeruns": 12,"plate_appearances": 28,"at_bats": 18,"games": 46,"wins": 37,"losses": 24,"points": 1} },{ "player_id": { "$oid": "4c3aa145d1eb16dfaa218cf2" },"stats": {"hits": 47,"singles": 35,"doubles": 4,"triples": 3,"homeruns": 15,"plate_appearances": 31,"at_bats": 34,"games": 1,"wins": 13,"losses": 36,"points": 34} }],
-    "max_num_players": 5,
-    "league_creator_id": { "$oid": "4c3aa145d1eb16dfaa218cf2" },
-    "game_ids": [{ "$oid": "c3da3efd18d138a35e1adecd" },{ "$oid": "9e4bb5b65a353d6fe5cffe2a" },{ "$oid": "f81d7dd77edb1c5e6bfdc2ac" },{ "$oid": "9e4bb5b65a353d6fe5cffe2a" },{ "$oid": "f25ddda97efd985a5fae4f91" },{ "$oid": "3e8f1cbcdb9d82fe8cb2f941" },{ "$oid": "a441af46abed3ff5f6b45a98" },{ "$oid": "cb8f2e4864d8cfec4342cdde" },{ "$oid": "eb29cac25914d9e3f2bb64aa" }],
-    "num_games": 9,
-    "games_created": false,
-    "team_size": 3,
-    "start_date": {
-        "$date": {
-            "$numberLong": "1631600000000"
-        }
-    },
-    "end_date": {
-        "$date": {
-            "$numberLong": "1632700000000"
-        }
-    },
-    "deadline_date": {
-        "$date": {
-            "$numberLong": "1630800000000"
-        }
-    },
-    "about_text": "Know me imagine learn. Down light beyond. Really available science raise issue. Somebody upon stuff relationship best industry art more. When environment unit forget deal field boy cause.",
-    "num_games_completed": 6
-},
-{
-  "_id": {
-        "$oid": "94b44e3bab43d8a6b46f9d24"
-    },
-    "name": "Animal technologist",
-    "player_ids": [{ "$oid": "d61b19816fa98abcd6fd81f6" },{ "$oid": "cda75dfd26debe215ecef6af" },{ "$oid": "dc85522eaa1ef8c4cc685ca9" },{ "$oid": "839c62bc8de8a5c6dbef1fbb" },{ "$oid": "8f4dfa6cee976912e798fdf4" },{ "$oid": "d61b19816fa98abcd6fd81f6" },{ "$oid": "ba51ce7dbbcf656f2455d26e" },{ "$oid": "ce8cfe754a22c7f3c534bab8" },{ "$oid": "ed827e48e76e3c8ec1185127" },{ "$oid": "6d4adcebec6cffddd2c1f4ad" },{ "$oid": "3fefc5f38a5f9c91bbaff78e" },{ "$oid": "ffc8f24ecfc84dd2ae24cadf" }],
-    "player_stats": [{ "player_id": { "$oid": "d61b19816fa98abcd6fd81f6" },"stats": {"hits": 40,"singles": 7,"doubles": 18,"triples": 20,"homeruns": 18,"plate_appearances": 20,"at_bats": 16,"games": 40,"wins": 12,"losses": 13,"points": 21} },{ "player_id": { "$oid": "cda75dfd26debe215ecef6af" },"stats": {"hits": 48,"singles": 6,"doubles": 45,"triples": 30,"homeruns": 18,"plate_appearances": 15,"at_bats": 7,"games": 40,"wins": 23,"losses": 25,"points": 10} },{ "player_id": { "$oid": "dc85522eaa1ef8c4cc685ca9" },"stats": {"hits": 41,"singles": 13,"doubles": 22,"triples": 38,"homeruns": 26,"plate_appearances": 16,"at_bats": 42,"games": 45,"wins": 36,"losses": 16,"points": 34} },{ "player_id": { "$oid": "839c62bc8de8a5c6dbef1fbb" },"stats": {"hits": 25,"singles": 39,"doubles": 1,"triples": 30,"homeruns": 39,"plate_appearances": 15,"at_bats": 4,"games": 16,"wins": 20,"losses": 11,"points": 48} },{ "player_id": { "$oid": "8f4dfa6cee976912e798fdf4" },"stats": {"hits": 33,"singles": 8,"doubles": 0,"triples": 15,"homeruns": 44,"plate_appearances": 20,"at_bats": 42,"games": 50,"wins": 36,"losses": 41,"points": 33} },{ "player_id": { "$oid": "d61b19816fa98abcd6fd81f6" },"stats": {"hits": 33,"singles": 15,"doubles": 34,"triples": 8,"homeruns": 9,"plate_appearances": 43,"at_bats": 32,"games": 30,"wins": 32,"losses": 5,"points": 32} },{ "player_id": { "$oid": "ba51ce7dbbcf656f2455d26e" },"stats": {"hits": 40,"singles": 28,"doubles": 44,"triples": 4,"homeruns": 21,"plate_appearances": 19,"at_bats": 14,"games": 22,"wins": 22,"losses": 34,"points": 28} },{ "player_id": { "$oid": "ce8cfe754a22c7f3c534bab8" },"stats": {"hits": 17,"singles": 39,"doubles": 10,"triples": 29,"homeruns": 44,"plate_appearances": 2,"at_bats": 32,"games": 38,"wins": 15,"losses": 20,"points": 8} },{ "player_id": { "$oid": "ed827e48e76e3c8ec1185127" },"stats": {"hits": 48,"singles": 0,"doubles": 29,"triples": 36,"homeruns": 16,"plate_appearances": 16,"at_bats": 11,"games": 45,"wins": 14,"losses": 32,"points": 46} },{ "player_id": { "$oid": "6d4adcebec6cffddd2c1f4ad" },"stats": {"hits": 30,"singles": 20,"doubles": 20,"triples": 45,"homeruns": 15,"plate_appearances": 29,"at_bats": 2,"games": 2,"wins": 19,"losses": 33,"points": 22} },{ "player_id": { "$oid": "3fefc5f38a5f9c91bbaff78e" },"stats": {"hits": 25,"singles": 30,"doubles": 27,"triples": 26,"homeruns": 37,"plate_appearances": 22,"at_bats": 18,"games": 24,"wins": 43,"losses": 49,"points": 16} },{ "player_id": { "$oid": "ffc8f24ecfc84dd2ae24cadf" },"stats": {"hits": 13,"singles": 9,"doubles": 31,"triples": 1,"homeruns": 23,"plate_appearances": 39,"at_bats": 9,"games": 11,"wins": 16,"losses": 34,"points": 39} }],
-    "max_num_players": 16,
-    "league_creator_id": { "$oid": "ed827e48e76e3c8ec1185127" },
-    "game_ids": [{ "$oid": "f941e23f174f2db262b8fec6" },{ "$oid": "3e8f1cbcdb9d82fe8cb2f941" },{ "$oid": "a744fde3ba55fad4ebca18e6" },{ "$oid": "b171df533cffc71dbad631d3" },{ "$oid": "1f6b9218a52174aa388ab7bf" }],
-    "num_games": 5,
-    "games_created": false,
-    "team_size": 3,
-    "start_date": {
-        "$date": {
-            "$numberLong": "1627500000000"
-        }
-    },
-    "end_date": {
-        "$date": {
-            "$numberLong": "1629700000000"
-        }
-    },
-    "deadline_date": {
-        "$date": {
-            "$numberLong": "1627300000000"
-        }
-    },
-    "about_text": "Happen quality side clearly. Whole kid save child realize.",
+    "about_text": "Although international peace. Which occur bit seven upon music his. Including concern federal pattern follow.",
     "num_games_completed": 0
 },
 {
   "_id": {
-        "$oid": "dff96366bc7cc598f7f27452"
+        "$oid": "fc9ea2aa918ded888f1694aa"
     },
-    "name": "Arts development officer",
-    "player_ids": [{ "$oid": "ce66173e4c52a3227c128d2a" },{ "$oid": "62a89bb97cb9458d28688bee" },{ "$oid": "3fefc5f38a5f9c91bbaff78e" },{ "$oid": "6d4adcebec6cffddd2c1f4ad" }],
-    "player_stats": [{ "player_id": { "$oid": "ce66173e4c52a3227c128d2a" },"stats": {"hits": 47,"singles": 36,"doubles": 50,"triples": 47,"homeruns": 5,"plate_appearances": 32,"at_bats": 33,"games": 39,"wins": 0,"losses": 21,"points": 50} },{ "player_id": { "$oid": "62a89bb97cb9458d28688bee" },"stats": {"hits": 11,"singles": 29,"doubles": 32,"triples": 40,"homeruns": 28,"plate_appearances": 35,"at_bats": 35,"games": 40,"wins": 41,"losses": 31,"points": 20} },{ "player_id": { "$oid": "3fefc5f38a5f9c91bbaff78e" },"stats": {"hits": 41,"singles": 29,"doubles": 3,"triples": 30,"homeruns": 42,"plate_appearances": 34,"at_bats": 14,"games": 10,"wins": 46,"losses": 17,"points": 3} },{ "player_id": { "$oid": "6d4adcebec6cffddd2c1f4ad" },"stats": {"hits": 31,"singles": 50,"doubles": 44,"triples": 7,"homeruns": 1,"plate_appearances": 42,"at_bats": 27,"games": 50,"wins": 33,"losses": 25,"points": 28} }],
-    "max_num_players": 14,
-    "league_creator_id": { "$oid": "62a89bb97cb9458d28688bee" },
-    "game_ids": [{ "$oid": "62caa4865d1bfd5e7a316af5" },{ "$oid": "54e49798f14f6bc9588ac5eb" },{ "$oid": "c3da3efd18d138a35e1adecd" },{ "$oid": "89b5ccb3fba91b5854b5ecab" },{ "$oid": "c3da3efd18d138a35e1adecd" },{ "$oid": "47ccfecb8566e1868395afdf" },{ "$oid": "47ccfecb8566e1868395afdf" },{ "$oid": "d5edbfc2c86af8acdac5b3fe" },{ "$oid": "613b8e5bd5f67abf364f9d2c" },{ "$oid": "eefe6f2a28b7bd521e12f93b" },{ "$oid": "6e834c34d9e2fe893a56e99c" },{ "$oid": "97af46d82b316f38f341ba21" },{ "$oid": "4eccfe2459dcafde6b28f99b" },{ "$oid": "1f6b9218a52174aa388ab7bf" },{ "$oid": "22fc1db2a3b4f5faba4ee6f7" },{ "$oid": "aa2821576fcff896821ef31d" }],
-    "num_games": 16,
+    "name": "Exercise physiologist",
+    "player_ids": [{ "$oid": "37a3a6af66acaa7e4a5decb5" },{ "$oid": "fd26af49fc48bd78752e1d87" },{ "$oid": "e82ace4dbf5efed36698a3d6" },{ "$oid": "9afe9d81d9f4d4ad7fea755e" },{ "$oid": "9e76c6ebf633271ca66cf1a7" },{ "$oid": "3b2b274afa6bfc19da333ebf" },{ "$oid": "55ec1ad3fa1edc81da2dbf46" },{ "$oid": "5bc7f79fae7cce577dedac8b" },{ "$oid": "ac1665bcb7c3fef7b2ecfba9" },{ "$oid": "6dc93da6b91dcda742ae7c98" },{ "$oid": "dfa95f28f7ebd74cefeeb3a5" },{ "$oid": "1cb941affdbebbd18ba9bd74" },{ "$oid": "9e76c6ebf633271ca66cf1a7" },{ "$oid": "6dc93da6b91dcda742ae7c98" },{ "$oid": "53b4f85a816a9e4dbc3cd2b4" }],
+    "player_stats": [{ "player_id": { "$oid": "37a3a6af66acaa7e4a5decb5" },"stats": {"hits": 46,"singles": 32,"doubles": 32,"triples": 19,"homeruns": 27,"plate_appearances": 1,"at_bats": 6,"games": 24,"wins": 46,"losses": 27,"points": 25} },{ "player_id": { "$oid": "fd26af49fc48bd78752e1d87" },"stats": {"hits": 46,"singles": 6,"doubles": 22,"triples": 11,"homeruns": 24,"plate_appearances": 40,"at_bats": 12,"games": 39,"wins": 46,"losses": 20,"points": 47} },{ "player_id": { "$oid": "e82ace4dbf5efed36698a3d6" },"stats": {"hits": 8,"singles": 45,"doubles": 6,"triples": 32,"homeruns": 19,"plate_appearances": 20,"at_bats": 24,"games": 1,"wins": 10,"losses": 25,"points": 38} },{ "player_id": { "$oid": "9afe9d81d9f4d4ad7fea755e" },"stats": {"hits": 18,"singles": 13,"doubles": 41,"triples": 16,"homeruns": 37,"plate_appearances": 49,"at_bats": 8,"games": 15,"wins": 17,"losses": 22,"points": 41} },{ "player_id": { "$oid": "9e76c6ebf633271ca66cf1a7" },"stats": {"hits": 1,"singles": 32,"doubles": 29,"triples": 49,"homeruns": 34,"plate_appearances": 44,"at_bats": 45,"games": 20,"wins": 16,"losses": 4,"points": 50} },{ "player_id": { "$oid": "3b2b274afa6bfc19da333ebf" },"stats": {"hits": 45,"singles": 11,"doubles": 36,"triples": 48,"homeruns": 40,"plate_appearances": 16,"at_bats": 22,"games": 8,"wins": 39,"losses": 40,"points": 34} },{ "player_id": { "$oid": "55ec1ad3fa1edc81da2dbf46" },"stats": {"hits": 6,"singles": 17,"doubles": 22,"triples": 21,"homeruns": 36,"plate_appearances": 47,"at_bats": 8,"games": 48,"wins": 15,"losses": 34,"points": 21} },{ "player_id": { "$oid": "5bc7f79fae7cce577dedac8b" },"stats": {"hits": 0,"singles": 33,"doubles": 50,"triples": 31,"homeruns": 39,"plate_appearances": 13,"at_bats": 15,"games": 30,"wins": 10,"losses": 15,"points": 10} },{ "player_id": { "$oid": "ac1665bcb7c3fef7b2ecfba9" },"stats": {"hits": 8,"singles": 20,"doubles": 34,"triples": 17,"homeruns": 18,"plate_appearances": 27,"at_bats": 44,"games": 6,"wins": 42,"losses": 32,"points": 35} },{ "player_id": { "$oid": "6dc93da6b91dcda742ae7c98" },"stats": {"hits": 19,"singles": 43,"doubles": 17,"triples": 31,"homeruns": 35,"plate_appearances": 44,"at_bats": 38,"games": 4,"wins": 33,"losses": 33,"points": 34} },{ "player_id": { "$oid": "dfa95f28f7ebd74cefeeb3a5" },"stats": {"hits": 31,"singles": 23,"doubles": 38,"triples": 5,"homeruns": 19,"plate_appearances": 21,"at_bats": 10,"games": 35,"wins": 9,"losses": 42,"points": 2} },{ "player_id": { "$oid": "1cb941affdbebbd18ba9bd74" },"stats": {"hits": 38,"singles": 22,"doubles": 5,"triples": 2,"homeruns": 8,"plate_appearances": 17,"at_bats": 26,"games": 35,"wins": 0,"losses": 16,"points": 34} },{ "player_id": { "$oid": "9e76c6ebf633271ca66cf1a7" },"stats": {"hits": 48,"singles": 16,"doubles": 9,"triples": 25,"homeruns": 16,"plate_appearances": 40,"at_bats": 47,"games": 6,"wins": 26,"losses": 4,"points": 14} },{ "player_id": { "$oid": "6dc93da6b91dcda742ae7c98" },"stats": {"hits": 9,"singles": 39,"doubles": 43,"triples": 15,"homeruns": 38,"plate_appearances": 1,"at_bats": 18,"games": 37,"wins": 35,"losses": 22,"points": 9} },{ "player_id": { "$oid": "53b4f85a816a9e4dbc3cd2b4" },"stats": {"hits": 40,"singles": 9,"doubles": 11,"triples": 39,"homeruns": 16,"plate_appearances": 35,"at_bats": 26,"games": 4,"wins": 40,"losses": 25,"points": 27} }],
+    "max_num_players": 17,
+    "league_creator_id": { "$oid": "dfa95f28f7ebd74cefeeb3a5" },
+    "game_ids": [{ "$oid": "5157cdfddce8bd8343a9ea84" },{ "$oid": "76e43b8e5eb45dd33333aa38" },{ "$oid": "5157cdfddce8bd8343a9ea84" },{ "$oid": "c6bfefaeb5c5db38b9fbee44" },{ "$oid": "3f19f6c813c2569da37be754" }],
+    "num_games": 5,
     "games_created": false,
     "team_size": 4,
     "start_date": {
         "$date": {
-            "$numberLong": "1631600000000"
+            "$numberLong": "1630500000000"
         }
     },
     "end_date": {
         "$date": {
-            "$numberLong": "1635400000000"
+            "$numberLong": "1632300000000"
         }
     },
     "deadline_date": {
         "$date": {
-            "$numberLong": "1630600000000"
+            "$numberLong": "1630300000000"
         }
     },
-    "about_text": "Along certainly back station world image join. Gas arrive position treatment. Walk born store sea. Upon ready outside half her option administration. Heavy suffer item trial control cultural.",
-    "num_games_completed": 1
+    "about_text": "Third message start himself strategy near. Plan design its away director various.",
+    "num_games_completed": 3
 },
 {
   "_id": {
-        "$oid": "92b58d517bd223e4e5afeca7"
+        "$oid": "fc338575bd9b2bc22c8dceca"
     },
-    "name": "Visual merchandiser",
-    "player_ids": [{ "$oid": "7cbcb7be999ca6dccdc5f1ef" },{ "$oid": "ed827e48e76e3c8ec1185127" },{ "$oid": "2c7a8a8b28d2262b5d8deb93" },{ "$oid": "2c7a8a8b28d2262b5d8deb93" },{ "$oid": "ce66173e4c52a3227c128d2a" },{ "$oid": "217ffcaae19c1d5f214c8378" },{ "$oid": "9d2d9aed7f4c2bbc221e6edf" }],
-    "player_stats": [{ "player_id": { "$oid": "7cbcb7be999ca6dccdc5f1ef" },"stats": {"hits": 10,"singles": 9,"doubles": 6,"triples": 16,"homeruns": 27,"plate_appearances": 33,"at_bats": 38,"games": 34,"wins": 23,"losses": 11,"points": 41} },{ "player_id": { "$oid": "ed827e48e76e3c8ec1185127" },"stats": {"hits": 29,"singles": 26,"doubles": 43,"triples": 15,"homeruns": 6,"plate_appearances": 8,"at_bats": 49,"games": 27,"wins": 9,"losses": 9,"points": 27} },{ "player_id": { "$oid": "2c7a8a8b28d2262b5d8deb93" },"stats": {"hits": 21,"singles": 5,"doubles": 43,"triples": 28,"homeruns": 47,"plate_appearances": 39,"at_bats": 47,"games": 12,"wins": 25,"losses": 30,"points": 20} },{ "player_id": { "$oid": "2c7a8a8b28d2262b5d8deb93" },"stats": {"hits": 13,"singles": 33,"doubles": 24,"triples": 7,"homeruns": 50,"plate_appearances": 5,"at_bats": 5,"games": 36,"wins": 5,"losses": 9,"points": 43} },{ "player_id": { "$oid": "ce66173e4c52a3227c128d2a" },"stats": {"hits": 5,"singles": 46,"doubles": 24,"triples": 42,"homeruns": 3,"plate_appearances": 11,"at_bats": 23,"games": 5,"wins": 35,"losses": 22,"points": 41} },{ "player_id": { "$oid": "217ffcaae19c1d5f214c8378" },"stats": {"hits": 14,"singles": 47,"doubles": 22,"triples": 27,"homeruns": 20,"plate_appearances": 43,"at_bats": 19,"games": 39,"wins": 26,"losses": 17,"points": 33} },{ "player_id": { "$oid": "9d2d9aed7f4c2bbc221e6edf" },"stats": {"hits": 21,"singles": 42,"doubles": 15,"triples": 43,"homeruns": 31,"plate_appearances": 33,"at_bats": 23,"games": 44,"wins": 2,"losses": 46,"points": 44} }],
-    "max_num_players": 11,
-    "league_creator_id": { "$oid": "9d2d9aed7f4c2bbc221e6edf" },
-    "game_ids": [{ "$oid": "815ddde5f9c25a171d48f34a" },{ "$oid": "edbfda1bb6f895fa377d4d3d" },{ "$oid": "cb8f2e4864d8cfec4342cdde" },{ "$oid": "2e9ffa432fdb6e8ec65f1f27" },{ "$oid": "5ec8b562bedf839a6589eeee" },{ "$oid": "613b8e5bd5f67abf364f9d2c" },{ "$oid": "62caa4865d1bfd5e7a316af5" },{ "$oid": "1e3d885f36f8c1da37f61dcb" }],
-    "num_games": 8,
+    "name": "Office manager",
+    "player_ids": [{ "$oid": "1a9ba8a88e34a94d721c8881" },{ "$oid": "e82ace4dbf5efed36698a3d6" },{ "$oid": "afbe8c7fba7d3736da491afc" },{ "$oid": "13b16dc87af7913b7fc373a5" },{ "$oid": "e314b1447eef3e5fb936fafc" },{ "$oid": "5bc7f79fae7cce577dedac8b" },{ "$oid": "dd3db3f9b29687e4baefb796" },{ "$oid": "13b16dc87af7913b7fc373a5" },{ "$oid": "fdb55b5a918ecdceeaea252f" },{ "$oid": "1cb941affdbebbd18ba9bd74" },{ "$oid": "914eaeab176cc6febb8c3e57" },{ "$oid": "e96c6c9d3d5da2b87a91cf3c" },{ "$oid": "fdb55b5a918ecdceeaea252f" },{ "$oid": "5bacc9dd6e79e46c96b2e6bf" },{ "$oid": "94a53ca3fe8ab62a3ea4f974" },{ "$oid": "dd3db3f9b29687e4baefb796" },{ "$oid": "ac1665bcb7c3fef7b2ecfba9" }],
+    "player_stats": [{ "player_id": { "$oid": "1a9ba8a88e34a94d721c8881" },"stats": {"hits": 11,"singles": 9,"doubles": 45,"triples": 25,"homeruns": 1,"plate_appearances": 30,"at_bats": 17,"games": 4,"wins": 0,"losses": 0,"points": 43} },{ "player_id": { "$oid": "e82ace4dbf5efed36698a3d6" },"stats": {"hits": 10,"singles": 12,"doubles": 24,"triples": 18,"homeruns": 0,"plate_appearances": 9,"at_bats": 20,"games": 9,"wins": 7,"losses": 46,"points": 26} },{ "player_id": { "$oid": "afbe8c7fba7d3736da491afc" },"stats": {"hits": 27,"singles": 12,"doubles": 2,"triples": 38,"homeruns": 19,"plate_appearances": 13,"at_bats": 2,"games": 10,"wins": 32,"losses": 49,"points": 30} },{ "player_id": { "$oid": "13b16dc87af7913b7fc373a5" },"stats": {"hits": 6,"singles": 18,"doubles": 14,"triples": 25,"homeruns": 8,"plate_appearances": 23,"at_bats": 15,"games": 14,"wins": 9,"losses": 44,"points": 19} },{ "player_id": { "$oid": "e314b1447eef3e5fb936fafc" },"stats": {"hits": 15,"singles": 11,"doubles": 15,"triples": 0,"homeruns": 33,"plate_appearances": 49,"at_bats": 5,"games": 12,"wins": 25,"losses": 26,"points": 45} },{ "player_id": { "$oid": "5bc7f79fae7cce577dedac8b" },"stats": {"hits": 45,"singles": 25,"doubles": 39,"triples": 50,"homeruns": 26,"plate_appearances": 38,"at_bats": 44,"games": 20,"wins": 19,"losses": 12,"points": 49} },{ "player_id": { "$oid": "dd3db3f9b29687e4baefb796" },"stats": {"hits": 23,"singles": 20,"doubles": 5,"triples": 14,"homeruns": 9,"plate_appearances": 43,"at_bats": 49,"games": 0,"wins": 38,"losses": 48,"points": 36} },{ "player_id": { "$oid": "13b16dc87af7913b7fc373a5" },"stats": {"hits": 48,"singles": 3,"doubles": 11,"triples": 35,"homeruns": 27,"plate_appearances": 32,"at_bats": 6,"games": 32,"wins": 41,"losses": 34,"points": 21} },{ "player_id": { "$oid": "fdb55b5a918ecdceeaea252f" },"stats": {"hits": 46,"singles": 16,"doubles": 48,"triples": 0,"homeruns": 9,"plate_appearances": 45,"at_bats": 20,"games": 50,"wins": 48,"losses": 23,"points": 40} },{ "player_id": { "$oid": "1cb941affdbebbd18ba9bd74" },"stats": {"hits": 4,"singles": 1,"doubles": 19,"triples": 48,"homeruns": 7,"plate_appearances": 28,"at_bats": 16,"games": 14,"wins": 37,"losses": 10,"points": 43} },{ "player_id": { "$oid": "914eaeab176cc6febb8c3e57" },"stats": {"hits": 20,"singles": 20,"doubles": 41,"triples": 35,"homeruns": 39,"plate_appearances": 20,"at_bats": 1,"games": 43,"wins": 30,"losses": 48,"points": 30} },{ "player_id": { "$oid": "e96c6c9d3d5da2b87a91cf3c" },"stats": {"hits": 10,"singles": 8,"doubles": 34,"triples": 31,"homeruns": 22,"plate_appearances": 31,"at_bats": 49,"games": 8,"wins": 44,"losses": 46,"points": 47} },{ "player_id": { "$oid": "fdb55b5a918ecdceeaea252f" },"stats": {"hits": 49,"singles": 46,"doubles": 0,"triples": 33,"homeruns": 38,"plate_appearances": 40,"at_bats": 13,"games": 32,"wins": 49,"losses": 37,"points": 12} },{ "player_id": { "$oid": "5bacc9dd6e79e46c96b2e6bf" },"stats": {"hits": 49,"singles": 48,"doubles": 21,"triples": 27,"homeruns": 36,"plate_appearances": 30,"at_bats": 5,"games": 9,"wins": 35,"losses": 31,"points": 33} },{ "player_id": { "$oid": "94a53ca3fe8ab62a3ea4f974" },"stats": {"hits": 26,"singles": 11,"doubles": 31,"triples": 47,"homeruns": 10,"plate_appearances": 48,"at_bats": 30,"games": 49,"wins": 10,"losses": 23,"points": 1} },{ "player_id": { "$oid": "dd3db3f9b29687e4baefb796" },"stats": {"hits": 34,"singles": 2,"doubles": 17,"triples": 36,"homeruns": 25,"plate_appearances": 46,"at_bats": 41,"games": 24,"wins": 14,"losses": 16,"points": 42} },{ "player_id": { "$oid": "ac1665bcb7c3fef7b2ecfba9" },"stats": {"hits": 30,"singles": 18,"doubles": 46,"triples": 23,"homeruns": 36,"plate_appearances": 43,"at_bats": 4,"games": 37,"wins": 35,"losses": 11,"points": 24} }],
+    "max_num_players": 20,
+    "league_creator_id": { "$oid": "13b16dc87af7913b7fc373a5" },
+    "game_ids": [{ "$oid": "f55c2fea86bd8faa8a5d4e54" },{ "$oid": "f56b55458fbe9e752c63dfb3" },{ "$oid": "c7a8bacf3c61f9d69dccdd2d" },{ "$oid": "ec2d426fd7743be3facb3d95" },{ "$oid": "7a9d5c3988fd26ddf6c72ef9" },{ "$oid": "e3e1eebf522d8117ff93e9dc" },{ "$oid": "c38c44e76c2c4c6dc351bf27" },{ "$oid": "8a9c51dcb46465777797aead" },{ "$oid": "e3e1eebf522d8117ff93e9dc" }],
+    "num_games": 9,
     "games_created": false,
-    "team_size": 3,
+    "team_size": 2,
     "start_date": {
         "$date": {
-            "$numberLong": "1631300000000"
+            "$numberLong": "1629000000000"
         }
     },
     "end_date": {
         "$date": {
-            "$numberLong": "1632500000000"
+            "$numberLong": "1630500000000"
         }
     },
     "deadline_date": {
         "$date": {
-            "$numberLong": "1630400000000"
+            "$numberLong": "1628200000000"
         }
     },
-    "about_text": "Car catch form. Keep remain event spring thank wall personal. Play perhaps how executive hotel. Arm others visit stay worry together. Second recently accept most.",
-    "num_games_completed": 8
+    "about_text": "Order leave decade page relationship where. Staff help bill get explain paper. Direction important agree break last entire. Every every religious exactly happen now.",
+    "num_games_completed": 5
 },
 {
   "_id": {
-        "$oid": "bc2f892bdb94d2a2dca2e16e"
+        "$oid": "4cec5e64694c8eb64229a9dc"
     },
-    "name": "Communications engineer",
-    "player_ids": [{ "$oid": "ffc8f24ecfc84dd2ae24cadf" },{ "$oid": "8f4dfa6cee976912e798fdf4" },{ "$oid": "ed827e48e76e3c8ec1185127" }],
-    "player_stats": [{ "player_id": { "$oid": "ffc8f24ecfc84dd2ae24cadf" },"stats": {"hits": 9,"singles": 18,"doubles": 1,"triples": 24,"homeruns": 5,"plate_appearances": 1,"at_bats": 46,"games": 23,"wins": 49,"losses": 18,"points": 7} },{ "player_id": { "$oid": "8f4dfa6cee976912e798fdf4" },"stats": {"hits": 38,"singles": 21,"doubles": 46,"triples": 37,"homeruns": 8,"plate_appearances": 42,"at_bats": 7,"games": 5,"wins": 1,"losses": 22,"points": 39} },{ "player_id": { "$oid": "ed827e48e76e3c8ec1185127" },"stats": {"hits": 18,"singles": 29,"doubles": 1,"triples": 27,"homeruns": 15,"plate_appearances": 3,"at_bats": 25,"games": 34,"wins": 35,"losses": 38,"points": 38} }],
-    "max_num_players": 9,
-    "league_creator_id": { "$oid": "8f4dfa6cee976912e798fdf4" },
-    "game_ids": [{ "$oid": "d5edbfc2c86af8acdac5b3fe" },{ "$oid": "1e7ee9df5c7aead57ea83313" },{ "$oid": "89b5ccb3fba91b5854b5ecab" },{ "$oid": "62caa4865d1bfd5e7a316af5" },{ "$oid": "1f6b9218a52174aa388ab7bf" },{ "$oid": "ae99c6ffd232c5d95da1c1fa" },{ "$oid": "67783d88eff9cb4fad1d41c8" },{ "$oid": "eea1bcc5e86b86ed7a815175" },{ "$oid": "1e7ee9df5c7aead57ea83313" },{ "$oid": "54e49798f14f6bc9588ac5eb" },{ "$oid": "9e4bb5b65a353d6fe5cffe2a" },{ "$oid": "f25ddda97efd985a5fae4f91" }],
-    "num_games": 12,
+    "name": "Heritage manager",
+    "player_ids": [{ "$oid": "13b16dc87af7913b7fc373a5" },{ "$oid": "e314b1447eef3e5fb936fafc" },{ "$oid": "3b2b274afa6bfc19da333ebf" },{ "$oid": "6dc93da6b91dcda742ae7c98" },{ "$oid": "5bc7f79fae7cce577dedac8b" },{ "$oid": "9afe9d81d9f4d4ad7fea755e" },{ "$oid": "fd26af49fc48bd78752e1d87" },{ "$oid": "94a53ca3fe8ab62a3ea4f974" },{ "$oid": "94a53ca3fe8ab62a3ea4f974" },{ "$oid": "fdb55b5a918ecdceeaea252f" },{ "$oid": "53b4f85a816a9e4dbc3cd2b4" },{ "$oid": "9e76c6ebf633271ca66cf1a7" },{ "$oid": "6dc93da6b91dcda742ae7c98" }],
+    "player_stats": [{ "player_id": { "$oid": "13b16dc87af7913b7fc373a5" },"stats": {"hits": 15,"singles": 41,"doubles": 26,"triples": 12,"homeruns": 17,"plate_appearances": 31,"at_bats": 10,"games": 42,"wins": 40,"losses": 47,"points": 49} },{ "player_id": { "$oid": "e314b1447eef3e5fb936fafc" },"stats": {"hits": 46,"singles": 13,"doubles": 11,"triples": 20,"homeruns": 1,"plate_appearances": 10,"at_bats": 46,"games": 27,"wins": 0,"losses": 41,"points": 28} },{ "player_id": { "$oid": "3b2b274afa6bfc19da333ebf" },"stats": {"hits": 16,"singles": 31,"doubles": 6,"triples": 46,"homeruns": 16,"plate_appearances": 0,"at_bats": 39,"games": 2,"wins": 33,"losses": 29,"points": 3} },{ "player_id": { "$oid": "6dc93da6b91dcda742ae7c98" },"stats": {"hits": 27,"singles": 46,"doubles": 18,"triples": 34,"homeruns": 2,"plate_appearances": 39,"at_bats": 8,"games": 5,"wins": 15,"losses": 34,"points": 33} },{ "player_id": { "$oid": "5bc7f79fae7cce577dedac8b" },"stats": {"hits": 7,"singles": 26,"doubles": 20,"triples": 18,"homeruns": 33,"plate_appearances": 39,"at_bats": 39,"games": 44,"wins": 48,"losses": 33,"points": 43} },{ "player_id": { "$oid": "9afe9d81d9f4d4ad7fea755e" },"stats": {"hits": 40,"singles": 5,"doubles": 45,"triples": 27,"homeruns": 47,"plate_appearances": 47,"at_bats": 13,"games": 40,"wins": 22,"losses": 18,"points": 34} },{ "player_id": { "$oid": "fd26af49fc48bd78752e1d87" },"stats": {"hits": 34,"singles": 29,"doubles": 24,"triples": 46,"homeruns": 18,"plate_appearances": 14,"at_bats": 34,"games": 17,"wins": 28,"losses": 15,"points": 44} },{ "player_id": { "$oid": "94a53ca3fe8ab62a3ea4f974" },"stats": {"hits": 18,"singles": 6,"doubles": 2,"triples": 18,"homeruns": 31,"plate_appearances": 48,"at_bats": 5,"games": 7,"wins": 30,"losses": 8,"points": 47} },{ "player_id": { "$oid": "94a53ca3fe8ab62a3ea4f974" },"stats": {"hits": 17,"singles": 25,"doubles": 24,"triples": 37,"homeruns": 41,"plate_appearances": 49,"at_bats": 19,"games": 13,"wins": 41,"losses": 31,"points": 15} },{ "player_id": { "$oid": "fdb55b5a918ecdceeaea252f" },"stats": {"hits": 36,"singles": 15,"doubles": 17,"triples": 24,"homeruns": 39,"plate_appearances": 46,"at_bats": 48,"games": 36,"wins": 32,"losses": 4,"points": 28} },{ "player_id": { "$oid": "53b4f85a816a9e4dbc3cd2b4" },"stats": {"hits": 49,"singles": 39,"doubles": 12,"triples": 36,"homeruns": 25,"plate_appearances": 40,"at_bats": 48,"games": 28,"wins": 31,"losses": 19,"points": 24} },{ "player_id": { "$oid": "9e76c6ebf633271ca66cf1a7" },"stats": {"hits": 18,"singles": 24,"doubles": 47,"triples": 0,"homeruns": 31,"plate_appearances": 35,"at_bats": 17,"games": 9,"wins": 2,"losses": 40,"points": 26} },{ "player_id": { "$oid": "6dc93da6b91dcda742ae7c98" },"stats": {"hits": 11,"singles": 5,"doubles": 17,"triples": 12,"homeruns": 1,"plate_appearances": 38,"at_bats": 45,"games": 40,"wins": 15,"losses": 1,"points": 15} }],
+    "max_num_players": 17,
+    "league_creator_id": { "$oid": "fd26af49fc48bd78752e1d87" },
+    "game_ids": [{ "$oid": "c38c44e76c2c4c6dc351bf27" },{ "$oid": "8a9c51dcb46465777797aead" },{ "$oid": "8c73d76eda8ed7fe787ba66e" },{ "$oid": "76e43b8e5eb45dd33333aa38" },{ "$oid": "4e2d38a3dd8aec17cb721417" },{ "$oid": "ddbf2f13683f947ebf5ba982" },{ "$oid": "835e2dd32b4326b9d1b2b9ed" }],
+    "num_games": 7,
     "games_created": false,
-    "team_size": 4,
+    "team_size": 1,
     "start_date": {
         "$date": {
-            "$numberLong": "1624200000000"
+            "$numberLong": "1626400000000"
         }
     },
     "end_date": {
         "$date": {
-            "$numberLong": "1627000000000"
-        }
-    },
-    "deadline_date": {
-        "$date": {
-            "$numberLong": "1623500000000"
-        }
-    },
-    "about_text": "Dream between me. Huge age political surface my. Measure set bank. Physical admit of someone try best edge thus.",
-    "num_games_completed": 11
-},
-{
-  "_id": {
-        "$oid": "49fedaa863e11a81bcd6f4d1"
-    },
-    "name": "Designer, industrial/product",
-    "player_ids": [{ "$oid": "e9bec4af49c3af481acce1ae" },{ "$oid": "f47b7e18ed14c97f88ec3a46" },{ "$oid": "e9bec4af49c3af481acce1ae" }],
-    "player_stats": [{ "player_id": { "$oid": "e9bec4af49c3af481acce1ae" },"stats": {"hits": 9,"singles": 25,"doubles": 12,"triples": 43,"homeruns": 19,"plate_appearances": 14,"at_bats": 28,"games": 14,"wins": 16,"losses": 21,"points": 14} },{ "player_id": { "$oid": "f47b7e18ed14c97f88ec3a46" },"stats": {"hits": 37,"singles": 12,"doubles": 44,"triples": 47,"homeruns": 38,"plate_appearances": 32,"at_bats": 13,"games": 1,"wins": 25,"losses": 13,"points": 38} },{ "player_id": { "$oid": "e9bec4af49c3af481acce1ae" },"stats": {"hits": 4,"singles": 23,"doubles": 11,"triples": 11,"homeruns": 38,"plate_appearances": 48,"at_bats": 40,"games": 7,"wins": 43,"losses": 38,"points": 45} }],
-    "max_num_players": 12,
-    "league_creator_id": { "$oid": "f47b7e18ed14c97f88ec3a46" },
-    "game_ids": [{ "$oid": "815ddde5f9c25a171d48f34a" },{ "$oid": "eea1bcc5e86b86ed7a815175" },{ "$oid": "5ec8b562bedf839a6589eeee" },{ "$oid": "eea1bcc5e86b86ed7a815175" },{ "$oid": "4a1fa6d534dd7544c177ff37" },{ "$oid": "c3da3efd18d138a35e1adecd" },{ "$oid": "d5edbfc2c86af8acdac5b3fe" },{ "$oid": "b171df533cffc71dbad631d3" }],
-    "num_games": 8,
-    "games_created": false,
-    "team_size": 3,
-    "start_date": {
-        "$date": {
-            "$numberLong": "1626200000000"
-        }
-    },
-    "end_date": {
-        "$date": {
-            "$numberLong": "1629800000000"
+            "$numberLong": "1627700000000"
         }
     },
     "deadline_date": {
@@ -244,6 +182,68 @@
             "$numberLong": "1625500000000"
         }
     },
-    "about_text": "Significant able fund mind act region bad. Hold article include why figure late us. Data understand policy fire. Wife discover amount own campaign consider.",
-    "num_games_completed": 5
+    "about_text": "Hand security yard moment. Run particular force check call. Become bring finish. Think eight material too attention power arm.",
+    "num_games_completed": 4
+},
+{
+  "_id": {
+        "$oid": "2efbe466f8cc9d3ee3c659dd"
+    },
+    "name": "Pilot, airline",
+    "player_ids": [{ "$oid": "94a53ca3fe8ab62a3ea4f974" },{ "$oid": "1cb941affdbebbd18ba9bd74" },{ "$oid": "db38baf6cbaf4f7477dfa78f" },{ "$oid": "dd3db3f9b29687e4baefb796" },{ "$oid": "a8dd432fe6a7e78a3d7654d3" },{ "$oid": "dd3db3f9b29687e4baefb796" },{ "$oid": "fdb55b5a918ecdceeaea252f" },{ "$oid": "9e76c6ebf633271ca66cf1a7" }],
+    "player_stats": [{ "player_id": { "$oid": "94a53ca3fe8ab62a3ea4f974" },"stats": {"hits": 21,"singles": 13,"doubles": 24,"triples": 44,"homeruns": 30,"plate_appearances": 34,"at_bats": 49,"games": 29,"wins": 20,"losses": 43,"points": 37} },{ "player_id": { "$oid": "1cb941affdbebbd18ba9bd74" },"stats": {"hits": 48,"singles": 47,"doubles": 33,"triples": 7,"homeruns": 0,"plate_appearances": 19,"at_bats": 23,"games": 8,"wins": 25,"losses": 37,"points": 41} },{ "player_id": { "$oid": "db38baf6cbaf4f7477dfa78f" },"stats": {"hits": 4,"singles": 24,"doubles": 8,"triples": 33,"homeruns": 18,"plate_appearances": 16,"at_bats": 7,"games": 1,"wins": 17,"losses": 34,"points": 24} },{ "player_id": { "$oid": "dd3db3f9b29687e4baefb796" },"stats": {"hits": 7,"singles": 9,"doubles": 45,"triples": 48,"homeruns": 27,"plate_appearances": 20,"at_bats": 19,"games": 40,"wins": 10,"losses": 41,"points": 24} },{ "player_id": { "$oid": "a8dd432fe6a7e78a3d7654d3" },"stats": {"hits": 8,"singles": 2,"doubles": 33,"triples": 25,"homeruns": 31,"plate_appearances": 47,"at_bats": 6,"games": 43,"wins": 14,"losses": 40,"points": 47} },{ "player_id": { "$oid": "dd3db3f9b29687e4baefb796" },"stats": {"hits": 38,"singles": 15,"doubles": 48,"triples": 5,"homeruns": 46,"plate_appearances": 45,"at_bats": 32,"games": 47,"wins": 17,"losses": 48,"points": 47} },{ "player_id": { "$oid": "fdb55b5a918ecdceeaea252f" },"stats": {"hits": 11,"singles": 28,"doubles": 37,"triples": 5,"homeruns": 46,"plate_appearances": 31,"at_bats": 32,"games": 47,"wins": 33,"losses": 0,"points": 21} },{ "player_id": { "$oid": "9e76c6ebf633271ca66cf1a7" },"stats": {"hits": 12,"singles": 14,"doubles": 17,"triples": 27,"homeruns": 41,"plate_appearances": 31,"at_bats": 21,"games": 50,"wins": 0,"losses": 30,"points": 28} }],
+    "max_num_players": 11,
+    "league_creator_id": { "$oid": "a8dd432fe6a7e78a3d7654d3" },
+    "game_ids": [{ "$oid": "63dcd61aeff281f93d3f7dd3" },{ "$oid": "f56b55458fbe9e752c63dfb3" },{ "$oid": "8c73d76eda8ed7fe787ba66e" },{ "$oid": "3997ec39dfe436c45bed7145" },{ "$oid": "2bfebdc5afcc9c24c2a23e49" },{ "$oid": "ec2d426fd7743be3facb3d95" },{ "$oid": "1696abb75fbfad747cadefdb" },{ "$oid": "82297bbe6611d4a16c388dcc" },{ "$oid": "82297bbe6611d4a16c388dcc" },{ "$oid": "ebfd391debba6aeba7f5fb39" },{ "$oid": "f55c2fea86bd8faa8a5d4e54" },{ "$oid": "d74cead86b1372f8f145e53a" },{ "$oid": "a628c313e3af5eccb52d62f7" }],
+    "num_games": 13,
+    "games_created": false,
+    "team_size": 4,
+    "start_date": {
+        "$date": {
+            "$numberLong": "1626100000000"
+        }
+    },
+    "end_date": {
+        "$date": {
+            "$numberLong": "1629100000000"
+        }
+    },
+    "deadline_date": {
+        "$date": {
+            "$numberLong": "1625400000000"
+        }
+    },
+    "about_text": "Official skin future many pull. Blue now data wrong. Already either guess Mr street Mrs. Financial reason summer key.",
+    "num_games_completed": 13
+},
+{
+  "_id": {
+        "$oid": "2acacfd7a822b6be8ad3d65d"
+    },
+    "name": "Tour manager",
+    "player_ids": [{ "$oid": "1cb941affdbebbd18ba9bd74" },{ "$oid": "9e76c6ebf633271ca66cf1a7" },{ "$oid": "dd3db3f9b29687e4baefb796" },{ "$oid": "dfa95f28f7ebd74cefeeb3a5" },{ "$oid": "3b2b274afa6bfc19da333ebf" },{ "$oid": "55ec1ad3fa1edc81da2dbf46" },{ "$oid": "5bacc9dd6e79e46c96b2e6bf" },{ "$oid": "fd26af49fc48bd78752e1d87" },{ "$oid": "e314b1447eef3e5fb936fafc" },{ "$oid": "3b9b69d9a7bfa8e2fb6376cd" },{ "$oid": "e437f664d3e84ad9ff3c8d18" }],
+    "player_stats": [{ "player_id": { "$oid": "1cb941affdbebbd18ba9bd74" },"stats": {"hits": 40,"singles": 25,"doubles": 19,"triples": 26,"homeruns": 4,"plate_appearances": 0,"at_bats": 25,"games": 7,"wins": 4,"losses": 21,"points": 24} },{ "player_id": { "$oid": "9e76c6ebf633271ca66cf1a7" },"stats": {"hits": 23,"singles": 39,"doubles": 49,"triples": 49,"homeruns": 14,"plate_appearances": 42,"at_bats": 2,"games": 14,"wins": 46,"losses": 20,"points": 40} },{ "player_id": { "$oid": "dd3db3f9b29687e4baefb796" },"stats": {"hits": 11,"singles": 1,"doubles": 7,"triples": 17,"homeruns": 11,"plate_appearances": 8,"at_bats": 26,"games": 24,"wins": 12,"losses": 36,"points": 3} },{ "player_id": { "$oid": "dfa95f28f7ebd74cefeeb3a5" },"stats": {"hits": 8,"singles": 46,"doubles": 25,"triples": 35,"homeruns": 16,"plate_appearances": 15,"at_bats": 25,"games": 25,"wins": 47,"losses": 49,"points": 8} },{ "player_id": { "$oid": "3b2b274afa6bfc19da333ebf" },"stats": {"hits": 38,"singles": 44,"doubles": 20,"triples": 1,"homeruns": 23,"plate_appearances": 16,"at_bats": 5,"games": 0,"wins": 37,"losses": 46,"points": 28} },{ "player_id": { "$oid": "55ec1ad3fa1edc81da2dbf46" },"stats": {"hits": 40,"singles": 22,"doubles": 15,"triples": 23,"homeruns": 40,"plate_appearances": 25,"at_bats": 35,"games": 36,"wins": 10,"losses": 32,"points": 9} },{ "player_id": { "$oid": "5bacc9dd6e79e46c96b2e6bf" },"stats": {"hits": 35,"singles": 45,"doubles": 38,"triples": 48,"homeruns": 35,"plate_appearances": 44,"at_bats": 37,"games": 24,"wins": 2,"losses": 27,"points": 49} },{ "player_id": { "$oid": "fd26af49fc48bd78752e1d87" },"stats": {"hits": 5,"singles": 49,"doubles": 39,"triples": 13,"homeruns": 15,"plate_appearances": 13,"at_bats": 34,"games": 37,"wins": 29,"losses": 19,"points": 1} },{ "player_id": { "$oid": "e314b1447eef3e5fb936fafc" },"stats": {"hits": 27,"singles": 34,"doubles": 3,"triples": 11,"homeruns": 18,"plate_appearances": 46,"at_bats": 11,"games": 39,"wins": 41,"losses": 14,"points": 6} },{ "player_id": { "$oid": "3b9b69d9a7bfa8e2fb6376cd" },"stats": {"hits": 10,"singles": 14,"doubles": 48,"triples": 21,"homeruns": 30,"plate_appearances": 4,"at_bats": 47,"games": 24,"wins": 25,"losses": 8,"points": 6} },{ "player_id": { "$oid": "e437f664d3e84ad9ff3c8d18" },"stats": {"hits": 48,"singles": 18,"doubles": 35,"triples": 37,"homeruns": 12,"plate_appearances": 39,"at_bats": 46,"games": 37,"wins": 18,"losses": 2,"points": 33} }],
+    "max_num_players": 19,
+    "league_creator_id": { "$oid": "1cb941affdbebbd18ba9bd74" },
+    "game_ids": [{ "$oid": "52e9e8ce919da915682381a9" },{ "$oid": "3997ec39dfe436c45bed7145" },{ "$oid": "ec2d426fd7743be3facb3d95" },{ "$oid": "d74cead86b1372f8f145e53a" },{ "$oid": "9a37bb4dee63a6cd6d5a7f6b" },{ "$oid": "cf5b2e8fa1a3d41ae5fb3ec9" },{ "$oid": "7a9d5c3988fd26ddf6c72ef9" },{ "$oid": "3997ec39dfe436c45bed7145" },{ "$oid": "3f19f6c813c2569da37be754" },{ "$oid": "3997ec39dfe436c45bed7145" },{ "$oid": "6ddf3cb56ab835f75c45cb3f" },{ "$oid": "8e7dadab98d7b121c13dbda3" },{ "$oid": "76e43b8e5eb45dd33333aa38" },{ "$oid": "7eecfba9b9bce6c576fc6cc6" }],
+    "num_games": 14,
+    "games_created": false,
+    "team_size": 2,
+    "start_date": {
+        "$date": {
+            "$numberLong": "1627100000000"
+        }
+    },
+    "end_date": {
+        "$date": {
+            "$numberLong": "1629100000000"
+        }
+    },
+    "deadline_date": {
+        "$date": {
+            "$numberLong": "1626400000000"
+        }
+    },
+    "about_text": "Best forward approach only. Million positive weight decision include. Radio increase continue guy. Her anything position rest simply during knowledge. Drop relate anything you central before use.",
+    "num_games_completed": 11
 }]

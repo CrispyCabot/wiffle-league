@@ -61,6 +61,8 @@ gameJSON = """
     "league_id": { "$oid": "league_placeholder" },
     "team_1_ids": team1_placeholder,
     "team_2_ids": team2_placeholder,
+    "team_1_score": team1Score_placeholder,
+    "team_2_score": team2Score_placeholder,
     "game_date": {
         "$date": {
             "$numberLong": "date_placeholder"
@@ -135,6 +137,8 @@ def makeGames():
             players.append(random.choice(playerIDs))
         temp = gameJSON
         temp = temp.replace("id_placeholder", i)
+        temp = temp.replace("team1Score_placeholder", str(randint(0,10)))
+        temp = temp.replace("team2Score_placeholder", str(randint(0,10)))
         temp = temp.replace("league_placeholder", random.choice(leagueIDs))
         s = []
         for x in range(0, int(len(players)/2)):
