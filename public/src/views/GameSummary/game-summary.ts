@@ -28,7 +28,6 @@ export default defineComponent({
   computed: {
     ...mapGetters(['getLoggedInPlayer']),
     gameIsCompleted(): Boolean {
-      return true
       return this.gameData.completed
     },
     playerIsInGame(): Boolean {
@@ -57,7 +56,8 @@ export default defineComponent({
         if (this.gameData.player_stats.map((p: any) => p.player_id).includes(player._id)) {
           const playerData = this.gameData.player_stats.find((p: any) => p.player_id == player._id)
           Object.keys(playerData.stats).forEach((s: string) => {
-            stats[s] = { text: playerData.stats[s], type: 'numeric' } 
+            if (this.overallStatsColumns.map(c => c.columnName).includes(s))
+              stats[s] = { text: playerData.stats[s], type: 'numeric' } 
           })
         }
 
@@ -76,6 +76,11 @@ export default defineComponent({
     const nameColumn = { columnLabel: 'Name', columnName: 'name', maxWidth: '33vw', isHidden: false }
     const filteredStatsColumnNames = ['games', 'wins', 'losses', 'points']
     this.overallStatsColumns = [ nameColumn, ...overallStatsColumns.filter((c: any) => !filteredStatsColumnNames.includes(c.columnName)) ]
+
+    if (this.gameIsCompleted) {
+      this.team1Score = this.gameData.team_1_score
+      this.team2Score = this.gameData.team_2_score
+    }
   },
   methods: {
     ...mapActions(['fetchGameById', 'fetchPlayerById', 'fetchPlayerStatsTableColumns'])

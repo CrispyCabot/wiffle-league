@@ -12,7 +12,7 @@ const game_schema = new Schema({
   game_date: Date,
   game_location: String,
   player_stats: [
-    { player_id: Schema.Types.ObjectId, stats: stats }
+    { player_id: Schema.Types.ObjectId, team_1_score: Number, team_2_score: Number, stats: stats }
   ],
   completed: Boolean
 })
