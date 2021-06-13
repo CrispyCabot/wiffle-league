@@ -78,6 +78,8 @@
           justify-content: space-between;
           align-items: center;
           background-color: $off_white;
+          cursor: pointer;
+          transition: .3s;
           &:nth-child(odd) {
             background-color: rgba($light_grey, .6);
           }
@@ -92,6 +94,9 @@
           .item-check {
             font-size: .9rem;
             color: $dark_background;
+          }
+          &:hover {
+            background-color: $light-grey;
           }
         }
         &_no-items {
@@ -111,4 +116,43 @@
       }
     }
   }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {  
+  .multi-item-selector {
+    &_popup {
+      &_links {
+        &_items {
+          &_item {
+            background-color: $off_white;
+            &:nth-child(odd) {
+              background-color: $off_white;
+            }
+            &:hover {
+              background-color: $light-grey;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
 }
