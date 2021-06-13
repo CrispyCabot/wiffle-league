@@ -1,0 +1,112 @@
+.game-summary {
+  &_summary {
+    margin: 1rem auto;
+    text-align: center;
+    &_teams {
+      h6 {
+        font-size: .9rem;
+        font-weight: 600;
+      }
+    }
+    &_info {
+      width: 100%;
+      margin-top: 1rem;
+      h2 {
+        border: 1px solid $light_grey;
+        background-color: $accent_red;
+        width: 90%;
+        margin: .5rem auto;
+        padding: .5rem 1rem;
+        color: $off_white;
+        border-radius: .25rem;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+    }
+  }
+  &_submission {
+    h1 {
+      margin-top: .25rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    &_scores {
+      margin: 1rem 0;
+      background-color: $pure_white;
+      border: 1px solid $light_grey;
+      border-radius: .25rem;
+      padding: 2rem;
+      width: 78%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .scores-dash {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+      &_team1, &_team2 {
+        position: relative;
+        h6 {
+          color: $accent_red;
+          font-weight: 600;
+          font-size: .75rem;
+          width: max-content;
+          position: absolute;
+          top: -1rem;
+          left: 0;
+        }
+        input {
+          outline: none;
+          border: 1px solid $dark_background;
+          border-radius: .25rem;
+          margin: .25rem 0;
+          width: 4rem;
+          height: 4rem;
+          text-align: center;
+          font-size: 200%;
+          font-weight: 700;
+        }
+      }
+      &_team2 {
+        text-align: right;
+        h6 {
+          position: absolute;
+          top: unset;
+          bottom: -1rem;
+          left: unset;
+          right: 0;
+        }
+      }
+    }
+
+    &_stats {
+      .stat-field {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        h6 {
+          font-size: 1.25rem;
+          font-style: italic;
+          font-weight: 800;
+          margin-right: 1rem;
+          color: $dark_background;
+        }
+        input {
+          outline: none;
+          border: 1px solid $dark_background;
+          border-radius: .25rem;
+          margin: .25rem 0;
+          width: 4rem;
+          height: 4rem;
+          text-align: center;
+          font-size: 200%;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .btn {
+    margin-top: 2rem;
+  }
+}
