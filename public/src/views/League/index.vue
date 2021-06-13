@@ -42,7 +42,7 @@
           :hasPagination="false"
           :hasSizeSelector="false"
           :canHideContent="true"
-      ></grid-table>
+        ></grid-table>
       </div>
 
       <div v-if="!isLeagueStarted" class="content-section league-container_content_players">
