@@ -16,8 +16,8 @@
         </div>
         <div class="multi-item-selector_popup_links_items">
           <div v-for="item in items" :key="item" class="multi-item-selector_popup_links_items_item" @click="$emit('multi-item-selection', item)">
-            <p>{{ item }}</p>
-            <font-awesome-icon class="item-check" v-if="selectedItems.includes(item)" :icon="['fas', 'check']"></font-awesome-icon>
+            <p>{{ item.text }}</p>
+            <font-awesome-icon class="item-check" v-if="selectedItems.map(i => i.text).includes(item.text)" :icon="['fas', 'check']"></font-awesome-icon>
           </div>
           <div v-if="items.length == 0" class="multi-item-selector_popup_links_items_no-items">
             <p>No data to show</p>

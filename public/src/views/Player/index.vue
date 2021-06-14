@@ -18,8 +18,8 @@
         :hasSizeSelector="false"
         :hoverable="false"
       ></grid-table>
-      <button class="btn red_btn" @click="contact()">Contact</button>
       <button class="btn red_btn" @click="inviteToLeague()">Invite to League</button>
+      <button class="btn red_btn" @click="contact()">Contact</button>
     </div>
 
   </div>

@@ -1,0 +1,84 @@
+.game-selection-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  &_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba($dark_background, 0.5);
+    z-index: 0;
+  }
+  
+  &_content {
+    padding: 2rem;
+    width: 70%;
+    background-color: $dark_background;
+    border: 1px solid $off_white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: $off_white;
+    h1 {
+      margin-bottom: .5rem;
+    }
+
+    &_arrows {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: calc(100% + 1.25rem);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2.5rem;
+      pointer-events: none;
+      .icon {
+        pointer-events: all;
+      }
+    }
+
+    &_teams {
+      margin: 1rem 0;
+      .multi-item-selector {
+        margin: .5rem 0;
+        color: $dark_background;
+        &_label {
+          color: $off_white;
+        }
+        &_selector {
+          min-width: 12rem;
+        }
+      }
+    }
+
+    &_info {
+      margin: 0 auto;
+      width: 12rem;
+      label {
+        text-align: left;
+        margin-top: .5rem;
+      }
+      .default-input {
+        width: 100%;
+        margin: .25rem 0;
+      }
+    }
+
+    .btn.disabled {
+      margin-top: 1.5rem;
+      background-color: $light_grey;
+      pointer-events: none;
+    }
+    .cancel-btn {
+      width: max-content;
+      font-size: .9rem;
+      margin: .5rem 0;
+    }
+  }
+}

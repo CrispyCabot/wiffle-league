@@ -2,12 +2,14 @@ import { defineComponent } from "@vue/runtime-core";
 import { mapActions, mapGetters } from "vuex";
 import GridTable from '@/components/tables/grid-table/index.vue'
 import RadioButtonGroup from '@/components/inputs/radio-button-group/index.vue'
+import GameSelectionModal from '@/components/popups/game-selection-modal/index.vue'
 
 export default defineComponent({
   name: 'league',
   components: {
     GridTable,
-    RadioButtonGroup
+    RadioButtonGroup,
+    GameSelectionModal
   },
   data() {
     return {
@@ -47,7 +49,8 @@ export default defineComponent({
         'Female',
         'Other'
       ],
-      isSettingsEditing: false
+      isSettingsEditing: false,
+      isSelectingGames: false
     }
   },
   computed: {
@@ -206,9 +209,11 @@ export default defineComponent({
         this.leagueData = res.league
       }
     },
+    cancelStartLeague() {
+      this.isSelectingGames = false
+    },
     startLeague() {
-      // TODO
-      // Should take you to create games pages
+      this.isSelectingGames = true
     },
     submitScores() {
       this.$router.push(`/league/${this.leagueData._id}/games`)

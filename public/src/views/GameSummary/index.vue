@@ -78,6 +78,7 @@
             :label="'Game Stats'"
             :hasPagination="false"
             :hasSizeSelector="false"
+            @row-click="playerClick"
           ></grid-table>
         </div>
 
