@@ -16,7 +16,7 @@
         :label="'Overall Stats'"
         :hasPagination="false"
         :hasSizeSelector="false"
-        :clickable="false"
+        :hoverable="false"
       ></grid-table>
       <button class="btn red_btn" @click="contact()">Contact</button>
       <button class="btn red_btn" @click="inviteToLeague()">Invite to League</button>

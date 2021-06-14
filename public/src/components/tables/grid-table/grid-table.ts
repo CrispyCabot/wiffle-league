@@ -19,7 +19,7 @@ export default defineComponent({
     hasSizeSelector: { type: Boolean, default: false },
     paginationRefresh: { type: Boolean, default: true },
     canHideContent: { type: Boolean, default: false },
-    clickable: { type: Boolean, default: true }
+    hoverable: { type: Boolean, default: true }
   },
   data() {
     return {
