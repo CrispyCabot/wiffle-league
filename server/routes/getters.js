@@ -34,6 +34,15 @@ router.route('/leagues/:id/stats').get((req, res) => {
 
 // Player Getters
 const Players = require('../models/player-model')
+router.route('/players').get((req, res) => {
+  Players.find({}, async (err, response) => {
+    if (err) {
+      console.log(err)
+      return
+    }
+    res.json(response)
+  })
+})
 router.route('/players/:id').get((req, res) => {
   const { id } = req.params
   Players.findOne({_id: id}, async (err, response) => {

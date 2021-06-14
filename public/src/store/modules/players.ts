@@ -94,6 +94,17 @@ export const PlayerActions = {
         })
     })
   },
+  fetchPlayers() {
+    return new Promise((resolve, reject) => {
+      api.get('/players')
+        .then(({data}) => {
+          resolve(data)
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    })
+  },
   fetchPlayerSelectedSchedules({ getters }: any, id: string) {
     return new Promise((resolve, reject) => {
       api.get(`/players/${id}/selected-schedules`)
