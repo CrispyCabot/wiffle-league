@@ -9,10 +9,23 @@
 
   &_summary {
     text-align: center;
+
+    .mark-finished {
+      margin-bottom: .75rem;
+    }
+
     &_teams {
+      width: 90%;
+      font-size: .9rem;
+      color: $dark_background;
+      p {
+        color: $accent_red;
+        font-weight: 500;
+      }
       h6 {
-        font-size: .9rem;
+        margin: .75rem 0;
         font-weight: 600;
+        font-size: 1rem;
       }
     }
     &_info {
@@ -33,6 +46,7 @@
 
     &_submission, &_completed {
       width: 80%;
+      margin: 0 auto;
       h1 {
         margin-top: 1rem;
         font-size: 1.25rem;
@@ -41,7 +55,10 @@
       }
   
       &_scores {
-        margin: 1rem 0;
+        width: max-content;
+        min-width: 85%;
+        margin: 1rem auto;
+        margin-bottom: 2.5rem;
         background-color: $pure_white;
         border: 1px solid $light_grey;
         border-radius: .25rem;
@@ -55,7 +72,9 @@
         }
         &_team1, &_team2 {
           position: relative;
+          text-align: center;
           h6 {
+            text-align: left;
             color: $accent_red;
             font-weight: 600;
             font-size: .75rem;
@@ -74,11 +93,18 @@
             text-align: center;
             font-size: 200%;
             font-weight: 700;
+            &[type=number] {
+              -moz-appearance: textfield;
+            }
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+            }
           }
         }
         &_team2 {
-          text-align: right;
           h6 {
+            text-align: right;
             position: absolute;
             top: unset;
             bottom: -1rem;
@@ -89,6 +115,11 @@
       }
   
       &_stats {
+        margin: .75rem auto;
+        width: max-content;
+        min-width: 85%;
+        display: grid;
+        grid-template-columns: 1fr;
         .stat-field {
           display: flex;
           justify-content: flex-end;
@@ -110,6 +141,13 @@
             text-align: center;
             font-size: 200%;
             font-weight: 700;
+            &[type=number] {
+              -moz-appearance: textfield;
+            }
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+            }
           }
         }
       }
@@ -142,7 +180,6 @@
       width: 90%;
       &_scores {
         margin: 1.5rem auto;
-        width: 80%;
       }
       &_stats {
         width: 100%;
@@ -153,3 +190,63 @@
     }
   }
 }
+
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .game-summary {
+    &_summary {
+      &_submission, &_completed {
+        &_scores {
+          min-width: 70%;
+        }
+        &_stats {
+          min-width: 70%;
+        }
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .game-summary {
+    &_summary {
+      &_submission, &_completed {
+        width: unset;
+        &_scores {
+          min-width: 60%;
+        }
+        &_stats {
+          width: unset;
+          grid-gap: .5rem;
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .game-summary {
+    &_summary {
+      &_submission, &_completed {
+        &_scores {
+          min-width: 50%;
+        }
+        &_stats {
+          width: unset;
+          grid-gap: .5rem;
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}

@@ -21,6 +21,6 @@ const league_schema = new Schema({
   deadline_date: Date,
   about_text: String,
   gender: String
-})
+}, {strict: false})
 
 module.exports = league_schema

@@ -167,7 +167,7 @@ const Games = require('../models/game-model');
 router.route('/games/:id/update-score').put(async (req, res) => {
   const gameId = req.params.id
   const { playerId, plate_appearances, at_bats, singles, doubles, triples, homeruns, team1Score, team2Score } = req.body
-  const gameStatKeys = {plate_appearances, at_bats, singles, doubles, triples, homeruns}
+  const gameStatKeys = { plate_appearances, at_bats, singles, doubles, triples, homeruns }
 
   let game = await Games.findOne({_id: gameId})
   if (!game) {
@@ -177,11 +177,12 @@ router.route('/games/:id/update-score').put(async (req, res) => {
   if (game.player_stats.map(p => p.player_id).includes(playerId)) {
     game.player_stats = game.player_stats.map(p => {
       if (p.player_id == playerId) {
-        gameStatKeys.forEach((key, value) => {
-          p.stats[key] = value 
+        Object.keys(gameStatKeys).forEach((key) => {
+          p.stats[key] = gameStatKeys[key] 
         })
+        p.stats.hits = singles + doubles + triples + homeruns
         p.team1Score = team1Score 
-        p.team2Score = team2Score 
+        p.team2Score = team2Score
       }
       return p
     })
@@ -199,6 +200,79 @@ router.route('/games/:id/update-score').put(async (req, res) => {
   } else {
     res.json({status: 400, message: 'Unsuccessfully updated game'})
   }
+})
+router.route('/games/:id/update-completed').put(async (req, res) => {
+  const gameId = req.params.id
+  const { completed } = req.body
+
+  // Updating the game completed
+  let game = await Games.findOne({_id: gameId})
+  if (!game) {
+    res.json({status: 400, message: 'Unsuccessfully found game with given id'})
+  }
+  await Games.findOneAndUpdate({_id: gameId}, { $set: { completed: completed } })
+  game = await Games.findOne({_id: gameId})
+  if (!game) {
+    res.json({status: 400, message: 'Unsuccessfully updated game'})
+  }
+
+  // console.log(game.player_stats)
+  const winningTeam = game.team_1_score > game.team_2_score ? 1 : 2
+  // Update overall stats for each player in games stats
+  try {
+    await Promise.all(game.player_stats.map(async (stat) => {
+      let player = await Players.findOne({_id: stat.player_id})
+      if (!player) res.json({status: 400, message: 'Unsuccessfully updated players overall stats'})
+
+      const team = game.team_1_ids.includes(player._id) ? 1 : 2
+      Object.keys(player.player_stats).filter(s => s !== '$init').forEach(key => {
+        player.player_stats[key] += stat.stats[key]
+      })
+      player.player_stats.hits += (stat.stats.singles + stat.stats.doubles + stat.stats.triples + stat.stats.homeruns)
+      player.player_stats.games += 1
+      if(winningTeam === team) {
+        player.player_stats.wins += 1
+      } else if(winningTeam !== team) {
+        player.player_stats.losses += 1
+      }
+
+      await Players.findOneAndUpdate({_id: stat.player_id}, player)
+      const updatedPlayer = await Players.findOne({_id: stat.player_id})
+      if(!updatedPlayer) res.json({status: 400, message: 'Unsuccessfully updated players overall stats'})
+      return stat
+    }))
+  } catch(e) {
+    console.log(e)
+  }
+
+  // Update overall stats for league for each player in games stats
+  let league = await Leagues.findOne({_id: game.league_id})
+  league.num_games_completed += 1
+  await Promise.all(game.player_stats.map(async (stat) => {
+    league.player_stats = league.player_stats.map(p => {
+      if (p.player_id === stat.player_id) {
+        const team = game.team_1_ids.includes(player._id) ? 1 : 2
+        p.stats.forEach(key => {
+          p.stats[key] += stat.stats[key]
+        })
+        p.stats.hits += (stat.stats.singles + stat.stats.doubles + stat.stats.triples + stat.stats.homeruns)
+        p.stats.games += 1
+        if(winningTeam === team) {
+          p.stats.wins += 1
+        } else if(winningTeam !== team) {
+          p.stats.losses += 1
+        }
+      }
+      return p
+    })
+    return stat
+  }))
+  await Leagues.findOneAndUpdate({_id: game.league_id}, league)
+  const updatedLeague = await Leagues.findOne({_id: game.league_id})
+  if(!updatedLeague) res.json({status: 400, message: 'Unsuccessfully updated league overall stats'})
+  
+  // No failed queries prior to this points... send a successful response
+  res.json({status: 200, message: 'Successfully updated game', game: game})
 })
 
 module.exports = router

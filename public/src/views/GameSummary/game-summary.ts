@@ -1,6 +1,7 @@
 import { defineComponent } from "@vue/runtime-core";
 import { mapActions, mapGetters } from "vuex";
 import GridTable from '@/components/tables/grid-table/index.vue'
+import { faTshirt } from "@fortawesome/free-solid-svg-icons";
 
 export default defineComponent({
   name: 'game-summary',
@@ -23,7 +24,8 @@ export default defineComponent({
         triples: {text: 'Triples', value: null },
         homeruns: {text: 'Home Runs', value: null }
       },
-      overallStatsColumns: Array<any>()
+      overallStatsColumns: Array<any>(),
+      league: Object()
     }
   },
   computed: {
@@ -65,11 +67,31 @@ export default defineComponent({
 
         return stats
       })
+    },
+    isLeagueCreator(): Boolean {
+      if (!this.league || !this.league.league_creator_id || !this.getLoggedInPlayer) return false
+      return this.league.league_creator_id === this.getLoggedInPlayer._id
+    },
+    allPlayersHaveSubmitted(): Boolean {
+      let playersWithStatsSubmitted: any = {}
+      const players = [...this.gameData.team_1_ids, ...this.gameData.team_2_ids]
+      players.forEach((id: any) => {
+        playersWithStatsSubmitted[id] = false
+        if (this.gameData.player_stats.map((p: any) => p.player_id).includes(id))
+          playersWithStatsSubmitted[id] = true
+      })
+      
+      playersWithStatsSubmitted = Object.keys(playersWithStatsSubmitted).filter((key: any) => {
+        return !playersWithStatsSubmitted[key]
+      })
+      
+      return playersWithStatsSubmitted.length === 0
     }
   },
   async created() {
     this.gameId = String(this.$route.params.id)
     this.gameData = await this.fetchGameById(this.gameId)
+    this.league = await this.fetchLeagueById(this.gameData.league_id)
 
     this.team1 = await Promise.all(this.gameData.team_1_ids.map(async (id: any) => await this.fetchPlayerById(id)))
     this.team2 = await Promise.all(this.gameData.team_2_ids.map(async (id: any) => await this.fetchPlayerById(id)))
@@ -85,7 +107,14 @@ export default defineComponent({
     }
   },
   methods: {
-    ...mapActions(['fetchGameById', 'fetchPlayerById', 'fetchPlayerStatsTableColumns', 'updateGameScoreByPlayerId']),
+    ...mapActions([
+      'fetchGameById',
+      'fetchPlayerById',
+      'fetchPlayerStatsTableColumns',
+      'updateGameScoreByPlayerId',
+      'fetchLeagueById',
+      'updateGameIsCompleted'
+    ]),
     reSubmit() {
       this.gameData.player_stats = this.gameData.player_stats.filter((p: any) => p.player_id !== this.getLoggedInPlayer._id)
     },
@@ -105,6 +134,18 @@ export default defineComponent({
 
       if (res.status === 200) {
         this.gameData = res.game
+      }
+    },
+    async completeGame() {
+      const res = await this.updateGameIsCompleted({
+        gameId: this.gameData._id,
+        completed: true
+      })
+
+      if(res.status === 200) {
+        this.gameData = res.game
+        this.team1Score = this.gameData.team_1_score
+        this.team2Score = this.gameData.team_2_score
       }
     }
   }

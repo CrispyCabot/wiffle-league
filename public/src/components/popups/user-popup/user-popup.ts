@@ -13,6 +13,8 @@ export default defineComponent({
     ...mapActions(['logPlayerOut']),
     ...mapMutations(['updateIsLoggedIn', 'updateLoggedInPlayer']),
     async redirectLink(link: string) {
+      this.$emit('link-click')
+
       if (link == '/logout') {
         await this.logPlayerOut()
       } else if (link == '/login') {
@@ -20,7 +22,6 @@ export default defineComponent({
       } else {
         this.$router.push(link)
       }
-      this.$emit('link-click')
     }
   }
 })

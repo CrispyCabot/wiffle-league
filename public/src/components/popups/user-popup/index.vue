@@ -15,7 +15,10 @@
           <font-awesome-icon class="icon" :icon="['fas', 'clipboard']"></font-awesome-icon>
           <p>My leagues</p>
         </div>
-        <p class="signout-link" @click="redirectLink('/logout')">Sign out...</p>
+        <div class="link" @click="redirectLink('/logout')">
+          <font-awesome-icon class="icon" :icon="['fas', 'sign-out-alt']"></font-awesome-icon>
+          <p>Sign out</p>
+        </div>
       </div>
       <div v-else-if="!getIsLoggedIn" class="not_logged_in_links">
         <p class="logged-out-text">You're not currently logged in</p>

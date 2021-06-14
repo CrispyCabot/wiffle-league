@@ -23,5 +23,17 @@ export const GameActions = {
           reject(error)
         })
     })
+  },
+  updateGameIsCompleted(_: any, payload: any) {
+    const { gameId, completed } = payload
+    return new Promise((resolve, reject) => {
+      api.put(`/games/${gameId}/update-completed`, { completed })
+        .then(({data}) => {
+          resolve(data)
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    })
   }
 }
