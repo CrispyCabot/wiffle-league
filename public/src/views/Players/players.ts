@@ -2,18 +2,23 @@ import { defineComponent } from "@vue/runtime-core";
 import { mapActions, mapGetters } from "vuex";
 import GridTable from '@/components/tables/grid-table/index.vue'
 import RadioButtonGroup from '@/components/inputs/radio-button-group/index.vue'
+import Pagination from '@/components/navigation/pagination/index.vue'
+import PaginationMixin from '@/mixins/pagination-mixin'
 
 export default defineComponent({
   name: 'players',
   components: {
-    GridTable
+    GridTable,
+    Pagination
   },
+  mixins: [PaginationMixin],
   data() {
     return {
       leagueId: '',
       creator: Object(),
       overallStatsColumns: Array<any>(),
-      players: Array<any>()
+      players: Array<any>(),
+      paginationRefresh: true
     }
   },
   computed: {
@@ -32,6 +37,9 @@ export default defineComponent({
         }
         return stats
       })
+    },
+    splicedRows(): Array<Object> {
+      return this.statsRows.slice(this.startingIndex, this.endingIndex)
     }
   },
   async created() {
@@ -72,6 +80,9 @@ export default defineComponent({
       if (this.players) {
         await this.fetchPlayers()
       }
+    },
+    statsRows() {
+      this.paginationRefresh = !this.paginationRefresh
     }
   }
 })
