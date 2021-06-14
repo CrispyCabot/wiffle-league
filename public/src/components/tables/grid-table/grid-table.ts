@@ -18,7 +18,8 @@ export default defineComponent({
     pageSize: { type: Number, default: 4 },
     hasSizeSelector: { type: Boolean, default: false },
     paginationRefresh: { type: Boolean, default: true },
-    canHideContent: { type: Boolean, default: false }
+    canHideContent: { type: Boolean, default: false },
+    clickable: { type: Boolean, default: true }
   },
   data() {
     return {

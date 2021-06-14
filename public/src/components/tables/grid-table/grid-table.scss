@@ -126,10 +126,10 @@
   }
 
   &_table_body_row {
-    cursor: pointer;
     transition: .3s;
-    &:hover {
+    &_hoverable:hover {
       background: $hover_grey;
+      cursor: pointer;
     }
   }
 }

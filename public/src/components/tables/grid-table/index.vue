@@ -12,7 +12,7 @@
           <th v-for="column in columns" :key="column.columnLabel" :class="{'hidden': column.isHidden}">{{column.columnLabel}}</th>
         </thead>
         <tbody v-if="rowsCount > 0" class="grid-table_table_body">
-          <tr v-for="row in rows" :key="row.name" class="grid-table_table_body_row" @click="$emit('row-clicked', row)">
+          <tr v-for="row in rows" :key="row.name" class="grid-table_table_body_row" :class = "{'grid-table_table_body_row_hoverable': clickable}" @click="$emit('row-clicked', row)">
             <td v-for="(col, key, index) in row"
               :key="col"
               class="grid-table_table_body_row_cell"
