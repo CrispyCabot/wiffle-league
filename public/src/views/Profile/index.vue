@@ -19,6 +19,7 @@
         :label="'Overall Stats'"
         :hasPagination="false"
         :hasSizeSelector="false"
+        :hoverable="false"
       ></grid-table>
 
       <content-dropdown class="profile-stats-table_settings" :label="'Settings'" :iconClass="'fas cog'">
