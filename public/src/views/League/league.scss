@@ -123,6 +123,9 @@
         color: $accent_light_red;
         text-align: left;
         margin-top: .75rem;
+        &:hover {
+          color: $accent_red;
+        }
       }
     }
     &_buttons {
