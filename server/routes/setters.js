@@ -14,10 +14,23 @@ router.route('/leagues/create').post(authChecker, async (req, res) => {
   const doesCreatorExist = await Players.exists({_id: league_creator_id})
   if (!doesLeagueNameExist) {
     if (doesCreatorExist) {
+      const defaultStats = {
+        hits: 0,
+        singles: 0,
+        doubles: 0,
+        triples: 0,
+        homeruns: 0,
+        plate_appearances: 0,
+        at_bats: 0,
+        games: 0,
+        wins: 0,
+        losses: 0,
+        points: 0
+      }
       const league = await Leagues.create({
         name,
         player_ids: [...player_ids.filter(i => i != league_creator_id), league_creator_id],
-        player_stats,
+        player_stats: [...player_ids.filter(i => i != league_creator_id), league_creator_id].map(id => { return { player_id: id, stats: defaultStats } }),
         max_num_players,
         league_creator_id,
         game_ids,
@@ -131,7 +144,6 @@ router.route('/players/logout').post(async (req, res) => {
 
 // Game Setters
 const Games = require('../models/game-model');
-const e = require("express");
 router.route('/games/create').post(authChecker, async (req, res) => {
   const { games } = req.body
   const league_id = games[0].league_id
@@ -151,10 +163,7 @@ router.route('/games/create').post(authChecker, async (req, res) => {
     return game
   }))
 
-  
-  
   if (createdGames.length === games.length) {
-    console.log(createdGames)
     await Leagues.findOneAndUpdate({_id: league_id}, { $addToSet: { game_ids: createdGames.map(g => g._id) }, games_created: true })
     const league = await Leagues.findOne({_id: league_id})
     if (league) {
