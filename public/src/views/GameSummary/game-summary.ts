@@ -147,6 +147,9 @@ export default defineComponent({
         this.team1Score = this.gameData.team_1_score
         this.team2Score = this.gameData.team_2_score
       }
+    },
+    playerClick(row: any) {
+      this.$router.push(`/player/${row.id.text}`)
     }
   }
 })

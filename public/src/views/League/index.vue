@@ -1,6 +1,10 @@
 <template>
   <div class="league-container">
 
+    <div v-if="isSelectingGames" class="league-container_game-selection">
+      <game-selection-modal :gameCount="leagueData.num_games" :players="players" :teamSize="leagueData.team_size" @cancel="cancelStartLeague" @games-created="gamesCreated" />
+    </div>
+
     <div v-if="leagueData" class="league-container_content white_card_background">
       <p v-if="leagueData && leagueData.name" class="league-container_content_title">{{ leagueData.name }}</p>
       <p v-if="leagueData && !leagueData.games_created" class="league-container_content_sub-title">(League has not started)</p>

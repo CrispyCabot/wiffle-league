@@ -2,12 +2,14 @@ import { defineComponent } from "@vue/runtime-core";
 import { mapActions, mapGetters } from "vuex";
 import GridTable from '@/components/tables/grid-table/index.vue'
 import RadioButtonGroup from '@/components/inputs/radio-button-group/index.vue'
+import GameSelectionModal from '@/components/popups/game-selection-modal/index.vue'
 
 export default defineComponent({
   name: 'league',
   components: {
     GridTable,
-    RadioButtonGroup
+    RadioButtonGroup,
+    GameSelectionModal
   },
   data() {
     return {
@@ -47,7 +49,8 @@ export default defineComponent({
         'Female',
         'Other'
       ],
-      isSettingsEditing: false
+      isSettingsEditing: false,
+      isSelectingGames: false
     }
   },
   computed: {
@@ -68,7 +71,7 @@ export default defineComponent({
       return this.players.map((p: any) => {
         return {
           name: { text: p.firstname + ' ' + p.lastname, type: 'string' },
-          avg: { text: this.calcAvg(p), type: 'string' },
+          avg: { text: this.calcAvg(p.player_stats), type: 'string' },
           kick: { text: 'Kick Player',  type: this.isLoggedInPlayerCreatorOfLeague ? 'button' : 'hidden' },
           id: { text: p._id, type: 'hidden' }
         }
@@ -91,14 +94,14 @@ export default defineComponent({
       })
     },
     leaderboardRows(): Array<Object> {
-      const rows = this.players.map((player: any) => {
+      const rows = this.leagueData.player_stats.map((player: any) => {
         return {
           placement: { text: this.getPlayerPlacement(player), type: 'string' },
           name: { text: player.firstname + ' ' + player.lastname, type: 'string' },
-          winloss: { text: player.player_stats.wins + ' - ' + player.player_stats.losses, type: 'string' },
-          avg: { text: this.calcAvg(player), type: 'numeric' },
-          points: { text: player.player_stats.points, type: 'numeric' },
-          id: { text: player._id, type: 'hidden' }
+          winloss: { text: player.stats.wins + ' - ' + player.stats.losses, type: 'string' },
+          avg: { text: this.calcAvg(player.stats), type: 'numeric' },
+          points: { text: player.stats.points, type: 'numeric' },
+          id: { text: player.player_id, type: 'hidden' }
         }
       })
       return rows
@@ -170,6 +173,15 @@ export default defineComponent({
       }))
       this.players.sort((a, b) => b.player_stats.points - a.player_stats.points)
     },
+    async setupLeagueDataStats() {
+      this.leagueData.player_stats = await Promise.all(this.leagueData.player_stats.map(async (p: any) => {
+        const player = await this.fetchPlayerById(p.player_id)
+        p.firstname = player.firstname
+        p.lastname = player.lastname
+        return p
+      }))
+      this.leagueData.player_stats.sort((a: any, b: any) => b.stats.points - a.stats.points)
+    },
     async setupScheduleRows() {
       this.scheduleRows = await Promise.all(this.leagueData.game_ids.map(async (id: any) => {
         const game = await this.fetchGameById(id)
@@ -191,8 +203,8 @@ export default defineComponent({
         }
       }))
     },
-    calcAvg(player: any) {
-      const { hits, plate_appearances } = player.player_stats
+    calcAvg(stats: any) {
+      const { hits, plate_appearances } = stats
       if (hits == 0) return '.000'
       if (hits > plate_appearances) return '.000'
 
@@ -206,9 +218,11 @@ export default defineComponent({
         this.leagueData = res.league
       }
     },
+    cancelStartLeague() {
+      this.isSelectingGames = false
+    },
     startLeague() {
-      // TODO
-      // Should take you to create games pages
+      this.isSelectingGames = true
     },
     submitScores() {
       this.$router.push(`/league/${this.leagueData._id}/games`)
@@ -226,7 +240,7 @@ export default defineComponent({
       }
     },
     getPlayerPlacement(player: any): String {
-      const playerIndex = this.players.findIndex((p: any) => p._id === player._id) + 1
+      const playerIndex = this.leagueData.player_stats.findIndex((p: any) => p.player_id === player.player_id) + 1
 
       if (playerIndex < 20) {
         if (playerIndex === 1) return playerIndex + 'st'
@@ -288,12 +302,17 @@ export default defineComponent({
     },
     gameClick(row: any) {
       this.$router.push(`/game-summary/${row.id.text}`)
+    },
+    gamesCreated(league: any, games: any) {
+      this.leagueData = league
+      this.isSelectingGames = false
     }
   },
   watch: {
     async leagueData() {
       if (this.leagueData) {
         await this.fetchPlayers()
+        await this.setupLeagueDataStats()
         await this.setupScheduleRows()
       }
     }

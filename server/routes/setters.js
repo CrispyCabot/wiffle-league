@@ -14,10 +14,23 @@ router.route('/leagues/create').post(authChecker, async (req, res) => {
   const doesCreatorExist = await Players.exists({_id: league_creator_id})
   if (!doesLeagueNameExist) {
     if (doesCreatorExist) {
+      const defaultStats = {
+        hits: 0,
+        singles: 0,
+        doubles: 0,
+        triples: 0,
+        homeruns: 0,
+        plate_appearances: 0,
+        at_bats: 0,
+        games: 0,
+        wins: 0,
+        losses: 0,
+        points: 0
+      }
       const league = await Leagues.create({
         name,
         player_ids: [...player_ids.filter(i => i != league_creator_id), league_creator_id],
-        player_stats,
+        player_stats: [...player_ids.filter(i => i != league_creator_id), league_creator_id].map(id => { return { player_id: id, stats: defaultStats } }),
         max_num_players,
         league_creator_id,
         game_ids,
@@ -130,6 +143,36 @@ router.route('/players/logout').post(async (req, res) => {
 })
 
 // Game Setters
+const Games = require('../models/game-model');
+router.route('/games/create').post(authChecker, async (req, res) => {
+  const { games } = req.body
+  const league_id = games[0].league_id
+
+  let createdGames = []
+  await Promise.all(games.map(async (game) => {
+    
+    const { team_1_ids, team_2_ids, game_date, game_location, completed, team_1_score, team_2_score, player_stats } = game
+    const createdGame = await Games.create({
+      league_id, team_1_ids, team_2_ids, game_date, game_location, completed, team_1_score, team_2_score, player_stats
+    })
+    if (!createdGame) {
+      res.json({status: 400, message: 'Unsuccessfully created games'})
+    } else {
+      createdGames.push(createdGame)
+    }
+    return game
+  }))
+
+  if (createdGames.length === games.length) {
+    await Leagues.findOneAndUpdate({_id: league_id}, { $addToSet: { game_ids: createdGames.map(g => g._id) }, games_created: true })
+    const league = await Leagues.findOne({_id: league_id})
+    if (league) {
+      res.json({status: 200, message: 'Successfully created games', league, games: createdGames})
+    } else {
+      res.json({status: 400, message: 'Unsuccessfully created games'})
+    }
+  }
+})
 
 // Auth Setters
 router.route('/refresh_token').post((req, res) => {

@@ -4,8 +4,8 @@
 
     <div class="leagues-schedules white_card_background">
       <multi-item-selector
-        :selectedItems="selectedSchedulesNames"
-        :items="allLeagueNames"
+        :selectedItems="selectedSchedulesNames.map(n => { return { text: n } })"
+        :items="allLeagueNames.map(n => { return { text: n } })"
         :overrideText="selectedSchedules.filter(id => id != 'All').length == allLeagueNames.length
           ? 'All'
           : selectedSchedulesNames.length == 0
@@ -13,7 +13,7 @@
             : ''
           "
         :label="'Selected League(s)'"
-        :itemMaxCharacters="Math.floor((allLeagueNames.length / selectedSchedulesNames.length) * 3)"
+        :itemMaxCharacters="(allLeagueNames.length >= selectedSchedulesNames.length) ? Math.floor((allLeagueNames.length / selectedSchedulesNames.length) * 3) : 6"
         @multi-item-selection="handleScheduleSelection"
         @search-value-change="searchValueChange($event)"
       />

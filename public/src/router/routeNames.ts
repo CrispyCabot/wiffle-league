@@ -12,7 +12,6 @@ export default {
   CreateLeague: 'create-league',
   StartLeague: 'start-league',
   GameSummary: 'game-summary',
-  SubmitScore: 'submit-score',
   Games: 'games',
   NotFound: 'not-found',
   Profile: 'profile'

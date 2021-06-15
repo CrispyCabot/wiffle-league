@@ -21,8 +21,8 @@ export default defineComponent({
   computed: {
     selections(): string {
       return this.selectedItems.map((i: any) => {
-        let slice = i.slice(0, this.itemMaxCharacters)
-        if (i.length >= this.itemMaxCharacters) slice = slice + '...'
+        let slice = i.text.slice(0, this.itemMaxCharacters)
+        if (i.text.length >= this.itemMaxCharacters) slice = slice + '...'
         return slice
       }).join(', ')
     }

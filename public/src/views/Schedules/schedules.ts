@@ -108,8 +108,8 @@ export default defineComponent({
         this.selectedSchedules = [ 'All', ...this.allLeagues.map((l: any) => l._id) ]
       }
     },
-    handleScheduleSelection(leagueName: string) {
-      const league: any = this.allLeagues.find((l: any) => l.name == leagueName)
+    handleScheduleSelection(leagueName: any) {
+      const league: any = this.allLeagues.find((l: any) => l.name == leagueName.text)
       
       if (league) {
         if (this.selectedSchedules.includes(league._id)) {
