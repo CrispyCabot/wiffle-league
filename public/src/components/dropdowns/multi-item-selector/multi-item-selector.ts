@@ -29,6 +29,7 @@ export default defineComponent({
   },
   methods: {
     closePopup() {
+      this.$emit('closing-popup')
       this.isPopupOpen = false
     },
     togglePopup() {

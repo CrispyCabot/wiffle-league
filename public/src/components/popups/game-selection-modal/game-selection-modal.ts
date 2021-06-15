@@ -16,13 +16,18 @@ export default defineComponent({
     return {
       games: new Array(),
       currGameNum: 1,
-      currentGame: Object()
+      currentGame: Object(),
+      searchText: ''
     }
   },
   computed: {
     unselectedPlayers(): Array<any> {
       if (!this.players || this.players.length === 0) return []
-      return this.players.filter((p: any) => p._id && (!this.currentGame.team1Selections.map((p: any) => p._id).includes(p._id) && !this.currentGame.team2Selections.map((p: any) => p._id).includes(p._id)))
+      const filteredPlayers = this.players.filter((p: any) => p._id && (!this.currentGame.team1Selections.map((p: any) => p._id).includes(p._id) && !this.currentGame.team2Selections.map((p: any) => p._id).includes(p._id)))
+      if (this.searchText) {
+        return filteredPlayers.filter((p: any) => p.firstname.slice(0, this.searchText.length).toLowerCase() == this.searchText.toLowerCase())
+      }
+      return filteredPlayers
     },
     areAllGamesSubmitted(): Boolean {
       return this.games.filter((g: any) => {
@@ -124,6 +129,9 @@ export default defineComponent({
       if (res.status === 200) {
         this.$emit('games-created', res.league, res.games)
       }
+    },
+    searchValueChange(searchText: string) {
+      this.searchText = searchText
     }
   },
   watch: {

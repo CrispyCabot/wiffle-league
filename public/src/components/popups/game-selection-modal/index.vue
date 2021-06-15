@@ -17,12 +17,16 @@
           :selectedItems="currentGame.team1Selections.map(p => { return { text: p.firstname, id: p._id } })"
           :items="[...currentGame.team1Selections.map(p => { return { text: p.firstname, id: p._id } }), ...unselectedPlayers.map(p => { return { text: p.firstname, id: p._id } })]"
           @multi-item-selection="team1Selection"
+          @search-value-change="searchValueChange($event)"
+          @closing-popup="searchValueChange('')"
         />
         <multi-item-selector
           :label="'Team 2'"
           :selectedItems="currentGame.team2Selections.map(p => { return { text: p.firstname, id: p._id } })"
           :items="[...currentGame.team2Selections.map(p => { return { text: p.firstname, id: p._id } }), ...unselectedPlayers.map(p => { return { text: p.firstname, id: p._id } })]"
           @multi-item-selection="team2Selection"
+          @search-value-change="searchValueChange($event)"
+          @closing-popup="searchValueChange('')"
         />
       </div>
 

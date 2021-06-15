@@ -16,6 +16,7 @@
         :itemMaxCharacters="(allLeagueNames.length >= selectedSchedulesNames.length) ? Math.floor((allLeagueNames.length / selectedSchedulesNames.length) * 3) : 6"
         @multi-item-selection="handleScheduleSelection"
         @search-value-change="searchValueChange($event)"
+        @closing-popup="searchValueChange('')"
       />
 
       <div class="leagues-schedules_dropdowns">
