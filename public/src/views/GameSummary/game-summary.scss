@@ -256,8 +256,10 @@
 @media (min-width: 768px) {
   .game-summary {
     &_summary {
-      &_submission, &_completed {
+      &_submission {
         width: unset;
+      }
+      &_submission, &_completed {
         &_scores {
           min-width: 60%;
         }

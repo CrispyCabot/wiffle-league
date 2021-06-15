@@ -21,6 +21,9 @@ export default defineComponent({
     this.setIsMobileView()
     window.addEventListener('resize', this.setIsMobileView)
   },
+  updated() {
+    this.setIsMobileView()
+  },
   methods: {
     closeUserPopup() {
       this.isUserPopupOpen = false
