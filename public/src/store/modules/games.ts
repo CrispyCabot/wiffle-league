@@ -47,5 +47,18 @@ export const GameActions = {
           reject(error)
         })
     })
+  },
+  updateGameDateLocation({ getters }: any, payload: any) {
+    const { gameId, game_date, game_location } = payload
+    api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`
+    return new Promise((resolve, reject) => {
+      api.put(`/game/${gameId}/update-date-location`, { game_date, game_location })
+        .then(({data}) => {
+          resolve(data)
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    })
   }
 }

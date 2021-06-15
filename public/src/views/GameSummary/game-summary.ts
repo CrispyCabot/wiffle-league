@@ -25,7 +25,11 @@ export default defineComponent({
         homeruns: {text: 'Home Runs', value: null }
       },
       overallStatsColumns: Array<any>(),
-      league: Object()
+      league: Object(),
+      gameDate: '',
+      gameTime: '',
+      gameLoc: '',
+      isEditingGame: false
     }
   },
   computed: {
@@ -105,6 +109,25 @@ export default defineComponent({
       this.team1Score = this.gameData.team_1_score
       this.team2Score = this.gameData.team_2_score
     }
+
+    this.gameDate = new Date(this.gameData.game_date).toISOString().substr(0, 10)
+    const times = new Date(this.gameData.game_date)
+      .toLocaleTimeString()
+      .split(' ')
+      .map((str: string, i: number) => i == 0 ? str.substring(0, str.length - 3) : str)
+    this.gameTime = times[0]
+      .split(':')
+      .map((str: string, i: number) => {
+        if (i == 0 && str.length == 1) {
+          str = '0' + str
+          if (times[1] == 'PM') {
+            str = String(parseInt(str) + 12)
+          }
+        } 
+        return str
+      })
+      .join(':')
+    this.gameLoc = this.gameData.game_location
   },
   methods: {
     ...mapActions([
@@ -113,7 +136,8 @@ export default defineComponent({
       'fetchPlayerStatsTableColumns',
       'updateGameScoreByPlayerId',
       'fetchLeagueById',
-      'updateGameIsCompleted'
+      'updateGameIsCompleted',
+      'updateGameDateLocation'
     ]),
     reSubmit() {
       this.gameData.player_stats = this.gameData.player_stats.filter((p: any) => p.player_id !== this.getLoggedInPlayer._id)
@@ -150,6 +174,21 @@ export default defineComponent({
     },
     playerClick(row: any) {
       this.$router.push(`/player/${row.id.text}`)
+    },
+    async startEditingGame() {
+      if (!this.isEditingGame) {
+        this.isEditingGame = true
+        return
+      }
+
+      const date = new Date(this.gameDate + ', ' + this.gameTime)
+      const res = await this.updateGameDateLocation({ gameId: this.gameData._id, game_date: date, game_location: this.gameLoc })
+      if (res.status === 200) {
+        this.gameData = res.game
+      }
+    },
+    cancelEditingGame() {
+      this.isEditingGame = false
     }
   }
 })

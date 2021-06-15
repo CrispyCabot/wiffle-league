@@ -274,5 +274,23 @@ router.route('/games/:id/update-completed').put(async (req, res) => {
   // No failed queries prior to this points... send a successful response
   res.json({status: 200, message: 'Successfully updated game', game: game})
 })
+router.route('/game/:id/update-date-location').put(async (req, res) => {
+  const gameId = req.params.id
+  const { game_date, game_location } = req.body
+
+  // Updating the game completed
+  try {
+    await Games.findOneAndUpdate({_id: gameId}, {game_location, game_date})
+  } catch {
+    res.json({status: 400, message: 'Unsuccessfully updated game'})
+  }
+  
+  let game = await Games.findOne({_id: gameId})
+  if (game) {
+    res.json({status: 200, message: 'Successfully updated game', game: game})
+  } else {
+    res.json({status: 400, message: 'Unsuccessfully found game with given id'})
+  }
+})
 
 module.exports = router

@@ -23,6 +23,22 @@
         <h2 v-if="gameData && gameData.game_location">{{gameData.game_location}}</h2>
       </div>
 
+      <div v-if="isLeagueCreator && !gameIsCompleted" class="game-summary_summary_edit">
+        <div v-if="isEditingGame" class="game-summary_summary_edit_fields">
+          <label for="date">Date</label>
+          <input class="default-input" type="date" name="date" id="date" v-model="gameDate">
+          <label for="time">Time</label>
+          <input class="default-input" type="time" name="time" id="time" v-model="gameTime">
+          <label for="location">Location</label>
+          <input class="default-input" type="text" name="location" id="location" placeholder="Location" v-model="gameLoc">
+        </div>
+
+        <button v-if="isLeagueCreator && !gameIsCompleted" class="btn red_btn" :class="{'edit-game': !isEditingGame, 'submit-edit-game': isEditingGame}" @click="startEditingGame">
+          {{isEditingGame ? 'Submit' : 'Edit game'}}
+        </button>
+        <p v-if="isEditingGame" class="cancel-btn" @click="cancelEditingGame">Cancel</p>
+      </div>
+
       <div v-if="!gameIsCompleted && playerIsInGame && !playerHasSubmittedScores" class="game-summary_summary_submission">
         <h1>Submit your scores</h1>
         <div class="game-summary_summary_submission_scores">

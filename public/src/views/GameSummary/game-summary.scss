@@ -13,6 +13,45 @@
     .mark-finished {
       margin-bottom: .75rem;
     }
+    &_edit {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      padding: 1rem 2rem;
+      border: 1px solid $light_grey;
+      border-radius: .25rem;
+      background-color: $hover_grey;
+      .edit-game, .submit-edit-game {
+        margin-top: 0;
+      }
+      .cancel-btn {
+        font-size: .8rem;
+        font-weight: 400;
+        margin: .25rem 0;
+        width: max-content;
+        color: $dark_background
+      }
+      &_fields {
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        text-align: left;
+        label {
+          display: block;
+          text-align: left;
+          width: 100%;
+          max-width: 25rem;
+          margin: 0rem auto;
+          margin-top: .5rem;
+        }
+        .default-input {
+          display: block;
+          width: 100%;
+          margin: .25rem auto;
+        }
+      }
+    }
 
     &_teams {
       width: 90%;
