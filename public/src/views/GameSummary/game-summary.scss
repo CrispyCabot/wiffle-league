@@ -217,11 +217,13 @@
 
     &_completed {
       width: 90%;
+      margin: 0 auto;
       &_scores {
         margin: 1.5rem auto;
       }
       &_stats {
         width: 100%;
+        display: block;
         &_table {
           width: 100%;
         }
