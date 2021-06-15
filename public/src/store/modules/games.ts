@@ -35,5 +35,17 @@ export const GameActions = {
           reject(error)
         })
     })
+  },
+  createGames({ getters }: any, payload: any) {
+    api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`
+    return new Promise((resolve, reject) => {
+      api.post(`/games/create`, { games: payload })
+        .then(({data}) => {
+          resolve(data)
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    })
   }
 }

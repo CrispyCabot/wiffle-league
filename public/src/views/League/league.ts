@@ -293,6 +293,10 @@ export default defineComponent({
     },
     gameClick(row: any) {
       this.$router.push(`/game-summary/${row.id.text}`)
+    },
+    gamesCreated(league: any, games: any) {
+      this.leagueData = league
+      this.isSelectingGames = false
     }
   },
   watch: {

@@ -1,5 +1,6 @@
 import { defineComponent } from "vue";
 import MultiItemSelector from '@/components/dropdowns/multi-item-selector/index.vue'
+import { mapActions } from "vuex";
 
 export default defineComponent({
   name: 'game-selection-modal',
@@ -75,6 +76,7 @@ export default defineComponent({
     }
   },
   methods: {
+    ...mapActions(['createGames']),
     nextGame() {
       if (this.currGameNum == this.games.length) return
       this.currGameNum += 1
@@ -104,8 +106,24 @@ export default defineComponent({
         this.currentGame.team2Selections.push(player)
       }
     },
-    startLeague() {
-      // TODO
+    async startLeague() {
+      const mappedGames = this.games.map((g: any) => {
+        return {
+          league_id: this.$route.params.id,
+          team_1_ids: g.team1Selections.map((p: any) => p._id),
+          team_2_ids: g.team2Selections.map((p: any) => p._id),
+          game_date: new Date(g.date + ', ' + g.time),
+          game_location: g.location,
+          completed: false,
+          team_1_score: 0,
+          team_2_score: 0,
+          player_stats: []
+        }
+      })
+      const res = await this.createGames(mappedGames)
+      if (res.status === 200) {
+        this.$emit('games-created', res.league, res.games)
+      }
     }
   },
   watch: {

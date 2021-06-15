@@ -130,6 +130,40 @@ router.route('/players/logout').post(async (req, res) => {
 })
 
 // Game Setters
+const Games = require('../models/game-model');
+const e = require("express");
+router.route('/games/create').post(authChecker, async (req, res) => {
+  const { games } = req.body
+  const league_id = games[0].league_id
+
+  let createdGames = []
+  await Promise.all(games.map(async (game) => {
+    
+    const { team_1_ids, team_2_ids, game_date, game_location, completed, team_1_score, team_2_score, player_stats } = game
+    const createdGame = await Games.create({
+      league_id, team_1_ids, team_2_ids, game_date, game_location, completed, team_1_score, team_2_score, player_stats
+    })
+    if (!createdGame) {
+      res.json({status: 400, message: 'Unsuccessfully created games'})
+    } else {
+      createdGames.push(createdGame)
+    }
+    return game
+  }))
+
+  
+  
+  if (createdGames.length === games.length) {
+    console.log(createdGames)
+    await Leagues.findOneAndUpdate({_id: league_id}, { $addToSet: { game_ids: createdGames.map(g => g._id) }, games_created: true })
+    const league = await Leagues.findOne({_id: league_id})
+    if (league) {
+      res.json({status: 200, message: 'Successfully created games', league, games: createdGames})
+    } else {
+      res.json({status: 400, message: 'Unsuccessfully created games'})
+    }
+  }
+})
 
 // Auth Setters
 router.route('/refresh_token').post((req, res) => {

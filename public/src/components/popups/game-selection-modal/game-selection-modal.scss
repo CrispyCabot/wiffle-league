@@ -15,6 +15,7 @@
   &_content {
     padding: 2rem;
     width: 70%;
+    max-width: 40rem;
     background-color: $dark_background;
     border: 1px solid $off_white;
     position: fixed;
@@ -70,8 +71,10 @@
       }
     }
 
-    .btn.disabled {
+    .btn {
       margin-top: 1.5rem;
+    }
+    .btn.disabled {
       background-color: $light_grey;
       pointer-events: none;
     }
