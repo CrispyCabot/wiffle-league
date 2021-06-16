@@ -130,12 +130,24 @@
     }
     &_buttons {
       margin-bottom: 0 !important;
+      text-align: center;
+      button {
+        margin: 0 auto;
+      }
       p {
         cursor: pointer;
         text-align: center;
         font-size: .8rem;
         color: $light-grey;
         margin: .5rem 0 0 0;
+      }
+      h6 {
+        cursor: pointer;
+        text-align: center;
+        font-size: .8rem;
+        font-weight: 400;
+        color: $accent_red;
+        margin: 0 0 .5rem 0;
       }
     }
   }

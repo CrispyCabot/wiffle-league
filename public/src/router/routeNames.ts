@@ -14,5 +14,6 @@ export default {
   GameSummary: 'game-summary',
   Games: 'games',
   NotFound: 'not-found',
-  Profile: 'profile'
+  Profile: 'profile',
+  Notifications: 'notifications'
 }

@@ -42,11 +42,6 @@ export default defineComponent({
     }
   },
   created() {
-    const html = document.querySelector('html')
-    if (html) {
-      html.style.overflowY = 'hidden'
-    }
-
     for (let i = 1; i <= this.gameCount; i++) {
       const team1Selections: Array<Object> = []
       const team2Selections: Array<Object> = []
@@ -73,6 +68,12 @@ export default defineComponent({
     }
 
     this.setCurrentGame()
+  },
+  mounted() {
+    const html = document.querySelector('html')
+    if (html) {
+      html.style.overflowY = 'hidden'
+    }
   },
   beforeUnmount() {
     const html = document.querySelector('html')

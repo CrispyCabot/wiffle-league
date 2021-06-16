@@ -2,7 +2,7 @@
   <div class="league-container">
 
     <div v-if="isSelectingGames" class="league-container_game-selection">
-      <game-selection-modal :gameCount="leagueData.num_games" :players="players" :teamSize="leagueData.team_size" @cancel="cancelStartLeague" @games-created="gamesCreated" />
+      <game-selection-modal :gameCount="leagueData.num_games" :players="players ? players : []" :teamSize="leagueData.team_size" @cancel="cancelStartLeague" @games-created="gamesCreated" />
     </div>
 
     <div v-if="leagueData" class="league-container_content white_card_background">
@@ -87,7 +87,8 @@
       </div>
 
       <div class="content-section league-container_content_buttons">
-        <button v-if="isLoggedInPlayerCreatorOfLeague && !isLeagueStarted" class="btn red_btn" @click="startLeague">Start League</button>
+        <h6 v-if="players.length < Math.ceil(this.leagueData.team_size * 2)">Not enough players to fill the current team size</h6>
+        <button v-if="isLoggedInPlayerCreatorOfLeague && !isLeagueStarted" class="btn red_btn" :class="{'disabled': players.length < Math.ceil(this.leagueData.team_size * 2)}" @click="startLeague">Start League</button>
         <button v-if="!isLeagueStarted && !isLoggedInPlayerInLeague" class="btn red_btn" @click="joinLeague">Request to join</button>
         <button v-if="isLeagueStarted && isLoggedInPlayerInLeague" class="btn red_btn" @click="submitScores">Submit scores</button>
         <p v-if="isLoggedInPlayerCreatorOfLeague" class="delete-league" @click="deleteLeague">Delete League</p>

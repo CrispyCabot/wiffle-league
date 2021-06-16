@@ -40,6 +40,10 @@ body {
   &:hover {
     background-color: $light-grey;
   }
+  &.disabled {
+    pointer-events: none;
+    background-color: $light-grey;
+  }
 }
 
 .site-title {

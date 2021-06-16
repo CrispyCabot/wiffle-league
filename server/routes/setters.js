@@ -99,7 +99,14 @@ router.route('/players/create').post(async (req, res) => {
           show_information: false,
           league_ids: [],
           token_version: 0,
-          notifications: [],
+          notifications: {
+            league_invitations: [],
+            league_updates: [],
+            league_join_requests: [],
+            contact_request: [],
+            general_update: [],
+            other: []
+          },
           selected_league_schedules: ['All']
         })
       const accessToken = createAccessToken(player)
