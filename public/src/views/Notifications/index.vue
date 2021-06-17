@@ -1,6 +1,11 @@
 <template>
   <div class="notifications">
-    <h1>notifications</h1>
+    <div class="notifications_table white_card_background">
+      <collapsible-table 
+        :title="'Notifications'"
+        :sections="notificationSections"
+      />
+    </div>
   </div>
 </template>
 

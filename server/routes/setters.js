@@ -194,6 +194,7 @@ router.route('/refresh_token').post((req, res) => {
   }
   
   Players.findOne({_id: decodedPayload.userId}).then(user => {
+    console.log(user)
     if (!user || user.token_version !== decodedPayload.tokenVersion) return res.send({ ok: false, accessToken: '' });
     sendRefreshToken(req, res, createJRTEM(user))
     res.send({ ok: true, accessToken: createAccessToken(user), user: user })

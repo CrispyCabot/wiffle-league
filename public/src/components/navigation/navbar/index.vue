@@ -9,7 +9,10 @@
     </div>
 
     <div class="navbar-container_profile" v-click-away="closeUserPopup">
-      <font-awesome-icon :icon="['fas', 'user-circle']" @click="toggleUserPopup"></font-awesome-icon>
+      <div class="navbar-container_profile_icon">
+        <div ref="notification_count" v-if="notificationCount > 0"><span>{{notificationCount}}</span></div>
+        <font-awesome-icon class="user-icon" :icon="['fas', 'user-circle']" @click="toggleUserPopup"></font-awesome-icon>
+      </div>
       <transition name="popup">
         <user-popup v-if="isUserPopupOpen" class="user-popup" @link-click="closeUserPopup" />
       </transition>

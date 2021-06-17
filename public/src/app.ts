@@ -11,10 +11,10 @@ export default defineComponent({
   },
   async created() {
     const res = await this.retrieveRefreshToken()
-    console.log('token refreshed', res);
+    console.log('token refreshed', res)
     if (res.ok) {
-      await this.updateIsLoggedIn(true);
-      await this.updateLoggedInPlayer(res.user);
+      this.updateIsLoggedIn(true)
+      this.updateLoggedInPlayer(res.user)
     }
   },
   methods: {

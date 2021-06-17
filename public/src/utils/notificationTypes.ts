@@ -1,10 +1,8 @@
-enum NOTIFICATION_TYPES {
-  LEAGUE_INVITATION,
-  LEAGUE_UPDATE,
-  LEAGUE_JOIN_REQUEST,
-  CONTACT_REQUEST,
-  GENERAL_UPDATE,
-  OTHER
+export const NOTIFICATION_TYPES = {
+  LEAGUE_INVITATION: 'LeagueInvitation',
+  LEAGUE_UPDATE: 'LeagueUpdate',
+  LEAGUE_JOIN_REQUEST: 'LeagueJoinRequest',
+  CONTACT_REQUEST: 'ContactRequest',
+  GENERAL_UPDATE: 'GeneralUpdate',
+  OTHER: 'Other'
 }
-
-export default NOTIFICATION_TYPES

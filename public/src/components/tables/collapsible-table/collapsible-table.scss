@@ -1,0 +1,153 @@
+.collapsible-table {
+  width: 90%;
+  margin: 0 auto;
+  background-color: $off_white;
+  text-align: center;
+  &_title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: .5rem 0;
+  }
+
+  &_label {
+    font-size: 1rem;
+    text-align: left;
+    font-weight: 600;
+    padding: .25rem 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &-icon {
+      cursor: pointer;
+      color: $dark_background;
+      font-size: .9rem;
+      margin-right: .5rem;
+      transition: .3s;
+    }
+    p {
+      cursor: pointer;
+    }
+    &.open {
+      .grid-table_label-icon {
+        transform: rotate(180deg);
+      }
+    }
+    &.closed {
+      border-bottom: 1px solid $accent_red;
+    }
+  }
+  
+  &_table {
+    margin: 0 auto;
+    width: 100%;
+    min-width: max-content;
+    white-space: nowrap;
+    border-collapse: collapse;
+    text-align: left;
+    &-container {
+      overflow-x: auto;
+    }
+
+    &_head {
+      color: $off_white;
+      background-color: $accent_red;
+      th {
+        white-space: nowrap;
+        font-weight: 400;
+        padding: .6rem .75rem;
+        border-right: 1px solid $off_white;
+        &:last-child {
+          border-right: unset;
+        }
+        &.hidden {
+          display: none;
+        }
+      }
+    }
+    &_body {
+      &_row {
+        border-bottom: 1px solid $accent_light_red;
+        &_cell {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          padding: .25rem .75rem;
+          &.numeric {
+            text-align: center;
+            &-left {
+              text-align: left;
+            }
+          }
+          &.date {
+            text-align: left;
+          }
+          &.location {
+            text-align: center;
+          }
+          &.string {
+            text-align: left;
+          }
+          &.hidden {
+            display: none;
+          }
+          &.wrap {
+            text-overflow: unset;
+            overflow: auto;
+            white-space: unset;
+          }
+          &.button {
+            span {
+              button {
+                margin: .5rem 0;
+                font-size: .75rem;
+                padding: .3rem .75rem;
+              }
+            }
+            &-disabled {
+              span {
+                button {
+                  margin: .5rem 0;
+                  font-size: .75rem;
+                  padding: .3rem .75rem;
+                  cursor: default;
+                  background-color: $light_grey;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &_table-empty {
+    border-top: 1px solid $accent_light_red;
+    border-bottom: 1px solid $accent_light_red;
+    padding: .5rem 0;
+    h6 {
+      font-size: 1.5rem;
+    }
+  }
+
+  &_table_body_row {
+    transition: .3s;
+    &_hoverable:hover {
+      background: $hover_grey;
+      cursor: pointer;
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
