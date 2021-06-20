@@ -27,6 +27,7 @@
       <div v-if="contactModalIsOpen" class="contact-modal-container">
         <contact-modal
           :player="player"
+          :isSending="true"
           @close="closeContactModal"
           @send="sendContactNotification"
           v-click-away="closeContactModal"

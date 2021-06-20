@@ -9,7 +9,7 @@
 
     <div class="contact-modal_message">
       <label for="message">Message</label>
-      <textarea name="message" id="message" cols="30" rows="6" :disabled="messageOverride" v-model="message"></textarea>
+      <textarea name="message" id="message" cols="30" rows="6" :disabled="messageOverride || !isSending" v-model="message"></textarea>
     </div>
     <div v-if="!isSending" class="contact-modal_response">
       <label for="response">Response</label>

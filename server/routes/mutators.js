@@ -2,6 +2,7 @@ const router = require("express").Router();
 const bcrypt = require('bcrypt');
 const authChecker = require("./utils/auth-checker");
 const gameScoreCalculation = require("./utils/game-score-calculation");
+const sendNotification = require("./utils/send-notification");
 
 const defaultStats = {
   hits: 0,
@@ -38,12 +39,11 @@ router.route('/leagues/kick-player').put(authChecker, async (req, res) => {
     res.send({ status: 400, message: 'Cannot kick the creator'})
   } else {
     // Remove player id from league
-    await Leagues.findOneAndUpdate({_id: leagueId}, { $set: { player_ids: league.player_ids.filter(id => id != playerId) } })
+    await Leagues.findOneAndUpdate({_id: leagueId}, { $pull: { player_ids: playerId } })
     // Remove league id from player
     await Players.findOneAndUpdate({_id: playerId}, { $pull: { league_ids: leagueId } })
-    // TODO
-    // Should also send a notification?
-
+    const notification = { senderId: league.league_creator_id, leagueId: leagueId, message: 'You have been kicked', type: 'LeagueUpdate' }
+    await sendNotification(playerId, notification, 'league_updates')
     const updatedLeague = await Leagues.findOne({_id: leagueId})
     if (updatedLeague) {
       res.send({ status: 200, message: 'Player successfully kicked', league: updatedLeague})
@@ -59,7 +59,7 @@ router.route('/leagues/add-player').put(authChecker, async (req, res) => {
   const league = await Leagues.findOne({_id: leagueId})
   if (!league) {
     res.status(400).send({ status: 400, message: 'Could not find league'})
-  } else if (league.league_creator_id !== playerId) {
+  } else if (league.league_creator_id != playerId) {
     res.status(400).send({ status: 400, message: 'Player making request is not the creator of this league'})
   }
 
@@ -76,6 +76,10 @@ router.route('/leagues/add-player').put(authChecker, async (req, res) => {
     await Players.findOneAndUpdate({_id: senderId}, { $addToSet: { league_ids: leagueId } })
     const updatedLeague = await Leagues.findOne({_id: leagueId})
     const updatedPlayer = await Players.findOne({_id: playerId})
+
+    const notification = { senderId: league.league_creator_id, leagueId: leagueId, message: 'You have been added', type: 'LeagueUpdate' }
+    await sendNotification(senderId, notification, 'league_updates')
+
     if (updatedLeague) {
       res.status(200).send({ status: 200, message: 'Player successfully added', league: updatedLeague, player: updatedPlayer })
     } else { 
@@ -282,32 +286,8 @@ router.route('/player/:id/notification/league-invitation/accept').put(async (req
 router.route('/player/:id/notification/send').put(async (req, res) => {
   const playerId = req.params.id
   const { notification, notificationKey } = req.body
-  
-  let player = await Players.findOne({_id: playerId})
-
-  const alreadySentNotification = player.notifications[notificationKey].notifications.some(n => {
-    return (
-      n.senderId == notification.senderId &&
-      n.leagueId == notification.leagueId &&
-      n.gameId == notification.gameId &&
-      n.message == notification.message &&
-      n.type == notification.type
-    )
-  })
-
-  if (alreadySentNotification) {
-    res.send({ status: 400, message: 'Already sent this notification' })
-  } else {
-    player.notifications[notificationKey].notifications = [...player.notifications[notificationKey].notifications, notification]
-    await Players.findOneAndUpdate({_id: playerId}, { $set: { notifications: player.notifications } })
-    player = await Players.findOne({_id: playerId})
-  
-    if (player) {
-      res.send({status: 200, message: 'Successfully sent notification', notification: notification, player: player})
-    } else {
-      res.send({ status: 400, message: 'Unsuccessfully sent notification', notification: notification })
-    }
-  }
+  const response = await sendNotification(playerId, notification, notificationKey)
+  res.send(response)
 })
 
 // Game Mutators
@@ -344,6 +324,7 @@ router.route('/games/:id/update-score').put(async (req, res) => {
   await Games.findOneAndUpdate({_id: gameId}, game)
   game = await Games.findOne({_id: gameId})
   if (game) {
+
     res.json({status: 200, message: 'Successfully updated game', game: game})
   } else {
     res.json({status: 400, message: 'Unsuccessfully updated game'})
@@ -420,6 +401,14 @@ router.route('/games/:id/update-completed').put(async (req, res) => {
   if(!updatedLeague) res.json({status: 400, message: 'Unsuccessfully updated league overall stats'})
   
   // No failed queries prior to this points... send a successful response
+  const notification = { senderId: league.league_creator_id, leagueId: game.league_id, gameId: game._id, message: 'Scores posted', type: 'LeagueUpdate' }
+  await Promise.all(game.team_1_ids.map(async (id) => {
+    await sendNotification(id, notification, 'league_updates')
+  }))
+  await Promise.all(game.team_2_ids.map(async (id) => {
+    await sendNotification(id, notification, 'league_updates')
+  }))
+
   res.json({status: 200, message: 'Successfully updated game', game: game})
 })
 router.route('/game/:id/update-date-location').put(async (req, res) => {
@@ -434,7 +423,16 @@ router.route('/game/:id/update-date-location').put(async (req, res) => {
   }
   
   let game = await Games.findOne({_id: gameId})
+  let league = await Leagues.findOne({_id: game.league_id})
   if (game) {
+    const notification = { senderId: league.league_creator_id, leagueId: game.league_id, gameId: game._id, message: 'Game schedule changed', type: 'LeagueUpdate' }
+    await Promise.all(game.team_1_ids.map(async (id) => {
+      await sendNotification(id, notification, 'league_updates')
+    }))
+    await Promise.all(game.team_2_ids.map(async (id) => {
+      await sendNotification(id, notification, 'league_updates')
+    }))
+
     res.json({status: 200, message: 'Successfully updated game', game: game})
   } else {
     res.json({status: 400, message: 'Unsuccessfully found game with given id'})

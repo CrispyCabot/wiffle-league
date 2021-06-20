@@ -159,9 +159,9 @@ export default defineComponent({
       if ((section.sectionKey === 'league_updates' && row.message === '') || section.sectionKey === 'league_invitations') {
         this.$router.push(`/league/${row.leagueId}`)
       } else if (section.sectionKey === 'league_updates' && row.message !== '') {
-        if (row.message === 'Scores posted' || row.message === 'Scores overwritten' || row.message === 'Game scheduled') {
+        if (row.message === 'Scores posted' || row.message === 'Scores overwritten' || row.message === 'Game scheduled' || row.message === 'Game schedule changed') {
           this.$router.push(`/game-summary/${row.gameId}`)
-        } else if (row.message === 'Games scheduled') {
+        } else {
           this.$router.push(`/league/${row.leagueId}`)
         }
       } else if (section.sectionKey === 'contact_requests') {
