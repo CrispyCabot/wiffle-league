@@ -48,7 +48,33 @@ playerJSON = """
     "league_ids": leagues_placeholder,
     "token_version": 0,
     "selected_league_schedules": ["All"],
-    "notifications": []
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
 },"""
 
 
