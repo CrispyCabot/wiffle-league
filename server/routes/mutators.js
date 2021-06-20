@@ -3,6 +3,20 @@ const bcrypt = require('bcrypt');
 const authChecker = require("./utils/auth-checker");
 const gameScoreCalculation = require("./utils/game-score-calculation");
 
+const defaultStats = {
+  hits: 0,
+  singles: 0,
+  doubles: 0,
+  triples: 0,
+  homeruns: 0,
+  plate_appearances: 0,
+  at_bats: 0,
+  games: 0,
+  wins: 0,
+  losses: 0,
+  points: 0
+}
+
 // League Mutators
 const Leagues = require('../models/league-model')
 router.route('/leagues/kick-player').put(authChecker, async (req, res) => {
@@ -35,6 +49,37 @@ router.route('/leagues/kick-player').put(authChecker, async (req, res) => {
       res.send({ status: 200, message: 'Player successfully kicked', league: updatedLeague})
     } else { 
       res.send({ status: 400, message: 'Player unsuccessfully kicked' })
+    }
+  }
+  
+})
+router.route('/leagues/add-player').put(authChecker, async (req, res) => {
+  const { playerId, senderId, leagueId } = req.body
+
+  const league = await Leagues.findOne({_id: leagueId})
+  if (!league) {
+    res.status(400).send({ status: 400, message: 'Could not find league'})
+  } else if (league.league_creator_id !== playerId) {
+    res.status(400).send({ status: 400, message: 'Player making request is not the creator of this league'})
+  }
+
+  // Check if player id is in league
+  const playerIsInLeague = league.player_ids.includes(senderId)
+  if (playerIsInLeague) {
+    res.status(400).send({ status: 400, message: 'Player is already in the league'})
+  } else {
+    // Remove player id from league
+    await Leagues.findOneAndUpdate({_id: leagueId}, { $push: { player_ids: senderId } })
+    // Add player stats for new player in league
+    await Leagues.findOneAndUpdate({_id: leagueId}, { $addToSet: { player_stats: { player_id: senderId, stats: defaultStats } } })
+    // Add league id to players league ids
+    await Players.findOneAndUpdate({_id: senderId}, { $addToSet: { league_ids: leagueId } })
+    const updatedLeague = await Leagues.findOne({_id: leagueId})
+    const updatedPlayer = await Players.findOne({_id: playerId})
+    if (updatedLeague) {
+      res.status(200).send({ status: 200, message: 'Player successfully added', league: updatedLeague, player: updatedPlayer })
+    } else { 
+      res.status(400).send({ status: 400, message: 'Player unsuccessfully added' })
     }
   }
   
@@ -159,6 +204,109 @@ router.route('/players/:id/selected-schedules/remove').put(async (req, res) => {
     }
   } else {
     res.send({ status: 400 })
+  }
+})
+
+// Notification Mutators
+router.route('/player/:id/notification/delete').put(async (req, res) => {
+  const playerId = req.params.id
+  const { notification, sectionKey } = req.body
+  let player = await Players.findOne({_id: playerId})
+  player.notifications[sectionKey].notifications = player.notifications[sectionKey].notifications.filter(n => {
+    return !(
+      n.senderId == notification.senderId &&
+      n.leagueId == notification.leagueId &&
+      n.gameId == notification.gameId &&
+      n.message == notification.message &&
+      n.type == notification.type
+    )
+  })
+  await Players.findOneAndUpdate({_id: playerId}, { $set: { notifications: player.notifications } })
+  player = await Players.findOne({_id: playerId})
+
+  if (player) {
+    res.send({status: 200, message: 'Successfully removed player notification', player: player})
+  } else {
+    res.send({ status: 400, message: 'Unsuccessfully removed player notification' })
+  }
+})
+router.route('/player/:id/notification/reorder').put(async (req, res) => {
+  const playerId = req.params.id
+  const { notifications } = req.body
+  await Players.findOneAndUpdate({_id: playerId}, { $set: { notifications: notifications } })
+  player = await Players.findOne({_id: playerId})
+
+  if (player) {
+    res.send({status: 200, message: 'Successfully reordered player notification', player: player})
+  } else {
+    res.send({ status: 400, message: 'Unsuccessfully reordered player notification' })
+  }
+})
+router.route('/player/:id/notification/collapse').put(async (req, res) => {
+  const playerId = req.params.id
+  const { notifications } = req.body
+  await Players.findOneAndUpdate({_id: playerId}, { $set: { notifications: notifications } })
+  player = await Players.findOne({_id: playerId})
+
+  if (player) {
+    res.send({status: 200, message: 'Successfully set collapsed status of player notification', player: player})
+  } else {
+    res.send({ status: 400, message: 'Unsuccessfully set collapsed status of player notification' })
+  }
+})
+router.route('/player/:id/notification/league-invitation/accept').put(async (req, res) => {
+  const playerId = req.params.id
+  const { notification } = req.body
+
+  let league = await Leagues.findOne({_id: notification.leagueId})
+  if (league.players_invited.includes(playerId)) {
+    // Add league id to player
+    await Players.findOneAndUpdate({_id: playerId}, { $addToSet: { league_ids: league._id } })
+    player = await Players.findOne({_id: playerId})
+    // Add player stats for new player in league
+    await Leagues.findOneAndUpdate({_id: notification.leagueId}, { $addToSet: { player_stats: { player_id: playerId, stats: defaultStats } } })
+    // Remove player id from players invited in league
+    await Leagues.findOneAndUpdate({_id: notification.leagueId}, { $pull: { players_invited: playerId } })
+    // Add player id to players ids in league
+    await Leagues.findOneAndUpdate({_id: notification.leagueId}, { $push: { player_ids: playerId } })
+
+    if (player) {
+      res.send({status: 200, message: 'Successfully added player to league', player: player})
+    } else {
+      res.send({ status: 400, message: 'Unsuccessfully added player to league' })
+    }
+  } else {
+    res.send({ status: 400, message: 'League has not invited player with this id' })
+  }
+})
+router.route('/player/:id/notification/send').put(async (req, res) => {
+  const playerId = req.params.id
+  const { notification, notificationKey } = req.body
+  
+  let player = await Players.findOne({_id: playerId})
+
+  const alreadySentNotification = player.notifications[notificationKey].notifications.some(n => {
+    return (
+      n.senderId == notification.senderId &&
+      n.leagueId == notification.leagueId &&
+      n.gameId == notification.gameId &&
+      n.message == notification.message &&
+      n.type == notification.type
+    )
+  })
+
+  if (alreadySentNotification) {
+    res.send({ status: 400, message: 'Already sent this notification' })
+  } else {
+    player.notifications[notificationKey].notifications = [...player.notifications[notificationKey].notifications, notification]
+    await Players.findOneAndUpdate({_id: playerId}, { $set: { notifications: player.notifications } })
+    player = await Players.findOne({_id: playerId})
+  
+    if (player) {
+      res.send({status: 200, message: 'Successfully requested to join league', player: player})
+    } else {
+      res.send({ status: 400, message: 'Unsuccessfully requested to join league' })
+    }
   }
 })
 

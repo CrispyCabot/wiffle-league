@@ -118,6 +118,20 @@ export const LeagueActions = {
         })
     })
   },
+  addPlayerToLeagueGivenId({ getters, commit }: any, payload: any) {
+    const { playerId, senderId, leagueId } = payload
+    api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`;
+    return new Promise((resolve, reject) => {
+      api.put(`/leagues/add-player`, { playerId, senderId, leagueId })
+        .then(({data}) => {
+          commit('updateLoggedInPlayer', data.player)
+          resolve(data)
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    })
+  },
   deleteLeagueById({getters}: any, leagueId: String) {
     api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`;
     return new Promise((resolve, reject) => {

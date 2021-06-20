@@ -1,4 +1,4 @@
-export const NOTIFICATION_TYPES = {
+const NOTIFICATION_TYPES = {
   LEAGUE_INVITATION: 'LeagueInvitation',
   LEAGUE_UPDATE: 'LeagueUpdate',
   LEAGUE_JOIN_REQUEST: 'LeagueJoinRequest',
@@ -6,3 +6,6 @@ export const NOTIFICATION_TYPES = {
   GENERAL_UPDATE: 'GeneralUpdate',
   OTHER: 'Other'
 }
+
+
+export default NOTIFICATION_TYPES

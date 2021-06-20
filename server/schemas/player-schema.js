@@ -17,12 +17,31 @@ const player_schema = new Schema({
   league_ids: [Schema.Types.ObjectId],
   token_version: Number,
   notifications: {
-    league_invitations: [ notification ],
-    league_updates: [ notification ],
-    league_join_requests: [ notification ],
-    contact_request: [ notification ],
-    general_update: [ notification ],
-    other: [ notification ]
+    league_invitations: {
+      notifications: [ notification ],
+      order_index: Number,
+      collapsed: Boolean
+    },
+    league_updates: {
+      notifications: [ notification ],
+      order_index: Number,
+      collapsed: Boolean
+    },
+    league_join_requests: {
+      notifications: [ notification ],
+      order_index: Number,
+      collapsed: Boolean
+    },
+    contact_requests: {
+      notifications: [ notification ],
+      order_index: Number,
+      collapsed: Boolean
+    },
+    other: {
+      notifications: [ notification ],
+      order_index: Number,
+      collapsed: Boolean
+    }
   },
   selected_league_schedules: Array
 }, {strict: false})

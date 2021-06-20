@@ -100,12 +100,31 @@ router.route('/players/create').post(async (req, res) => {
           league_ids: [],
           token_version: 0,
           notifications: {
-            league_invitations: [],
-            league_updates: [],
-            league_join_requests: [],
-            contact_request: [],
-            general_update: [],
-            other: []
+            league_invitations: {
+              notifications: [],
+              order_index: 0,
+              collapsed: false
+            },
+            league_updates: {
+              notifications: [],
+              order_index: 1,
+              collapsed: false
+            },
+            league_join_requests: {
+              notifications: [],
+              order_index: 2,
+              collapsed: false
+            },
+            contact_request: {
+              notifications: [],
+              order_index: 3,
+              collapsed: false
+            },
+            other: {
+              notifications: [],
+              order_index: 4,
+              collapsed: false
+            }
           },
           selected_league_schedules: ['All']
         })
@@ -194,7 +213,6 @@ router.route('/refresh_token').post((req, res) => {
   }
   
   Players.findOne({_id: decodedPayload.userId}).then(user => {
-    console.log(user)
     if (!user || user.token_version !== decodedPayload.tokenVersion) return res.send({ ok: false, accessToken: '' });
     sendRefreshToken(req, res, createJRTEM(user))
     res.send({ ok: true, accessToken: createAccessToken(user), user: user })

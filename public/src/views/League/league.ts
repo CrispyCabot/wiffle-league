@@ -165,7 +165,8 @@ export default defineComponent({
       'fetchPlayerStatsTableColumns',
       'fetchLeaguesScheduleTableColumns',
       'fetchGameById',
-      'editLeagueSettings'
+      'editLeagueSettings',
+      'sendNotification'
     ]),
     async fetchPlayers() {
       this.players = await Promise.all(this.leagueData.player_ids.map(async (id: any) => {
@@ -227,8 +228,14 @@ export default defineComponent({
     submitScores() {
       this.$router.push(`/league/${this.leagueData._id}/games`)
     },
-    joinLeague() {
-      // TODO
+    async joinLeague() {
+      const message = `wants to join ${this.leagueData.name}`
+      const res = await this.sendNotification({
+        notification: { senderId: this.getLoggedInPlayer._id, leagueId: this.leagueId, message: message, type: 'LeagueJoinRequest' },
+        notificationKey: 'league_join_requests',
+        playerId: this.leagueData.league_creator_id
+      })
+      console.log(res)
     },
     async deleteLeague() {
       const res = await this.deleteLeagueById(this.leagueData._id)

@@ -37,7 +37,7 @@ export default defineComponent({
       let count = 0
       if (this.getLoggedInPlayer && this.getLoggedInPlayer.notifications) {
         Object.keys(this.getLoggedInPlayer.notifications).map((key: any) => {
-          count += this.getLoggedInPlayer.notifications[key].length
+          count += this.getLoggedInPlayer.notifications[key].notifications.length
         })
       }
       return count

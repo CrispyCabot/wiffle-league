@@ -3,7 +3,11 @@
     <div class="notifications_table white_card_background">
       <collapsible-table 
         :title="'Notifications'"
-        :sections="notificationSections"
+        :sections="orderedNotificationSections"
+        @row-header-click="handleRowHeaderClick"
+        @sections-mutated="mutatedSections"
+        @collapsible-row-title-click="handleRowTitleClick"
+        @collapsible-row-btn-click="handleRowBtnClick"
       />
     </div>
   </div>
