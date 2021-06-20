@@ -87,7 +87,7 @@
       </div>
 
       <div class="content-section league-container_content_buttons">
-        <h6 v-if="players.length < Math.ceil(this.leagueData.team_size * 2)">Not enough players to fill the current team size</h6>
+        <h6 v-if="isLoggedInPlayerCreatorOfLeague && players.length < Math.ceil(this.leagueData.team_size * 2)">Not enough players to fill the current team size</h6>
         <button v-if="isLoggedInPlayerCreatorOfLeague && !isLeagueStarted" class="btn red_btn" :class="{'disabled': players.length < Math.ceil(this.leagueData.team_size * 2)}" @click="startLeague">Start League</button>
         <button v-if="!isLeagueStarted && !isLoggedInPlayerInLeague" class="btn red_btn" @click="joinLeague">Request to join</button>
         <button v-if="isLeagueStarted && isLoggedInPlayerInLeague" class="btn red_btn" @click="submitScores">Submit scores</button>

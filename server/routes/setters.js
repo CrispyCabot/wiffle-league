@@ -199,6 +199,10 @@ router.route('/games/create').post(authChecker, async (req, res) => {
     await Leagues.findOneAndUpdate({_id: league_id}, { $addToSet: { game_ids: createdGames.map(g => g._id) }, games_created: true })
     const league = await Leagues.findOne({_id: league_id})
     if (league) {
+      const notification = { senderId: league.league_creator_id, leagueId: league._id, message: 'Schedule Posted', type: 'LeagueUpdate' }
+      await Promise.all(league.player_ids.map(async (id) => {
+        await sendNotification(id, notification, 'league_updates')
+      }))
       res.json({status: 200, message: 'Successfully created games', league, games: createdGames})
     } else {
       res.json({status: 400, message: 'Unsuccessfully created games'})

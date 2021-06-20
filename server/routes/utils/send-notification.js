@@ -16,7 +16,7 @@ module.exports = async (playerId, notification, notificationKey) => {
   if (alreadySentNotification) {
     return ({ status: 400, message: 'Already sent this notification' })
   } else {
-    player.notifications[notificationKey].notifications = [...player.notifications[notificationKey].notifications, notification]
+    player.notifications[notificationKey].notifications = [notification, ...player.notifications[notificationKey].notifications]
     await Players.findOneAndUpdate({_id: playerId}, { $set: { notifications: player.notifications } })
     player = await Players.findOne({_id: playerId})
   
