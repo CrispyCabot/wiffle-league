@@ -1,0 +1,49 @@
+.contact-modal {
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%);
+  max-width: 50rem;
+  .close-icon {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+
+  &_title {
+    margin-top: 1rem;
+    text-align: center;
+    h1 {
+      font-size: 2rem;
+      color: $accent_red;
+      font-style: italic;
+    }
+  }
+
+  &_message, &_response {
+    width: 80%;
+    margin: 1rem auto;
+    label {
+      text-align: left;
+    }
+    textarea {
+      width: 100%;
+      display: block;
+      outline: none;
+      border: 1px solid $light-grey;
+      border-radius: .25rem;
+      resize: vertical;
+      padding: .5rem;
+    }
+  }
+
+  &_btns {
+    text-align: center;
+    p {
+      font-size: .9rem;
+      cursor: pointer;
+      color: $light-grey;
+    }
+  }
+}
