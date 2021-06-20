@@ -10,6 +10,17 @@
         @collapsible-row-btn-click="handleRowBtnClick"
       />
     </div>
+
+    <div v-if="contactModalIsOpen" class="contact-modal-container">
+      <contact-modal
+        :player="contactPlayer"
+        :isSending="false"
+        :messageOverride="contactPlayerMessage"
+        @close="closeContactModal"
+        @send="sendContactNotification"
+        v-click-away="closeContactModal"
+      />
+    </div>
   </div>
 </template>
 

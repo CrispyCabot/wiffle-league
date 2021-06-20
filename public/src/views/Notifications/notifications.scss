@@ -1,0 +1,11 @@
+.notifications {
+  .contact-modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($dark_background, .5);
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+  }
+}

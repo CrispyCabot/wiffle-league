@@ -2,17 +2,22 @@ import { defineComponent } from "vue";
 import { mapActions, mapGetters } from "vuex";
 import NOTIFICATION_TYPES from '@/utils/notificationTypes'
 import CollapsibleTable from '@/components/tables/collapsible-table/index.vue'
+import ContactModal from '@/components/popups/contact-modal/index.vue'
 
 export default defineComponent({
   name: 'notifications',
   components: {
-    CollapsibleTable
+    CollapsibleTable,
+    ContactModal
   },
   data() {
     return {
       collapsedSections: new Array<any>(),
       notifications: new Array<any>(),
-      orderedNotificationSections: new Array<any>()
+      orderedNotificationSections: new Array<any>(),
+      contactModalIsOpen: false,
+      contactPlayer: {_id: ''},
+      contactPlayerMessage: ''
     }
   },
   computed: {
@@ -30,7 +35,8 @@ export default defineComponent({
       'reorderNotifications',
       'acceptLeagueInvitationNotification',
       'addPlayerToLeagueGivenId',
-      'collapseNotifications'
+      'collapseNotifications',
+      'sendNotification'
     ]),
     getSectionTitle(type: String): String {
       switch (type) {
@@ -97,10 +103,10 @@ export default defineComponent({
         sortedNotifications.push({
           rows: await Promise.all(this.getLoggedInPlayer.notifications[key].notifications
             .map(async (n: any) => {
-              const sender = await this.fetchPlayerById(n.senderId)
-              const senderName = `${sender.firstname} ${sender.lastname}`
-              const league = await this.fetchLeagueById(n.leagueId)
-              const leagueName = league.name
+              const sender = n.senderId ? await this.fetchPlayerById(n.senderId) : null
+              const senderName = n.senderId ? `${sender.firstname} ${sender.lastname}` : ''
+              const league = n.leagueId ? await this.fetchLeagueById(n.leagueId) : null
+              const leagueName = n.leagueId ? league.name : ''
               return {
                 ...n,
                 title: (n.type === 'LeagueInvitation' || n.type === 'LeagueUpdate')
@@ -111,6 +117,7 @@ export default defineComponent({
             })
           ),
           sectionTitle: this.getSectionTitle(key),
+          hasSubtitle: (key == 'league_join_requests' || key == 'league_updates'),
           sectionKey: key,
           isCollapsed: this.getLoggedInPlayer.notifications[key].collapsed
         })
@@ -123,7 +130,6 @@ export default defineComponent({
       this.orderedNotificationSections = await this.getOrderedNotificationSections()
     },
     async handleRowBtnClick({btn, row, section}: any) {
-      console.log(btn, row, section)
       if (btn === 'Accept') {
         if (section.sectionKey === 'league_invitations') {
           const res = await this.acceptLeagueInvitationNotification({ playerId: this.getLoggedInPlayer._id, notification: row, sectionKey: section.sectionKey  })
@@ -138,7 +144,13 @@ export default defineComponent({
           }
         }
       } else if (btn === 'View') {
-        this.handleRowTitleClick({ row, section })
+        if (section.sectionKey === 'contact_requests') {
+          this.contactPlayer = await this.fetchPlayerById(row.senderId)
+          this.contactPlayerMessage = row.message
+          this.toggleContactModal()
+        } else {
+          this.handleRowTitleClick({ row, section })
+        }
       } else if (btn === 'Deny' || btn === 'Dismiss') {
         await this.deleteNotification(row, section)
       }
@@ -152,6 +164,8 @@ export default defineComponent({
         } else if (row.message === 'Games scheduled') {
           this.$router.push(`/league/${row.leagueId}`)
         }
+      } else if (section.sectionKey === 'contact_requests') {
+        this.$router.push(`/player/${row.senderId}`)
       }
     },
     async deleteNotification(notification: any, notificationSection: any) {
@@ -184,7 +198,25 @@ export default defineComponent({
           console.log('success')
         }
       }
-    }
+    },
+    toggleContactModal() {
+      this.contactModalIsOpen = !this.contactModalIsOpen
+    },
+    closeContactModal() {
+      this.contactModalIsOpen = false
+    },
+    async sendContactNotification({ isSending, message, response }: any) {
+      const playerId = this.contactPlayer._id
+      const notification = {
+        senderId: this.getLoggedInPlayer._id,
+        leagueId: '',
+        gameId: '',
+        message: response,
+        type: 'ContactRequest'
+      }
+      await this.sendNotification({ playerId, notification, notificationKey: 'contact_requests' })
+      this.closeContactModal()
+    },
   },
   watch: {
     async getLoggedInPlayer() {

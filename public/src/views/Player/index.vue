@@ -22,7 +22,16 @@
       <row-card v-for="row in leagueRows" :key="row.id.text" :row="row" :columns="leagueColumns" @row-click="handleLeagueClick"/>
 
       <button class="btn red_btn" @click="inviteToLeague()">Invite to League</button>
-      <button class="btn red_btn" @click="contact()">Contact</button>
+      <button  v-if="player.show_information" class="btn red_btn" @click.stop="toggleContactModal">Contact</button>
+
+      <div v-if="contactModalIsOpen" class="contact-modal-container">
+        <contact-modal
+          :player="player"
+          @close="closeContactModal"
+          @send="sendContactNotification"
+          v-click-away="closeContactModal"
+        />
+      </div>
     </div>
 
   </div>

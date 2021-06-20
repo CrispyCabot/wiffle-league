@@ -303,9 +303,9 @@ router.route('/player/:id/notification/send').put(async (req, res) => {
     player = await Players.findOne({_id: playerId})
   
     if (player) {
-      res.send({status: 200, message: 'Successfully requested to join league', player: player})
+      res.send({status: 200, message: 'Successfully sent notification', notification: notification, player: player})
     } else {
-      res.send({ status: 400, message: 'Unsuccessfully requested to join league' })
+      res.send({ status: 400, message: 'Unsuccessfully sent notification', notification: notification })
     }
   }
 })

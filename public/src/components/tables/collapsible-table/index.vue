@@ -24,7 +24,7 @@
                   <td class="collapsible-content-cell">
                     <div class="collapsible-row-title">
                       <h2 @click="$emit('collapsible-row-title-click', { row, section })">{{row.title}}</h2>
-                      <p @click="$emit('collapsible-row-title-click', { row, section })" v-if="row.message">{{row.message}}</p>
+                      <p @click="$emit('collapsible-row-title-click', { row, section })" v-if="row.message && section.hasSubtitle">{{row.message}}</p>
                     </div>
                     <div class="collapsible-row-btns">
                       <button class="btn red_btn" v-for="btn in row.btns" :key="btn" @click="$emit('collapsible-row-btn-click', { btn, row, section })">{{btn}}</button>

@@ -1,14 +1,15 @@
 import { defineComponent } from "@vue/runtime-core"
-import GridTable from '@/components/tables/grid-table/index.vue'
 import { mapActions, mapGetters } from "vuex"
+import GridTable from '@/components/tables/grid-table/index.vue'
 import RowCard from '@/components/cards/row-card/index.vue'
-import { faTemperatureHigh } from "@fortawesome/free-solid-svg-icons"
+import ContactModal from '@/components/popups/contact-modal/index.vue'
 
 export default defineComponent({
   name: 'profile',
   components: {
     GridTable,
-    RowCard
+    RowCard,
+    ContactModal
   },
   data() {
     return {
@@ -17,7 +18,8 @@ export default defineComponent({
       columns: [],
       leagueColumns: ['adsf', 'aasdf', 'asdf', 'alsdkfj'],
       leagues: [],
-      leagueRanks: []
+      leagueRanks: [],
+      contactModalIsOpen: false
     }
   },
   computed: {
@@ -60,7 +62,7 @@ export default defineComponent({
     }))
   },
   methods: {
-    ...mapActions(['fetchPlayerStatsTableColumns', 'updateUserSettings', 'fetchPlayerById', 'getPlayerRank', 'fetchLeagueById']),
+    ...mapActions(['fetchPlayerStatsTableColumns', 'updateUserSettings', 'fetchPlayerById', 'getPlayerRank', 'fetchLeagueById', 'sendNotification']),
     redirect(link: string) {
       if (link == "top") {
         window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
@@ -69,8 +71,23 @@ export default defineComponent({
         this.$router.push(link)
       }
     },
-    contact() {
-      alert("To contact this person go talk to them u fkin idiot")
+    toggleContactModal() {
+      this.contactModalIsOpen = !this.contactModalIsOpen
+    },
+    closeContactModal() {
+      this.contactModalIsOpen = false
+    },
+    async sendContactNotification({ isSending, message, response }: any) {
+      const playerId = this.player._id
+      const notification = {
+        senderId: this.getLoggedInPlayer._id,
+        leagueId: '',
+        gameId: '',
+        message: message,
+        type: 'ContactRequest'
+      }
+      await this.sendNotification({ playerId, notification, notificationKey: 'contact_requests' })
+      this.closeContactModal()
     },
     inviteToLeague() {
       alert("To invite this person to a league go talk to them u fkin idiot")
