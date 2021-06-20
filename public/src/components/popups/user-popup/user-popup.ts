@@ -7,7 +7,16 @@ export default defineComponent({
     alignment: { type: String, default: 'right' }
   },
   computed: {
-    ...mapGetters(['getIsLoggedIn'])
+    ...mapGetters(['getIsLoggedIn', 'getLoggedInPlayer']),
+    notificationCount(): Number {
+      let count = 0
+      if (this.getLoggedInPlayer && this.getLoggedInPlayer.notifications) {
+        Object.keys(this.getLoggedInPlayer.notifications).map((key: any) => {
+          count += this.getLoggedInPlayer.notifications[key].notifications.length
+        })
+      }
+      return count
+    }
   },
   methods: {
     ...mapActions(['logPlayerOut']),

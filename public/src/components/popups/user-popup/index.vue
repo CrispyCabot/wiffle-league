@@ -10,6 +10,7 @@
         <div class="link" @click="redirectLink('/notifications')">
           <font-awesome-icon class="icon" :icon="['fas', 'bell']"></font-awesome-icon>
           <p>My notifications</p>
+          <div v-if="notificationCount" class="notification-count">{{notificationCount}}</div>
         </div>
         <div class="link" @click="redirectLink('/my-leagues')">
           <font-awesome-icon class="icon" :icon="['fas', 'clipboard']"></font-awesome-icon>

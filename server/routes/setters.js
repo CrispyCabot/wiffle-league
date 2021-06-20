@@ -2,6 +2,7 @@ const router = require("express").Router();
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { createAccessToken, createJRTEM, sendRefreshToken } = require('./utils/authorization');
+const sendNotification = require('./utils/send-notification');
 const authChecker = require("./utils/auth-checker");
 
 // League Setters
@@ -61,7 +62,12 @@ router.route('/leagues/delete').post(authChecker, async (req, res) => {
   if (!doesLeagueNameExist) {
     res.json({status: 400, message: 'League does not exist'})
   } else {
+    const league = await Leagues.findOne({_id: leagueId})
     await Leagues.deleteOne({_id: leagueId})
+    const notification = { senderId: league.league_creator_id, leagueId: leagueId, league: league, message: 'League Deleted', type: 'LeagueUpdate' }
+    await Promise.all(league.player_ids.map(async (id) => {
+      await sendNotification(id, notification, 'league_updates')
+    }))
     res.json({status: 200, message: 'League successfully deleted'})
   }
 })

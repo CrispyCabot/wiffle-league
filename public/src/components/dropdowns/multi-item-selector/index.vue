@@ -15,7 +15,7 @@
           <search-input @search-value-change="$emit('search-value-change', $event)"/>
         </div>
         <div class="multi-item-selector_popup_links_items">
-          <div v-for="item in items" :key="item" class="multi-item-selector_popup_links_items_item" @click="$emit('multi-item-selection', item)">
+          <div v-for="item in items" :key="item" class="multi-item-selector_popup_links_items_item" @click.stop="$emit('multi-item-selection', item)">
             <p>{{ item.text }}</p>
             <font-awesome-icon class="item-check" v-if="selectedItems.map(i => i.text).includes(item.text)" :icon="['fas', 'check']"></font-awesome-icon>
           </div>

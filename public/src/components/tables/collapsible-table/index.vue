@@ -22,7 +22,7 @@
                 <tr v-for="row in section.rows" :key="row.senderId" class="collapsible-table_table_body_collapsible-row">
                   <td class="collapsible-filler-cell"></td>
                   <td class="collapsible-content-cell">
-                    <div class="collapsible-row-title">
+                    <div class="collapsible-row-title" :class="{'not-clickable-title': !row.canClickTitle}">
                       <h2 @click="$emit('collapsible-row-title-click', { row, section })">{{row.title}}</h2>
                       <p @click="$emit('collapsible-row-title-click', { row, section })" v-if="row.message && section.hasSubtitle">{{row.message}}</p>
                     </div>

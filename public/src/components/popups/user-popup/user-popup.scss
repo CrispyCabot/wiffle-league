@@ -36,6 +36,7 @@
     right: 0;
     z-index: 5;
     min-width: max-content;
+    width: calc(100% + 6rem);
     background-color: $off_white;
     border: 1px solid $light_grey;
     border-radius: .4rem;
@@ -45,7 +46,7 @@
     }
     .logged_in_links {
       .link {
-        padding: .5rem 6rem .5rem 1rem;
+        padding: .5rem 1rem;
         cursor: pointer;
         color: $dark_background;
         display: flex;
@@ -54,9 +55,27 @@
         font-size: 1rem;
         font-weight: 600;
         transition: .3s;
+        position: relative;
         .icon {
           margin-right: .5rem;
           font-size: 1.25rem;
+        }
+        p {
+          min-width: max-content;
+          margin-right: 1rem;
+        }
+        .notification-count {
+          width: 100%;
+          text-align: right;
+          background-color: $accent_red;
+          width: 1.15rem;
+          height: 1.15rem;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $off_white;
+          font-size: .75rem;
         }
         &:hover {
           background-color: $hover_grey;

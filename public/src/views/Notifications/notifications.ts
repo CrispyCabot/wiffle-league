@@ -105,14 +105,15 @@ export default defineComponent({
             .map(async (n: any) => {
               const sender = n.senderId ? await this.fetchPlayerById(n.senderId) : null
               const senderName = n.senderId ? `${sender.firstname} ${sender.lastname}` : ''
-              const league = n.leagueId ? await this.fetchLeagueById(n.leagueId) : null
+              const league = (n.leagueId && n.message !== 'League Deleted') ? await this.fetchLeagueById(n.leagueId) : (n.message === 'League Deleted' && n.league) ? n.league : null
               const leagueName = n.leagueId ? league.name : ''
               return {
                 ...n,
                 title: (n.type === 'LeagueInvitation' || n.type === 'LeagueUpdate')
                   ? leagueName
                   : senderName,
-                btns: !((n.type === 'LeagueUpdate' || n.type === 'league_updates') && n.message === 'League Deleted') ? this.getRowBtns(n.type) : ['Dismiss'] 
+                btns: !((n.type === 'LeagueUpdate' || n.type === 'league_updates') && n.message === 'League Deleted') ? this.getRowBtns(n.type) : ['Dismiss'],
+                canClickTitle: !(n.type === 'LeagueUpdate' && n.message === 'League Deleted')
               }
             })
           ),
@@ -161,6 +162,8 @@ export default defineComponent({
       } else if (section.sectionKey === 'league_updates' && row.message !== '') {
         if (row.message === 'Scores posted' || row.message === 'Scores overwritten' || row.message === 'Game scheduled' || row.message === 'Game schedule changed') {
           this.$router.push(`/game-summary/${row.gameId}`)
+        } else if (row.message === 'League Deleted') {
+          return
         } else {
           this.$router.push(`/league/${row.leagueId}`)
         }

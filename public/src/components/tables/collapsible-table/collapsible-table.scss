@@ -99,6 +99,10 @@
                 width: max-content;
                 cursor: pointer;
               }
+              &.not-clickable-title {
+                cursor: default;
+                pointer-events: none;
+              }
             }
             .collapsible-row-btns {
               display: flex;
