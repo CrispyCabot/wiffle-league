@@ -6,6 +6,7 @@
   color: $off_white;
   font-size: 1.75rem;
   max-width: 80rem;
+  width: calc(100% - 4rem);
   margin: 0 auto;
 
   &_mobile {

@@ -34,13 +34,11 @@ export const PlayerActions = {
       api.post(`/players/login`, { email, password })
           .then(({data}) => {
               if (data.status == 200) {
-                  commit('updateIsLoggedIn', true)
-                  commit('updateLoggedInPlayer', data.player)
-                  commit('updateAccessToken', data.accessToken)
-                  resolve(data)
-              } else {
-                  throw 'Invalid Login'
+                commit('updateIsLoggedIn', true)
+                commit('updateLoggedInPlayer', data.player)
+                commit('updateAccessToken', data.accessToken)
               }
+              resolve(data)
           })
           .catch((error) => {
             reject(error)

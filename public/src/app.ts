@@ -1,14 +1,16 @@
 import api from '@/api/api'
 import Navbar from '@/components/navigation/navbar/index.vue'
 import Footer from '@/components/navigation/footer/index.vue'
-import { mapActions, mapMutations } from 'vuex'
+import Toast from '@/components/popups/toast/index.vue'
+import { mapActions, mapGetters, mapMutations } from 'vuex'
 import { defineComponent } from '@vue/runtime-core'
 
 export default defineComponent({
   name: 'app',
   components: {
     Navbar,
-    Footer
+    Footer,
+    Toast
   },
   async created() {
     const res = await this.retrieveRefreshToken()
@@ -19,8 +21,19 @@ export default defineComponent({
       api.defaults.headers.common['Authorization'] = `Bearer ${res.accessToken}`
     }
   },
+  computed: {
+    ...mapGetters(['getGlobalToastMessage', 'getGlobalToastType', 'getGlobalToastIsShowing'])
+  },
   methods: {
     ...mapActions(['retrieveRefreshToken']),
-    ...mapMutations(['updateIsLoggedIn', 'updateLoggedInPlayer'])
+    ...mapMutations(['updateIsLoggedIn', 'updateLoggedInPlayer', 'updateGlobalToast']),
+    closingGlobalToast() {
+      this.updateGlobalToast({
+        message: '',
+        type: '',
+        duration: '',
+        isShowing: false
+      })
+    }
   }
 })

@@ -1,7 +1,9 @@
 import { reactive } from "@vue/reactivity"
+import { IToast } from '@/interfaces/IToast'
 
 export default reactive({
   isLoggedIn: false,
   loggedInPlayer: {},
-  accessToken: ''
+  accessToken: '',
+  globalToast: {} as IToast
 })

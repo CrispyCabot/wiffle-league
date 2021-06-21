@@ -1,0 +1,81 @@
+.toast {
+  position: relative;
+  width: 100%;
+  max-width: 40rem;
+  background-color: $off_white;
+  border-radius: .5rem;
+  min-height: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem 3.5rem 1rem 1.75rem;
+  color: $dark_background;
+  
+  &_sidebar {
+    width: .5rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: .5rem 0 0 .5rem;
+    &.success {
+      background-color: $toast_green;
+    }
+    &.info {
+      background-color: $toast_blue;
+    }
+    &.error {
+      background-color: $toast_red;
+    }
+    &.warning {
+      background-color: $toast_yellow;
+    }
+  }
+
+  &_close-icon {
+    position: absolute;
+    top: .5rem;
+    right: .75rem;
+    color: $default_grey;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+      color: $dark_grey;
+    }
+  }
+
+  &_content {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &_icon {
+      font-size: 2rem;
+      margin-left: 0;
+      &.success {
+        color: $toast_green;
+      }
+      &.info {
+        color: $toast_blue;
+      }
+      &.error {
+        color: $toast_red;
+      }
+      &.warning {
+        color: $toast_yellow;
+      }
+    }
+    &_text {
+      margin-left: 1rem;
+      &_type {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+      &_message {
+        font-size: .9rem;
+        color: $default_grey;
+      }
+    }
+  }
+}
