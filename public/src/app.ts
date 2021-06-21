@@ -22,18 +22,20 @@ export default defineComponent({
     }
   },
   computed: {
-    ...mapGetters(['getGlobalToastMessage', 'getGlobalToastType', 'getGlobalToastIsShowing'])
+    ...mapGetters(['getGlobalToastMessage', 'getGlobalToastType', 'getGlobalToastIsShowing', 'getGlobalToastDuration'])
   },
   methods: {
     ...mapActions(['retrieveRefreshToken']),
     ...mapMutations(['updateIsLoggedIn', 'updateLoggedInPlayer', 'updateGlobalToast']),
     closingGlobalToast() {
-      this.updateGlobalToast({
-        message: '',
-        type: '',
-        duration: '',
-        isShowing: false
-      })
+      if (this.getGlobalToastIsShowing) {
+        this.updateGlobalToast({
+          message: '',
+          type: '',
+          duration: '',
+          isShowing: false
+        })
+      }
     }
   }
 })

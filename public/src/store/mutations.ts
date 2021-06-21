@@ -11,6 +11,7 @@ export default {
     state.accessToken = accessToken
   },
   updateGlobalToast(state: any, toast: IToast) {
+    state.globalToast.isShowing = false // Reset any previous toast before updating the next toast
     state.globalToast = toast
   }
 }

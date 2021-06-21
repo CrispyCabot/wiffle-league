@@ -1,4 +1,5 @@
 import api from '@/api/api'
+import { TOAST_TYPES } from '@/utils/toastTypes'
 
 export const PlayerActions = {
   fetchPlayerStatsTableColumns() {
@@ -53,6 +54,12 @@ export const PlayerActions = {
             commit('updateIsLoggedIn', false)
             commit('updateLoggedInPlayer', {})
             commit('updateAccessToken', null)
+            commit('updateGlobalToast', {
+              message: data.message,
+              type: data.status == 400 ? TOAST_TYPES.Error : TOAST_TYPES.Success,
+              duration: 5000,
+              isShowing: true
+            })
             resolve(data)
           } else {
             throw 'Invalid logout'

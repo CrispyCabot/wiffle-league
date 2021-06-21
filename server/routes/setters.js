@@ -152,7 +152,7 @@ router.route('/players/login').post(async (req, res) => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const isValidEmail = re.test(String(email).toLowerCase())
     if (!isValidEmail) {
-      res.json({player: response, status: 400, message: 'Invalid Email'})
+      res.json({player: response, status: 400, message: 'Email provided is invalid...'})
     } else {
       const playerWithEmail = await Players.findOne({ email: email })
       const passwordMatches = await bcrypt.compare(password, playerWithEmail.password)
@@ -161,18 +161,18 @@ router.route('/players/login').post(async (req, res) => {
         sendRefreshToken(req, res, createJRTEM(playerWithEmail))
         res.json({player: playerWithEmail, accessToken: accessToken, status: 200, message: 'Successfully logged into account'})
       } else {
-        res.json({status: 400, message: 'Incorrect password'})
+        res.json({status: 400, message: 'Password provided for this account was incorrect...'})
       }
     }
   } else {
-    res.json({status: 400, message: 'No account with this email'})
+    res.json({status: 400, message: 'No account with this email...'})
   }
 })
 router.route('/players/logout').post(async (req, res) => {
   sendRefreshToken(req, res, '')
   res.send({
     status: 200,
-    message: 'successful logout'
+    message: 'Successfully logged out...'
   })
 })
 

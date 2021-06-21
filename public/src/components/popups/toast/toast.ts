@@ -11,6 +11,10 @@ export default defineComponent({
   },
   data() {
     return {
+      timer: null as any,
+      slider: 100,
+      intervalRate: 10,
+      clearing: false
     }
   },
   computed: {
@@ -29,15 +33,28 @@ export default defineComponent({
     }
   },
   created() {
-    setTimeout(() => {
-      this.close()
-    }, this.duration)
+    this.startInterval()
   },
   unmounted() {
+    clearInterval(this.timer)
+    this.close()
+  },
+  updated() {
+    this.startInterval()
   },
   methods: {
     close() {
       this.$emit('close')
+    },
+    startInterval() {
+      clearInterval(this.timer)
+      this.slider = 100
+      this.timer = setInterval(() => {
+        this.slider -= 100 / (this.duration / this.intervalRate)
+        if (this.slider <= 0 && this.isShowing && !this.clearing) {
+          this.close()
+        }
+      }, this.intervalRate)
     }
   }
 })

@@ -1,3 +1,4 @@
+import { IToast } from "@/interfaces/IToast"
 import state from "./state"
 
 export default {
