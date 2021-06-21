@@ -1,3 +1,4 @@
+import api from '@/api/api'
 import Navbar from '@/components/navigation/navbar/index.vue'
 import Footer from '@/components/navigation/footer/index.vue'
 import { mapActions, mapMutations } from 'vuex'
@@ -15,6 +16,7 @@ export default defineComponent({
     if (res.ok) {
       this.updateIsLoggedIn(true)
       this.updateLoggedInPlayer(res.user)
+      api.defaults.headers.common['Authorization'] = `Bearer ${res.accessToken}`
     }
   },
   methods: {

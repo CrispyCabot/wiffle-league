@@ -4,7 +4,7 @@ module.exports = async (playerId, notification, notificationKey) => {
   let player = await Players.findOne({_id: playerId})
 
   const alreadySentNotification = player.notifications[notificationKey].notifications.some(n => {
-    return (
+    return !(
       n.senderId == notification.senderId &&
       n.leagueId == notification.leagueId &&
       n.gameId == notification.gameId &&

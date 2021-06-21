@@ -55,7 +55,6 @@ export const LeagueActions = {
   },
   createLeague({ getters }:any, payload: any) {
     const { creatorId, name, maxPlayers, numGames, teamSize, startDate, endDate, deadlineDate, other, gender } = payload
-    api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`;
     return new Promise((resolve, reject) => {
       api.post(`/leagues/create`, {
         name: name,
@@ -83,7 +82,6 @@ export const LeagueActions = {
   },
   editLeagueSettings({ getters }:any, payload: any) {
     const { leagueId, name, maxPlayers, numGames, teamSize, startDate, endDate, deadlineDate, other, gender } = payload
-    api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`;
     return new Promise((resolve, reject) => {
       api.put(`/leagues/edit-settings`, {
         leagueId: leagueId,
@@ -107,7 +105,6 @@ export const LeagueActions = {
   },
   removePlayerFromLeagueGivenId({ getters }: any, payload: any) {
     const { playerId, leagueId } = payload
-    api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`;
     return new Promise((resolve, reject) => {
       api.put(`/leagues/kick-player`, { playerId, leagueId })
         .then(({data}) => {
@@ -120,7 +117,6 @@ export const LeagueActions = {
   },
   addPlayerToLeagueGivenId({ getters, commit }: any, payload: any) {
     const { playerId, senderId, leagueId } = payload
-    api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`;
     return new Promise((resolve, reject) => {
       api.put(`/leagues/add-player`, { playerId, senderId, leagueId })
         .then(({data}) => {
@@ -133,7 +129,6 @@ export const LeagueActions = {
     })
   },
   invitePlayerToLeague({ getters }: any, { leagueId, playerId }: any) {
-    api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`;
     return new Promise((resolve, reject) => {
       api.put(`/league/${leagueId}/invite`, { playerId })
         .then(({data}) => {
@@ -145,7 +140,6 @@ export const LeagueActions = {
     })
   },
   deleteLeagueById({getters}: any, leagueId: String) {
-    api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`;
     return new Promise((resolve, reject) => {
       api.post(`/leagues/delete`, { leagueId })
         .then(({data}) => {

@@ -129,10 +129,14 @@ router.route('/league/:id/invite').put(authChecker, async (req, res) => {
         message: '',
         type: 'LeagueInvitation'
       }
-      await sendNotification(playerId, notification, 'league_invitations')
-      res.send({ status: 200, message: 'Successfully sent league invitation', league: updatedLeague})
+      const notificationResponse = await sendNotification(playerId, notification, 'league_invitations')
+      if (notificationResponse.status == 200) {
+        res.status(200).send({ status: 200, message: 'Successfully sent league invitation', league: updatedLeague})
+      } else {
+        res.status(400).send(notificationResponse)
+      }
     } else { 
-      res.send({ status: 400, message: 'Unsuccessfully updated league settings' })
+      res.status(400).send({ status: 400, message: 'Unsuccessfully sent league invitation' })
     }
   }
   
@@ -284,7 +288,7 @@ router.route('/player/:id/notification/collapse').put(async (req, res) => {
     res.send({ status: 400, message: 'Unsuccessfully set collapsed status of player notification' })
   }
 })
-router.route('/player/:id/notification/league-invitation/accept').put(async (req, res) => {
+router.route('/player/:id/notification/league-invitation/accept').put(authChecker, async (req, res) => {
   const playerId = req.params.id
   const { notification } = req.body
 
@@ -309,7 +313,7 @@ router.route('/player/:id/notification/league-invitation/accept').put(async (req
     res.send({ status: 400, message: 'League has not invited player with this id' })
   }
 })
-router.route('/player/:id/notification/send').put(async (req, res) => {
+router.route('/player/:id/notification/send').put(authChecker, async (req, res) => {
   const playerId = req.params.id
   const { notification, notificationKey } = req.body
   const response = await sendNotification(playerId, notification, notificationKey)
@@ -318,7 +322,7 @@ router.route('/player/:id/notification/send').put(async (req, res) => {
 
 // Game Mutators
 const Games = require('../models/game-model');
-router.route('/games/:id/update-score').put(async (req, res) => {
+router.route('/games/:id/update-score').put(authChecker, async (req, res) => {
   const gameId = req.params.id
   const { playerId, plate_appearances, at_bats, singles, doubles, triples, homeruns, team1Score, team2Score } = req.body
   const gameStatKeys = { plate_appearances, at_bats, singles, doubles, triples, homeruns }
@@ -356,7 +360,7 @@ router.route('/games/:id/update-score').put(async (req, res) => {
     res.json({status: 400, message: 'Unsuccessfully updated game'})
   }
 })
-router.route('/games/:id/update-completed').put(async (req, res) => {
+router.route('/games/:id/update-completed').put(authChecker, async (req, res) => {
   const gameId = req.params.id
   const { completed } = req.body
 
@@ -437,7 +441,7 @@ router.route('/games/:id/update-completed').put(async (req, res) => {
 
   res.json({status: 200, message: 'Successfully updated game', game: game})
 })
-router.route('/game/:id/update-date-location').put(async (req, res) => {
+router.route('/game/:id/update-date-location').put(authChecker, async (req, res) => {
   const gameId = req.params.id
   const { game_date, game_location } = req.body
 
