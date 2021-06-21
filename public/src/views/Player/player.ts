@@ -16,7 +16,13 @@ export default defineComponent({
       playerID: "",
       player: Object(),
       columns: [],
-      leagueColumns: ['adsf', 'asdf', 'asdf', 'alsdkfj', 'asdflkj', 'a'],
+      leagueColumns: [
+        { type: 'string', maxWidth: 'unset' },
+        { type: 'string', maxWidth: 'unset' },
+        { type: 'string', maxWidth: 'unset' },
+        { type: 'string', maxWidth: 'unset' },
+        { type: 'string', maxWidth: 'unset' }
+        ],
       leagues: [],
       leagueRanks: [],
       contactModalIsOpen: false,
