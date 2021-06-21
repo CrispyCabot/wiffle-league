@@ -34,10 +34,10 @@ export const PlayerActions = {
       api.post(`/players/login`, { email, password })
           .then(({data}) => {
               if (data.status == 200) {
-                  commit('updateIsLoggedIn', true);
-                  commit('updateLoggedInPlayer', data.player);
-                  commit('updateAccessToken', data.accessToken);
-                  resolve(data);
+                  commit('updateIsLoggedIn', true)
+                  commit('updateLoggedInPlayer', data.player)
+                  commit('updateAccessToken', data.accessToken)
+                  resolve(data)
               } else {
                   throw 'Invalid Login'
               }
@@ -52,10 +52,10 @@ export const PlayerActions = {
       api.post(`/players/logout`)
         .then(({data}) => {
           if (data.status == 200) {
-            commit('updateIsLoggedIn', false);
-            commit('updateLoggedInPlayer', {});
-            commit('updateAccessToken', null);
-            resolve(data);
+            commit('updateIsLoggedIn', false)
+            commit('updateLoggedInPlayer', {})
+            commit('updateAccessToken', null)
+            resolve(data)
           } else {
             throw 'Invalid logout'
           }
@@ -67,19 +67,19 @@ export const PlayerActions = {
   },
   getPlayerRank(_: any, payload: any) {
     const { playerId, stats } = payload
-    console.log(stats);
+    console.log(stats)
 
     return "1st"
   },
   updateUserSettings({ commit, getters }: any, payload: any) {
-    api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`;
+    api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`
     const { playerId, updates } = payload
     return new Promise((resolve, reject) => {
       api.put(`/players/update-profile`, { playerId, updates })
         .then(({data}) => {
             if (data.status == 200) {
-              commit('updateLoggedInPlayer', data.player);
-              resolve(data);
+              commit('updateLoggedInPlayer', data.player)
+              resolve(data)
             } else {
               throw 'Invalid logout'
             }
@@ -115,7 +115,18 @@ export const PlayerActions = {
     return new Promise((resolve, reject) => {
       api.get(`/players/${id}/selected-schedules`)
         .then(({data}: any) => {
-          resolve(data);
+          resolve(data)
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    })
+  },
+  fetchPlayerCreatedLeagues({ getters }: any, id: string) {
+    return new Promise((resolve, reject) => {
+      api.get(`/players/${id}/created-leagues`)
+        .then(({data}: any) => {
+          resolve(data)
         })
         .catch((error) => {
           reject(error)
@@ -126,7 +137,7 @@ export const PlayerActions = {
     return new Promise((resolve, reject) => {
       api.put(`/players/${getters.getLoggedInPlayer._id}/selected-schedules/add`, { id })
         .then(({data}: any) => {
-          resolve(data);
+          resolve(data)
         })
         .catch((error) => {
           reject(error)
@@ -137,7 +148,7 @@ export const PlayerActions = {
     return new Promise((resolve, reject) => {
       api.put(`/players/${getters.getLoggedInPlayer._id}/selected-schedules/remove`, { id })
         .then(({data}: any) => {
-          resolve(data);
+          resolve(data)
         })
         .catch((error) => {
           reject(error)

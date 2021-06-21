@@ -63,6 +63,20 @@ router.route('/players/:id/selected-schedules').get((req, res) => {
     res.json(response.selected_league_schedules)
   })
 })
+router.route('/players/:id/created-leagues').get(async (req, res) => {
+  const { id } = req.params
+  const player = await Players.findOne({_id: id})
+
+  let leagues = []
+  await Promise.all(player.league_ids.map(async (leagueId) => {
+    const league = await Leagues.findOne({_id: leagueId})
+    if (league && league.league_creator_id == id) {
+      leagues.push(league)
+    }
+  }))
+
+  res.send({status: 200, message: 'Successfully fetch players leagues', leagues: leagues})
+})
 
 // Game Getters
 const Games = require('../models/game-model')

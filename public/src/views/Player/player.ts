@@ -19,7 +19,9 @@ export default defineComponent({
       leagueColumns: ['adsf', 'aasdf', 'asdf', 'alsdkfj'],
       leagues: [],
       leagueRanks: [],
-      contactModalIsOpen: false
+      contactModalIsOpen: false,
+      loggedInPlayersLeagues: [],
+      isInvitingToLeague: false
     }
   },
   computed: {
@@ -60,9 +62,19 @@ export default defineComponent({
       const league = await this.fetchLeagueById(id)
       return league
     }))
+    this.loggedInPlayersLeagues = (await this.fetchPlayerCreatedLeagues(this.getLoggedInPlayer._id)).leagues
   },
   methods: {
-    ...mapActions(['fetchPlayerStatsTableColumns', 'updateUserSettings', 'fetchPlayerById', 'getPlayerRank', 'fetchLeagueById', 'sendNotification']),
+    ...mapActions([
+      'fetchPlayerStatsTableColumns',
+      'updateUserSettings',
+      'fetchPlayerById',
+      'getPlayerRank',
+      'fetchLeagueById',
+      'sendNotification',
+      'fetchPlayerCreatedLeagues',
+      'invitePlayerToLeague'
+    ]),
     redirect(link: string) {
       if (link == "top") {
         window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
@@ -77,7 +89,7 @@ export default defineComponent({
     closeContactModal() {
       this.contactModalIsOpen = false
     },
-    async sendContactNotification({ isSending, message, response }: any) {
+    async sendContactNotification({ message }: any) {
       const playerId = this.player._id
       const notification = {
         senderId: this.getLoggedInPlayer._id,
@@ -89,8 +101,15 @@ export default defineComponent({
       await this.sendNotification({ playerId, notification, notificationKey: 'contact_requests' })
       this.closeContactModal()
     },
-    inviteToLeague() {
-      alert("To invite this person to a league go talk to them u fkin idiot")
+    closeInviteToLeague() {
+      this.isInvitingToLeague = false
+    },
+    toggleInviteToLeague() {
+      this.isInvitingToLeague = !this.isInvitingToLeague
+    },
+    async inviteToLeague(league: any) {
+      await this.invitePlayerToLeague({ leagueId: league._id, playerId: this.player._id })
+      this.closeInviteToLeague()
     },
     handleLeagueClick(row: any) {
       const id = row.id.text

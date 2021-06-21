@@ -111,6 +111,32 @@ router.route('/leagues/edit-settings').put(authChecker, async (req, res) => {
   }
   
 })
+router.route('/league/:id/invite').put(authChecker, async (req, res) => {
+  const { playerId } = req.body
+  const { id: leagueId } = req.params
+
+  const league = await Leagues.findOne({_id: leagueId})
+  if (!league) {
+    res.send({ status: 400, message: 'Could not find league'})
+  } else {
+    // Update league fields
+    await Leagues.findOneAndUpdate({_id: leagueId}, { $push: { players_invited: playerId } })
+    const updatedLeague = await Leagues.findOne({_id: leagueId})
+    if (updatedLeague) {
+      const notification = {
+        senderId: league.league_creator_id,
+        leagueId: league._id,
+        message: '',
+        type: 'LeagueInvitation'
+      }
+      await sendNotification(playerId, notification, 'league_invitations')
+      res.send({ status: 200, message: 'Successfully sent league invitation', league: updatedLeague})
+    } else { 
+      res.send({ status: 400, message: 'Unsuccessfully updated league settings' })
+    }
+  }
+  
+})
 
 // Player Mutators
 const Players = require('../models/player-model');

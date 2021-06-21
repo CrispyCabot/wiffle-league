@@ -67,7 +67,9 @@ router.route('/leagues/delete').post(authChecker, async (req, res) => {
     const notification = { senderId: league.league_creator_id, leagueId: leagueId, league: league, message: 'League Deleted', type: 'LeagueUpdate' }
     await Promise.all(league.player_ids.map(async (id) => {
       await sendNotification(id, notification, 'league_updates')
+      await Players.findOneAndUpdate({_id: id}, { $pull: { league_ids: leagueId } })
     }))
+
     res.json({status: 200, message: 'League successfully deleted'})
   }
 })

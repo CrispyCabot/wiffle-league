@@ -21,8 +21,23 @@
 
       <row-card v-for="row in leagueRows" :key="row.id.text" :row="row" :columns="leagueColumns" @row-click="handleLeagueClick"/>
 
-      <button class="btn red_btn" @click="inviteToLeague()">Invite to League</button>
-      <button  v-if="player.show_information" class="btn red_btn" @click.stop="toggleContactModal">Contact</button>
+      <div class="player_btns">
+        <button class="btn red_btn" @click="toggleInviteToLeague">Invite to League</button>
+        <div v-if="isInvitingToLeague" class="invite-to-league" v-click-away="closeInviteToLeague">
+          <div class="invite-to-league_arrow"></div>
+          <div class="invite-to-league_leagues">
+            <div v-for="league in loggedInPlayersLeagues.filter(l => !l.player_ids.includes(player._id))" :key="league._id" class="invite-to-league_leagues_league" @click="inviteToLeague(league)">
+              <p>{{ league.name }}</p>
+            </div>
+            <div v-if="loggedInPlayersLeagues.filter(l => !l.player_ids.includes(player._id)).length == 0" class="invite-to-league_leagues_no-leagues">
+              <p>No leagues to invite this player to</p>
+              <font-awesome-icon :icon="['fas', 'frown']"></font-awesome-icon>
+            </div>
+          </div>
+        </div>
+        
+        <button  v-if="player.show_information" class="btn red_btn" @click.stop="toggleContactModal">Contact</button>
+      </div>
 
       <div v-if="contactModalIsOpen" class="contact-modal-container">
         <contact-modal

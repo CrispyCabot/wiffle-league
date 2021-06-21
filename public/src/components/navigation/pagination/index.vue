@@ -1,7 +1,7 @@
 <template>
   <div class="pagination-container">
     <div v-if="hasSizeSelector" class="pagination-container_pagination_page-size">
-      <SimpleDropdown :items="pageSizes" :label="'Page size'" :selectedItem="pageSize" @select-item="pageSizeSelection($event)"/>
+      <simple-dropdown :items="pageSizes" :label="'Page size'" :selectedItem="pageSize" @select-item="pageSizeSelection($event)"/>
     </div>
     <div class="pagination-container_pagination_page-index">
       <div class="arrow arrow-left" :class="{'inactive-arrow': startingPage == 1}">

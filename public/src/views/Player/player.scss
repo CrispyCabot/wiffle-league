@@ -26,8 +26,80 @@
       margin: 1rem 0;
     }
   }
-  .btn {
-    margin: 0.2rem auto;
+  &_btns {
+    margin: 2rem auto 0 auto;
+    position: relative;
+    .btn {
+      margin: 0.2rem auto;
+    }
+    .invite-to-league {
+      position: relative;
+      &_arrow {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 6;
+        width: 0; 
+        height: 0; 
+        border-left: .8rem solid transparent;
+        border-right: .8rem solid transparent;
+        border-bottom: .8rem solid $light_grey;
+        border-top: none;
+        &::after {
+          content: '';
+          position: absolute;
+          top: .1rem;
+          left: -.75rem;
+          width: 0; 
+          height: 0; 
+          border-left: .75rem solid transparent;
+          border-right: .75rem solid transparent;
+          border-bottom: .75rem solid $off_white;
+          border-top: none;
+          z-index: 3;
+        }
+      }
+      &_leagues {
+        border: 1px solid $light_grey;
+        border-radius: .25rem;
+        position: absolute;
+        top: calc(100% + .35rem);
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: calc(100% + 2rem);
+        min-width: max-content;
+        max-height: 7rem;
+        overflow-y: overlay;
+        &_no-leagues {
+          background-color: $off_white;
+          padding: .5rem .75rem;
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          p {
+            font-size: .9rem;
+            margin-right: .5rem;
+          }
+        }
+        &_league {
+          background-color: $off_white;
+          padding: .5rem .75rem;
+          cursor: pointer;
+          &:nth-child(even) {
+            background-color: $light_grey;
+          }
+          p {
+            font-size: .75rem;
+            text-align: left;
+          }
+          &:hover {
+            background: $hover_grey;
+          }
+        }
+      }
+    }
   }
   .contact-modal-container {
     position: fixed;

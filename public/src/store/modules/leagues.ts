@@ -132,6 +132,18 @@ export const LeagueActions = {
         })
     })
   },
+  invitePlayerToLeague({ getters }: any, { leagueId, playerId }: any) {
+    api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`;
+    return new Promise((resolve, reject) => {
+      api.put(`/league/${leagueId}/invite`, { playerId })
+        .then(({data}) => {
+          resolve(data)
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    })
+  },
   deleteLeagueById({getters}: any, leagueId: String) {
     api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`;
     return new Promise((resolve, reject) => {
