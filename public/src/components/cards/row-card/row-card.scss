@@ -8,6 +8,9 @@
   margin: .25rem 0;
   background-color: $accent_red;
   border-bottom: .25rem solid $accent_light_red;
+  &:hover {
+    background-color: $dark_background;
+  }
   &_column {
     color: $off_white;
     text-overflow: ellipsis;
@@ -23,6 +26,13 @@
     &-subtitle {
       position: absolute;
       right: .5rem;
+      font-size: .8rem;
+      font-style: normal;
+      font-weight: 400;
+    }
+    &-heading {
+      position: absolute;
+      top: 0;
       font-size: .8rem;
       font-style: normal;
       font-weight: 400;
@@ -44,8 +54,16 @@
       font-style: italic;
       font-weight: 600;
     }
+    &.info {
+      text-align: left;
+      font-weight: 600;
+      padding-right: 3rem;
+    }
     &.paddingBottom {
       padding-bottom: 1rem;
+    }
+    &.paddingTop {
+      padding-top: 1rem;
     }
     &.arrow {
       flex-grow: 1;

@@ -16,12 +16,13 @@ export default defineComponent({
       playerID: "",
       player: Object(),
       columns: [],
-      leagueColumns: ['adsf', 'aasdf', 'asdf', 'alsdkfj'],
+      leagueColumns: ['adsf', 'asdf', 'asdf', 'alsdkfj', 'asdflkj', 'a'],
       leagues: [],
       leagueRanks: [],
       contactModalIsOpen: false,
       loggedInPlayersLeagues: [],
-      isInvitingToLeague: false
+      isInvitingToLeague: false,
+      isMobileView: true
     }
   },
   computed: {
@@ -42,19 +43,33 @@ export default defineComponent({
       return [ this.stats ]
     },
     leagueRows(): Array<Object> {
-      return this.leagues
+      if (this.isMobileView)
+        return this.leagues
         .map((league: any) => {
           const simple_row = {
             name: {text: league.name, subtitle: '', type: 'title'},
-            players: {text: league.player_ids.length + ' / ' + league.max_num_players, type: 'numeric'},
-            place: {text: "1st", type: 'numeric'},
+            place: {heading: 'Placement', text: this.getPlayerRankInLeague(this.playerID, league.player_stats), type: 'info'},
             id: {text: league._id, type: 'hidden'}
           }
           return simple_row
         })
+      else
+        return this.leagues
+          .map((league: any) => {
+            const simple_row = {
+              name: {text: league.name, subtitle: '', type: 'title'},
+              points: {heading: 'Points', text: this.getPlayerPoints(this.playerID, league.player_stats), type: 'info'},
+              place: {heading: 'Placement', text: this.getPlayerRankInLeague(this.playerID, league.player_stats), type: 'info'},
+              record: {heading: "Record", text: this.getPlayerRecord(this.playerID, league.player_stats), type: 'info'},
+              id: {text: league._id, type: 'hidden'}
+            }
+            return simple_row
+          })
     },
   },
   async created() {
+    this.setIsMobileView()
+    window.addEventListener('resize', this.setIsMobileView)
     this.playerID = String(this.$route.params.id)
     this.player = await this.fetchPlayerById(this.playerID)
     this.columns = await this.fetchPlayerStatsTableColumns()
@@ -69,7 +84,6 @@ export default defineComponent({
       'fetchPlayerStatsTableColumns',
       'updateUserSettings',
       'fetchPlayerById',
-      'getPlayerRank',
       'fetchLeagueById',
       'sendNotification',
       'fetchPlayerCreatedLeagues',
@@ -114,6 +128,50 @@ export default defineComponent({
     handleLeagueClick(row: any) {
       const id = row.id.text
       this.$router.push(`/league/${id}`)
-    }
+    },
+    getPlayerRankInLeague(playerId: string, leagueStats: Array<Object>) {
+      let place = leagueStats.length; //Assume last place, increase it per person with lower score than them
+      const playerPoints = this.getPlayerPoints(playerId, leagueStats)
+      leagueStats.forEach(function(value: any, index: number) {
+        if (value.player_id != playerId && value.stats.points < playerPoints) {
+          place -= 1
+        }
+      })
+      let rank = ""
+      const placeString = place.toString()
+      if (placeString[placeString.length-1] == "1" && placeString != "11")
+        rank = placeString + "st"
+      else if (placeString[placeString.length-1] == "2" && placeString != "12")
+        rank = placeString + "nd"
+      else if (placeString[placeString.length-1] == "3" && placeString != "13")
+        rank = placeString + "rd"
+      else
+        rank = placeString + "th"
+      return rank;
+    },
+    getPlayerPoints(playerId: string, leagueStats: Array<Object>) {
+      let points = -1
+      leagueStats.forEach(function(value: any, index: number) {
+        if (value.player_id == playerId) {
+          points = value.stats.points
+        }
+      })
+      return points
+    },
+    getPlayerRecord(playerId: string, leagueStats: Array<Object>) {
+      let record = ""
+      leagueStats.forEach(function(value: any, index: number) {
+        if (value.player_id == playerId) {
+          record = value.stats.wins + " - " + value.stats.losses
+        }
+      })
+      return record
+    },
+    setIsMobileView() {
+      this.isMobileView = Boolean(window.outerWidth <= 576)
+    },
+  },
+  unmounted() { 
+    window.removeEventListener('resize', this.setIsMobileView)
   }
 })

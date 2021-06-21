@@ -8,9 +8,12 @@
       'date': col.type === 'date',
       'string': col.type === 'string',
       'title': col.type === 'title',
-      'paddingBottom': col.type === 'title' && col.subtitle
+      'info': col.type === 'info',
+      'paddingBottom': col.type === 'title' && col.subtitle,
+      'paddingTop': col.type === 'info' && col.heading
     }"
     :style="{'max-width': columns[index].maxWidth}">
+      <p v-if="col.type == 'info'" class="row-card_column-heading">{{col.heading}}</p>
       <p>{{col.text}}</p>
       <p v-if="col.type == 'title'" class="row-card_column-subtitle">{{col.subtitle}}</p>
     </div>

@@ -19,8 +19,10 @@
         :hoverable="false"
       ></grid-table>
 
-      <row-card v-for="row in leagueRows" :key="row.id.text" :row="row" :columns="leagueColumns" @row-click="handleLeagueClick"/>
-
+      <div class="player_leagues-info">
+        <row-card v-for="row in leagueRows" :key="row.id.text" :row="row" :columns="leagueColumns" @row-click="handleLeagueClick"/>
+      </div>
+      
       <div class="player_btns">
         <button class="btn red_btn" @click="toggleInviteToLeague">Invite to League</button>
         <div v-if="isInvitingToLeague" class="invite-to-league" v-click-away="closeInviteToLeague">

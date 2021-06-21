@@ -65,12 +65,6 @@ export const PlayerActions = {
         })
     })
   },
-  getPlayerRank(_: any, payload: any) {
-    const { playerId, stats } = payload
-    console.log(stats)
-
-    return "1st"
-  },
   updateUserSettings({ commit, getters }: any, payload: any) {
     api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`
     const { playerId, updates } = payload
