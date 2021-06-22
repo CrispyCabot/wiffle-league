@@ -9,7 +9,12 @@ $dark_background: #141516;
 $accent_red: #fe3838;
 $accent_light_red: #ffacac;
 
+$toast_offset: 40;
 $toast_red: #FE3838;
+$toast_red_offset: lighten(#FE3838, $toast_offset);
 $toast_green: #29E176;
+$toast_green_offset: lighten(#29E176, $toast_offset);
 $toast_blue: #3182CE;
+$toast_blue_offset: lighten(#3182CE, $toast_offset);
 $toast_yellow: #FFC107;
+$toast_yellow_offset: lighten(#FFC107, $toast_offset);

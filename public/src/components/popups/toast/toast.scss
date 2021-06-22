@@ -15,9 +15,31 @@
     width: .5rem;
     height: 100%;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
-    border-radius: .5rem 0 0 .5rem;
+    border-radius: 0 0 0 .5rem;
+    z-index: 5;
+    &_background {
+      width: .5rem;
+      height: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-radius: .5rem 0 0 .5rem;
+      z-index: 4;
+      &.success {
+        background-color: $toast_green_offset;
+      }
+      &.info {
+        background-color: $toast_blue_offset;
+      }
+      &.error {
+        background-color: $toast_red_offset;
+      }
+      &.warning {
+        background-color: $toast_yellow_offset;
+      }
+    }
     &.success {
       background-color: $toast_green;
     }

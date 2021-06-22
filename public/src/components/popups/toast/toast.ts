@@ -13,8 +13,7 @@ export default defineComponent({
     return {
       timer: null as any,
       slider: 100,
-      intervalRate: 10,
-      clearing: false
+      intervalRate: 10
     }
   },
   computed: {
@@ -40,18 +39,18 @@ export default defineComponent({
     this.close()
   },
   updated() {
-    this.startInterval()
+    this.startInterval(false)
   },
   methods: {
     close() {
       this.$emit('close')
     },
-    startInterval() {
+    startInterval(resetSlider = true) {
       clearInterval(this.timer)
-      this.slider = 100
+      if (resetSlider) this.slider = 100
       this.timer = setInterval(() => {
         this.slider -= 100 / (this.duration / this.intervalRate)
-        if (this.slider <= 0 && this.isShowing && !this.clearing) {
+        if (this.slider <= 0) {
           this.close()
         }
       }, this.intervalRate)

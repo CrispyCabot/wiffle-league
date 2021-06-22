@@ -1,6 +1,7 @@
 <template>
   <div class="toast">
-    <div class="toast_sidebar" :class="type"></div>
+    <div class="toast_sidebar" :class="type" :style="{'height': slider + '%'}"></div>
+    <div class="toast_sidebar_background" :class="type"></div>
     <font-awesome-icon class="toast_close-icon" :icon="['fas', 'times']" @click="close"></font-awesome-icon>
 
     <div class="toast_content">
