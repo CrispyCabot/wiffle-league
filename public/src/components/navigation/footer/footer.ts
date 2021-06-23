@@ -1,12 +1,15 @@
 import { defineComponent } from "@vue/runtime-core"
+import { mapGetters } from "vuex";
 
 export default defineComponent({
   name: 'footer',
   props: {
   },
   data() {
-    return {
-    }
+    return {}
+  },
+  computed: {
+    ...mapGetters(['getIsLoggedIn'])
   },
   methods: {
     redirect(link: string) {
