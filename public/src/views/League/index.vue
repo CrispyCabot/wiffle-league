@@ -61,6 +61,7 @@
           :hasHeader="false"
           :hasPagination="false"
           :hasSizeSelector="false"
+          @row-clicked="playerClick"
           @row-button-clicked="handleKickPlayerClick"
         ></grid-table>
       </div>

@@ -7,6 +7,13 @@
   }
   &_leagues-info {
     width: 90%;
+    margin-top: .5rem;
+    &_label {
+      font-size: 1rem;
+      text-align: left;
+      font-weight: 600;
+      padding: .25rem 0;
+    }
   }
   .player-stats-table {
     &_firstname {

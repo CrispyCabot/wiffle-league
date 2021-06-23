@@ -20,6 +20,7 @@
       ></grid-table>
 
       <div class="player_leagues-info">
+        <p class="player_leagues-info_label">League Standings</p>
         <row-card v-for="row in leagueRows" :key="row.id.text" :row="row" :columns="leagueColumns" @row-click="handleLeagueClick"/>
       </div>
       

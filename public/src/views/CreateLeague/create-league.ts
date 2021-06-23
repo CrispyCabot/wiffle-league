@@ -1,6 +1,7 @@
 import { defineComponent } from "@vue/runtime-core";
 import RadioButtonGroup from '@/components/inputs/radio-button-group/index.vue'
-import { mapActions, mapGetters } from "vuex";
+import { mapActions, mapGetters, mapMutations } from "vuex";
+import { TOAST_TYPES } from '@/utils/toastTypes'
 
 export default defineComponent({
   name: 'create-league',
@@ -66,6 +67,7 @@ export default defineComponent({
   },
   methods: {
     ...mapActions(['createLeague']),
+    ...mapMutations(['updateGlobalToast']),
     async createLeagueClick() {
       const res = await this.createLeague({
         creatorId: this.getLoggedInPlayer._id,
@@ -82,6 +84,12 @@ export default defineComponent({
       if (res.status == 200) {
         this.$router.push(`/league/${res.league._id}`)
       }
+      this.updateGlobalToast({
+        message: res.message,
+        type: res.status == 400 ? TOAST_TYPES.Error : res.status == 403 ? TOAST_TYPES.Warning : TOAST_TYPES.Success,
+        duration: 5000,
+        isShowing: true
+      })
     },
     setGender(gender: string) {
       this.fields.gender.value = gender
