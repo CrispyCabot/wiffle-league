@@ -84,7 +84,7 @@ router.route('/players/create').post(async (req, res) => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const isValidEmail = re.test(String(email).toLowerCase())
     if (!isValidEmail) {
-      res.json({player: response, status: 400, message: 'Invalid Email'})
+      res.json({player: response, status: 400, message: 'Email provided is invalid...'})
     } else {
       const player = await Players.create({
           email: email,
@@ -138,10 +138,10 @@ router.route('/players/create').post(async (req, res) => {
         })
       const accessToken = createAccessToken(player)
       sendRefreshToken(req, res, createJRTEM(player))
-      res.json({player: player, accessToken: accessToken, status: 200, message: 'Successfully been made an account'})
+      res.json({player: player, accessToken: accessToken, status: 200, message: 'Successfully made an account'})
     }
   } else {
-    res.json({status: 400, message: 'This email is already in use'})
+    res.json({status: 400, message: 'This email is already in use...'})
   }
 })
 router.route('/players/login').post(async (req, res) => {

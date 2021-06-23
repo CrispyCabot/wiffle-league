@@ -18,7 +18,7 @@ const player_schema = new Schema({
   token_version: Number,
   notifications: {
     league_invitations: {
-      notifications: [ notification ],
+      notifications: Array,
       order_index: Number,
       collapsed: Boolean
     },

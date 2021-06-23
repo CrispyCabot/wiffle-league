@@ -7,7 +7,8 @@ export default defineComponent({
     message: { type: String, default: '' },
     type: { type: String, default: TOAST_TYPES.Success },
     duration: { type: Number, default: 5000 },
-    isShowing: { type: Boolean, default: false }
+    isShowing: { type: Boolean, default: false },
+    isShowingOverride: { type: Number, default: 0 }
   },
   data() {
     return {
@@ -34,22 +35,18 @@ export default defineComponent({
   created() {
     this.startInterval()
   },
-  unmounted() {
+  beforeUnmount() {
+    this.slider = 100
     clearInterval(this.timer)
-    this.close()
-  },
-  updated() {
-    this.startInterval(false)
   },
   methods: {
     close() {
       this.$emit('close')
     },
-    startInterval(resetSlider = true) {
+    startInterval() {
       clearInterval(this.timer)
-      if (resetSlider) this.slider = 100
       this.timer = setInterval(() => {
-        this.slider -= 100 / (this.duration / this.intervalRate)
+        this.slider -= (100 / (this.duration / this.intervalRate))
         if (this.slider <= 0) {
           this.close()
         }

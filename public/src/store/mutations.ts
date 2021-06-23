@@ -12,6 +12,9 @@ export default {
   },
   updateGlobalToast(state: any, toast: IToast) {
     state.globalToast.isShowing = false // Reset any previous toast before updating the next toast
-    state.globalToast = toast
+    state.globalToast = {
+      ...toast,
+      isShowingOverride: state.globalToast.isShowingOverride ? Number(state.globalToast.isShowingOverride) + 1 : 1 // Reset any previous toast before updating the next toast
+    }
   }
 }

@@ -1,8 +1,9 @@
 import { defineComponent } from "@vue/runtime-core"
-import { mapActions, mapGetters } from "vuex"
+import { mapActions, mapGetters, mapMutations } from "vuex"
 import GridTable from '@/components/tables/grid-table/index.vue'
 import RowCard from '@/components/cards/row-card/index.vue'
 import ContactModal from '@/components/popups/contact-modal/index.vue'
+import { TOAST_TYPES } from '@/utils/toastTypes'
 
 export default defineComponent({
   name: 'profile',
@@ -95,6 +96,7 @@ export default defineComponent({
       'fetchPlayerCreatedLeagues',
       'invitePlayerToLeague'
     ]),
+    ...mapMutations(['updateGlobalToast']),
     redirect(link: string) {
       if (link == "top") {
         window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
@@ -118,7 +120,13 @@ export default defineComponent({
         message: message,
         type: 'ContactRequest'
       }
-      await this.sendNotification({ playerId, notification, notificationKey: 'contact_requests' })
+      const res = await this.sendNotification({ playerId, notification, notificationKey: 'contact_requests' })
+      this.updateGlobalToast({
+        message: res.message,
+        type: res.status == 400 ? TOAST_TYPES.Error : res.status == 403 ? TOAST_TYPES.Warning : TOAST_TYPES.Success,
+        duration: 5000,
+        isShowing: true
+      })
       this.closeContactModal()
     },
     closeInviteToLeague() {
@@ -128,8 +136,15 @@ export default defineComponent({
       this.isInvitingToLeague = !this.isInvitingToLeague
     },
     async inviteToLeague(league: any) {
-      await this.invitePlayerToLeague({ leagueId: league._id, playerId: this.player._id })
+      const res = await this.invitePlayerToLeague({ leagueId: league._id, playerId: this.player._id })
       this.closeInviteToLeague()
+
+      this.updateGlobalToast({
+        message: res.message,
+        type: res.status == 400 ? TOAST_TYPES.Error : res.status == 403 ? TOAST_TYPES.Warning : TOAST_TYPES.Success,
+        duration: 5000,
+        isShowing: true
+      })
     },
     handleLeagueClick(row: any) {
       const id = row.id.text

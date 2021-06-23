@@ -1,6 +1,6 @@
 import { defineComponent } from "@vue/runtime-core";
 import RadioButtonGroup from '@/components/inputs/radio-button-group/index.vue'
-import { mapActions, mapMutations } from "vuex";
+import { mapActions, mapMutations } from "vuex"
 import { TOAST_TYPES } from '@/utils/toastTypes'
 
 export default defineComponent({

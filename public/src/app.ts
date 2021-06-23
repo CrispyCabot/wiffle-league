@@ -22,7 +22,7 @@ export default defineComponent({
     }
   },
   computed: {
-    ...mapGetters(['getGlobalToastMessage', 'getGlobalToastType', 'getGlobalToastIsShowing', 'getGlobalToastDuration'])
+    ...mapGetters(['getGlobalToastMessage', 'getGlobalToastType', 'getGlobalToastIsShowing', 'getGlobalToastDuration', 'getGlobalToastIsShowingOverride'])
   },
   methods: {
     ...mapActions(['retrieveRefreshToken']),
@@ -30,9 +30,6 @@ export default defineComponent({
     closingGlobalToast() {
       if (this.getGlobalToastIsShowing) {
         this.updateGlobalToast({
-          message: '',
-          type: '',
-          duration: '',
           isShowing: false
         })
       }

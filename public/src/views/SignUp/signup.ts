@@ -1,6 +1,7 @@
 import { defineComponent } from "@vue/runtime-core";
 import RadioButtonGroup from '@/components/inputs/radio-button-group/index.vue'
-import { mapActions, mapMutations } from "vuex";
+import { mapActions, mapMutations } from "vuex"
+import { TOAST_TYPES } from '@/utils/toastTypes'
 
 export default defineComponent({
   name: 'signup',
@@ -59,7 +60,7 @@ export default defineComponent({
   },
   methods: {
     ...mapActions(['createNewPlayer']),
-    ...mapMutations(['updateIsLoggedIn', 'updateLoggedInPlayer']),
+    ...mapMutations(['updateIsLoggedIn', 'updateLoggedInPlayer', 'updateGlobalToast']),
     setGender(gender: string) {
       this.fields.gender.value = gender
     },
@@ -73,13 +74,19 @@ export default defineComponent({
         phone: this.fields.phone.value.split('-').join(''),
         gender: this.fields.gender.value
       })
-      if (res.status == 400) {
-        console.log('There is an account with this email already')
-      } else if (res.status == 200) {
+      
+      if (res.status == 200) {
         this.updateIsLoggedIn(true)
         this.updateLoggedInPlayer(res.player)
         this.$router.push('/')
       }
+
+      this.updateGlobalToast({
+        message: res.message,
+        type: res.status == 400 ? TOAST_TYPES.Error : TOAST_TYPES.Success,
+        duration: 5000,
+        isShowing: true
+      })
     },
     formatPhone(e: any, isPhone: boolean) {
       if (isPhone) {

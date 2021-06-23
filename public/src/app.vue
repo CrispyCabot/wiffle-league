@@ -1,7 +1,14 @@
 <template>
   <div class="app-container">
     <div v-if="getGlobalToastIsShowing" class="global-toast">
-      <Toast :message="getGlobalToastMessage" :type="getGlobalToastType" :duration="getGlobalToastDuration" :isShowing="getGlobalToastIsShowing" @close="closingGlobalToast" />
+      <Toast
+        :message="getGlobalToastMessage"
+        :type="getGlobalToastType"
+        :duration="getGlobalToastDuration"
+        :isShowing="getGlobalToastIsShowing"
+        :key="getGlobalToastIsShowingOverride"
+        @close="closingGlobalToast"
+      />
     </div>
     <Navbar />
     <div class="router-view">

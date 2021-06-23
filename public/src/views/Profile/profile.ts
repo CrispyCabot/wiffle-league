@@ -4,7 +4,8 @@ import ContentDropdown from '@/components/dropdowns/content-dropdown/index.vue'
 import PaginationMixin from '@/mixins/pagination-mixin'
 import RadioSlider from '@/components/inputs/radio-slider/index.vue'
 import RadioButtonGroup from '@/components/inputs/radio-button-group/index.vue'
-import { mapActions, mapGetters } from "vuex"
+import { mapActions, mapGetters, mapMutations } from "vuex"
+import { TOAST_TYPES } from '@/utils/toastTypes'
 
 export default defineComponent({
   name: 'profile',
@@ -97,6 +98,7 @@ export default defineComponent({
   },
   methods: {
     ...mapActions(['fetchPlayerStatsTableColumns', 'updateUserSettings']),
+    ...mapMutations(['updateGlobalToast']),
     changeRadioValue(e: boolean, field: any) {
       if (field.name == 'contactInfo') {
         this.fields.contactInfo.value = e
@@ -110,7 +112,7 @@ export default defineComponent({
       this.setupFieldsValues()
     },
     async saveSettings() {
-      this.updateUserSettings({ 
+      const res = await this.updateUserSettings({ 
         playerId: this.getLoggedInPlayer._id,
         updates: {
           phone_number: Number(this.fields.phone.value.split('-').join('')),
@@ -123,6 +125,13 @@ export default defineComponent({
           show_information: Boolean(this.fields.contactInfo.value),
           gender: this.fields.gender.value
         }
+      })
+
+      this.updateGlobalToast({
+        message: res.message,
+        type: res.status == 400 ? TOAST_TYPES.Error : res.status == 403 ? TOAST_TYPES.Warning : TOAST_TYPES.Success,
+        duration: 5000,
+        isShowing: true
       })
     },
     setupFieldsValues() {

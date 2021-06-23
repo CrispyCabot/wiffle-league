@@ -42,7 +42,7 @@ router.route('/leagues/kick-player').put(authChecker, async (req, res) => {
     await Leagues.findOneAndUpdate({_id: leagueId}, { $pull: { player_ids: playerId } })
     // Remove league id from player
     await Players.findOneAndUpdate({_id: playerId}, { $pull: { league_ids: leagueId } })
-    const notification = { senderId: league.league_creator_id, leagueId: leagueId, message: 'You have been kicked', type: 'LeagueUpdate' }
+    const notification = { senderId: league.league_creator_id, leagueId: leagueId, gameId: '', message: 'You have been kicked', type: 'LeagueUpdate' }
     await sendNotification(playerId, notification, 'league_updates')
     const updatedLeague = await Leagues.findOne({_id: leagueId})
     if (updatedLeague) {
@@ -77,7 +77,7 @@ router.route('/leagues/add-player').put(authChecker, async (req, res) => {
     const updatedLeague = await Leagues.findOne({_id: leagueId})
     const updatedPlayer = await Players.findOne({_id: playerId})
 
-    const notification = { senderId: league.league_creator_id, leagueId: leagueId, message: 'You have been added', type: 'LeagueUpdate' }
+    const notification = { senderId: league.league_creator_id, leagueId: leagueId, gameId: '', message: 'You have been added', type: 'LeagueUpdate' }
     await sendNotification(senderId, notification, 'league_updates')
 
     if (updatedLeague) {
@@ -117,7 +117,7 @@ router.route('/league/:id/invite').put(authChecker, async (req, res) => {
 
   const league = await Leagues.findOne({_id: leagueId})
   if (!league) {
-    res.send({ status: 400, message: 'Could not find league'})
+    res.send({ status: 403, message: 'Could not find league'})
   } else {
     // Update league fields
     await Leagues.findOneAndUpdate({_id: leagueId}, { $push: { players_invited: playerId } })
@@ -126,17 +126,18 @@ router.route('/league/:id/invite').put(authChecker, async (req, res) => {
       const notification = {
         senderId: league.league_creator_id,
         leagueId: league._id,
+        gameId: '',
         message: '',
         type: 'LeagueInvitation'
       }
       const notificationResponse = await sendNotification(playerId, notification, 'league_invitations')
       if (notificationResponse.status == 200) {
-        res.status(200).send({ status: 200, message: 'Successfully sent league invitation', league: updatedLeague})
+        res.send({ status: 200, message: 'Successfully sent league invitation', league: updatedLeague})
       } else {
-        res.status(400).send(notificationResponse)
+        res.send(notificationResponse)
       }
     } else { 
-      res.status(400).send({ status: 400, message: 'Unsuccessfully sent league invitation' })
+      res.send({ status: 400, message: 'Unsuccessfully sent league invitation' })
     }
   }
   
@@ -177,7 +178,7 @@ router.route('/players/update-profile').put(authChecker, async (req, res) => {
   const presentImmutableFields = immutableFields.map(f => updates[f]).filter(f => f)
   if (presentImmutableFields.length > 0) {
     if (presentImmutableFields.filter(f => updates[f] != preUpdatePlayer[f]).length > 0) {
-      res.send({ status: 400, message: 'Some fields being updated are immutable' })
+      res.send({ status: 403, message: 'Some fields being updated are immutable' })
       return
     } else {
       await Players.findOneAndUpdate({_id: playerId}, { ...updates })

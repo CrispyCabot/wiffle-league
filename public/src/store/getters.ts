@@ -22,5 +22,8 @@ export default {
   },
   getGlobalToastIsShowing(): Boolean {
     return state.globalToast.isShowing
+  },
+  getGlobalToastIsShowingOverride(): Number {
+    return state.globalToast.isShowingOverride
   }
 }
