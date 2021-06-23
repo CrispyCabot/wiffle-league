@@ -47,7 +47,7 @@ export default defineComponent({
         const canSubmit = Boolean(
           this.getLoggedInPlayer &&
           (game.team_1_ids.includes(this.getLoggedInPlayer._id) || game.team_2_ids.includes(this.getLoggedInPlayer._id)) &&
-          (new Date(Date.now()) >=  game.game_date)
+          (new Date(Date.now()) >=  new Date(game.game_date))
         )
         return {
           team1: { text: team1.join(', '), type: 'string-wrap' },
@@ -65,7 +65,9 @@ export default defineComponent({
     },
     handleSubmitScoreClick(row: any, column: any) {
       if (column.type === 'button-disabled') return
-      console.log(row, column)
+      if (column.type == 'button' && column.text == 'Submit scores') {
+        this.$router.push(`/game-summary/${row.id.text}`)
+      }
     }
   }
 })

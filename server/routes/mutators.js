@@ -3,20 +3,7 @@ const bcrypt = require('bcrypt');
 const authChecker = require("./utils/auth-checker");
 const gameScoreCalculation = require("./utils/game-score-calculation");
 const sendNotification = require("./utils/send-notification");
-
-const defaultStats = {
-  hits: 0,
-  singles: 0,
-  doubles: 0,
-  triples: 0,
-  homeruns: 0,
-  plate_appearances: 0,
-  at_bats: 0,
-  games: 0,
-  wins: 0,
-  losses: 0,
-  points: 0
-}
+const defaultStats = require('./utils/default-stats');
 
 // League Mutators
 const Leagues = require('../models/league-model')
@@ -356,9 +343,9 @@ router.route('/games/:id/update-score').put(authChecker, async (req, res) => {
   game = await Games.findOne({_id: gameId})
   if (game) {
 
-    res.json({status: 200, message: 'Successfully updated game', game: game})
+    res.json({status: 200, message: 'Successfully updated game score', game: game})
   } else {
-    res.json({status: 400, message: 'Unsuccessfully updated game'})
+    res.json({status: 400, message: 'Unsuccessfully updated game score'})
   }
 })
 router.route('/games/:id/update-completed').put(authChecker, async (req, res) => {

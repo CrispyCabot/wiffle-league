@@ -4,6 +4,7 @@ const jwt = require('jsonwebtoken');
 const { createAccessToken, createJRTEM, sendRefreshToken } = require('./utils/authorization');
 const sendNotification = require('./utils/send-notification');
 const authChecker = require("./utils/auth-checker");
+const defaultStats = require('./utils/default-stats');
 
 // League Setters
 const Leagues = require('../models/league-model')
@@ -94,16 +95,7 @@ router.route('/players/create').post(async (req, res) => {
           nickname: nname,
           phone_number: phone,
           gender: gender,
-          player_stats: {
-            hits: 0,
-            singles: 0,
-            doubles: 0,
-            triples: 0,
-            homeruns: 0,
-            plate_appearances: 0,
-            at_bats: 0,
-            games: 0
-          },
+          player_stats: defaultStats,
           show_information: false,
           league_ids: [],
           token_version: 0,

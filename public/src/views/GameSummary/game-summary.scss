@@ -20,9 +20,10 @@
       align-items: center;
       width: 90%;
       padding: 1rem 2rem;
+      margin: .5rem auto;
       border: 1px solid $light_grey;
       border-radius: .25rem;
-      background-color: $hover_grey;
+      background-color: $pure_white;
       .edit-game, .submit-edit-game {
         margin-top: 0;
       }
@@ -69,7 +70,6 @@
     }
     &_info {
       width: 100%;
-      margin-top: 1rem;
       h2 {
         border: 1px solid $light_grey;
         background-color: $accent_red;
@@ -193,6 +193,7 @@
   
       &-has-submitted {
         width: 90%;
+        margin-top: 0.5rem;
         background-color: $pure_white;
         border-radius: .25rem;
         padding: 1rem;

@@ -4,12 +4,14 @@
   max-width: 40rem;
   background-color: $off_white;
   border-radius: .5rem;
+  border: 1px solid $light_grey;
   min-height: 3rem;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 1rem 3.5rem 1rem 1.75rem;
   color: $dark_background;
+  overflow: hidden;
   
   &_sidebar {
     width: .5rem;
