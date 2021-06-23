@@ -8,8 +8,10 @@
   margin: .25rem 0;
   background-color: $accent_red;
   border-bottom: .25rem solid $accent_light_red;
+  transition: .3s;
   &:hover {
-    background-color: $dark_background;
+    background-color: $accent_red_hover;
+    border-color: darken($accent_light_red, 15);
   }
   &_column {
     color: $off_white;
