@@ -169,7 +169,7 @@ export default defineComponent({
       'editLeagueSettings',
       'sendNotification'
     ]),
-    ...mapMutations(['updateGlobalToast']),
+    ...mapMutations(['updateGlobalToast', 'updateLoggedInPlayer']),
     async fetchPlayers() {
       this.players = await Promise.all(this.leagueData.player_ids.map(async (id: any) => {
         return await this.fetchPlayerById(id)
@@ -254,6 +254,9 @@ export default defineComponent({
       const res = await this.deleteLeagueById(this.leagueData._id)
       if (res.status === 200) {
         this.$router.push('/')
+        if (this.getLoggedInPlayer._id == res.creator._id) {
+          this.updateLoggedInPlayer(res.creator)
+        }
       }
       this.updateGlobalToast({
         message: res.message,

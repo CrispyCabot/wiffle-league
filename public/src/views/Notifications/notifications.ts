@@ -1,5 +1,5 @@
 import { defineComponent } from "vue";
-import { mapActions, mapGetters } from "vuex";
+import { mapActions, mapGetters, mapMutations } from "vuex";
 import NOTIFICATION_TYPES from '@/utils/notificationTypes'
 import CollapsibleTable from '@/components/tables/collapsible-table/index.vue'
 import ContactModal from '@/components/popups/contact-modal/index.vue'
@@ -24,6 +24,10 @@ export default defineComponent({
     ...mapGetters(['getLoggedInPlayer'])
   },
   async created() {
+    // Re fetch logged in player in case new notifications have come in since the last time they updated the store
+    if (this.getLoggedInPlayer && this.getLoggedInPlayer._id) {
+      this.updateLoggedInPlayer((await this.fetchPlayerById(this.getLoggedInPlayer._id)))
+    }
     this.notifications = this.getLoggedInPlayer.notifications
     this.orderedNotificationSections = await this.getOrderedNotificationSections()
   },
@@ -38,6 +42,7 @@ export default defineComponent({
       'collapseNotifications',
       'sendNotification'
     ]),
+    ...mapMutations(['updateLoggedInPlayer']),
     getSectionTitle(type: String): String {
       switch (type) {
         case 'LeagueInvitation':
@@ -167,7 +172,7 @@ export default defineComponent({
         } else {
           this.$router.push(`/league/${row.leagueId}`)
         }
-      } else if (section.sectionKey === 'contact_requests') {
+      } else if (section.sectionKey === 'contact_requests' || section.sectionKey === 'league_join_requests') {
         this.$router.push(`/player/${row.senderId}`)
       }
     },

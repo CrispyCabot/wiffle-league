@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const authChecker = require("./utils/auth-checker");
 const gameScoreCalculation = require("./utils/game-score-calculation");
 const sendNotification = require("./utils/send-notification");
+const deleteNotification = require('./utils/delete-notification');
 const defaultStats = require('./utils/default-stats');
 
 // League Mutators
@@ -234,22 +235,17 @@ router.route('/player/:id/notification/delete').put(async (req, res) => {
   const playerId = req.params.id
   const { notification, sectionKey } = req.body
   let player = await Players.findOne({_id: playerId})
-  player.notifications[sectionKey].notifications = player.notifications[sectionKey].notifications.filter(n => {
-    return !(
-      n.senderId == notification.senderId &&
-      n.leagueId == notification.leagueId &&
-      n.gameId == notification.gameId &&
-      n.message == notification.message &&
-      n.type == notification.type
-    )
-  })
-  await Players.findOneAndUpdate({_id: playerId}, { $set: { notifications: player.notifications } })
-  player = await Players.findOne({_id: playerId})
-
-  if (player) {
-    res.send({status: 200, message: 'Successfully removed player notification', player: player})
+  
+  const deleteResponse = await deleteNotification(playerId, notification, sectionKey)
+  if (deleteResponse.status == 200) {
+    player = await Players.findOne({_id: playerId})
+    if (player) {
+      res.send({status: 200, message: 'Successfully removed player notification', player: player})
+    } else {
+      res.send({ status: 400, message: 'Unsuccessfully removed player notification' })
+    }
   } else {
-    res.send({ status: 400, message: 'Unsuccessfully removed player notification' })
+    res.send(deleteResponse)
   }
 })
 router.route('/player/:id/notification/reorder').put(async (req, res) => {

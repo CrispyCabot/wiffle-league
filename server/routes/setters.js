@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { createAccessToken, createJRTEM, sendRefreshToken } = require('./utils/authorization');
 const sendNotification = require('./utils/send-notification');
+const deleteNotification = require('./utils/delete-notification');
 const authChecker = require("./utils/auth-checker");
 const defaultStats = require('./utils/default-stats');
 
@@ -65,13 +66,23 @@ router.route('/leagues/delete').post(authChecker, async (req, res) => {
   } else {
     const league = await Leagues.findOne({_id: leagueId})
     await Leagues.deleteOne({_id: leagueId})
-    const notification = { senderId: league.league_creator_id, leagueId: leagueId, league: league, message: 'League Deleted', type: 'LeagueUpdate' }
+    // Send notification to all players that league has been deleted
+    const notification = { senderId: league.league_creator_id, leagueId: leagueId, gameId: '', league: league, message: 'League Deleted', type: 'LeagueUpdate' }
     await Promise.all(league.player_ids.map(async (id) => {
       await sendNotification(id, notification, 'league_updates')
       await Players.findOneAndUpdate({_id: id}, { $pull: { league_ids: leagueId } })
     }))
+    // Remove invite notification from all players in the leagues invited players
+    const inviteNotification = { senderId: league.league_creator_id, leagueId: leagueId, gameId: '', message: '', type: 'LeagueInvitation' }
+    await Promise.all(league.players_invited.map(async (id) => {
+      await deleteNotification(id, inviteNotification, 'league_invitations')
+    }))
+    // Remove join requests for league from creator
+    const creator = await Players.findOne({_id: league.league_creator_id})
+    creator.notifications.league_join_requests.notifications = creator.notifications.league_join_requests.notifications.filter(n => n.leagueId != leagueId)
+    await Players.findOneAndUpdate({_id: league.league_creator_id}, { $set: { notifications: creator.notifications } })
 
-    res.json({status: 200, message: 'League successfully deleted'})
+    res.json({status: 200, message: 'League successfully deleted', creator})
   }
 })
 

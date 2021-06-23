@@ -50,6 +50,7 @@ export default defineComponent({
       return [ this.stats ]
     },
     leagueRows(): Array<Object> {
+      if (!this.leagues || this.leagues.length == 0) return []
       if (this.isMobileView)
         return this.leagues
         .map((league: any) => {
