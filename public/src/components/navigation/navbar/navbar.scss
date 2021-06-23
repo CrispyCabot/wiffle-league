@@ -6,7 +6,6 @@
   color: $off_white;
   font-size: 1.75rem;
   max-width: 80rem;
-  width: calc(100% - 4rem);
   margin: 0 auto;
 
   &_mobile {
@@ -92,6 +91,7 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   .navbar-container {
+    width: calc(100% - 4rem);
     padding: 2rem 0;
     &_profile {
       &_icon {

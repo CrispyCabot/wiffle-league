@@ -1,4 +1,5 @@
 .profile {
+  min-height: calc(90vh - 10.75rem);
   &_not_logged_in {
     cursor: pointer;
     &:hover {

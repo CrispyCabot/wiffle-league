@@ -1,7 +1,9 @@
 <template>
   <div class="signup-container">
-    <h1 class="home site-title">Wiffle League</h1>
-    <img src="../../assets/logo.png">
+    <div class="signup-container_title">
+      <img src="../../assets/logo.png">
+      <h1 class="site-title">Wiffle League</h1>
+    </div>
     <div class="signup-container_fields">
       <div class="signup-container_fields_field" v-for="field in fields" :key="field.name">
         <div v-if="field.name !== 'gender'"
