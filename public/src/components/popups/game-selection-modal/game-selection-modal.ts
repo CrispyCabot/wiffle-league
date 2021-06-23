@@ -1,6 +1,7 @@
 import { defineComponent } from "vue";
 import MultiItemSelector from '@/components/dropdowns/multi-item-selector/index.vue'
-import { mapActions } from "vuex";
+import { mapActions, mapMutations } from "vuex"
+import { TOAST_TYPES } from '@/utils/toastTypes'
 
 export default defineComponent({
   name: 'game-selection-modal',
@@ -83,6 +84,7 @@ export default defineComponent({
   },
   methods: {
     ...mapActions(['createGames']),
+    ...mapMutations(['updateGlobalToast']),
     nextGame() {
       if (this.currGameNum == this.games.length) return
       this.currGameNum += 1
@@ -130,6 +132,12 @@ export default defineComponent({
       if (res.status === 200) {
         this.$emit('games-created', res.league, res.games)
       }
+      this.updateGlobalToast({
+        message: res.message,
+        type: res.status == 400 ? TOAST_TYPES.Error : res.status == 403 ? TOAST_TYPES.Warning : TOAST_TYPES.Success,
+        duration: 5000,
+        isShowing: true
+      })
     },
     searchValueChange(searchText: string) {
       this.searchText = searchText

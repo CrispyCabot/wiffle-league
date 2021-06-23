@@ -8,6 +8,7 @@ export default {
   Player: 'player',
   Leagues: 'leagues',
   League: 'league',
+  MyLeagues: 'my-leagues',
   Rules: 'rules',
   CreateLeague: 'create-league',
   StartLeague: 'start-league',

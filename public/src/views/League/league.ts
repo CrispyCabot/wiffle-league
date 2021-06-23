@@ -1,8 +1,9 @@
 import { defineComponent } from "@vue/runtime-core";
-import { mapActions, mapGetters } from "vuex";
+import { mapActions, mapGetters, mapMutations } from "vuex";
 import GridTable from '@/components/tables/grid-table/index.vue'
 import RadioButtonGroup from '@/components/inputs/radio-button-group/index.vue'
 import GameSelectionModal from '@/components/popups/game-selection-modal/index.vue'
+import { TOAST_TYPES } from '@/utils/toastTypes'
 
 export default defineComponent({
   name: 'league',
@@ -168,6 +169,7 @@ export default defineComponent({
       'editLeagueSettings',
       'sendNotification'
     ]),
+    ...mapMutations(['updateGlobalToast']),
     async fetchPlayers() {
       this.players = await Promise.all(this.leagueData.player_ids.map(async (id: any) => {
         return await this.fetchPlayerById(id)
@@ -218,6 +220,12 @@ export default defineComponent({
       if (res.status === 200) {
         this.leagueData = res.league
       }
+      this.updateGlobalToast({
+        message: res.message,
+        type: res.status == 400 ? TOAST_TYPES.Error : res.status == 403 ? TOAST_TYPES.Warning : TOAST_TYPES.Success,
+        duration: 5000,
+        isShowing: true
+      })
     },
     cancelStartLeague() {
       this.isSelectingGames = false
@@ -235,16 +243,24 @@ export default defineComponent({
         notificationKey: 'league_join_requests',
         playerId: this.leagueData.league_creator_id
       })
-      console.log(res)
+      this.updateGlobalToast({
+        message: res.message,
+        type: res.status == 400 ? TOAST_TYPES.Error : res.status == 403 ? TOAST_TYPES.Warning : TOAST_TYPES.Success,
+        duration: 5000,
+        isShowing: true
+      })
     },
     async deleteLeague() {
       const res = await this.deleteLeagueById(this.leagueData._id)
       if (res.status === 200) {
-        console.log('success')
         this.$router.push('/')
-      } else {
-        console.log('failure', res.message)
       }
+      this.updateGlobalToast({
+        message: res.message,
+        type: res.status == 400 ? TOAST_TYPES.Error : res.status == 403 ? TOAST_TYPES.Warning : TOAST_TYPES.Success,
+        duration: 5000,
+        isShowing: true
+      })
     },
     getPlayerPlacement(player: any): String {
       const playerIndex = this.leagueData.player_stats.findIndex((p: any) => p.player_id === player.player_id) + 1
@@ -283,6 +299,12 @@ export default defineComponent({
         this.leagueData = res.league
         this.isSettingsEditing = false
       }
+      this.updateGlobalToast({
+        message: res.message,
+        type: res.status == 400 ? TOAST_TYPES.Error : res.status == 403 ? TOAST_TYPES.Warning : TOAST_TYPES.Success,
+        duration: 5000,
+        isShowing: true
+      })
    },
     editSettings() {
       this.isSettingsEditing = true

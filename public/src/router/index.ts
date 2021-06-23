@@ -16,6 +16,7 @@ import Profile from '../views/Profile/index.vue'
 import Games from '../views/Games/index.vue'
 import GameSummary from '../views/GameSummary/index.vue'
 import Notifications from '../views/Notifications/index.vue'
+import MyLeagues from '../views/MyLeagues/index.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -42,6 +43,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/notifications',
     name: routeNames.Notifications,
     component: Notifications
+  },
+  {
+    path: '/my-leagues',
+    name: routeNames.MyLeagues,
+    component: MyLeagues
   },
   {
     path: '/rules',

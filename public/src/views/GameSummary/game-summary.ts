@@ -1,7 +1,7 @@
-import { defineComponent } from "@vue/runtime-core";
-import { mapActions, mapGetters } from "vuex";
+import { defineComponent } from "@vue/runtime-core"
+import { mapActions, mapGetters, mapMutations } from "vuex";
 import GridTable from '@/components/tables/grid-table/index.vue'
-import { faTshirt } from "@fortawesome/free-solid-svg-icons";
+import { TOAST_TYPES } from '@/utils/toastTypes'
 
 export default defineComponent({
   name: 'game-summary',
@@ -139,6 +139,7 @@ export default defineComponent({
       'updateGameIsCompleted',
       'updateGameDateLocation'
     ]),
+    ...mapMutations(['updateGlobalToast']),
     reSubmit() {
       this.gameData.player_stats = this.gameData.player_stats.filter((p: any) => p.player_id !== this.getLoggedInPlayer._id)
     },
@@ -159,6 +160,13 @@ export default defineComponent({
       if (res.status === 200) {
         this.gameData = res.game
       }
+
+      this.updateGlobalToast({
+        message: res.message,
+        type: res.status == 400 ? TOAST_TYPES.Error : res.status == 403 ? TOAST_TYPES.Warning : TOAST_TYPES.Success,
+        duration: 5000,
+        isShowing: true
+      })
     },
     async completeGame() {
       const res = await this.updateGameIsCompleted({
@@ -171,6 +179,13 @@ export default defineComponent({
         this.team1Score = this.gameData.team_1_score
         this.team2Score = this.gameData.team_2_score
       }
+
+      this.updateGlobalToast({
+        message: res.message,
+        type: res.status == 400 ? TOAST_TYPES.Error : res.status == 403 ? TOAST_TYPES.Warning : TOAST_TYPES.Success,
+        duration: 5000,
+        isShowing: true
+      })
     },
     playerClick(row: any) {
       this.$router.push(`/player/${row.id.text}`)
@@ -186,6 +201,12 @@ export default defineComponent({
       if (res.status === 200) {
         this.gameData = res.game
       }
+      this.updateGlobalToast({
+        message: res.message,
+        type: res.status == 400 ? TOAST_TYPES.Error : res.status == 403 ? TOAST_TYPES.Warning : TOAST_TYPES.Success,
+        duration: 5000,
+        isShowing: true
+      })
     },
     cancelEditingGame() {
       this.isEditingGame = false

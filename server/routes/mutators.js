@@ -25,7 +25,7 @@ router.route('/leagues/kick-player').put(authChecker, async (req, res) => {
 
   const league = await Leagues.findOne({_id: leagueId})
   if (!league) {
-    res.send({ status: 400, message: 'Could not find league'})
+    res.send({ status: 400, message: 'Could not find this league...'})
   }
 
   // Make sure player id is in league
@@ -34,9 +34,9 @@ router.route('/leagues/kick-player').put(authChecker, async (req, res) => {
   const playerIsNotTheCreator = league.league_creator_id != playerId
 
   if (!playerIsInLeague) {
-    res.send({ status: 400, message: 'Player is not in the league'})
+    res.send({ status: 400, message: 'Player is not in this league...'})
   } else if (!playerIsNotTheCreator) {
-    res.send({ status: 400, message: 'Cannot kick the creator'})
+    res.send({ status: 403, message: 'The creator of the league cannot be kicked'})
   } else {
     // Remove player id from league
     await Leagues.findOneAndUpdate({_id: leagueId}, { $pull: { player_ids: playerId } })
@@ -46,9 +46,9 @@ router.route('/leagues/kick-player').put(authChecker, async (req, res) => {
     await sendNotification(playerId, notification, 'league_updates')
     const updatedLeague = await Leagues.findOne({_id: leagueId})
     if (updatedLeague) {
-      res.send({ status: 200, message: 'Player successfully kicked', league: updatedLeague})
+      res.send({ status: 200, message: 'Player has been successfully kicked', league: updatedLeague})
     } else { 
-      res.send({ status: 400, message: 'Player unsuccessfully kicked' })
+      res.send({ status: 400, message: 'Player has been unsuccessfully kicked' })
     }
   }
   
@@ -93,7 +93,7 @@ router.route('/leagues/edit-settings').put(authChecker, async (req, res) => {
 
   const league = await Leagues.findOne({_id: leagueId})
   if (!league) {
-    res.send({ status: 400, message: 'Could not find league'})
+    res.send({ status: 400, message: 'Could not find this league...'})
   } else {
     // Update league fields
     await Leagues.findOneAndUpdate({_id: leagueId}, {
@@ -104,9 +104,9 @@ router.route('/leagues/edit-settings').put(authChecker, async (req, res) => {
 
     const updatedLeague = await Leagues.findOne({_id: leagueId})
     if (updatedLeague) {
-      res.send({ status: 200, message: 'Successfully updated league settings', league: updatedLeague})
+      res.send({ status: 200, message: 'Successfully updated this leagues settings', league: updatedLeague})
     } else { 
-      res.send({ status: 400, message: 'Unsuccessfully updated league settings' })
+      res.send({ status: 400, message: 'Unsuccessfully updated this league settings' })
     }
   }
   
