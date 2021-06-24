@@ -25,5 +25,11 @@ export default {
   },
   getGlobalToastIsShowingOverride(): Number {
     return state.globalToast.isShowingOverride
+  },
+  getCurrentLeagueName(): String {
+    return state.currentLeagueName
+  },
+  getCurrentPlayerName(): String {
+    return state.currentPlayerName
   }
 }

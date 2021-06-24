@@ -12,6 +12,12 @@ export default defineComponent({
     Footer,
     Toast
   },
+  data() {
+    return {
+      isMobileView: true,
+      isMaxViewportHeight: true
+    }
+  },
   async created() {
     const res = await this.retrieveRefreshToken()
     console.log('token refreshed', res)
@@ -20,6 +26,16 @@ export default defineComponent({
       this.updateLoggedInPlayer(res.user)
       api.defaults.headers.common['Authorization'] = `Bearer ${res.accessToken}`
     }
+  },
+  mounted() {
+    this.setIsMobileView()
+    window.addEventListener('resize', this.setIsMobileView)
+    this.setIsMaxViewportHeight()
+    window.addEventListener('resize', this.setIsMaxViewportHeight)  
+  },
+  updated() {
+    this.setIsMobileView()
+    this.setIsMaxViewportHeight()
   },
   computed: {
     ...mapGetters(['getGlobalToastMessage', 'getGlobalToastType', 'getGlobalToastIsShowing', 'getGlobalToastDuration', 'getGlobalToastIsShowingOverride'])
@@ -33,6 +49,23 @@ export default defineComponent({
           isShowing: false
         })
       }
+    },
+    setIsMobileView() {
+      this.isMobileView = Boolean(window.outerWidth <= 576)
+    },
+    setIsMaxViewportHeight() {
+      const routerView = this.$refs.router_view as any
+      const routerViewBounds = routerView.getBoundingClientRect()
+      const footerSpan = this.$refs.footer_element as any
+      const footerBounds = footerSpan.children[0].getBoundingClientRect()
+      this.isMaxViewportHeight = Boolean((routerViewBounds.height + footerBounds.height) >= window.outerHeight )
+      if (!this.isMaxViewportHeight) {
+        routerView.style.paddingBottom = footerBounds.height + 'px'
+      }
     }
+  },
+  unmounted() { 
+    window.removeEventListener('resize', this.setIsMobileView)
+    window.removeEventListener('resize', this.setIsMaxViewportHeight)
   }
 })

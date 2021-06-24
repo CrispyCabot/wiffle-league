@@ -62,37 +62,85 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/leagues',
     name: routeNames.Leagues,
-    component: Leagues
+    component: Leagues,
+    meta: {
+      breadcrumbs: [
+        { name: routeNames.Home },
+        { name: routeNames.Leagues }
+      ]
+    }
   },
   {
     path: '/league/:id',
     name: routeNames.League,
-    component: League
+    component: League,
+    meta: {
+      breadcrumbs: [
+        { name: routeNames.Home },
+        { name: routeNames.Leagues },
+        { name: routeNames.League }
+      ]
+    }
   },
   {
     path: '/league/:id/games',
     name: routeNames.Games,
-    component: Games
+    component: Games,
+    meta: {
+      breadcrumbs: [
+        { name: routeNames.Home },
+        { name: routeNames.Leagues },
+        { name: routeNames.League },
+        { name: routeNames.Games }
+      ]
+    }
   },
   {
     path: '/leagues/schedules',
     name: routeNames.Schedules,
-    component: Schedules
+    component: Schedules,
+    meta: {
+      breadcrumbs: [
+        { name: routeNames.Home },
+        { name: routeNames.Leagues },
+        { name: routeNames.Schedules }
+      ]
+    }
   },
   {
     path: '/leagues/create',
     name: routeNames.CreateLeague,
-    component: CreateLeague
+    component: CreateLeague,
+    meta: {
+      breadcrumbs: [
+        { name: routeNames.Home },
+        { name: routeNames.Leagues },
+        { name: routeNames.CreateLeague }
+      ]
+    }
   },
   {
     path: '/players',
     name: routeNames.Players,
-    component: Players
+    component: Players,
+    meta: {
+      breadcrumbs: [
+        { name: routeNames.Home },
+        { name: routeNames.Players }
+      ]
+    }
   },
   {
     path: '/player/:id',
     name: routeNames.Player,
-    component: Player
+    component: Player,
+    meta: {
+      breadcrumbs: [
+        { name: routeNames.Home },
+        { name: routeNames.Players },
+        { name: routeNames.Player }
+      ]
+    }
   },
   {
     path: '/game-summary/:id',

@@ -1,7 +1,7 @@
 <template>
   <div class="schedules-container">
     <h1 class="site-title">Schedules</h1>
-
+    <breadcrumb />
     <div class="leagues-schedules white_card_background">
       <multi-item-selector
         :selectedItems="selectedSchedulesNames.map(n => { return { text: n } })"

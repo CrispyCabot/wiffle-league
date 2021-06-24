@@ -17,14 +17,26 @@ body {
   width: 100vw;
   min-height: 100vh;
   background-color: $dark_background;
+  position: relative;
   .global-toast {
     position: fixed;
     top: 0;
     left: 50%;
     transform: translate(-50%);
+    z-index: 5000;
+    width: 80%;
+    max-width: 30rem;
   }
   .router-view {
-    min-height: calc(90vh - 11.25rem);
+    // min-height: calc(90vh - 20.25rem);
+    &.not-max-viewport-height-router-view {
+    }
+  }
+  .footer-container {
+    position: absolute;
+    bottom: 0;
+    &.max-viewport-height-footer {
+    }
   }
 }
 

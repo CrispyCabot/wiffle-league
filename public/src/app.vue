@@ -11,10 +11,12 @@
       />
     </div>
     <Navbar />
-    <div class="router-view">
+    <div ref="router_view" class="router-view" :class="{'mobile-router-view': isMobileView, 'not-max-viewport-height-router-view': !isMaxViewportHeight }">
       <router-view/>
     </div>
-    <Footer />
+    <span ref="footer_element">
+      <Footer :class="{'max-viewport-height-footer': isMaxViewportHeight}"/>
+    </span>
   </div>
 </template>
 

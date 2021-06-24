@@ -1,8 +1,9 @@
 <template>
   <div class="player">
+    <breadcrumb />
     <div class="player-stats-table white_card_background ">
 
-      <h1 v-if="player.firstname" class="player-stats-table_firstname">{{player.firstname}}</h1>
+      <h1 v-if="player.firstname" class="player-stats-table_firstname">{{player.firstname}} {{player.lastname}}</h1>
       <p v-if="player.nickname" class="player-stats-table_nickname">
         <span>a.k.a</span> <br> {{player.nickname}}
       </p>

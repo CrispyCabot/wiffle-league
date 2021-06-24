@@ -1,6 +1,7 @@
 <template>
   <div class="leagues-container">
     <h1 class="site-title">Leagues</h1>
+    <breadcrumb />
     <div class="leagues-table white_card_background ">
 
       <div class="leagues-table_navigation">

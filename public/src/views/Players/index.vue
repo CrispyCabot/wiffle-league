@@ -2,6 +2,7 @@
   <div class="players-container">
 
     <h1 class="site-title">Players</h1>
+    <breadcrumb />
     <div class="players-table white_card_background ">
       <grid-table
         class="players-table_table"

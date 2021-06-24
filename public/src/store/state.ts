@@ -5,5 +5,7 @@ export default reactive({
   isLoggedIn: false,
   loggedInPlayer: {},
   accessToken: '',
-  globalToast: {} as IToast
+  globalToast: {} as IToast,
+  currentLeagueName: '',
+  currentPlayerName: ''
 })

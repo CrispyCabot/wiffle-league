@@ -4,13 +4,15 @@ import GridTable from '@/components/tables/grid-table/index.vue'
 import RadioButtonGroup from '@/components/inputs/radio-button-group/index.vue'
 import GameSelectionModal from '@/components/popups/game-selection-modal/index.vue'
 import { TOAST_TYPES } from '@/utils/toastTypes'
+import Breadcrumb from '@/components/navigation/breadcrumb/index.vue'
 
 export default defineComponent({
   name: 'league',
   components: {
     GridTable,
     RadioButtonGroup,
-    GameSelectionModal
+    GameSelectionModal,
+    Breadcrumb
   },
   data() {
     return {
@@ -144,6 +146,7 @@ export default defineComponent({
   async created() {
     this.leagueId = String(this.$route.params.id)
     this.leagueData = await this.fetchLeagueById(this.leagueId)
+    this.updateCurrentLeagueName(this.leagueData.name)
     this.creator = await this.fetchPlayerById(this.leagueData.league_creator_id)
 
     // Column setup
@@ -169,7 +172,7 @@ export default defineComponent({
       'editLeagueSettings',
       'sendNotification'
     ]),
-    ...mapMutations(['updateGlobalToast', 'updateLoggedInPlayer']),
+    ...mapMutations(['updateGlobalToast', 'updateLoggedInPlayer', 'updateCurrentLeagueName']),
     async fetchPlayers() {
       this.players = await Promise.all(this.leagueData.player_ids.map(async (id: any) => {
         return await this.fetchPlayerById(id)

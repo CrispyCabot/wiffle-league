@@ -1,15 +1,16 @@
 import { defineComponent } from "@vue/runtime-core";
 import { mapActions, mapGetters } from "vuex";
 import GridTable from '@/components/tables/grid-table/index.vue'
-import RadioButtonGroup from '@/components/inputs/radio-button-group/index.vue'
 import Pagination from '@/components/navigation/pagination/index.vue'
 import PaginationMixin from '@/mixins/pagination-mixin'
+import Breadcrumb from '@/components/navigation/breadcrumb/index.vue'
 
 export default defineComponent({
   name: 'players',
   components: {
     GridTable,
-    Pagination
+    Pagination,
+    Breadcrumb
   },
   mixins: [PaginationMixin],
   data() {

@@ -16,5 +16,11 @@ export default {
       ...toast,
       isShowingOverride: state.globalToast.isShowingOverride ? Number(state.globalToast.isShowingOverride) + 1 : 1 // Reset any previous toast before updating the next toast
     }
+  },
+  updateCurrentLeagueName(state: any, name: string) {
+    state.currentLeagueName = name
+  },
+  updateCurrentPlayerName(state: any, name: string) {
+    state.currentPlayerName = name
   }
 }

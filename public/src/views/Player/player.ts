@@ -4,13 +4,15 @@ import GridTable from '@/components/tables/grid-table/index.vue'
 import RowCard from '@/components/cards/row-card/index.vue'
 import ContactModal from '@/components/popups/contact-modal/index.vue'
 import { TOAST_TYPES } from '@/utils/toastTypes'
+import Breadcrumb from '@/components/navigation/breadcrumb/index.vue'
 
 export default defineComponent({
   name: 'profile',
   components: {
     GridTable,
     RowCard,
-    ContactModal
+    ContactModal,
+    Breadcrumb
   },
   data() {
     return {
@@ -80,6 +82,7 @@ export default defineComponent({
     window.addEventListener('resize', this.setIsMobileView)
     this.playerID = String(this.$route.params.id)
     this.player = await this.fetchPlayerById(this.playerID)
+    this.updateCurrentPlayerName(this.player.firstname + ' '  + this.player.lastname)
     this.columns = await this.fetchPlayerStatsTableColumns()
     this.leagues = await Promise.all(this.player.league_ids.map(async (id: string) => {
       const league = await this.fetchLeagueById(id)
@@ -97,7 +100,7 @@ export default defineComponent({
       'fetchPlayerCreatedLeagues',
       'invitePlayerToLeague'
     ]),
-    ...mapMutations(['updateGlobalToast']),
+    ...mapMutations(['updateGlobalToast', 'updateCurrentPlayerName']),
     redirect(link: string) {
       if (link == "top") {
         window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });

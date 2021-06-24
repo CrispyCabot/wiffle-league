@@ -6,6 +6,7 @@ import GridTable from '@/components/tables/grid-table/index.vue'
 import RowCard from '@/components/cards/row-card/index.vue'
 import Pagination from '@/components/navigation/pagination/index.vue'
 import PaginationMixin from '@/mixins/pagination-mixin'
+import Breadcrumb from '@/components/navigation/breadcrumb/index.vue'
 
 export default defineComponent({
   name: 'leagues',
@@ -14,7 +15,8 @@ export default defineComponent({
     RadioSlider,
     GridTable,
     RowCard,
-    Pagination
+    Pagination,
+    Breadcrumb
   },
   mixins: [PaginationMixin],
   data() {

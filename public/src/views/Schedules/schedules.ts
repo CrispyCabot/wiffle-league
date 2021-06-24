@@ -5,6 +5,7 @@ import PaginationMixin from '@/mixins/pagination-mixin'
 import ContentDropdown from '@/components/dropdowns/content-dropdown/index.vue'
 import GridTable from '@/components/tables/grid-table/index.vue'
 import MultiItemSelector from '@/components/dropdowns/multi-item-selector/index.vue'
+import Breadcrumb from '@/components/navigation/breadcrumb/index.vue'
 
 export default defineComponent({
   name: 'schedules',
@@ -12,7 +13,8 @@ export default defineComponent({
     Pagination,
     ContentDropdown,
     GridTable,
-    MultiItemSelector
+    MultiItemSelector,
+    Breadcrumb
   },
   mixins: [ PaginationMixin ],
   data() {
