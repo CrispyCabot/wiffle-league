@@ -4,11 +4,12 @@
   margin-bottom: .5rem;
   text-align: left;
   &_links {
+    font-size: .9rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     &_link {
-      margin-right: 1rem;
+      margin-right: .65rem;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -42,6 +43,12 @@
 @media (min-width: 992px) {
   .breadcrumb {
     max-width: 60rem;
+    &_links {
+      font-size: 1rem;
+      &_link {
+          margin-right: 1rem;
+      }
+    }
   }
 }
 
