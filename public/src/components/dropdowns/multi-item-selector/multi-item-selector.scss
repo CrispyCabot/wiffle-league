@@ -25,6 +25,9 @@
       text-overflow: ellipsis;
       white-space: nowrap;
     }
+    &:hover {
+      background: $accent_red_hover;
+    }
   }
   &_popup {
     position: relative;

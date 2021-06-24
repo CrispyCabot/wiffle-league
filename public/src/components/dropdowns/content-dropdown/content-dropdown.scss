@@ -10,6 +10,9 @@
     padding: .5rem;
     color: $off_white;
     border-bottom: .2rem solid $accent_light_red;
+    &:hover {
+      background: $accent_red_hover;
+    }
     &_text {
       display: flex;
       justify-content: flex-start;
