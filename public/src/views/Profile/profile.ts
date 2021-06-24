@@ -6,6 +6,7 @@ import RadioSlider from '@/components/inputs/radio-slider/index.vue'
 import RadioButtonGroup from '@/components/inputs/radio-button-group/index.vue'
 import { mapActions, mapGetters, mapMutations } from "vuex"
 import { TOAST_TYPES } from '@/utils/toastTypes'
+import RowCard from '@/components/cards/row-card/index.vue'
 
 export default defineComponent({
   name: 'profile',
@@ -13,7 +14,8 @@ export default defineComponent({
     GridTable,
     ContentDropdown,
     RadioSlider,
-    RadioButtonGroup
+    RadioButtonGroup,
+    RowCard
   },
   mixins: [PaginationMixin],
   data() {
@@ -30,12 +32,23 @@ export default defineComponent({
         confirm: { value: '', placeholder: 'Confirm password', name: 'confirm', isRequired: false, type: 'input' },
         gender: { value: '', placeholder: 'Gender', name: 'gender', isRequired: true, type: 'radio-group' }
       },
+      leagueColumns: [
+        { type: 'string', maxWidth: 'unset' },
+        { type: 'string', maxWidth: 'unset' },
+        { type: 'string', maxWidth: 'unset' },
+        { type: 'string', maxWidth: 'unset' },
+        { type: 'string', maxWidth: 'unset' }
+        ],
       genderRadioButtons: [
         'Male',
         'Female',
         'Other'
       ],
-      isSettingsEditing: false
+      leagues: [],
+      isMobileView: true,
+      isSettingsEditing: false,
+      playerID: "",
+      player: Object()
     }
   },
   computed: {
@@ -63,6 +76,32 @@ export default defineComponent({
       return (field: any) => {
         return (field.name != 'confirm' && field.name != 'password') ? true : this.isSettingsEditing
       }
+    },
+    leagueRows(): Array<Object> {
+      if (!this.leagues || this.leagues.length == 0) 
+        return []
+      if (this.isMobileView)
+        return this.leagues
+        .map((league: any) => {
+          const simple_row = {
+            name: {text: league.name, subtitle: '', type: 'title'},
+            place: {heading: 'Placement', text: this.getPlayerRankInLeague(this.playerID, league.player_stats), type: 'info'},
+            id: {text: league._id, type: 'hidden'}
+          }
+          return simple_row
+        })
+      else
+        return this.leagues
+          .map((league: any) => {
+            const simple_row = {
+              name: {text: league.name, subtitle: '', type: 'title'},
+              points: {heading: 'Points', text: this.getPlayerPoints(this.playerID, league.player_stats), type: 'info'},
+              place: {heading: 'Placement', text: this.getPlayerRankInLeague(this.playerID, league.player_stats), type: 'info'},
+              record: {heading: "Record", text: this.getPlayerRecord(this.playerID, league.player_stats), type: 'info'},
+              id: {text: league._id, type: 'hidden'}
+            }
+            return simple_row
+          })
     },
     isSaveEnabled(): Boolean {
       return Boolean(
@@ -93,11 +132,18 @@ export default defineComponent({
     }
   },
   async created() {
+    this.setIsMobileView()
+    this.playerID = this.getLoggedInPlayer._id
     this.columns = await this.fetchPlayerStatsTableColumns()
     this.setupFieldsValues()
+    this.player = await this.fetchPlayerById(this.playerID)
+    this.leagues = await Promise.all(this.player.league_ids.map(async (id: string) => {
+      const league = await this.fetchLeagueById(id)
+      return league
+    }))
   },
   methods: {
-    ...mapActions(['fetchPlayerStatsTableColumns', 'updateUserSettings']),
+    ...mapActions(['fetchPlayerStatsTableColumns', 'updateUserSettings', 'fetchPlayerById', 'fetchLeagueById']),
     ...mapMutations(['updateGlobalToast']),
     changeRadioValue(e: boolean, field: any) {
       if (field.name == 'contactInfo') {
@@ -169,6 +215,51 @@ export default defineComponent({
       else {
         this.$router.push(link)
       }
+    },
+    handleLeagueClick(row: any) {
+      const id = row.id.text
+      this.$router.push(`/league/${id}`)
+    },
+    getPlayerRankInLeague(playerId: string, leagueStats: Array<Object>) {
+      let place = leagueStats.length; //Assume last place, increase it per person with lower score than them
+      const playerPoints = this.getPlayerPoints(playerId, leagueStats)
+      leagueStats.forEach(function(value: any, index: number) {
+        if (value.player_id != playerId && value.stats.points < playerPoints) {
+          place -= 1
+        }
+      })
+      let rank = ""
+      const placeString = place.toString()
+      if (placeString[placeString.length-1] == "1" && placeString != "11")
+        rank = placeString + "st"
+      else if (placeString[placeString.length-1] == "2" && placeString != "12")
+        rank = placeString + "nd"
+      else if (placeString[placeString.length-1] == "3" && placeString != "13")
+        rank = placeString + "rd"
+      else
+        rank = placeString + "th"
+      return rank;
+    },
+    getPlayerPoints(playerId: string, leagueStats: Array<Object>) {
+      let points = -1
+      leagueStats.forEach(function(value: any, index: number) {
+        if (value.player_id == playerId) {
+          points = value.stats.points
+        }
+      })
+      return points
+    },
+    getPlayerRecord(playerId: string, leagueStats: Array<Object>) {
+      let record = ""
+      leagueStats.forEach(function(value: any, index: number) {
+        if (value.player_id == playerId) {
+          record = value.stats.wins + " - " + value.stats.losses
+        }
+      })
+      return record
+    },
+    setIsMobileView() {
+      this.isMobileView = Boolean(window.outerWidth <= 576)
     }
   },
   watch: {
@@ -177,5 +268,8 @@ export default defineComponent({
         this.setupFieldsValues()
       }
     }
+  },
+  unmounted() { 
+    window.removeEventListener('resize', this.setIsMobileView)
   }
 })

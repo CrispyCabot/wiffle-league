@@ -22,6 +22,11 @@
         :hoverable="false"
       ></grid-table>
 
+      <div class="player_leagues-info" v-if="leagueRows && leagueRows.length > 0">
+        <p class="player_leagues-info_label">League Standings</p>
+        <row-card v-for="row in leagueRows" :key="row.id.text" :row="row" :columns="leagueColumns" @row-click="handleLeagueClick"/>
+      </div>
+
       <content-dropdown class="profile-stats-table_settings" :label="'Settings'" :iconClass="'fas cog'">
         <div class="profile-stats-table_settings_grid">
           <div v-for="field in fields" :key="field.name" class="profile-stats-table_settings_grid_field" :class="{'full-width': field.type == 'radio-group'}">

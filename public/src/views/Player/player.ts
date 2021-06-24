@@ -27,7 +27,6 @@ export default defineComponent({
         { type: 'string', maxWidth: 'unset' }
         ],
       leagues: [],
-      leagueRanks: [],
       contactModalIsOpen: false,
       loggedInPlayersLeagues: [],
       isInvitingToLeague: false,
