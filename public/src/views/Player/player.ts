@@ -79,9 +79,13 @@ export default defineComponent({
   async created() {
     this.setIsMobileView()
     window.addEventListener('resize', this.setIsMobileView)
-    this.playerID = String(this.$route.params.id)
+    this.playerID = String(this.$route.params.playerId)
     this.player = await this.fetchPlayerById(this.playerID)
     this.updateCurrentPlayerName(this.player.firstname + ' '  + this.player.lastname)
+    if (this.$route.params.leagueId) {
+      const league = await this.fetchLeagueById(this.$route.params.leagueId)
+      this.updateCurrentLeagueName(league.name)
+    }
     this.columns = await this.fetchPlayerStatsTableColumns()
     this.leagues = await Promise.all(this.player.league_ids.map(async (id: string) => {
       const league = await this.fetchLeagueById(id)
@@ -99,7 +103,7 @@ export default defineComponent({
       'fetchPlayerCreatedLeagues',
       'invitePlayerToLeague'
     ]),
-    ...mapMutations(['updateGlobalToast', 'updateCurrentPlayerName']),
+    ...mapMutations(['updateGlobalToast', 'updateCurrentPlayerName', 'updateCurrentLeagueName']),
     redirect(link: string) {
       if (link == "top") {
         window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });

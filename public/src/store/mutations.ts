@@ -22,5 +22,8 @@ export default {
   },
   updateCurrentPlayerName(state: any, name: string) {
     state.currentPlayerName = name
+  },
+  updateCurrentGameName(state: any, name: string) {
+    state.currentGameName = name
   }
 }

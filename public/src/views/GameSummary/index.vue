@@ -1,6 +1,7 @@
 <template>
   <div class="game-summary">
     <h1 class="site-title">Game Summary</h1>
+    <breadcrumb />
 
     <div class="game-summary_summary white_card_background">
       <div class="game-summary_summary_teams">

@@ -2,11 +2,13 @@ import { defineComponent } from "@vue/runtime-core"
 import { mapActions, mapGetters, mapMutations } from "vuex";
 import GridTable from '@/components/tables/grid-table/index.vue'
 import { TOAST_TYPES } from '@/utils/toastTypes'
+import Breadcrumb from '@/components/navigation/breadcrumb/index.vue'
 
 export default defineComponent({
   name: 'game-summary',
   components: {
-    GridTable
+    GridTable,
+    Breadcrumb
   },
   data() {
     return {
@@ -96,9 +98,11 @@ export default defineComponent({
     }
   },
   async created() {
-    this.gameId = String(this.$route.params.id)
+    this.gameId = String(this.$route.params.gameId)
     this.gameData = await this.fetchGameById(this.gameId)
-    this.league = await this.fetchLeagueById(this.gameData.league_id)
+    this.league = await this.fetchLeagueById(String(this.$route.params.leagueId))
+
+    this.updateCurrentGameName('Game ' + (this.league.game_ids.findIndex((g: any) => g == this.gameId) + 1))
 
     this.team1 = await Promise.all(this.gameData.team_1_ids.map(async (id: any) => await this.fetchPlayerById(id)))
     this.team2 = await Promise.all(this.gameData.team_2_ids.map(async (id: any) => await this.fetchPlayerById(id)))
@@ -143,7 +147,7 @@ export default defineComponent({
       'updateGameIsCompleted',
       'updateGameDateLocation'
     ]),
-    ...mapMutations(['updateGlobalToast']),
+    ...mapMutations(['updateGlobalToast', 'updateCurrentGameName']),
     reSubmit() {
       this.gameData.player_stats = this.gameData.player_stats.filter((p: any) => p.player_id !== this.getLoggedInPlayer._id)
     },

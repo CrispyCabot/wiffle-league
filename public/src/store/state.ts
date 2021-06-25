@@ -7,5 +7,6 @@ export default reactive({
   accessToken: '',
   globalToast: {} as IToast,
   currentLeagueName: '',
-  currentPlayerName: ''
+  currentPlayerName: '',
+  currentGameName: ''
 })

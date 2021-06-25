@@ -71,7 +71,7 @@ const routes: Array<RouteRecordRaw> = [
     }
   },
   {
-    path: '/league/:id',
+    path: '/league/:leagueId',
     name: routeNames.League,
     component: League,
     meta: {
@@ -83,7 +83,20 @@ const routes: Array<RouteRecordRaw> = [
     }
   },
   {
-    path: '/league/:id/games',
+    path: '/league/:leagueId/player/:playerId',
+    name: routeNames.LeaguePlayer,
+    component: Player,
+    meta: {
+      breadcrumbs: [
+        { name: routeNames.Home },
+        { name: routeNames.Leagues },
+        { name: routeNames.League },
+        { name: routeNames.Player }
+      ]
+    }
+  },
+  {
+    path: '/league/:leagueId/games',
     name: routeNames.Games,
     component: Games,
     meta: {
@@ -92,6 +105,20 @@ const routes: Array<RouteRecordRaw> = [
         { name: routeNames.Leagues },
         { name: routeNames.League },
         { name: routeNames.Games }
+      ]
+    }
+  },
+  {
+    path: '/league/:leagueId/game-summary/:gameId',
+    name: routeNames.GameSummary,
+    component: GameSummary,
+    meta: {
+      breadcrumbs: [
+        { name: routeNames.Home },
+        { name: routeNames.Leagues },
+        { name: routeNames.League },
+        { name: routeNames.Games },
+        { name: routeNames.GameSummary }
       ]
     }
   },
@@ -131,7 +158,7 @@ const routes: Array<RouteRecordRaw> = [
     }
   },
   {
-    path: '/player/:id',
+    path: '/player/:playerId',
     name: routeNames.Player,
     component: Player,
     meta: {
@@ -141,11 +168,6 @@ const routes: Array<RouteRecordRaw> = [
         { name: routeNames.Player }
       ]
     }
-  },
-  {
-    path: '/game-summary/:id',
-    name: routeNames.GameSummary,
-    component: GameSummary
   },
   // Catch All Routes
   {

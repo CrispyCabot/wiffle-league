@@ -31,5 +31,8 @@ export default {
   },
   getCurrentPlayerName(): String {
     return state.currentPlayerName
+  },
+  getCurrentGameName(): String {
+    return state.currentGameName
   }
 }

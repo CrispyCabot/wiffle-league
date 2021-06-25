@@ -30,7 +30,7 @@
             :hasHeader="true"
             :hasPagination="false"
             :hasSizeSelector="false"
-            @row-clicked="handleGameClick"
+            @row-clicked="handleGameClick($event, league)"
           ></grid-table>
           <div v-if="loadingGames && !gamesShown.some(g => g.leagueId == league._id)" class="leagues-schedules_dropdowns_dropdown_loading">
             <span>Loading</span>

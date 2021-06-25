@@ -6,6 +6,7 @@ export default {
   Contact: 'contact',
   Players: 'players',
   Player: 'player',
+  LeaguePlayer: 'league-player',
   Leagues: 'leagues',
   League: 'league',
   MyLeagues: 'my-leagues',

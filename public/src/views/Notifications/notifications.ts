@@ -161,12 +161,12 @@ export default defineComponent({
         await this.deleteNotification(row, section)
       }
     },
-    async handleRowTitleClick({ row, section}: any) {
+    async handleRowTitleClick({ row, section }: any) {
       if ((section.sectionKey === 'league_updates' && row.message === '') || section.sectionKey === 'league_invitations') {
         this.$router.push(`/league/${row.leagueId}`)
       } else if (section.sectionKey === 'league_updates' && row.message !== '') {
         if (row.message === 'Scores posted' || row.message === 'Scores overwritten' || row.message === 'Game scheduled' || row.message === 'Game schedule changed') {
-          this.$router.push(`/game-summary/${row.gameId}`)
+          this.$router.push(`/league/${row.leagueId}/game-summary/${row.gameId}`)
         } else if (row.message === 'League Deleted') {
           return
         } else {

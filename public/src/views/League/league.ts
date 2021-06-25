@@ -146,7 +146,7 @@ export default defineComponent({
     }
   },
   async created() {
-    this.leagueId = String(this.$route.params.id)
+    this.leagueId = String(this.$route.params.leagueId)
     this.leagueData = await this.fetchLeagueById(this.leagueId)
     this.updateCurrentLeagueName(this.leagueData.name)
     this.creator = await this.fetchPlayerById(this.leagueData.league_creator_id)
@@ -336,10 +336,10 @@ export default defineComponent({
       }
     },
     playerClick(row: any) {
-      this.$router.push(`/player/${row.id.text}`)
+      this.$router.push(`/league/${this.leagueId}/player/${row.id.text}`)
     },
     gameClick(row: any) {
-      this.$router.push(`/game-summary/${row.id.text}`)
+      this.$router.push(`/league/${this.leagueId}/game-summary/${row.id.text}`)
     },
     gamesCreated(league: any, games: any) {
       this.leagueData = league

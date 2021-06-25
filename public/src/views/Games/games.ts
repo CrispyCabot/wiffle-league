@@ -1,11 +1,13 @@
 import { defineComponent } from "@vue/runtime-core";
 import { mapActions, mapGetters } from "vuex";
 import GridTable from '@/components/tables/grid-table/index.vue'
+import Breadcrumb from '@/components/navigation/breadcrumb/index.vue'
 
 export default defineComponent({
   name: 'games',
   components: {
-    GridTable
+    GridTable,
+    Breadcrumb
   },
   data() {
     return {
@@ -21,7 +23,7 @@ export default defineComponent({
     ])
   },
   async created() {
-    this.leagueId = String(this.$route.params.id)
+    this.leagueId = String(this.$route.params.leagueId)
     this.leagueData = await this.fetchLeagueById(this.leagueId)
     this.scheduleColumns = [...await this.fetchLeaguesScheduleTableColumns(), { columnName: 'submit', columnLabel: '', maxWidth: 'unset', isHidden: false}]
     await this.setupScheduleRows()
@@ -61,12 +63,12 @@ export default defineComponent({
       }))
     },
     handleGameClick(row: any, col: any) {
-      this.$router.push(`/game-summary/${row.id.text}`)
+      this.$router.push(`/league/${this.leagueId}/game-summary/${row.id.text}`)
     },
     handleSubmitScoreClick(row: any, column: any) {
       if (column.type === 'button-disabled') return
       if (column.type == 'button' && column.text == 'Submit scores') {
-        this.$router.push(`/game-summary/${row.id.text}`)
+        this.$router.push(`/league/${this.leagueId}/game-summary/${row.id.text}`)
       }
     }
   }

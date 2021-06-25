@@ -100,8 +100,8 @@ export default defineComponent({
       
       this.loadingGames = false
     },
-    handleGameClick(row: any, col: any) {
-      this.$router.push(`/game-summary/${row.id.text}`)
+    handleGameClick(row: any, league: any) {
+      this.$router.push(`/league/${league._id}/game-summary/${row.id.text}`)
     },
     async setSelectedSchedules() {
       if (this.getLoggedInPlayer && this.getIsLoggedIn && this.getLoggedInPlayer._id) {

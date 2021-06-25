@@ -117,7 +117,7 @@ export default defineComponent({
     async startLeague() {
       const mappedGames = this.games.map((g: any) => {
         return {
-          league_id: this.$route.params.id,
+          league_id: this.$route.params.leagueId,
           team_1_ids: g.team1Selections.map((p: any) => p._id),
           team_2_ids: g.team2Selections.map((p: any) => p._id),
           game_date: new Date(g.date + ', ' + g.time),

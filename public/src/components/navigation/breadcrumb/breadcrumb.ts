@@ -5,7 +5,7 @@ import { mapGetters } from "vuex"
 export default defineComponent({
   name: 'breadcrumb',
   computed: {
-    ...mapGetters(['getCurrentLeagueName', 'getCurrentPlayerName']),
+    ...mapGetters(['getCurrentLeagueName', 'getCurrentPlayerName', 'getCurrentGameName']),
     currentBreadcrumbs(): Array<any> {
       if (!this.$route.meta.breadcrumbs) return []
       if (!Array.isArray(this.$route.meta.breadcrumbs)) return []
@@ -20,12 +20,14 @@ export default defineComponent({
   },
   methods: {
     getDisplayNameData(name: string) {
-      if (name != 'league' && name != 'player') {
+      if (name != 'league' && name != 'player' && name != 'league-player' && name != 'game-summary') {
         return name.charAt(0).toUpperCase() + name.slice(1)
       } else if (name == 'league') {
         return this.getCurrentLeagueName
-      } else if (name == 'player') {
+      } else if (name == 'player' || name == 'league-player') {
         return this.getCurrentPlayerName
+      } else if (name == 'game-summary') {
+        return this.getCurrentGameName
       }
     },
     redirect(path: any) {

@@ -1,6 +1,7 @@
 <template>
   <div class="games-container">
     <h1 class="site-title">{{ leagueData.name }}</h1>
+    <breadcrumb />
 
     <div class="games-container_content white_card_background">
       <grid-table
