@@ -7,10 +7,9 @@ const bodyParser = require("body-parser")
 const cors = require("cors")
 require('dotenv').config()
 
-app.use(cors({
-  credentials: true,
-  origin: 'http://localhost:8080'
-}))
+// app.use(cors({
+//   origin: 'http://localhost:8080'
+// }))
 app.use(bodyParser.json({ limit: '1000mb' }))
 app.use(bodyParser.urlencoded({ limit: '1000mb', extended: false }))
 app.use(cookieParser()); // process.env.COOKIE_SECRET set secret as env var
@@ -34,9 +33,10 @@ app.listen(PORT, () => { console.log(`Listening on port ${PORT}`) })
 app.use(express.static('server_html'))
 app.use(function (req, res, next) {
   // Request methods you wish to allow
+  res.setHeader('Access-Control-Allow-Origin', '*')
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE')
   res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
-  res.setHeader('Access-Control-Allow-Credentials', true)
+  // res.setHeader('Access-Control-Allow-Credentials', true)
   // Pass to next layer of middleware
   next()
 })

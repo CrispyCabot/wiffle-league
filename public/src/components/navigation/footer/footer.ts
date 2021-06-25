@@ -9,7 +9,7 @@ export default defineComponent({
     return {}
   },
   computed: {
-    ...mapGetters(['getIsLoggedIn'])
+    ...mapGetters(['getIsLoggedIn', 'getLogo'])
   },
   methods: {
     redirect(link: string) {

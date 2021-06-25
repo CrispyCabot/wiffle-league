@@ -1,11 +1,9 @@
 import axios from 'axios'
 
 let httpClient = axios.create({
-  baseURL: window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'heroku_link_here',
-  withCredentials: 'include',
+  baseURL: window.location.hostname === 'localhost' ? 'http://localhost:3000' : 'https://agile-tor-70423.herokuapp.com',
   headers: {
-    'content-type': 'application/json',
-    'api-version': 1
+    'content-type': 'application/json'
   },
   crossDomain: true
 })

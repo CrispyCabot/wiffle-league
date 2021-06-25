@@ -1,8 +1,8 @@
 <template>
   <div class="login-container">
     <div class="login-container_title">
-      <img src="../../assets/logo.png">
-      <h1 class="site-title">Wiffle League</h1>
+      <img :src="getLogo">
+      <h1 class="site-title">Wiffle Ninja</h1>
     </div>
     <div class="login-container_fields">
       <div class="login-container_fields_field" v-for="field in fields" :key="field.name">

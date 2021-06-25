@@ -4,7 +4,7 @@
       <Hamburger :links="links" />
     </div>
     <div v-else class="navbar-container_desktop">
-      <img src="../../../assets/logo.png" @click="redirect({redirect: '/'})">
+      <img :src="getLogo" @click="redirect({redirect: '/'})">
       <p v-for="link in links" :key="link.redirect" :class="{'active': link.redirect === $route.path}" @click="redirect(link)">{{ link.label }}</p>
     </div>
 

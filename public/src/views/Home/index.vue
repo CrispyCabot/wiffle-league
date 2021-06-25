@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1 class="site-title">Wiffle League</h1>
+    <h1 class="site-title">Wiffle Ninja</h1>
     <button class="btn red_btn" @click="redirect('/signup')">Sign up today!</button>
     <div class="home_league-table white_card_background ">
       <grid-table

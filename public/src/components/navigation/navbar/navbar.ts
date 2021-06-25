@@ -32,7 +32,7 @@ export default defineComponent({
     }
   },
   computed: {
-    ...mapGetters(['getIsLoggedIn', 'getLoggedInPlayer']),
+    ...mapGetters(['getIsLoggedIn', 'getLoggedInPlayer', 'getLogo']),
     notificationCount(): Number {
       let count = 0
       if (this.getLoggedInPlayer && this.getLoggedInPlayer.notifications) {

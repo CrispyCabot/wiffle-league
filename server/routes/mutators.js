@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const authChecker = require("./utils/auth-checker");
 const gameScoreCalculation = require("./utils/game-score-calculation");
 const sendNotification = require("./utils/send-notification");

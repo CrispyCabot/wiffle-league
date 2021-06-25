@@ -1,5 +1,6 @@
 import { IToast } from "@/interfaces/IToast"
 import state from "./state"
+const Logo =  require('@/assets/wiffle_ninja_logo.png')
 
 export default {
   getIsLoggedIn(): Boolean {
@@ -34,5 +35,8 @@ export default {
   },
   getCurrentGameName(): String {
     return state.currentGameName
+  },
+  getLogo(): any {
+    return Logo
   }
 }
