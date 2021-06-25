@@ -25,9 +25,12 @@
     </div>
     <div class="home_about">
       <h2>About</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ut metus eget libero facilisis aliquam. Phasellus in lobortis eros, ac dapibus elit. Curabitur ac magna ut metus finibus dapibus at in purus. Aenean consequat ipsum et orci mattis, a tristique ex mattis. Vestibulum eleifend libero quis arcu consequat, ac imperdiet purus feugiat. Nullam mauris quam, ultrices nec pellentesque vel, efficitur a nibh. Curabitur in enim quis velit sodales egestas luctus ac purus. Etiam nibh nulla, porttitor sit amet fringilla at, pretium ut quam. Maecenas dolor est, viverra non lobortis et, rutrum sit amet ligula.
+      <p>This website sprouted from the idea of creating a wiffle ball league with minimal planning. Through this website, you no longer need to go through some complex process to try and gather friends into a league. Using this can keep track of all the stats you need, and even automatically create the games for you, leaving you to just select dates and locations. Furthermore, you don’t even have to worry about trying to create balanced teams, since teams will be randomized every game!
         <br><br>
-Morbi nisl nibh, facilisis at vehicula rhoncus, porttitor non dolor. Sed ac orci sagittis, accumsan ex sit amet, faucibus lacus. Quisque felis libero, blandit eget semper eu, scelerisque eu quam. Nunc vulputate lorem risus, ac hendrerit tellus consequat efficitur. Pellentesque nec tempor urna. Nam suscipit accumsan tortor molestie ultricies. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce ut erat sed dolor dignissim rhoncus eget id orci. Aenean erat quam, scelerisque tempor sapien id, varius volutpat mi. Quisque vulputate quis enim ut ultricies. Nam maximus, dui sed elementum gravida, nisi nibh aliquam libero, nec mollis quam tellus sit amet sem. Etiam eget massa sagittis, maximus metus id, molestie eros. Aliquam maximus orci eu lobortis porta. Etiam fringilla enim non blandit vehicula.</p>
+        One key factor which led to the creation of this site was the idea of signing up individually, rather than with teams. This makes it super quick and easy to join a league and get in on the fun of wiffle ball! All you have to do is join a league, then let the league creator take care of selecting dates for games. Teams will be randomized every game and you are scored individually for the league, rather than as a team (though a win sure helps out your own score!)
+        <br><br>
+        If you’ve got any ideas, suggestions, complaints, or whatever else, don’t hesitate to check out the ‘Contact’ page which can be found in the navigation above.
+        </p>
     </div>
   </div>
 </template>

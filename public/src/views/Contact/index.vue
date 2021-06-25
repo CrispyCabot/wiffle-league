@@ -3,12 +3,7 @@
     <h1 class="site-title">Contact</h1>
     <div class="contact-card white_card_background">
       <h2>Questions? Comments? Concerns? Something Else?</h2>
-      <p>You can get in contact with us through the following things:</p>
-      <ul>
-        <li>Thing 1</li>
-        <li>Thing 2</li>
-        <a href="mailto:wiffleleagues@gmail.com">Contact</a>
-      </ul>
+      <p>Shoot an email to <a href="mailto:wiffleleagues@gmail.com">wiffleleagues@gmail.com</a> and we'll try getting back to you in a timely manner!</p>
     </div>
   </div>
 </template>

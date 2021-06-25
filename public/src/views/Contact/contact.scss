@@ -6,6 +6,7 @@
         margin: 1rem auto;
         padding: 0.5rem;
         border-radius: 5px;
+        display: block;
         h2 {
             background: $accent_red;
             color: $off_white;
@@ -13,10 +14,14 @@
             width: 100%;
         }
         p {
-            padding: 0.4rem;
+            margin-top: 1rem;
+            margin-left: 0.4rem;
         }
-        ul {
-            margin-left: 2rem;
+        a {
+            color: $accent_red;
+            &:hover {
+                color: $accent_light_red;
+            }
         }
     }
 }
