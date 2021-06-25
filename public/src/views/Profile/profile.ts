@@ -55,11 +55,12 @@ export default defineComponent({
     ...mapGetters(['getIsLoggedIn', 'getLoggedInPlayer']),
     stats(): any {
       if (!this.getLoggedInPlayer) return {}
-      const stats: { [key: string]: any } = {}
+      const stats: { [key: string]: any } = { id: { text: this.getLoggedInPlayer._id, type: 'hidden' } }
 
-      if (this.getLoggedInPlayer.player_stats) {
-        Object.keys(this.getLoggedInPlayer.player_stats).forEach((s: string) => {
-          stats[s] = { text: this.getLoggedInPlayer.player_stats[s], type: 'numeric' } 
+      if (this.columns) {
+        this.columns.map((c: any) => c.columnName).forEach((s: string) => {
+          if (s != 'name' && s != 'id')
+            stats[s] = { text: this.getLoggedInPlayer.player_stats[s], type: 'numeric' } 
         })
       }
 
@@ -260,6 +261,9 @@ export default defineComponent({
     },
     setIsMobileView() {
       this.isMobileView = Boolean(window.outerWidth <= 576)
+    },
+    playerClick(row: any) {
+      this.$router.push(`/player/${row.id.text}`)
     }
   },
   watch: {

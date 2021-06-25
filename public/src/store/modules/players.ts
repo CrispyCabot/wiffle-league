@@ -14,7 +14,8 @@ export const PlayerActions = {
       { columnLabel: 'Plate Appearances', columnName: 'plate_appearances', maxWidth: 'unset', isHidden: false },
       { columnLabel: 'Wins', columnName: 'wins', maxWidth: 'unset', isHidden: false },
       { columnLabel: 'Losses', columnName: 'losses', maxWidth: 'unset', isHidden: false },
-      { columnLabel: 'Points', columnName: 'points', maxWidth: 'unset', isHidden: false }
+      { columnLabel: 'Points', columnName: 'points', maxWidth: 'unset', isHidden: false },
+      {columnLabel: 'Id', columnName: 'id', maxWidth: 'unset', isHidden: true}
     ]
   },
   createNewPlayer({ getters }: any, payload: any) {

@@ -7,6 +7,7 @@
       <ul>
         <li>Thing 1</li>
         <li>Thing 2</li>
+        <a href="mailto:wiffleleagues@gmail.com">Contact</a>
       </ul>
     </div>
   </div>

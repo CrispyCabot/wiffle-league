@@ -59,12 +59,15 @@ export default defineComponent({
     },
     statsRows(): Array<Object> {
       return [...this.team1, ...this.team2].map((player: any) => {
-        const stats: { [key: string]: any } =  { name: { text: player.firstname + ' ' + player.lastname, type: 'string' } } 
+        const stats: { [key: string]: any } =  {
+          name: { text: player.firstname + ' ' + player.lastname, type: 'string' },
+          id: { text: player._id, type: 'hidden' }
+        } 
 
         if (this.gameData.player_stats.map((p: any) => p.player_id).includes(player._id)) {
           const playerData = this.gameData.player_stats.find((p: any) => p.player_id == player._id)
-          Object.keys(playerData.stats).forEach((s: string) => {
-            if (this.overallStatsColumns.map(c => c.columnName).includes(s))
+          this.overallStatsColumns.map((c: any) => c.columnName).forEach((s: string) => {
+            if (s != 'name' && s != 'id')
               stats[s] = { text: playerData.stats[s], type: 'numeric' } 
           })
         }
@@ -102,8 +105,9 @@ export default defineComponent({
 
     const overallStatsColumns = await this.fetchPlayerStatsTableColumns()
     const nameColumn = { columnLabel: 'Name', columnName: 'name', maxWidth: '33vw', isHidden: false }
+    const idColumn = { columnLabel: 'Id', columnName: 'id', maxWidth: 'unset', isHidden: true }
     const filteredStatsColumnNames = ['games', 'wins', 'losses', 'points']
-    this.overallStatsColumns = [ nameColumn, ...overallStatsColumns.filter((c: any) => !filteredStatsColumnNames.includes(c.columnName)) ]
+    this.overallStatsColumns = [ nameColumn, ...overallStatsColumns.filter((c: any) => !filteredStatsColumnNames.includes(c.columnName)), idColumn ]
 
     if (this.gameIsCompleted) {
       this.team1Score = this.gameData.team_1_score

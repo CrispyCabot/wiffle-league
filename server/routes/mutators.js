@@ -316,20 +316,23 @@ router.route('/games/:id/update-score').put(authChecker, async (req, res) => {
     res.json({status: 400, message: 'Unsuccessfully found game with given id'})
   }
 
+  const playersHits = Number(singles) + Number(doubles) + Number(triples) + Number(homeruns)
+  const playersPoints = (Number(singles) + Number((2 * doubles)) + Number((3 * triples)) + Number((4 * homeruns)))
   if (game.player_stats.map(p => p.player_id).includes(playerId)) {
     game.player_stats = game.player_stats.map(p => {
       if (p.player_id == playerId) {
         Object.keys(gameStatKeys).forEach((key) => {
           p.stats[key] = gameStatKeys[key] 
         })
-        p.stats.hits = singles + doubles + triples + homeruns
+        p.stats.hits = playersHits
+        p.stats.points = playersPoints
         p.team1Score = team1Score 
         p.team2Score = team2Score
       }
       return p
     })
   } else {
-    game.player_stats.push({ player_id: playerId, team_1_score: team1Score, team_2_score: team2Score, stats: gameStatKeys })
+    game.player_stats.push({ player_id: playerId, team_1_score: team1Score, team_2_score: team2Score, stats: {...gameStatKeys, hits: playersHits, points: playersPoints } })
   }
   const { team_1_score, team_2_score } = gameScoreCalculation(game)
   game.team_1_score = team_1_score
@@ -338,7 +341,6 @@ router.route('/games/:id/update-score').put(authChecker, async (req, res) => {
   await Games.findOneAndUpdate({_id: gameId}, game)
   game = await Games.findOne({_id: gameId})
   if (game) {
-
     res.json({status: 200, message: 'Successfully updated game score', game: game})
   } else {
     res.json({status: 400, message: 'Unsuccessfully updated game score'})
@@ -359,7 +361,6 @@ router.route('/games/:id/update-completed').put(authChecker, async (req, res) =>
     res.json({status: 400, message: 'Unsuccessfully updated game'})
   }
 
-  // console.log(game.player_stats)
   const winningTeam = game.team_1_score > game.team_2_score ? 1 : 2
   // Update overall stats for each player in games stats
   try {
@@ -368,14 +369,16 @@ router.route('/games/:id/update-completed').put(authChecker, async (req, res) =>
       if (!player) res.json({status: 400, message: 'Unsuccessfully updated players overall stats'})
 
       const team = game.team_1_ids.includes(player._id) ? 1 : 2
-      Object.keys(player.player_stats).filter(s => s !== '$init').forEach(key => {
+      Object.keys(player.player_stats).filter(s => s != '$init').forEach(key => {
         player.player_stats[key] += stat.stats[key]
       })
-      player.player_stats.hits += (stat.stats.singles + stat.stats.doubles + stat.stats.triples + stat.stats.homeruns)
+      player.player_stats.hits += (Number(stat.stats.singles) + Number(stat.stats.doubles) + Number(stat.stats.triples) + Number(stat.stats.homeruns))
+      player.player_stats.points += (Number(stat.stats.singles) + Number((2 * stat.stats.doubles)) + Number((3 * stat.stats.triples)) + Number((4 * stat.stats.homeruns)))
       player.player_stats.games += 1
-      if(winningTeam === team) {
+      if(winningTeam == team) {
         player.player_stats.wins += 1
-      } else if(winningTeam !== team) {
+        player.player_stats.points += 10
+      } else if (winningTeam != team) {
         player.player_stats.losses += 1
       }
 
@@ -391,25 +394,28 @@ router.route('/games/:id/update-completed').put(authChecker, async (req, res) =>
   // Update overall stats for league for each player in games stats
   let league = await Leagues.findOne({_id: game.league_id})
   league.num_games_completed += 1
-  await Promise.all(game.player_stats.map(async (stat) => {
-    league.player_stats = league.player_stats.map(p => {
-      if (p.player_id === stat.player_id) {
-        const team = game.team_1_ids.includes(player._id) ? 1 : 2
-        p.stats.forEach(key => {
-          p.stats[key] += stat.stats[key]
-        })
-        p.stats.hits += (stat.stats.singles + stat.stats.doubles + stat.stats.triples + stat.stats.homeruns)
-        p.stats.games += 1
-        if(winningTeam === team) {
-          p.stats.wins += 1
-        } else if(winningTeam !== team) {
-          p.stats.losses += 1
+  league.player_stats = league.player_stats.map(p => {
+    const stat = game.player_stats.find(s => String(p.player_id) == String(s.player_id))
+    if (stat) {
+      const team = game.team_1_ids.includes(p.player_id) ? 1 : 2
+      Object.keys(stat.stats).forEach(key => {
+        if (stat.stats[key]) {
+          p.stats[key] += Number(stat.stats[key])
         }
+      })
+      p.stats.hits += (Number(stat.stats.singles) + Number(stat.stats.doubles) + Number(stat.stats.triples) + Number(stat.stats.homeruns))
+      p.stats.points += (Number(stat.stats.singles) + Number((2 * stat.stats.doubles)) + Number((3 * stat.stats.triples)) + Number((4 * stat.stats.homeruns)))
+      p.stats.games += 1
+      if(winningTeam === team) {
+        p.stats.wins += 1
+        p.stats.points += 10
+      } else if(winningTeam !== team) {
+        p.stats.losses += 1
       }
-      return p
-    })
-    return stat
-  }))
+    }
+    return p
+  })
+
   await Leagues.findOneAndUpdate({_id: game.league_id}, league)
   const updatedLeague = await Leagues.findOne({_id: game.league_id})
   if(!updatedLeague) res.json({status: 400, message: 'Unsuccessfully updated league overall stats'})

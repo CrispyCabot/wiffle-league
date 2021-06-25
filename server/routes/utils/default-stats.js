@@ -7,7 +7,7 @@ module.exports = {
   plate_appearances: 0,
   at_bats: 0,
   games: 0,
+  points: 0,
   wins: 0,
-  losses: 0,
-  points: 0
+  losses: 0
 }

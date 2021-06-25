@@ -1,6 +1,7 @@
 module.exports = (game) => {
   const team1Scores = {}
   const team2Scores = {}
+
   game.player_stats.forEach(player => {
     if (!player.team_1_score || !player.team_2_score) return
 

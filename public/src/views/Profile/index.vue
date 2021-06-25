@@ -13,13 +13,14 @@
       <grid-table
         class="profile-stats-table_table"
         :columns="columns"
-        :rows="splicedRows"
+        :rows="row"
         :rowsCount="1"
         :hasHeader="columns.length > 0"
         :label="'Overall Stats'"
         :hasPagination="false"
         :hasSizeSelector="false"
         :hoverable="false"
+        @row-click="playerClick"
       ></grid-table>
 
       <div class="player_leagues-info" v-if="leagueRows && leagueRows.length > 0">

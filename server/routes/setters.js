@@ -44,7 +44,8 @@ router.route('/leagues/create').post(authChecker, async (req, res) => {
         end_date,
         deadline_date,
         about_text,
-        gender
+        gender,
+        num_games_completed: 0
       })
       // Add league id to player that is creating league
       await Players.findOneAndUpdate({_id: league_creator_id}, { $addToSet: { league_ids: league._id } })

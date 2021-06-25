@@ -46,7 +46,7 @@
           :rows="statsRows"
           :rowsCount="statsRows ? statsRows.length : 0"
           :hasHeader="overallStatsColumns.length > 0"
-          :label="'Overall Stats'"
+          :label="'League Stats'"
           :hasPagination="false"
           :hasSizeSelector="false"
           :canHideContent="true"

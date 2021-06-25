@@ -87,12 +87,14 @@ export default defineComponent({
           id: { text: player._id, type: 'hidden' }
         } 
 
-        if (player.player_stats) {
-          Object.keys(player.player_stats).forEach((s: string) => {
-            stats[s] = { text: player.player_stats[s], type: 'numeric' } 
+        const playersStats = this.leagueData.player_stats.find((p: any)=> p.player_id == player._id).stats
+        if (playersStats) {
+          this.overallStatsColumns.map((c: any) => c.columnName).forEach((s: string) => {
+            if (s != 'name' && s != 'id') {
+              stats[s] = { text: playersStats[s], type: 'numeric' } 
+            }
           })
         }
-
         return stats
       })
     },
@@ -214,9 +216,10 @@ export default defineComponent({
       if (hits == 0) return '.000'
       if (hits > plate_appearances) return '.000'
 
-      const avg = String(hits / plate_appearances)
+      let avg = String(hits / plate_appearances)
       if (avg.length > 5) return avg.slice(1, 5)
-      return avg
+      while (avg.length < 5) avg += '0'
+      return avg.slice(1, 5)
     },
     async handleKickPlayerClick(row: any, column: any) {
       const res = await this.removePlayerFromLeagueGivenId({ playerId: row.id.text, leagueId: this.leagueData._id })
