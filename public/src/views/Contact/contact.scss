@@ -10,12 +10,14 @@
         h2 {
             background: $accent_red;
             color: $off_white;
-            padding: 0.4rem;
+            padding: 0.5rem;
+            border-radius: .25rem;
             width: 100%;
         }
         p {
             margin-top: 1rem;
-            margin-left: 0.4rem;
+            margin-bottom: .5rem;
+            margin-left: 0.5rem;
         }
         a {
             color: $accent_red;

@@ -10,8 +10,10 @@
     padding: .5rem;
     color: $off_white;
     border-bottom: .2rem solid $accent_light_red;
+    transition: .3s;
     &:hover {
-      background: $accent_red_hover;
+      background-color: $accent_red_hover;
+      border-color: darken($accent_light_red, 15);
     }
     &_text {
       display: flex;

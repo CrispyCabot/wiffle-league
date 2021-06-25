@@ -19,7 +19,7 @@
         margin-bottom: .5rem;
       }
       &_radio {
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
       }
     }
     &_table {
@@ -38,5 +38,8 @@
     &_btn {
       margin-top: 1.5rem;
     }
+  }
+  .create-league-btn {
+    margin-top: 2rem;
   }
 }

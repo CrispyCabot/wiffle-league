@@ -44,6 +44,9 @@
 
       <button class="leagues-table_btn btn red_btn" @click="$router.push('/leagues/schedules')">View schedules</button>
     </div>
+
+    
+    <button class="create-league-btn btn red_btn" @click="$router.push('/leagues/create')">Create a League</button>
   </div>
 </template>
 

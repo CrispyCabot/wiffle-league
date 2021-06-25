@@ -9,8 +9,9 @@
         h2 {
             background: $accent_red;
             color: $off_white;
-            padding: 0.4rem;
+            padding: 0.5rem;
             width: 100%;
+            border-radius: .25rem;
         }
         p {
             padding: 0.4rem;
@@ -18,6 +19,9 @@
         ul {
             margin: 1rem 0.5rem 1rem 2rem;
             list-style: none;
+            li {
+                margin: .25rem 0;
+            }
             li::before { //Copy and pasted this from https://www.w3schools.com/howto/howto_css_bullet_color.asp
                 content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
                 color: $accent_red; /* Change the color */
@@ -29,10 +33,24 @@
             li ul {
                 margin: 0.5rem 0.5rem 1rem 2rem;
             }
-            img {
-                display: block;
-                width: 40%;
-                margin: 0 auto;
+            .list-with-image {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                p {
+    
+                }
+                span {
+                    height: 4rem;
+                    width: 4rem;
+                    img {
+                        object-fit: contain;
+                        display: block;
+                        width: inherit;
+                        height: inherit;
+                        margin: 0 auto;
+                    }
+                }
             }
         }
     }

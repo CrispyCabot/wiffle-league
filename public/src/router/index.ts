@@ -52,12 +52,24 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/rules',
     name: routeNames.Rules,
-    component: Rules
+    component: Rules,
+    meta: {
+      breadcrumbs: [
+        { name: routeNames.Home },
+        { name: routeNames.Rules }
+      ]
+    }
   },
   {
     path: '/contact',
     name: routeNames.Contact,
-    component: Contact
+    component: Contact,
+    meta: {
+      breadcrumbs: [
+        { name: routeNames.Home },
+        { name: routeNames.Contact }
+      ]
+    }
   },
   {
     path: '/leagues',

@@ -1,6 +1,7 @@
 <template>
   <div class="rules-container">
     <h1 class="site-title">Rules</h1>
+    <breadcrumb />
     <div class="league-rules-card white_card_background">
       <h2>General Rules</h2>
       <ul>
@@ -26,8 +27,12 @@
     <div class="game-rules-card white_card_background">
       <h2>Gameplay Rules</h2>
       <ul>
-        <li>Use a wiffle ball/bat as depicted below</li>
-        <img src="../../assets/wiffleballbat.png">
+        <li class="list-with-image">
+          <p>Use a wiffle ball/bat as depicted... </p>
+          <span>
+            <img src="../../assets/wiffleballbat.png">
+          </span>
+        </li>
         <li>6 innings, 3 outs, 3 strikes, 4 balls</li>
         <li>In the event of a walk, a ghost runner advances to 1st base, and the same batter will restart the plate appearance</li>
         <li>'Ghost' runner rules
