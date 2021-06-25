@@ -38,7 +38,7 @@ export default defineComponent({
     this.setIsMaxViewportHeight()
   },
   computed: {
-    ...mapGetters(['getGlobalToastMessage', 'getGlobalToastType', 'getGlobalToastIsShowing', 'getGlobalToastDuration', 'getGlobalToastIsShowingOverride'])
+    ...mapGetters(['getGlobalToastMessage', 'getGlobalToastType', 'getGlobalToastIsShowing', 'getGlobalToastDuration', 'getGlobalToastIsShowingOverride', 'getAccessToken'])
   },
   methods: {
     ...mapActions(['retrieveRefreshToken']),

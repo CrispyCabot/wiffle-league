@@ -1,3 +1,4 @@
+import api from '@/api/api'
 import { defineComponent } from "@vue/runtime-core";
 import RadioButtonGroup from '@/components/inputs/radio-button-group/index.vue'
 import { mapActions, mapGetters, mapMutations } from "vuex"
@@ -79,6 +80,7 @@ export default defineComponent({
       if (res.status == 200) {
         this.updateIsLoggedIn(true)
         this.updateLoggedInPlayer(res.player)
+        api.defaults.headers.common['Authorization'] = `Bearer ${res.accessToken}`
         this.$router.push('/')
       }
 
