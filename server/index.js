@@ -16,8 +16,6 @@ app.use(bodyParser.urlencoded({ limit: '1000mb', extended: false }))
 app.use(cookieParser()); // process.env.COOKIE_SECRET set secret as env var
 app.use(express.json());
 
-
-
 // Mongoose methods
 const uri = `mongodb+srv://admin:${encodeURI(process.env.MONGO_ATLAS_PASSWORD)}@cluster0.kktwa.mongodb.net/${encodeURI(process.env.MONGO_ATLAS_DB)}?retryWrites=true&w=majority`
 mongoose.connect(uri, {

@@ -11,12 +11,11 @@ const createJRTEM = (user) => {
 }
 
 const sendRefreshToken = (req, res, token) => {
-  res.cookie('jrtem', token,
-  {
-    httpOnly: true,
-    secure: req.app.get('env') != 'development',
-    signed: false
-  });
+  res.cookie('jrtem', token, {
+    sameSite: 'None',
+    secure: true,
+    httpOnly: true
+  })
 }
 
 module.exports = {
