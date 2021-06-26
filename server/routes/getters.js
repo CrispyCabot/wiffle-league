@@ -11,6 +11,15 @@ router.route('/leagues').get((req, res) => {
     res.json(response)
   })
 })
+router.route('/leagues/games-completed').get((req, res) => {
+  Leagues.find({games_created: true}, async (err, response) => {
+    if (err) {
+      console.log(err)
+      return
+    }
+    res.json(response)
+  })
+})
 router.route('/leagues/:id').get((req, res) => {
   const { id } = req.params
   Leagues.findOne({_id: id}, async (err, response) => {

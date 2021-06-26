@@ -31,6 +31,17 @@ export const LeagueActions = {
         })
     })
   },
+  fetchLeaguesWithCompletedGames() {
+    return new Promise((resolve, reject) => {
+      api.get('/leagues/games-completed')
+        .then(({data}) => {
+          resolve(data)
+        })
+        .catch((error) => {
+          reject(error)
+        })
+    })
+  },
   fetchLeagueById(_: any, id: String) {
     return new Promise((resolve, reject) => {
       api.get(`/leagues/${id}`)

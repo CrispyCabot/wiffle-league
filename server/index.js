@@ -8,13 +8,15 @@ const cors = require("cors")
 require('dotenv').config()
 
 app.use(cors({
-  origin: ['http://127.0.0.1:8080', 'http://localhost:8080', 'http://localhost:8081', 'https://wiffle.ninja'],
+  origin: ['http://127.0.0.1:8080', 'http://localhost:8080', 'http://localhost:8081', 'http://wiffle.ninja', 'https://wiffle.ninja'],
   credentials: true
 }))
 app.use(bodyParser.json({ limit: '1000mb' }))
 app.use(bodyParser.urlencoded({ limit: '1000mb', extended: false }))
 app.use(cookieParser()); // process.env.COOKIE_SECRET set secret as env var
 app.use(express.json());
+
+
 
 // Mongoose methods
 const uri = `mongodb+srv://admin:${encodeURI(process.env.MONGO_ATLAS_PASSWORD)}@cluster0.kktwa.mongodb.net/${encodeURI(process.env.MONGO_ATLAS_DB)}?retryWrites=true&w=majority`
@@ -30,7 +32,9 @@ mongoose.connect(uri, {
 
 // Express endpoints setup
 const PORT = process.env.PORT || 3000
-app.listen(PORT, () => { console.log(`Listening on port ${PORT}`) })
+app.listen(PORT, () => { 
+  console.log(`Listening on port ${PORT}`)
+})
 app.use(express.static('server_html'))
 app.use(function (req, res, next) {
   // Request methods you wish to allow
@@ -40,8 +44,8 @@ app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Origin', origin);
   }
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE')
-  res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
-  res.setHeader('Access-Control-Allow-Credentials', "true")
+  res.setHeader("Access-Control-Allow-Headers", "*")
+  res.setHeader('Access-Control-Allow-Credentials', true)
   // Pass to next layer of middleware
   next()
 })

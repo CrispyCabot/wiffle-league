@@ -47,7 +47,7 @@ export default defineComponent({
     }
   },
   async created() {
-    this.allLeagues = await this.fetchLeagues()
+    this.allLeagues = await this.fetchLeaguesWithCompletedGames()
     this.columns = await this.fetchLeaguesScheduleTableColumns()
     this.shownLeagues = this.allLeagues
     await this.setSelectedSchedules()
@@ -61,7 +61,8 @@ export default defineComponent({
       'fetchGameById',
       'fetchPlayerById',
       'addSelectedSchedule',
-      'removeSelectedSchedule'
+      'removeSelectedSchedule',
+      'fetchLeaguesWithCompletedGames'
     ]),
     findGames(league: any) {
       const gameShownForLeague = this.gamesShown.find((g: any) => g.leagueId == league._id)

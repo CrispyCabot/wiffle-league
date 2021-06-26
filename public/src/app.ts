@@ -67,5 +67,12 @@ export default defineComponent({
   unmounted() { 
     window.removeEventListener('resize', this.setIsMobileView)
     window.removeEventListener('resize', this.setIsMaxViewportHeight)
+  },
+  watch: {
+    $route() {
+      if (this.getAccessToken) {
+        api.defaults.headers.common['Authorization'] = `Bearer ${this.getAccessToken}`
+      }
+    }
   }
 })
