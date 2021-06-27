@@ -91,7 +91,9 @@ export default defineComponent({
       const league = await this.fetchLeagueById(id)
       return league
     }))
-    this.loggedInPlayersLeagues = (await this.fetchPlayerCreatedLeagues(this.getLoggedInPlayer._id)).leagues
+    if (this.getIsLoggedIn) {
+      this.loggedInPlayersLeagues = (await this.fetchPlayerCreatedLeagues(this.getLoggedInPlayer._id)).leagues
+    }
   },
   methods: {
     ...mapActions([

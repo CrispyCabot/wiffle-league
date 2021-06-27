@@ -9,5 +9,6 @@ export default reactive({
   currentLeagueName: '',
   currentPlayerName: '',
   currentGameName: '',
-  isUsingMockData: false
+  isUsingMockData: false,
+  mockOverride: false
 })

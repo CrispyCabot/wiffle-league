@@ -41,5 +41,8 @@ export default {
   },
   getIsUsingMockData(): Boolean {
     return state.isUsingMockData
+  },
+  getMockOverride(): Boolean {
+    return state.mockOverride
   }
 }

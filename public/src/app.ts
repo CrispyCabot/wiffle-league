@@ -38,7 +38,7 @@ export default defineComponent({
     this.setIsMaxViewportHeight()
   },
   computed: {
-    ...mapGetters(['getGlobalToastMessage', 'getGlobalToastType', 'getGlobalToastIsShowing', 'getGlobalToastDuration', 'getGlobalToastIsShowingOverride', 'getAccessToken'])
+    ...mapGetters(['getGlobalToastMessage', 'getGlobalToastType', 'getGlobalToastIsShowing', 'getGlobalToastDuration', 'getGlobalToastIsShowingOverride', 'getAccessToken', 'getMockOverride'])
   },
   methods: {
     ...mapActions(['retrieveRefreshToken']),
@@ -74,8 +74,7 @@ export default defineComponent({
         api.defaults.headers.common['Authorization'] = `Bearer ${this.getAccessToken}`
       }
 
-      console.log(window.location)
-      if (window.location.href.includes('mock')) this.setIsUsingMockData(true)
+      if (window.location.href.includes('mock') || this.getMockOverride) this.setIsUsingMockData(true)
       else this.setIsUsingMockData(false)
     }
   }
