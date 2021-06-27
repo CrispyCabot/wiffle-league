@@ -7,8 +7,10 @@ const bodyParser = require("body-parser")
 const cors = require("cors")
 require('dotenv').config()
 
+
+const allowedOrigins = ['http://127.0.0.1:8080', 'http://localhost:8080', 'http://localhost:8081', 'http://wiffle.ninja', 'https://wiffle.ninja', 'http://mock.wiffle.ninja', 'https://mock.wiffle.ninja']
 app.use(cors({
-  origin: ['http://127.0.0.1:8080', 'http://localhost:8080', 'http://localhost:8081', 'http://wiffle.ninja', 'https://wiffle.ninja'],
+  origin: [...allowedOrigins],
   credentials: true
 }))
 app.use(bodyParser.json({ limit: '1000mb' }))
@@ -36,7 +38,6 @@ app.listen(PORT, () => {
 app.use(express.static('server_html'))
 app.use(function (req, res, next) {
   // Request methods you wish to allow
-  const allowedOrigins = ['http://127.0.0.1:8080', 'http://localhost:8080', 'http://localhost:8081', 'https://wiffle.ninja']
   const origin = req.headers.origin;
   if (allowedOrigins.includes(origin)) {
     res.setHeader('Access-Control-Allow-Origin', origin);
@@ -62,3 +63,10 @@ const mutators = require("./routes/mutators");
 app.use(router.use('/', getters))
 app.use(router.use('/', setters))
 app.use(router.use('/', mutators))
+
+const mock_getters = require("./routes/mock-routes/getters");
+const mock_setters = require("./routes/mock-routes/setters");
+const mock_mutators = require("./routes/mock-routes/mutators");
+app.use(router.use('/', mock_getters))
+app.use(router.use('/', mock_setters))
+app.use(router.use('/', mock_mutators))

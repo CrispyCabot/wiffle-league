@@ -42,7 +42,7 @@ export default defineComponent({
   },
   methods: {
     ...mapActions(['retrieveRefreshToken']),
-    ...mapMutations(['updateIsLoggedIn', 'updateLoggedInPlayer', 'updateGlobalToast']),
+    ...mapMutations(['updateIsLoggedIn', 'updateLoggedInPlayer', 'updateGlobalToast', 'setIsUsingMockData']),
     closingGlobalToast() {
       if (this.getGlobalToastIsShowing) {
         this.updateGlobalToast({
@@ -73,6 +73,10 @@ export default defineComponent({
       if (this.getAccessToken) {
         api.defaults.headers.common['Authorization'] = `Bearer ${this.getAccessToken}`
       }
+
+      console.log(window.location)
+      if (window.location.href.includes('mock')) this.setIsUsingMockData(true)
+      else this.setIsUsingMockData(false)
     }
   }
 })

@@ -20,8 +20,10 @@ export const PlayerActions = {
   },
   createNewPlayer({ getters }: any, payload: any) {
     const { email, password, fname, lname, nname, phone, gender } = payload
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/players/create` : `/players/create`
     return new Promise((resolve, reject) => {
-      api.post(`/players/create`, { email, password, fname, lname, nname, phone, gender })
+      api.post(route, { email, password, fname, lname, nname, phone, gender })
         .then(({data}) => {
           resolve(data)
         })
@@ -32,8 +34,10 @@ export const PlayerActions = {
   },
   logPlayerIn({ commit, getters }: any, payload: any) {
     const { email, password } = payload
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/players/login` : `/players/login`
     return new Promise((resolve, reject) => {
-      api.post(`/players/login`, { email, password })
+      api.post(route, { email, password })
           .then(({data}) => {
               if (data.status == 200) {
                 commit('updateIsLoggedIn', true)
@@ -47,9 +51,11 @@ export const PlayerActions = {
           })
     })
   },
-  logPlayerOut({ commit }: any) {
+  logPlayerOut({ commit, getters }: any) {
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/players/logout` : `/players/logout`
     return new Promise((resolve, reject) => {
-      api.post(`/players/logout`)
+      api.post(route)
         .then(({data}) => {
           if (data.status == 200) {
             commit('updateIsLoggedIn', false)
@@ -72,10 +78,11 @@ export const PlayerActions = {
     })
   },
   updateUserSettings({ commit, getters }: any, payload: any) {
-    api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`
     const { playerId, updates } = payload
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/players/update-profile` : `/players/update-profile`
     return new Promise((resolve, reject) => {
-      api.put(`/players/update-profile`, { playerId, updates })
+      api.put(route, { playerId, updates })
         .then(({data}) => {
             if (data.status == 200) {
               commit('updateLoggedInPlayer', data.player)
@@ -89,9 +96,11 @@ export const PlayerActions = {
         })
     })
   },
-  fetchPlayerById(_:any, id: string) {
+  fetchPlayerById({getters}: any, id: string) {
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/players/${id}` : `/players/${id}`
     return new Promise((resolve, reject) => {
-      api.get(`/players/${id}`)
+      api.get(route)
         .then(({data}: any) => {
           resolve(data)
         })
@@ -100,9 +109,11 @@ export const PlayerActions = {
         })
     })
   },
-  fetchPlayers() {
+  fetchPlayers({getters}: any) {
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/players` : `/players`
     return new Promise((resolve, reject) => {
-      api.get('/players')
+      api.get(route)
         .then(({data}) => {
           resolve(data)
         })
@@ -112,8 +123,10 @@ export const PlayerActions = {
     })
   },
   fetchPlayerSelectedSchedules({ getters }: any, id: string) {
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/players/${id}/selected-schedules` : `/players/${id}/selected-schedules`
     return new Promise((resolve, reject) => {
-      api.get(`/players/${id}/selected-schedules`)
+      api.get(route)
         .then(({data}: any) => {
           resolve(data)
         })
@@ -123,8 +136,10 @@ export const PlayerActions = {
     })
   },
   fetchPlayerCreatedLeagues({ getters }: any, id: string) {
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/players/${id}/created-leagues` : `/players/${id}/created-leagues`
     return new Promise((resolve, reject) => {
-      api.get(`/players/${id}/created-leagues`)
+      api.get(route)
         .then(({data}: any) => {
           resolve(data)
         })
@@ -134,8 +149,10 @@ export const PlayerActions = {
     })
   },
   addSelectedSchedule({ getters }: any, id: string) {
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/players/${getters.getLoggedInPlayer._id}/selected-schedules/add` : `/players/${getters.getLoggedInPlayer._id}/selected-schedules/add`
     return new Promise((resolve, reject) => {
-      api.put(`/players/${getters.getLoggedInPlayer._id}/selected-schedules/add`, { id })
+      api.put(route, { id })
         .then(({data}: any) => {
           resolve(data)
         })
@@ -145,8 +162,10 @@ export const PlayerActions = {
       })
   },
   removeSelectedSchedule({ getters }: any, id: string) {
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/players/${getters.getLoggedInPlayer._id}/selected-schedules/remove` : `/players/${getters.getLoggedInPlayer._id}/selected-schedules/remove`
     return new Promise((resolve, reject) => {
-      api.put(`/players/${getters.getLoggedInPlayer._id}/selected-schedules/remove`, { id })
+      api.put(route, { id })
         .then(({data}: any) => {
           resolve(data)
         })

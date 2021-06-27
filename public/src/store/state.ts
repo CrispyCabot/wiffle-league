@@ -8,5 +8,6 @@ export default reactive({
   globalToast: {} as IToast,
   currentLeagueName: '',
   currentPlayerName: '',
-  currentGameName: ''
+  currentGameName: '',
+  isUsingMockData: false
 })

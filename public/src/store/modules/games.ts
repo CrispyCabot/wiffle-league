@@ -1,9 +1,11 @@
 import api from '@/api/api'
 
 export const GameActions = {
-  fetchGameById(_: any, id: string) {
+  fetchGameById({ getters }: any, id: string) {
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/games/${id}` : `/games/${id}`
     return new Promise((resolve, reject) => {
-      api.get(`/games/${id}`)
+      api.get(route)
         .then(({data}) => {
           resolve(data)
         })
@@ -12,10 +14,12 @@ export const GameActions = {
         })
     })
   },
-  updateGameScoreByPlayerId(_: any, payload: any) {
+  updateGameScoreByPlayerId({ getters }: any, payload: any) {
     const { gameId, playerId, plate_appearances, at_bats, singles, doubles, triples, homeruns, team1Score, team2Score } = payload
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/games/${gameId}/update-score` : `/games/${gameId}/update-score`
     return new Promise((resolve, reject) => {
-      api.put(`/games/${gameId}/update-score`, { playerId, plate_appearances, at_bats, singles, doubles, triples, homeruns, team1Score, team2Score })
+      api.put(route, { playerId, plate_appearances, at_bats, singles, doubles, triples, homeruns, team1Score, team2Score })
         .then(({data}) => {
           resolve(data)
         })
@@ -24,10 +28,12 @@ export const GameActions = {
         })
     })
   },
-  updateGameIsCompleted(_: any, payload: any) {
+  updateGameIsCompleted({ getters }: any, payload: any) {
     const { gameId, completed } = payload
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/games/${gameId}/update-completed` : `/games/${gameId}/update-completed`
     return new Promise((resolve, reject) => {
-      api.put(`/games/${gameId}/update-completed`, { completed })
+      api.put(route, { completed })
         .then(({data}) => {
           resolve(data)
         })
@@ -37,9 +43,10 @@ export const GameActions = {
     })
   },
   createGames({ getters }: any, payload: any) {
-    api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/games/create` : `/games/create`
     return new Promise((resolve, reject) => {
-      api.post(`/games/create`, { games: payload })
+      api.post(route, { games: payload })
         .then(({data}) => {
           resolve(data)
         })
@@ -50,9 +57,10 @@ export const GameActions = {
   },
   updateGameDateLocation({ getters }: any, payload: any) {
     const { gameId, game_date, game_location } = payload
-    api.defaults.headers.common['Authorization'] = `Bearer ${getters.getAccessToken}`
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/game/${gameId}/update-date-location` : `/game/${gameId}/update-date-location`
     return new Promise((resolve, reject) => {
-      api.put(`/game/${gameId}/update-date-location`, { game_date, game_location })
+      api.put(route, { game_date, game_location })
         .then(({data}) => {
           resolve(data)
         })

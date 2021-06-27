@@ -1,6 +1,6 @@
 import { IToast } from "@/interfaces/IToast"
 import state from "./state"
-const Logo =  require('@/assets/wiffle_ninja_logo.png')
+const Logo =  require('@/assets/wiffle_ninja_logo_v2.png')
 
 export default {
   getIsLoggedIn(): Boolean {
@@ -38,5 +38,8 @@ export default {
   },
   getLogo(): any {
     return Logo
+  },
+  getIsUsingMockData(): Boolean {
+    return state.isUsingMockData
   }
 }

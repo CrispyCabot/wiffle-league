@@ -20,9 +20,11 @@ export const LeagueActions = {
       {columnLabel: 'Id', columnName: 'id', maxWidth: 'unset', isHidden: true}
     ]
   },
-  fetchLeagues() {
+  fetchLeagues({ getters }: any) {
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/leagues` : `/leagues`
     return new Promise((resolve, reject) => {
-      api.get('/leagues')
+      api.get(route)
         .then(({data}) => {
           resolve(data)
         })
@@ -31,9 +33,11 @@ export const LeagueActions = {
         })
     })
   },
-  fetchLeaguesWithCompletedGames() {
+  fetchLeaguesWithCompletedGames({ getters }: any) {
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/leagues/games-completed` : `/leagues/games-completed`
     return new Promise((resolve, reject) => {
-      api.get('/leagues/games-completed')
+      api.get(route)
         .then(({data}) => {
           resolve(data)
         })
@@ -42,9 +46,11 @@ export const LeagueActions = {
         })
     })
   },
-  fetchLeagueById(_: any, id: String) {
+  fetchLeagueById({ getters }: any, id: String) {
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/leagues/${id}` : `/leagues/${id}`
     return new Promise((resolve, reject) => {
-      api.get(`/leagues/${id}`)
+      api.get(route)
         .then(({data}) => {
           resolve(data)
         })
@@ -53,9 +59,11 @@ export const LeagueActions = {
         })
     })
   },
-  fetchLeagueStatsById(_: any, id: String) {
+  fetchLeagueStatsById({ getters }: any, id: String) {
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/leagues/${id}/stats` : `/leagues/${id}/stats`
     return new Promise((resolve, reject) => {
-      api.get(`/leagues/${id}/stats`)
+      api.get(route)
         .then(({data}) => {
           resolve(data)
         })
@@ -66,8 +74,10 @@ export const LeagueActions = {
   },
   createLeague({ getters }:any, payload: any) {
     const { creatorId, name, maxPlayers, numGames, teamSize, startDate, endDate, deadlineDate, other, gender } = payload
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/leagues/create` : `/leagues/create`
     return new Promise((resolve, reject) => {
-      api.post(`/leagues/create`, {
+      api.post(route, {
         name: name,
         player_ids: [],
         player_stats: [],
@@ -93,8 +103,10 @@ export const LeagueActions = {
   },
   editLeagueSettings({ getters }:any, payload: any) {
     const { leagueId, name, maxPlayers, numGames, teamSize, startDate, endDate, deadlineDate, other, gender } = payload
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/leagues/edit-settings` : `/leagues/edit-settings`
     return new Promise((resolve, reject) => {
-      api.put(`/leagues/edit-settings`, {
+      api.put(route, {
         leagueId: leagueId,
         name: name,
         max_num_players: maxPlayers,
@@ -116,8 +128,10 @@ export const LeagueActions = {
   },
   removePlayerFromLeagueGivenId({ getters }: any, payload: any) {
     const { playerId, leagueId } = payload
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/leagues/kick-player` : `/leagues/kick-player`
     return new Promise((resolve, reject) => {
-      api.put(`/leagues/kick-player`, { playerId, leagueId })
+      api.put(route, { playerId, leagueId })
         .then(({data}) => {
           resolve(data)
         })
@@ -128,8 +142,10 @@ export const LeagueActions = {
   },
   addPlayerToLeagueGivenId({ getters, commit }: any, payload: any) {
     const { playerId, senderId, leagueId } = payload
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/leagues/add-player` : `/leagues/add-player`
     return new Promise((resolve, reject) => {
-      api.put(`/leagues/add-player`, { playerId, senderId, leagueId })
+      api.put(route, { playerId, senderId, leagueId })
         .then(({data}) => {
           commit('updateLoggedInPlayer', data.player)
           resolve(data)
@@ -140,8 +156,10 @@ export const LeagueActions = {
     })
   },
   invitePlayerToLeague({ getters }: any, { leagueId, playerId }: any) {
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/league/${leagueId}/invite` : `/league/${leagueId}/invite`
     return new Promise((resolve, reject) => {
-      api.put(`/league/${leagueId}/invite`, { playerId })
+      api.put(route, { playerId })
         .then(({data}) => {
           resolve(data)
         })
@@ -150,9 +168,11 @@ export const LeagueActions = {
         })
     })
   },
-  deleteLeagueById({getters}: any, leagueId: String) {
+  deleteLeagueById({ getters }: any, leagueId: String) {
+    const isUsingMockData = getters.getIsUsingMockData
+    const route = isUsingMockData ? `/mock/leagues/delete` : `/leagues/delete`
     return new Promise((resolve, reject) => {
-      api.post(`/leagues/delete`, { leagueId })
+      api.post(route, { leagueId })
         .then(({data}) => {
           resolve(data)
         })

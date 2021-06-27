@@ -25,5 +25,8 @@ export default {
   },
   updateCurrentGameName(state: any, name: string) {
     state.currentGameName = name
+  },
+  setIsUsingMockData(state: any, isUsingMockData: Boolean) {
+    state.isUsingMockData = isUsingMockData
   }
 }
