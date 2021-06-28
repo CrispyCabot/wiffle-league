@@ -23,6 +23,7 @@
           :hasSizeSelector="false"
           :canHideContent="true"
           @row-clicked="playerClick"
+          @sort-change="handleLeaderBoardSortChange"
         ></grid-table>
       </div>
       <div v-if="isLeagueStarted" class="content-section league-container_content_schedule">
@@ -37,6 +38,7 @@
           :hasSizeSelector="false"
           :canHideContent="true"
           @row-clicked="gameClick"
+          @sort-change="handleScheduleSortChange"
         ></grid-table>
       </div>
       <div v-if="isLeagueStarted" class="content-section league-container_content_overall-stats">
@@ -51,6 +53,7 @@
           :hasSizeSelector="false"
           :canHideContent="true"
           @row-clicked="playerClick"
+          @sort-change="handleStatsSortChange"
         ></grid-table>
       </div>
 

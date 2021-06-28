@@ -24,6 +24,7 @@
         @page-index-change="changePageIndex($event)"
         @page-size-change="changePageSize($event)"
         @row-clicked="handleLeagueClick"
+        @sort-change="handleSortChange"
       ></grid-table>
 
       <div v-if="selectedDisplayValue == 'Simple' && columns.length > 0" class="leagues-table_cards">

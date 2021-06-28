@@ -21,10 +21,10 @@ export default defineComponent({
       creator: Object(),
       leaderboardColumns: [
         {columnLabel: 'Placement', columnName: 'placement', maxWidth: 'unset', isHidden: false},
-        {columnLabel: 'Name', columnName: 'name', maxWidth: '33vw', isHidden: false},
+        {columnLabel: 'Name', columnName: 'name', maxWidth: '33vw', isHidden: false, canSort: true},
         {columnLabel: 'Win Loss', columnName: 'winloss', maxWidth: 'unset', isHidden: false},
-        {columnLabel: 'Avg', columnName: 'avg', maxWidth: 'unset', isHidden: false},
-        {columnLabel: 'Points', columnName: 'points', maxWidth: 'unset', isHidden: false},
+        {columnLabel: 'Avg', columnName: 'avg', maxWidth: 'unset', isHidden: false, canSort: true},
+        {columnLabel: 'Points', columnName: 'points', maxWidth: 'unset', isHidden: false, canSort: true},
         {columnLabel: 'Id', columnName: 'id', maxWidth: 'unset', isHidden: true}
       ],
       scheduleColumns: Array<any>(),
@@ -86,14 +86,16 @@ export default defineComponent({
           name: { text: player.firstname + ' ' + player.lastname, type: 'string' },
           id: { text: player._id, type: 'hidden' }
         } 
-
-        const playersStats = this.leagueData.player_stats.find((p: any)=> p.player_id == player._id).stats
-        if (playersStats) {
-          this.overallStatsColumns.map((c: any) => c.columnName).forEach((s: string) => {
-            if (s != 'name' && s != 'id') {
-              stats[s] = { text: playersStats[s], type: 'numeric' } 
-            }
-          })
+        const playerInLeague = this.leagueData.player_stats.find((p: any)=> p.player_id == player._id)
+        if (playerInLeague) {
+          const playersStats = playerInLeague.stats
+          if (playersStats) {
+            this.overallStatsColumns.map((c: any) => c.columnName).forEach((s: string) => {
+              if (s != 'name' && s != 'id') {
+                stats[s] = { text: playersStats[s], type: 'numeric' } 
+              }
+            })
+          }
         }
         return stats
       })
@@ -155,8 +157,15 @@ export default defineComponent({
     const overallStatsColumns = await this.fetchPlayerStatsTableColumns()
     const nameColumn = { columnLabel: 'Name', columnName: 'name', maxWidth: '33vw', isHidden: false }
     const idColumn = { columnLabel: 'Id', columnName: 'id', maxWidth: '33vw', isHidden: true }
-    this.overallStatsColumns = [ nameColumn, ...overallStatsColumns, idColumn ]
+    this.overallStatsColumns = [ nameColumn, ...overallStatsColumns, idColumn ].map(c => {
+      c.canSort = true
+      return c
+    })
     this.scheduleColumns = await this.fetchLeaguesScheduleTableColumns()
+    this.scheduleColumns = this.scheduleColumns.map(c => {
+        c.canSort = c.columnName == 'date'
+        return c
+      })
 
     await this.setupScheduleRows() 
     this.setupFieldsValues()
@@ -188,7 +197,11 @@ export default defineComponent({
         p.lastname = player.lastname
         return p
       }))
-      this.leagueData.player_stats.sort((a: any, b: any) => b.stats.points - a.stats.points)
+      this.leagueData.player_stats.sort((a: any, b: any) => {
+        if (Number(a.stats.points) < Number(b.stats.points)) return 1
+        if (Number(a.stats.points) > Number(b.stats.points)) return -1
+        return 0
+      })
     },
     async setupScheduleRows() {
       this.scheduleRows = await Promise.all(this.leagueData.game_ids.map(async (id: any) => {
@@ -272,7 +285,13 @@ export default defineComponent({
       })
     },
     getPlayerPlacement(player: any): String {
-      const playerIndex = this.leagueData.player_stats.findIndex((p: any) => p.player_id === player.player_id) + 1
+      const playerIndex = [...this.leagueData.player_stats]
+        .sort((a: any, b: any) => {
+          if (Number(a.stats.points) < Number(b.stats.points)) return 1
+          if (Number(a.stats.points) > Number(b.stats.points)) return -1
+          return 0
+        })
+        .findIndex((p: any) => p.player_id === player.player_id) + 1
 
       if (playerIndex < 20) {
         if (playerIndex === 1) return playerIndex + 'st'
@@ -344,6 +363,57 @@ export default defineComponent({
     gamesCreated(league: any, games: any) {
       this.leagueData = league
       this.isSelectingGames = false
+    },
+    async handleLeaderBoardSortChange({column, direction}: any) {
+      const { columnName } = column
+      const mult = direction == 'up' ? 1 : -1
+      if (columnName == 'name') {
+        this.leagueData.player_stats = this.leagueData.player_stats.sort((a: any, b: any) => {
+          if (a.firstname + a.lastname < b.firstname + b.lastname) return -1 * mult
+          if (a.firstname + a.lastname > b.firstname + b.lastname) return 1 * mult
+          return 0
+        })
+      } else if (columnName == 'avg') {
+        this.leagueData.player_stats = this.leagueData.player_stats.sort((a: any, b: any) => {
+          if (this.calcAvg(a.stats) < this.calcAvg(b.stats)) return 1 * mult
+          if (this.calcAvg(a.stats) > this.calcAvg(b.stats)) return -1 * mult
+          return 0
+        })
+      } else if (columnName == 'points') {
+        this.leagueData.player_stats = this.leagueData.player_stats.sort((a: any, b: any) => {
+          if (Number(a.stats.points) < Number(b.stats.points)) return 1 * mult
+          if (Number(a.stats.points) > Number(b.stats.points)) return -1 * mult
+          return 0
+        })
+      }
+    },
+    handleScheduleSortChange({column, direction}: any) {
+      const mult = direction == 'up' ? 1 : -1
+      this.scheduleRows = this.scheduleRows.sort((a: any, b: any) => {
+        if (new Date(a.date.text) < new Date(b.date.text)) return 1 * mult
+        if (new Date(a.date.text) > new Date(b.date.text)) return -1 * mult
+        return 0
+      })
+    },
+    handleStatsSortChange({column, direction}: any) {
+      const { columnName } = column
+      const mult = direction == 'up' ? 1 : -1
+      if (columnName == 'name') {
+        this.players = this.players.sort((a: any, b: any) => {
+          if (a.firstname + a.lastname < b.firstname + b.lastname) return -1 * mult
+          if (a.firstname + a.lastname > b.firstname + b.lastname) return 1 * mult
+          return 0
+        })
+      } else {
+        const key = column.columnName
+        this.players = this.players.sort((a: any, b: any) => {
+          const aLeagueStats = this.leagueData.player_stats.find((p: any) => p.player_id == a._id).stats
+          const bLeagueStats = this.leagueData.player_stats.find((p: any) => p.player_id == b._id).stats
+          if (aLeagueStats[key] < bLeagueStats[key]) return 1 * mult
+          if (aLeagueStats[key] > bLeagueStats[key]) return -1 * mult
+          return 0
+        })
+      }
     }
   },
   watch: {

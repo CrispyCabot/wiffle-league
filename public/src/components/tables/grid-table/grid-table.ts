@@ -1,5 +1,6 @@
 import { defineComponent } from "@vue/runtime-core";
 import Pagination from '@/components/navigation/pagination/index.vue'
+import SortingIcons from '@/utils/sortingIcons'
 
 export default defineComponent({
   name: 'grid-table',
@@ -23,7 +24,23 @@ export default defineComponent({
   },
   data() {
     return {
-      isContentOpen: false
+      isContentOpen: false,
+      sortingColumn: null as any,
+      sortingDirection: null as any
+    }
+  },
+  computed: {
+    getSortingIcon() {
+      return (column: any) => {
+        if (!this.sortingColumn || !column) return SortingIcons.SORTING
+
+        if (this.sortingColumn.columnName == column.columnName) {
+          if (this.sortingDirection) return this.sortingDirection
+          return SortingIcons.SORTING_UP
+        }
+
+        return SortingIcons.SORTING
+      }
     }
   },
   methods: {
@@ -34,6 +51,24 @@ export default defineComponent({
     },
     locationClick(row: any, col: any) {
       window.open(`https://www.google.com/maps/search/${col.text.split(' ').join('+')}`)
+    },
+    handleSortingColumnChange(column: any) {
+      if (this.sortingColumn && column) {
+        if (this.sortingColumn.columnName == column.columnName) {
+          if (this.sortingDirection == SortingIcons.SORTING_UP) {
+            this.sortingDirection = SortingIcons.SORTING_DOWN  
+          } else {
+            this.sortingDirection = SortingIcons.SORTING_UP
+          }
+        } else {
+          this.sortingDirection = SortingIcons.SORTING_UP
+        }
+      } else {
+        this.sortingDirection = SortingIcons.SORTING_UP
+      }
+      this.sortingColumn = column
+      const directionString = (this.sortingDirection == SortingIcons.SORTING_UP) || !this.sortingDirection ? 'up' : 'down'
+      this.$emit('sort-change', {column: this.sortingColumn, direction: directionString })
     }
   }
 })

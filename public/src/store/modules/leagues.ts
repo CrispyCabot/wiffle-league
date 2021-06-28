@@ -3,11 +3,11 @@ import api from '@/api/api'
 export const LeagueActions = {
   fetchLeaguesTableColumns() {
     return [
-      {columnLabel: 'Name', columnName: 'name', maxWidth: '33vw', isHidden: false},
-      {columnLabel: 'Players', columnName: 'players', maxWidth: 'unset', isHidden: false},
-      {columnLabel: 'Start Date', columnName: 'startDate', maxWidth: 'unset', isHidden: false},
-      {columnLabel: 'End Date', columnName: 'endDate', maxWidth: 'unset', isHidden: false},
-      {columnLabel: 'Id', columnName: 'id', maxWidth: 'unset', isHidden: true}
+      {columnLabel: 'Name', columnName: 'name', maxWidth: '33vw', isHidden: false, canSort: true},
+      {columnLabel: 'Players', columnName: 'players', maxWidth: 'unset', isHidden: false, canSort: true},
+      {columnLabel: 'Start Date', columnName: 'startDate', maxWidth: 'unset', isHidden: false, canSort: true},
+      {columnLabel: 'End Date', columnName: 'endDate', maxWidth: 'unset', isHidden: false, canSort: true},
+      {columnLabel: 'Id', columnName: 'id', maxWidth: 'unset', isHidden: true, canSort: false}
     ]
   },
   fetchLeaguesScheduleTableColumns() {

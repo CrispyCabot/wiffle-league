@@ -16,6 +16,7 @@
         @page-index-change="changePageIndex($event)"
         @page-size-change="changePageSize($event)"
         @row-clicked="handleLeagueClick"
+        @sort-change="handleSortChange"
       ></grid-table>
     </div>
     <div class="home_btns">

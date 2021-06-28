@@ -20,6 +20,7 @@
         @page-size-change="changePageSize($event)"
         :canHideContent="false"
         @row-clicked="playerClick"
+        @sort-change="handleSortChange"
       ></grid-table>
     </div>
 

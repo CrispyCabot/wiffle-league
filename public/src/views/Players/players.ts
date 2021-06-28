@@ -50,7 +50,10 @@ export default defineComponent({
     const overallStatsColumns = await this.fetchPlayerStatsTableColumns()
     const nameColumn = { columnLabel: 'Name', columnName: 'name', maxWidth: '33vw', isHidden: false }
     const idColumn = { columnLabel: 'Id', columnName: 'id', maxWidth: '33vw', isHidden: true }
-    this.overallStatsColumns = [ nameColumn, ...overallStatsColumns, idColumn ]
+    this.overallStatsColumns = [ nameColumn, ...overallStatsColumns, idColumn ].map(c => {
+      c.canSort = true
+      return c
+    })
   },
   methods: {
     ...mapActions([
@@ -75,6 +78,24 @@ export default defineComponent({
     playerClick(row: any) {
       this.$router.push(`/player/${row.id.text}`)
     },
+    handleSortChange({column, direction}: any) {
+      const { columnName } = column
+      const mult = direction == 'up' ? 1 : -1
+      if (columnName == 'name') {
+        this.players = this.players.sort((a: any, b: any) => {
+          if (a.firstname + a.lastname < b.firstname + b.lastname) return -1 * mult
+          if (a.firstname + a.lastname > b.firstname + b.lastname) return 1 * mult
+          return 0
+        })
+      } else {
+        const key = column.columnName
+        this.players = this.players.sort((a: any, b: any) => {
+          if (a.player_stats[key] < b.player_stats[key]) return 1 * mult
+          if (a.player_stats[key] > b.player_stats[key]) return -1 * mult
+          return 0
+        })
+      }
+    }
   },
   watch: {
     async playerData() {

@@ -9,7 +9,16 @@
     <div v-if="isContentOpen || !canHideContent" class="grid-table_table-container">
       <table class="grid-table_table">
         <thead v-if="hasHeader" class="grid-table_table_head">
-          <th v-for="column in columns" :key="column.columnLabel" :class="{'hidden': column.isHidden}">{{column.columnLabel}}</th>
+          <th v-for="column in columns" :key="column.columnLabel" :class="{'hidden': column.isHidden, 'isSorting': column.canSort}">
+            {{column.columnLabel}}
+            <span v-if="column.canSort" class="grid-table_table_head_sorting">
+              <inline-svg
+                :src="getSortingIcon(column)"
+                @click="handleSortingColumnChange(column)"
+                class="sorting-icon"
+              ></inline-svg>
+            </span>
+          </th>
         </thead>
         <tbody v-if="rowsCount > 0" class="grid-table_table_body">
           <tr v-for="row in rows" :key="row.name" class="grid-table_table_body_row" :class = "{'grid-table_table_body_row_hoverable': hoverable}" @click="$emit('row-clicked', row)">
