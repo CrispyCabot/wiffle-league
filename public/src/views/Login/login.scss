@@ -133,10 +133,10 @@
 @media (min-width: 992px) {
   .login-container {
     &_title {
-      flex-direction: row;
+      // flex-direction: c;
       img {
-        width: 5rem;
-        height: 5rem;
+        width: 6rem;
+        height: 6rem;
         margin-right: 1rem;
       }
     }
@@ -148,8 +148,8 @@
   .login-container {
     &_title {
       img {
-        width: 5.5rem;
-        height: 5.5rem;
+        width: 6.5rem;
+        height: 6.5rem;
       }
     }
   }

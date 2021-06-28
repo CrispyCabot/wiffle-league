@@ -56,6 +56,9 @@ export default defineComponent({
   },
   async mounted() {
     this.columns = await this.fetchLeaguesTableColumns()
+    const id = this.getLoggedInPlayer._id
+    const res = await this.fetchPlayerCreatedLeagues(id)
+    this.leagues = res.leagues
   },
   methods: {
     ...mapActions(['fetchPlayerCreatedLeagues', 'fetchLeaguesTableColumns']),
