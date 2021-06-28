@@ -6,6 +6,7 @@ import ContentDropdown from '@/components/dropdowns/content-dropdown/index.vue'
 import GridTable from '@/components/tables/grid-table/index.vue'
 import MultiItemSelector from '@/components/dropdowns/multi-item-selector/index.vue'
 import Breadcrumb from '@/components/navigation/breadcrumb/index.vue'
+import SortingIcons from '@/utils/sortingIcons'
 
 export default defineComponent({
   name: 'schedules',
@@ -16,6 +17,7 @@ export default defineComponent({
     MultiItemSelector,
     Breadcrumb
   },
+  SortingIcons,
   mixins: [ PaginationMixin ],
   data() {
     return {
@@ -49,6 +51,10 @@ export default defineComponent({
   async created() {
     this.allLeagues = await this.fetchLeaguesWithCompletedGames()
     this.columns = await this.fetchLeaguesScheduleTableColumns()
+    this.columns = this.columns.map((c: any) => {
+      c.canSort = c.columnName == 'date'
+      return c
+    }) as any
     this.shownLeagues = this.allLeagues
     await this.setSelectedSchedules()
   },
@@ -98,6 +104,7 @@ export default defineComponent({
       }))
 
       this.gamesShown = [...this.gamesShown, { leagueId: league._id, games }]
+      this.handleScheduleSortChange({ direction: 'down' }, league)
       
       this.loadingGames = false
     },
@@ -136,7 +143,17 @@ export default defineComponent({
     },
     searchValueChange(searchText: string) {
       this.searchText = searchText
-    }
+    },
+    handleScheduleSortChange({ direction }: any, league: any) {
+      const mult = direction == 'up' ? 1 : -1
+      let gamesInGamesShown = this.gamesShown.find(l => l.leagueId == league._id)
+      if (gamesInGamesShown) gamesInGamesShown = gamesInGamesShown.games
+      gamesInGamesShown = gamesInGamesShown.sort((a: any, b: any) => {
+        if (new Date(a.date.text) < new Date(b.date.text)) return 1 * mult
+        if (new Date(a.date.text) > new Date(b.date.text)) return -1 * mult
+        return 0
+      })
+    },
   },
   watch: {
     async getLoggedInPlayer() {

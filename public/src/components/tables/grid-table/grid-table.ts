@@ -20,7 +20,9 @@ export default defineComponent({
     hasSizeSelector: { type: Boolean, default: false },
     paginationRefresh: { type: Boolean, default: true },
     canHideContent: { type: Boolean, default: false },
-    hoverable: { type: Boolean, default: true }
+    hoverable: { type: Boolean, default: true },
+    sortingColumnOverride: { type: null as any, default: null },
+    sortingDirectionOverride: { type: null as any, default: null }
   },
   data() {
     return {
@@ -41,6 +43,12 @@ export default defineComponent({
 
         return SortingIcons.SORTING
       }
+    }
+  },
+  created() {
+    if (this.sortingColumnOverride && this.sortingDirectionOverride) {
+      this.sortingColumn = this.sortingColumnOverride
+      this.sortingDirection = this.sortingDirectionOverride
     }
   },
   methods: {

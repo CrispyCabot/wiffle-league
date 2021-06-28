@@ -21,7 +21,6 @@ export default defineComponent({
   mixins: [PaginationMixin],
   data() {
     return {
-      allLeagues: [],
       playerID: "",
       leagues: [],
       searchValue: '',
@@ -55,20 +54,11 @@ export default defineComponent({
       return this.rows.slice(this.startingIndex, this.endingIndex)
     }
   },
-  async created() {
-    this.allLeagues = await this.fetchLeagues()
-    const pid = this.getLoggedInPlayer._id
-    const playerOwnedLeagues: any = []
-    this.allLeagues.forEach(function(val: any, index: number) {
-      if (val.league_creator_id == pid)
-        playerOwnedLeagues.push(val)
-    })
-    this.leagues = playerOwnedLeagues
-
+  async mounted() {
     this.columns = await this.fetchLeaguesTableColumns()
   },
   methods: {
-    ...mapActions(['fetchLeagues', 'fetchLeaguesTableColumns']),
+    ...mapActions(['fetchPlayerCreatedLeagues', 'fetchLeaguesTableColumns']),
     searchValueChange(value: string) {
       this.searchValue = value
     },
@@ -82,11 +72,42 @@ export default defineComponent({
     redirect(link: any) {
       console.log(link)
       this.$router.push(link.redirect)
+    },
+    handleSortChange({column, direction}: any) {
+      const { columnName } = column
+      const mult = direction == 'up' ? 1 : -1
+      if (columnName == 'name') {
+        this.leagues = this.leagues.sort((a: any, b: any) => {
+          if (a.name < b.name) return -1 * mult
+          if (a.name > b.name) return 1 * mult
+          return 0
+        })
+      } else if (columnName == 'players') {
+        this.leagues = this.leagues.sort((a: any, b: any) => {
+          if (a.player_ids.length < b.player_ids.length) return 1 * mult
+          if (a.player_ids.length > b.player_ids.length) return -1 * mult
+          return 0
+        })
+      } else if (columnName == 'startDate' || columnName == 'endDate') {
+        const key = columnName == 'startDate' ? 'start_date' : 'end_date'
+        this.leagues = this.leagues.sort((a: any, b: any) => {
+          if (new Date(a[key]) < new Date(b[key])) return 1 * mult
+          if (new Date(a[key]) > new Date(b[key])) return -1 * mult
+          return 0
+        })
+      }
     }
   },
   watch: {
     rows() {
       this.paginationRefresh = !this.paginationRefresh
+    },
+    async getLoggedInPlayer() {
+      if (this.getLoggedInPlayer) {
+        const id = this.getLoggedInPlayer._id
+        const res = await this.fetchPlayerCreatedLeagues(id)
+        this.leagues = res.leagues
+      }
     }
   }
 })

@@ -30,7 +30,10 @@
             :hasHeader="true"
             :hasPagination="false"
             :hasSizeSelector="false"
+            :sortingColumnOverride="columns.find(c => c.columnName == 'date')"
+            :sortingDirectionOverride="$options.SortingIcons.SORTING_DOWN"
             @row-clicked="handleGameClick($event, league)"
+            @sort-change="handleScheduleSortChange($event, league)"
           ></grid-table>
           <div v-if="loadingGames && !gamesShown.some(g => g.leagueId == league._id)" class="leagues-schedules_dropdowns_dropdown_loading">
             <span>Loading</span>

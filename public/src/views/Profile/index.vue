@@ -5,7 +5,7 @@
     </div>
     <div v-if="getIsLoggedIn" class="profile-stats-table white_card_background ">
 
-      <h1 v-if="getLoggedInPlayer && getLoggedInPlayer.firstname" class="profile-stats-table_firstname">{{getLoggedInPlayer.firstname}}</h1>
+      <h1 v-if="getLoggedInPlayer && getLoggedInPlayer.firstname" class="profile-stats-table_firstname">{{getLoggedInPlayer.firstname}} {{getLoggedInPlayer.lastname}}</h1>
       <p v-if="getLoggedInPlayer && getLoggedInPlayer.nickname" class="profile-stats-table_nickname">
         <span>a.k.a</span> <br> {{getLoggedInPlayer.nickname}}
       </p>
