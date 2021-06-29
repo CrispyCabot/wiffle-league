@@ -64,7 +64,6 @@ app.ws('/:id?', function(ws, req) {
   listeningPlayers.push({ ws, senderId })
 
   ws.on('message', (message) => {
-    console.log(listeningPlayers.map(p => p.senderId))
     const parsedMessage = JSON.parse(message)
     if (parsedMessage.leaving) {
       listeningPlayers = listeningPlayers.filter(p => p.senderId != parsedMessage.senderId)

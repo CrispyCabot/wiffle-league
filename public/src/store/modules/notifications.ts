@@ -83,7 +83,8 @@ export const NotificationActions = {
   },
   initializeWebSocketConnection({ getters, commit, state }: any) {
     const currPlayer = getters.getLoggedInPlayer
-    commit('setWebSocketConnection', new WebSocket(`ws://localhost:3000/${currPlayer._id}`))
+    const WSServer = window.location.hostname === 'localhost' ? `ws://localhost:3000/${currPlayer._id}` : `ws://agile-tor-70423.herokuapp.com/${currPlayer._id}`
+    commit('setWebSocketConnection', new WebSocket(WSServer))
     getters.getWebSocketConnection.onopen = () => {
       console.log('Connection is established')
     }
