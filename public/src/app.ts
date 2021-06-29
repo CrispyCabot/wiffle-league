@@ -91,6 +91,9 @@ export default defineComponent({
       }
       if (window.location.href.includes('mock') || this.getMockOverride) this.setIsUsingMockData(true)
       else this.setIsUsingMockData(false)
+    },
+    getLoggedInPlayer() {
+      this.loadingPage()
     }
   }
 })

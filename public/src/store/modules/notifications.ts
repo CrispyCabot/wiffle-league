@@ -52,7 +52,8 @@ export const NotificationActions = {
         .then(({data}) => {
           dispatch('deleteNotifications', { playerId, notification, sectionKey })
           commit('updateLoggedInPlayer', data.player)
-          getters.getWebSocketConnection.send(JSON.stringify({ playerId, notification: notification, key: sectionKey }))
+          const webSocketConnection = getters.getWebSocketConnection
+          if (webSocketConnection) webSocketConnection.send(JSON.stringify({ playerId, notification: notification, key: sectionKey }))
           resolve(data)
         })
         .catch((error) => {
@@ -66,7 +67,8 @@ export const NotificationActions = {
     return new Promise((resolve, reject) => {
       api.put(route, { notification, notificationKey })
         .then(({data}) => {
-          getters.getWebSocketConnection.send(JSON.stringify({ playerId, notification: notification, key: notificationKey }))
+          const webSocketConnection = getters.getWebSocketConnection
+          if (webSocketConnection) webSocketConnection.send(JSON.stringify({ playerId, notification: notification, key: notificationKey }))
           resolve(data)
         })
         .catch((error) => {

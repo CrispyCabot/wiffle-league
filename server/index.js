@@ -58,11 +58,13 @@ app.get('/', (req, res) => {
 let listeningPlayers = []
 app.ws('/:id?', function(ws, req) {
   const senderId = req.params.id
-  if (!listeningPlayers.includes(p => p.senderId == senderId)) {
-    listeningPlayers.push({ ws, senderId })
-  }
+  // Filter out old connections if present
+  listeningPlayers = listeningPlayers.filter(p => p.senderId != senderId)
+  // Add connection back in with updated ws
+  listeningPlayers.push({ ws, senderId })
 
   ws.on('message', (message) => {
+    console.log(listeningPlayers.map(p => p.senderId))
     const parsedMessage = JSON.parse(message)
     if (parsedMessage.leaving) {
       listeningPlayers = listeningPlayers.filter(p => p.senderId != parsedMessage.senderId)
