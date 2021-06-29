@@ -1,7 +1,7 @@
-const axios = require('axios')
 const cookieParser = require('cookie-parser');
 const express = require('express')
 const app = express()
+const expressWs = require('express-ws')(app)
 const mongoose = require('mongoose')
 const bodyParser = require("body-parser")
 const cors = require("cors")
@@ -54,6 +54,25 @@ app.get('/', (req, res) => {
   console.log('Route / recieved')
   res.send('Connected')
 })
+
+let listeningPlayers = []
+app.ws('/:id?', function(ws, req) {
+  const senderId = req.params.id
+  if (!listeningPlayers.includes(p => p.senderId == senderId)) {
+    listeningPlayers.push({ ws, senderId })
+  }
+
+  ws.on('message', (message) => {
+    const parsedMessage = JSON.parse(message)
+    if (parsedMessage.leaving) {
+      listeningPlayers = listeningPlayers.filter(p => p.senderId != parsedMessage.senderId)
+      return
+    }
+    const { notification, key, playerId } = parsedMessage
+    const listeningPlayer = listeningPlayers.find(p => p.senderId == playerId)
+    listeningPlayer.ws.send(JSON.stringify({ notification, key }))
+  });
+});
 
 // Routes
 const router = express.Router();

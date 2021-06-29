@@ -28,5 +28,8 @@ export default {
   },
   setIsUsingMockData(state: any, isUsingMockData: Boolean) {
     state.isUsingMockData = isUsingMockData
+  },
+  setWebSocketConnection(state: any, connection: any) {
+    state.webSocketConnection = connection
   }
 }

@@ -1,4 +1,5 @@
 import api from '@/api/api'
+import getters from '../getters'
 
 export const NotificationActions = {
   deleteNotifications({ commit, getters }: any, { playerId, notification, sectionKey }: any) {
@@ -51,6 +52,7 @@ export const NotificationActions = {
         .then(({data}) => {
           dispatch('deleteNotifications', { playerId, notification, sectionKey })
           commit('updateLoggedInPlayer', data.player)
+          getters.getWebSocketConnection.send(JSON.stringify({ playerId, notification: notification, key: sectionKey }))
           resolve(data)
         })
         .catch((error) => {
@@ -64,11 +66,32 @@ export const NotificationActions = {
     return new Promise((resolve, reject) => {
       api.put(route, { notification, notificationKey })
         .then(({data}) => {
+          getters.getWebSocketConnection.send(JSON.stringify({ playerId, notification: notification, key: notificationKey }))
           resolve(data)
         })
         .catch((error) => {
           reject(error)
         })
     })
+  },
+  closeWebSocketConnection({ state }: any) {
+    const senderId = state.loggedInPlayer._id
+    state.webSocketConnection.send(JSON.stringify({ senderId, leaving: true }))
+    state.webSocketConnection.close()
+  },
+  initializeWebSocketConnection({ getters, commit, state }: any) {
+    const currPlayer = getters.getLoggedInPlayer
+    commit('setWebSocketConnection', new WebSocket(`ws://localhost:3000/${currPlayer._id}`))
+    getters.getWebSocketConnection.onopen = () => {
+      console.log('Connection is established')
+    }
+    getters.getWebSocketConnection.onmessage =  (evt: any) => {
+      const {notification, key} = JSON.parse(evt.data)
+      currPlayer.notifications[key].notifications = [notification, ...currPlayer.notifications[key].notifications]
+      commit('updateLoggedInPlayer', currPlayer)
+    }
+    getters.getWebSocketConnection.onclose = () => { 
+      console.log("Connection is closed...")
+    }
   }
 }

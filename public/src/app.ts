@@ -15,7 +15,7 @@ export default defineComponent({
   data() {
     return {
       isMobileView: true,
-      isMaxViewportHeight: true
+      isMaxViewportHeight: true,
     }
   },
   async created() {
@@ -26,6 +26,8 @@ export default defineComponent({
       this.updateLoggedInPlayer(res.user)
       api.defaults.headers.common['Authorization'] = `Bearer ${res.accessToken}`
     }
+    this.initializeWebSocketConnection()
+    window.addEventListener('load', this.loadingPage)
   },
   mounted() {
     this.setIsMobileView()
@@ -38,10 +40,19 @@ export default defineComponent({
     this.setIsMaxViewportHeight()
   },
   computed: {
-    ...mapGetters(['getGlobalToastMessage', 'getGlobalToastType', 'getGlobalToastIsShowing', 'getGlobalToastDuration', 'getGlobalToastIsShowingOverride', 'getAccessToken', 'getMockOverride'])
+    ...mapGetters([
+    'getGlobalToastMessage',
+    'getGlobalToastType',
+    'getGlobalToastIsShowing',
+    'getGlobalToastDuration',
+    'getGlobalToastIsShowingOverride',
+    'getAccessToken',
+    'getMockOverride',
+    'getWebSocketConnection'
+  ])
   },
   methods: {
-    ...mapActions(['retrieveRefreshToken']),
+    ...mapActions(['retrieveRefreshToken', 'initializeWebSocketConnection', 'closeWebSocketConnection']),
     ...mapMutations(['updateIsLoggedIn', 'updateLoggedInPlayer', 'updateGlobalToast', 'setIsUsingMockData']),
     closingGlobalToast() {
       if (this.getGlobalToastIsShowing) {
@@ -62,18 +73,22 @@ export default defineComponent({
       if (!this.isMaxViewportHeight) {
         routerView.style.paddingBottom = footerBounds.height + 'px'
       }
+    },
+    loadingPage() {
+      if (this.getWebSocketConnection) this.closeWebSocketConnection()
+      this.initializeWebSocketConnection()
     }
   },
-  unmounted() { 
+  beforeUnmount() { 
     window.removeEventListener('resize', this.setIsMobileView)
     window.removeEventListener('resize', this.setIsMaxViewportHeight)
+    window.removeEventListener('load', this.loadingPage)
   },
   watch: {
     $route() {
       if (this.getAccessToken) {
         api.defaults.headers.common['Authorization'] = `Bearer ${this.getAccessToken}`
       }
-
       if (window.location.href.includes('mock') || this.getMockOverride) this.setIsUsingMockData(true)
       else this.setIsUsingMockData(false)
     }

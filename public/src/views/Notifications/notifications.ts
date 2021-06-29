@@ -228,8 +228,7 @@ export default defineComponent({
   },
   watch: {
     async getLoggedInPlayer() {
-      if (this.getLoggedInPlayer &&
-        this.getLoggedInPlayer.notifications) {
+      if (this.getLoggedInPlayer && this.getLoggedInPlayer.notifications) {
         this.notifications = this.getLoggedInPlayer.notifications
         this.orderedNotificationSections = await this.getOrderedNotificationSections()
       }

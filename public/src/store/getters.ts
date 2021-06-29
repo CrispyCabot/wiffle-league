@@ -43,5 +43,8 @@ export default {
   },
   getMockOverride(): Boolean {
     return state.mockOverride
+  },
+  getWebSocketConnection(): any {
+    return state.webSocketConnection
   }
 }
