@@ -4,7 +4,7 @@ const stats_schema = {
   doubles: Number,
   triples: Number,
   homeruns: Number,
-  plate_appearances: Number,
+  // plate_appearances: Number,
   at_bats: Number,
   games: Number,
   wins: Number,

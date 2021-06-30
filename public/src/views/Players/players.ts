@@ -67,11 +67,11 @@ export default defineComponent({
       this.players.sort((a, b) => b.player_stats.points - a.player_stats.points)
     },
     calcAvg(player: any) {
-      const { hits, plate_appearances } = player.player_stats
+      const { hits, at_bats } = player.player_stats
       if (hits == 0) return '.000'
-      if (hits > plate_appearances) return '.000'
+      if (hits > at_bats) return '.000'
 
-      const avg = String(hits / plate_appearances)
+      const avg = String(hits / at_bats)
       if (avg.length > 5) return avg.slice(1, 5)
       return avg
     },

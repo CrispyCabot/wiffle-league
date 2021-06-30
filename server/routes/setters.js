@@ -17,19 +17,6 @@ router.route('/leagues/create').post(authChecker, async (req, res) => {
   const doesCreatorExist = await Players.exists({_id: league_creator_id})
   if (!doesLeagueNameExist) {
     if (doesCreatorExist) {
-      const defaultStats = {
-        hits: 0,
-        singles: 0,
-        doubles: 0,
-        triples: 0,
-        homeruns: 0,
-        plate_appearances: 0,
-        at_bats: 0,
-        games: 0,
-        wins: 0,
-        losses: 0,
-        points: 0
-      }
       const league = await Leagues.create({
         name,
         player_ids: [...player_ids.filter(i => i != league_creator_id), league_creator_id],

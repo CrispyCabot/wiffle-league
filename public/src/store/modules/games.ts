@@ -15,11 +15,11 @@ export const GameActions = {
     })
   },
   updateGameScoreByPlayerId({ getters }: any, payload: any) {
-    const { gameId, playerId, plate_appearances, at_bats, singles, doubles, triples, homeruns, team1Score, team2Score } = payload
+    const { gameId, playerId, at_bats, singles, doubles, triples, homeruns, team1Score, team2Score } = payload
     const isUsingMockData = getters.getIsUsingMockData
     const route = isUsingMockData ? `/mock/games/${gameId}/update-score` : `/games/${gameId}/update-score`
     return new Promise((resolve, reject) => {
-      api.put(route, { playerId, plate_appearances, at_bats, singles, doubles, triples, homeruns, team1Score, team2Score })
+      api.put(route, { playerId, at_bats, singles, doubles, triples, homeruns, team1Score, team2Score })
         .then(({data}) => {
           resolve(data)
         })
