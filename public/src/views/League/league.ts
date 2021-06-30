@@ -225,11 +225,11 @@ export default defineComponent({
       }))
     },
     calcAvg(stats: any) {
-      const { hits, plate_appearances } = stats
+      const { hits, at_bats } = stats
       if (hits == 0) return '.000'
-      if (hits > plate_appearances) return '.000'
+      if (hits > at_bats) return '.000'
 
-      let avg = String(hits / plate_appearances)
+      let avg = String(hits / at_bats)
       if (avg.length > 5) return avg.slice(1, 5)
       while (avg.length < 5) avg += '0'
       return avg.slice(1, 5)

@@ -19,7 +19,6 @@ export default defineComponent({
       team1Score: null,
       team2Score: null,
       fields: {
-        plate_appearances: {text: 'Plate Appearances', value: null },
         at_bats: {text: 'At bats', value: null },
         singles: {text: 'Singles', value: null },
         doubles: {text: 'Doubles', value: null },
@@ -49,7 +48,6 @@ export default defineComponent({
     },
     canSubmitScores(): Boolean {
       return Boolean(
-        this.fields.plate_appearances.value &&
         this.fields.at_bats.value &&
         this.fields.singles.value &&
         this.fields.doubles.value &&
@@ -155,7 +153,6 @@ export default defineComponent({
       const res = await this.updateGameScoreByPlayerId({
         gameId: this.gameData._id,
         playerId: this.getLoggedInPlayer._id,
-        plate_appearances: this.fields.plate_appearances.value,
         at_bats: this.fields.at_bats.value,
         singles: this.fields.singles.value,
         doubles: this.fields.doubles.value,

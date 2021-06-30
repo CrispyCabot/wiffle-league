@@ -308,8 +308,8 @@ router.route('/mock/player/:id/notification/send').put(authChecker, async (req, 
 const Games = require('../../models/mocks/game-mock-model');
 router.route('/mock/games/:id/update-score').put(authChecker, async (req, res) => {
   const gameId = req.params.id
-  const { playerId, plate_appearances, at_bats, singles, doubles, triples, homeruns, team1Score, team2Score } = req.body
-  const gameStatKeys = { plate_appearances, at_bats, singles, doubles, triples, homeruns }
+  const { playerId, at_bats, singles, doubles, triples, homeruns, team1Score, team2Score } = req.body
+  const gameStatKeys = { at_bats, singles, doubles, triples, homeruns }
 
   let game = await Games.findOne({_id: gameId})
   if (!game) {
