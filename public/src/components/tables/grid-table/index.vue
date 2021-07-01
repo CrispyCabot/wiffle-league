@@ -45,7 +45,12 @@
           </tr>
         </tbody>
       </table>
-      <div v-if="rowsCount == 0" class="grid-table_table-empty">
+
+      <div v-if="isLoading" class="grid-table_table-loading">
+        <p>Loading...</p>
+        <font-awesome-icon :icon="['fas', 'spinner']" class="fa-spin"></font-awesome-icon>
+      </div>
+      <div v-else-if="rowsCount == 0" class="grid-table_table-empty">
         <h6>Oops!</h6>
         <p>No Data Found</p>
       </div>

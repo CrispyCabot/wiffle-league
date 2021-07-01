@@ -14,7 +14,8 @@ export default defineComponent({
       leagueId: '',
       leagueData: Object(),
       scheduleColumns: Array<any>(),
-      scheduleRows: Array<any>()
+      scheduleRows: Array<any>(),
+      tableLoading: false
     }
   },
   computed: {
@@ -23,10 +24,12 @@ export default defineComponent({
     ])
   },
   async created() {
+    this.tableLoading = true
     this.leagueId = String(this.$route.params.leagueId)
     this.leagueData = await this.fetchLeagueById(this.leagueId)
     this.scheduleColumns = [...await this.fetchLeaguesScheduleTableColumns(), { columnName: 'submit', columnLabel: '', maxWidth: 'unset', isHidden: false}]
     await this.setupScheduleRows()
+    this.tableLoading = false
   },
   methods: {
     ...mapActions([

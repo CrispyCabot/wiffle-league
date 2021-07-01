@@ -12,12 +12,15 @@ export default defineComponent({
   data() {
     return {
       leagues: [],
-      columns: []
+      columns: [],
+      tableLoading: false
     }
   },
   async created() {
+    this.tableLoading = true
     this.leagues = await this.fetchLeagues()
     this.columns = await this.fetchLeaguesTableColumns()
+    this.tableLoading = false
   },
   computed: {
     rows(): Array<Object> {

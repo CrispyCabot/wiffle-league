@@ -16,6 +16,7 @@ export default defineComponent({
       gameData: Object(),
       team1: Array<Object>(),
       team2: Array<Object>(),
+      playersInGame: Array<Object>(),
       team1Score: null,
       team2Score: null,
       fields: {
@@ -30,7 +31,8 @@ export default defineComponent({
       gameDate: '',
       gameTime: '',
       gameLoc: '',
-      isEditingGame: false
+      isEditingGame: false,
+      tableLoading: false
     }
   },
   computed: {
@@ -58,7 +60,7 @@ export default defineComponent({
       )
     },
     statsRows(): Array<Object> {
-      return [...this.team1, ...this.team2].map((player: any) => {
+      return this.playersInGame.map((player: any) => {
         const stats: { [key: string]: any } =  {
           name: { text: player.firstname + ' ' + player.lastname, type: 'string' },
           id: { text: player._id, type: 'hidden' }
@@ -66,9 +68,14 @@ export default defineComponent({
 
         if (this.gameData.player_stats.map((p: any) => p.player_id).includes(player._id)) {
           const playerData = this.gameData.player_stats.find((p: any) => p.player_id == player._id)
-          this.overallStatsColumns.map((c: any) => c.columnName).forEach((s: string) => {
-            if (s != 'name' && s != 'id')
+          this.overallStatsColumns.filter(c => c.columnName != 'name' && c.columnName != 'id').map((c: any) => c.columnName).forEach((s: string) => {
+            if (s == 'avg') {
+              stats[s] = { text: this.calcAvg(playerData), type: 'numeric' } 
+            } else if (s == 'slg') {
+              stats[s] = { text: this.calcSlg(playerData), type: 'numeric' } 
+            } else {
               stats[s] = { text: playerData.stats[s], type: 'numeric' } 
+            }
           })
         }
 
@@ -96,6 +103,7 @@ export default defineComponent({
     }
   },
   async created() {
+    this.tableLoading = true
     this.gameId = String(this.$route.params.gameId)
     this.gameData = await this.fetchGameById(this.gameId)
     this.league = await this.fetchLeagueById(String(this.$route.params.leagueId))
@@ -104,13 +112,16 @@ export default defineComponent({
 
     this.team1 = await Promise.all(this.gameData.team_1_ids.map(async (id: any) => await this.fetchPlayerById(id)))
     this.team2 = await Promise.all(this.gameData.team_2_ids.map(async (id: any) => await this.fetchPlayerById(id)))
-
+    this.playersInGame = [ ...this.team1, ...this.team2 ]
     const overallStatsColumns = await this.fetchPlayerStatsTableColumns()
     const nameColumn = { columnLabel: 'Name', columnName: 'name', maxWidth: '33vw', isHidden: false }
     const idColumn = { columnLabel: 'Id', columnName: 'id', maxWidth: 'unset', isHidden: true }
     const filteredStatsColumnNames = ['games', 'wins', 'losses', 'points']
     this.overallStatsColumns = [ nameColumn, ...overallStatsColumns.filter((c: any) => !filteredStatsColumnNames.includes(c.columnName)), idColumn ]
-
+    this.overallStatsColumns.map(c => {
+      c.canSort = true
+      return c
+    })
     if (this.gameIsCompleted) {
       this.team1Score = this.gameData.team_1_score
       this.team2Score = this.gameData.team_2_score
@@ -134,6 +145,7 @@ export default defineComponent({
       })
       .join(':')
     this.gameLoc = this.gameData.game_location
+    this.tableLoading = false
   },
   methods: {
     ...mapActions([
@@ -215,6 +227,56 @@ export default defineComponent({
     },
     cancelEditingGame() {
       this.isEditingGame = false
+    },
+    calcAvg(player: any) {
+      const { hits, at_bats } = player.stats
+      if (hits == 0) return '.000'
+      if (hits > at_bats) return '.000'
+
+      const avg = String(hits / at_bats)
+      if (avg.length > 5) return avg.slice(1, 5)
+      return avg
+    },
+    calcSlg(player: any) {
+      const { hits, singles, doubles, triples, homeruns, at_bats } = player.stats
+      if (hits == 0) return '0'
+      if (hits > at_bats) return '0' 
+      return String((singles + (2 * doubles) + (3 * triples) + (4 * homeruns)) / at_bats).slice(0, 5)
+    },
+    handleStatsSortChange({column, direction}: any) {
+      const { columnName } = column
+      const mult = direction == 'up' ? 1 : -1
+      if (columnName == 'name') {
+        this.playersInGame =  this.playersInGame.sort((a: any, b: any) => {
+          if (a.firstname + a.lastname < b.firstname + b.lastname) return -1 * mult
+          if (a.firstname + a.lastname > b.firstname + b.lastname) return 1 * mult
+          return 0
+        }) 
+      } else if (columnName == 'avg') {
+        this.playersInGame =  this.playersInGame.sort((a: any, b: any) => {
+          const aPlayerData = this.gameData.player_stats.find((p: any) => p.player_id == a._id)
+          const bPlayerData = this.gameData.player_stats.find((p: any) => p.player_id == b._id)
+          if (Number(this.calcAvg(aPlayerData)) < Number(this.calcAvg(bPlayerData))) return 1 * mult
+          if (Number(this.calcAvg(aPlayerData)) > Number(this.calcAvg(bPlayerData))) return -1 * mult
+          return 0
+        })
+      } else if (columnName == 'slg') {
+        this.playersInGame = this.playersInGame.sort((a: any, b: any) => {
+          const aPlayerData = this.gameData.player_stats.find((p: any) => p.player_id == a._id)
+          const bPlayerData = this.gameData.player_stats.find((p: any) => p.player_id == b._id)
+          if (Number(this.calcSlg(aPlayerData)) < Number(this.calcSlg(bPlayerData))) return 1 * mult
+          if (Number(this.calcSlg(aPlayerData)) > Number(this.calcSlg(bPlayerData))) return -1 * mult
+          return 0
+        })
+      } else {
+        this.playersInGame = this.playersInGame.sort((a: any, b: any) => {
+          const aPlayerData = this.gameData.player_stats.find((p: any) => p.player_id == a._id)
+          const bPlayerData = this.gameData.player_stats.find((p: any) => p.player_id == b._id)
+          if (Number(aPlayerData.stats[columnName]) < Number(bPlayerData.stats[columnName])) return 1 * mult
+          if (Number(aPlayerData.stats[columnName]) > Number(bPlayerData.stats[columnName])) return -1 * mult
+          return 0
+        })
+      }
     }
   }
 })

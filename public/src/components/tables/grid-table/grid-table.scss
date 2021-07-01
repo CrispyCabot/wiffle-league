@@ -138,6 +138,19 @@
     }
   }
 
+  &_table-loading {
+    border-top: 1px solid $accent_light_red;
+    border-bottom: 1px solid $accent_light_red;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: $dark_background;
+    p {
+      margin-right: .75rem;
+    }
+  }
   &_table-empty {
     border-top: 1px solid $accent_light_red;
     border-bottom: 1px solid $accent_light_red;

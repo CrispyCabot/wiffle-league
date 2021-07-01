@@ -24,6 +24,7 @@ export default defineComponent({
         {columnLabel: 'Name', columnName: 'name', maxWidth: '33vw', isHidden: false, canSort: true},
         {columnLabel: 'Win Loss', columnName: 'winloss', maxWidth: 'unset', isHidden: false},
         {columnLabel: 'Avg', columnName: 'avg', maxWidth: 'unset', isHidden: false, canSort: true},
+        {columnLabel: 'Slg', columnName: 'slg', maxWidth: 'unset', isHidden: false, canSort: true},
         {columnLabel: 'Points', columnName: 'points', maxWidth: 'unset', isHidden: false, canSort: true},
         {columnLabel: 'Id', columnName: 'id', maxWidth: 'unset', isHidden: true}
       ],
@@ -91,7 +92,11 @@ export default defineComponent({
           const playersStats = playerInLeague.stats
           if (playersStats) {
             this.overallStatsColumns.map((c: any) => c.columnName).forEach((s: string) => {
-              if (s != 'name' && s != 'id') {
+              if (s == 'avg') {
+                stats[s] = { text: this.calcAvg(playersStats), type: 'numeric' } 
+              } else if (s == 'slg') {
+                stats[s] = { text: this.calcSlg(playersStats), type: 'numeric' } 
+              } else if (s != 'name' && s != 'id') {
                 stats[s] = { text: playersStats[s], type: 'numeric' } 
               }
             })
@@ -107,6 +112,7 @@ export default defineComponent({
           name: { text: player.firstname + ' ' + player.lastname, type: 'string' },
           winloss: { text: player.stats.wins + ' - ' + player.stats.losses, type: 'string' },
           avg: { text: this.calcAvg(player.stats), type: 'numeric' },
+          slg: { text: this.calcSlg(player.stats), type: 'numeric' },
           points: { text: player.stats.points, type: 'numeric' },
           id: { text: player.player_id, type: 'hidden' }
         }
@@ -233,6 +239,12 @@ export default defineComponent({
       if (avg.length > 5) return avg.slice(1, 5)
       while (avg.length < 5) avg += '0'
       return avg.slice(1, 5)
+    },
+    calcSlg(stats: any) {
+      const { hits, singles, doubles, triples, homeruns, at_bats } = stats
+      if (hits == 0) return '0'
+      if (hits > at_bats) return '0' 
+      return String((singles + (2 * doubles) + (3 * triples) + (4 * homeruns)) / at_bats).slice(0, 5)
     },
     async handleKickPlayerClick(row: any, column: any) {
       const res = await this.removePlayerFromLeagueGivenId({ playerId: row.id.text, leagueId: this.leagueData._id })
@@ -379,6 +391,12 @@ export default defineComponent({
           if (this.calcAvg(a.stats) > this.calcAvg(b.stats)) return -1 * mult
           return 0
         })
+      } else if (columnName == 'slg') {
+        this.leagueData.player_stats = this.leagueData.player_stats.sort((a: any, b: any) => {
+          if (this.calcSlg(a.stats) < this.calcSlg(b.stats)) return 1 * mult
+          if (this.calcSlg(a.stats) > this.calcSlg(b.stats)) return -1 * mult
+          return 0
+        })
       } else if (columnName == 'points') {
         this.leagueData.player_stats = this.leagueData.player_stats.sort((a: any, b: any) => {
           if (Number(a.stats.points) < Number(b.stats.points)) return 1 * mult
@@ -402,6 +420,22 @@ export default defineComponent({
         this.players = this.players.sort((a: any, b: any) => {
           if (a.firstname + a.lastname < b.firstname + b.lastname) return -1 * mult
           if (a.firstname + a.lastname > b.firstname + b.lastname) return 1 * mult
+          return 0
+        }) 
+      } else if (columnName == 'avg') {
+        this.players = this.players.sort((a: any, b: any) => {
+          const aLeagueStats = this.leagueData.player_stats.find((p: any) => p.player_id == a._id).stats
+          const bLeagueStats = this.leagueData.player_stats.find((p: any) => p.player_id == b._id).stats
+          if (this.calcAvg(aLeagueStats) < this.calcAvg(bLeagueStats)) return 1 * mult
+          if (this.calcAvg(aLeagueStats) > this.calcAvg(bLeagueStats)) return -1 * mult
+          return 0
+        })
+      } else if (columnName == 'slg') {
+        this.players = this.players.sort((a: any, b: any) => {
+          const aLeagueStats = this.leagueData.player_stats.find((p: any) => p.player_id == a._id).stats
+          const bLeagueStats = this.leagueData.player_stats.find((p: any) => p.player_id == b._id).stats
+          if (this.calcSlg(aLeagueStats) < this.calcSlg(bLeagueStats)) return 1 * mult
+          if (this.calcSlg(aLeagueStats) > this.calcSlg(bLeagueStats)) return -1 * mult
           return 0
         })
       } else {

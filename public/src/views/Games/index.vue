@@ -13,6 +13,7 @@
         :title="'Games'"
         :hasPagination="false"
         :hasSizeSelector="false"
+        :isLoading="tableLoading"
         @row-clicked="handleGameClick"
         @row-button-clicked="handleSubmitScoreClick"
       ></grid-table>

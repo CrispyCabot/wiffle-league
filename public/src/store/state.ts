@@ -10,6 +10,6 @@ export default reactive({
   currentPlayerName: '',
   currentGameName: '',
   isUsingMockData: false,
-  mockOverride: false,
+  mockOverride: true,
   webSocketConnection: null as any
 })

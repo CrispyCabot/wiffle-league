@@ -9,6 +9,8 @@ export const PlayerActions = {
       { columnLabel: '2B', columnName: 'doubles', maxWidth: 'unset', isHidden: false },
       { columnLabel: '3B', columnName: 'triples', maxWidth: 'unset', isHidden: false },
       { columnLabel: 'HR', columnName: 'homeruns', maxWidth: 'unset', isHidden: false },
+      { columnLabel: 'Avg', columnName: 'avg', maxWidth: 'unset', isHidden: false },
+      { columnLabel: 'Slg', columnName: 'slg', maxWidth: 'unset', isHidden: false },
       { columnLabel: 'At Bats', columnName: 'at_bats', maxWidth: 'unset', isHidden: false },
       { columnLabel: 'Games', columnName: 'games', maxWidth: 'unset', isHidden: false },
       { columnLabel: 'Wins', columnName: 'wins', maxWidth: 'unset', isHidden: false },

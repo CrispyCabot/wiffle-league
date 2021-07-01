@@ -13,6 +13,7 @@
         :hasSizeSelector="hasSizeSelector"
         :pageIndex="pageIndex"
         :pageSize="pageSize"
+        :isLoading="tableLoading"
         @page-index-change="changePageIndex($event)"
         @page-size-change="changePageSize($event)"
         @row-clicked="handleLeagueClick"

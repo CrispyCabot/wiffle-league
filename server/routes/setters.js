@@ -10,7 +10,7 @@ const defaultStats = require('./utils/default-stats');
 // League Setters
 const Leagues = require('../models/league-model')
 router.route('/leagues/create').post(authChecker, async (req, res) => {
-  const { name, player_ids, player_stats, max_num_players, league_creator_id, game_ids, num_games } = req.body
+  const { name, player_ids, max_num_players, league_creator_id, game_ids, num_games } = req.body
   const { games_created, team_size, start_date, end_date, deadline_date, about_text, gender } = req.body
 
   const doesLeagueNameExist = await Leagues.exists({name: name})

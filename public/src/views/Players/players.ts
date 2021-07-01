@@ -32,8 +32,14 @@ export default defineComponent({
           id: { text: player._id, type: 'hidden' }
         }
         if (player.player_stats) {
-          Object.keys(player.player_stats).forEach((s: string) => {
-            stats[s] = { text: player.player_stats[s], type: 'numeric' } 
+          this.overallStatsColumns.filter(c => c.columnName != 'name' && c.columnName != 'id').map(c => c.columnName).forEach((s: string) => {
+            if (s == 'avg') {
+              stats[s] = { text: this.calcAvg(player), type: 'numeric' } 
+            } else if (s == 'slg') {
+              stats[s] = { text: this.calcSlg(player), type: 'numeric' } 
+            } else {
+              stats[s] = { text: player.player_stats[s], type: 'numeric' } 
+            }
           })
         }
         return stats
@@ -75,6 +81,12 @@ export default defineComponent({
       if (avg.length > 5) return avg.slice(1, 5)
       return avg
     },
+    calcSlg(player: any) {
+      const { hits, singles, doubles, triples, homeruns, at_bats } = player.player_stats
+      if (hits == 0) return '0'
+      if (hits > at_bats) return '0' 
+      return String((singles + (2 * doubles) + (3 * triples) + (4 * homeruns)) / at_bats).slice(0, 5)
+    },
     playerClick(row: any) {
       this.$router.push(`/player/${row.id.text}`)
     },
@@ -85,6 +97,18 @@ export default defineComponent({
         this.players = this.players.sort((a: any, b: any) => {
           if (a.firstname + a.lastname < b.firstname + b.lastname) return -1 * mult
           if (a.firstname + a.lastname > b.firstname + b.lastname) return 1 * mult
+          return 0
+        })
+      } else if (columnName == 'avg') {
+        this.players = this.players.sort((a: any, b: any) => {
+          if (this.calcAvg(a) < this.calcAvg(b)) return 1 * mult
+          if (this.calcAvg(a) > this.calcAvg(b)) return -1 * mult
+          return 0
+        })
+      } else if (columnName == 'slg') {
+        this.players = this.players.sort((a: any, b: any) => {
+          if (this.calcSlg(a) < this.calcSlg(b)) return 1 * mult
+          if (this.calcSlg(a) > this.calcSlg(b)) return -1 * mult
           return 0
         })
       } else {

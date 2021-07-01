@@ -95,7 +95,9 @@
             :label="'Game Stats'"
             :hasPagination="false"
             :hasSizeSelector="false"
+            :isLoading="tableLoading"
             @row-click="playerClick"
+            @sort-change="handleStatsSortChange"
           ></grid-table>
         </div>
 

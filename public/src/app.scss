@@ -16,8 +16,12 @@ body {
 .app-container {
   width: 100vw;
   min-height: 100vh;
-  background-color: $dark_background;
   position: relative;
+  background: $dark_background;
+  .navbar-container {
+    position: relative;
+    z-index: 15;
+  }
   .global-toast {
     position: fixed;
     top: 0;
@@ -28,6 +32,8 @@ body {
     max-width: 30rem;
   }
   .router-view {
+    z-index: 5;
+    position: relative;
     // min-height: calc(90vh - 20.25rem);
     &.not-max-viewport-height-router-view {
     }
@@ -35,6 +41,7 @@ body {
   .footer-container {
     position: absolute;
     bottom: 0;
+    z-index: 5;
     &.max-viewport-height-footer {
     }
   }

@@ -22,7 +22,8 @@ export default defineComponent({
     canHideContent: { type: Boolean, default: false },
     hoverable: { type: Boolean, default: true },
     sortingColumnOverride: { type: null as any, default: null },
-    sortingDirectionOverride: { type: null as any, default: null }
+    sortingDirectionOverride: { type: null as any, default: null },
+    isLoading: { type: Boolean, default: false }
   },
   data() {
     return {
