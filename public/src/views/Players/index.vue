@@ -19,6 +19,7 @@
         @page-index-change="changePageIndex($event)"
         @page-size-change="changePageSize($event)"
         :canHideContent="false"
+        :isLoading="tableLoading"
         @row-clicked="playerClick"
         @sort-change="handleSortChange"
       ></grid-table>

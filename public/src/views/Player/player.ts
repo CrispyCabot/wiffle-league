@@ -37,11 +37,17 @@ export default defineComponent({
     ...mapGetters(['getIsLoggedIn', 'getLoggedInPlayer']),
     stats(): any {
       if (!this.player) return {}
-      const stats: { [key: string]: any } = {}
+      const stats: { [key: string]: any } = { id: { text: this.player._id, type: 'hidden' } }
 
       if (this.player.player_stats) {
-        Object.keys(this.player.player_stats).forEach((s: string) => {
-          stats[s] = { text: this.player.player_stats[s], type: 'numeric' } 
+        this.columns.map((c: any) => c.columnName).filter((c: any) => c != 'id').forEach((columnName: string) => {
+          if (columnName == 'avg') {
+            stats[columnName] = { text: this.calcAvg(this.player.player_stats), type: 'numeric' }
+          } else if (columnName == 'slg') {
+            stats[columnName] = { text: this.calcSlg(this.player.player_stats), type: 'numeric' }
+          } else {
+            stats[columnName] = { text: this.player.player_stats[columnName], type: 'numeric' }
+          }
         })
       }
       return stats
@@ -196,6 +202,21 @@ export default defineComponent({
         }
       })
       return record
+    },
+    calcAvg(stats: any) {
+      const { hits, at_bats } = stats
+      if (hits == 0) return '.000'
+      if (hits > at_bats) return '.000'
+
+      const avg = String(hits / at_bats)
+      if (avg.length > 5) return avg.slice(1, 5)
+      return avg
+    },
+    calcSlg(stats: any) {
+      const { hits, singles, doubles, triples, homeruns, at_bats } = stats
+      if (hits == 0) return '0'
+      if (hits > at_bats) return '0' 
+      return String((singles + (2 * doubles) + (3 * triples) + (4 * homeruns)) / at_bats).slice(0, 5)
     },
     setIsMobileView() {
       this.isMobileView = Boolean(window.outerWidth <= 576)

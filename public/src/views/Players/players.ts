@@ -19,7 +19,8 @@ export default defineComponent({
       creator: Object(),
       overallStatsColumns: Array<any>(),
       players: Array<any>(),
-      paginationRefresh: true
+      paginationRefresh: true,
+      tableLoading: false
     }
   },
   computed: {
@@ -50,8 +51,9 @@ export default defineComponent({
     }
   },
   async created() {
+    this.tableLoading = true
     this.players = await this.fetchPlayers()
-
+    
     // Column setup
     const overallStatsColumns = await this.fetchPlayerStatsTableColumns()
     const nameColumn = { columnLabel: 'Name', columnName: 'name', maxWidth: '33vw', isHidden: false }
@@ -60,6 +62,7 @@ export default defineComponent({
       c.canSort = true
       return c
     })
+    this.tableLoading = false
   },
   methods: {
     ...mapActions([

@@ -27,7 +27,8 @@ export default defineComponent({
       displayValues: ['Detailed', 'Simple'],
       selectedDisplayValue: 'Simple',
       columns: [],
-      paginationRefresh: true
+      paginationRefresh: true,
+      tableLoading: false
     }
   },
   computed: {
@@ -47,6 +48,7 @@ export default defineComponent({
             name: {text: league.name, type: 'string'},
             startDate: {text: new Date(league.start_date).toLocaleDateString(undefined, {year: 'numeric', month: 'numeric', day: 'numeric'}), type: 'date'},
             endDate: {text: new Date(league.end_date).toLocaleDateString(undefined, {year: 'numeric', month: 'numeric', day: 'numeric'}), type: 'date'},
+            dealineDate: {text: new Date(league.deadline_date).toLocaleDateString(undefined, {year: 'numeric', month: 'numeric', day: 'numeric'}), type: 'date'}
           }
         })
     },
@@ -55,10 +57,12 @@ export default defineComponent({
     }
   },
   async mounted() {
+    this.tableLoading = true
     this.columns = await this.fetchLeaguesTableColumns()
     const id = this.getLoggedInPlayer._id
     const res = await this.fetchPlayerCreatedLeagues(id)
     this.leagues = res.leagues
+    this.tableLoading = false
   },
   methods: {
     ...mapActions(['fetchPlayerCreatedLeagues', 'fetchLeaguesTableColumns']),
@@ -91,8 +95,8 @@ export default defineComponent({
           if (a.player_ids.length > b.player_ids.length) return -1 * mult
           return 0
         })
-      } else if (columnName == 'startDate' || columnName == 'endDate') {
-        const key = columnName == 'startDate' ? 'start_date' : 'end_date'
+      } else if (columnName == 'startDate' || columnName == 'endDate' || columnName == 'deadlineDate') {
+        const key = columnName == 'startDate' ? 'start_date' : columnName == 'endDate' ? 'end_date' : 'deadline_date'
         this.leagues = this.leagues.sort((a: any, b: any) => {
           if (new Date(a[key]) < new Date(b[key])) return 1 * mult
           if (new Date(a[key]) > new Date(b[key])) return -1 * mult

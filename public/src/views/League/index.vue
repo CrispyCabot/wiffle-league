@@ -22,6 +22,7 @@
           :hasPagination="false"
           :hasSizeSelector="false"
           :canHideContent="true"
+          :isLoading="leagueDataTableLoading"
           @row-clicked="playerClick"
           @sort-change="handleLeaderBoardSortChange"
         ></grid-table>
@@ -37,6 +38,7 @@
           :hasPagination="false"
           :hasSizeSelector="false"
           :canHideContent="true"
+          :isLoading="scheduleTableLoading"
           @row-clicked="gameClick"
           @sort-change="handleScheduleSortChange"
         ></grid-table>
@@ -52,6 +54,7 @@
           :hasPagination="false"
           :hasSizeSelector="false"
           :canHideContent="true"
+          :isLoading="playersTableLoading"
           @row-clicked="playerClick"
           @sort-change="handleStatsSortChange"
         ></grid-table>
@@ -79,13 +82,17 @@
               <th>Creator</th>
               <th>Start Date</th>
               <th>End Date</th>
+              <th>Join by Date</th>
               <th>Games Played</th>
+              <th>Team size</th>
             </thead>
             <tbody>
               <td>{{ creator.firstname + ' ' + creator.lastname }}</td>
               <td>{{ new Date(leagueData.start_date).toLocaleDateString() }}</td>
               <td>{{ new Date(leagueData.end_date).toLocaleDateString() }}</td>
+              <td>{{ new Date(leagueData.deadline_date).toLocaleDateString() }}</td>
               <td>{{ (leagueData.num_games_completed ? leagueData.num_games_completed : 0) + '/' + leagueData.num_games }}</td>
+              <td>{{ leagueData.team_size }}</td>
             </tbody>
           </table>
         </div>
@@ -101,7 +108,7 @@
       </div>
     </div>
 
-    <div class="league-container_about white_card_background">
+    <div v-if="leagueData.about_text" class="league-container_about white_card_background">
       <p class="league-container_about_title">About</p>
 
       <div class="league-container_about_content">

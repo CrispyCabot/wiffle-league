@@ -23,13 +23,14 @@
         :pageIndex="pageIndex"
         :pageSize="pageSize"
         :paginationRefresh="paginationRefresh"
+        :isLoading="tableLoading"
         @page-index-change="changePageIndex($event)"
         @page-size-change="changePageSize($event)"
         @row-clicked="handleLeagueClick"
         @sort-change="handleSortChange"
       ></grid-table>
 
-      <div v-if="selectedDisplayValue == 'Simple' && columns.length > 0" class="leagues-table_cards">
+      <div v-if="selectedDisplayValue == 'Simple' && columns.length > 0 && splicedRows.length > 0" class="leagues-table_cards">
         <row-card v-for="row in splicedRows" :key="row.id.text" :row="row" :columns="columns" @row-click="handleLeagueClick" />
         <pagination
           class="leagues-table_cards_pagination"
@@ -42,12 +43,18 @@
           @page-size-change="changePageSize($event)"
         />
       </div>
+      <div v-if="selectedDisplayValue == 'Simple' && splicedRows.length == 0" class="leagues-table_no-cards">
+        <h1>No data</h1>
+        <font-awesome-icon :icon="['fas', 'frown']"></font-awesome-icon>
+      </div>
 
       <button class="leagues-table_btn btn red_btn" @click="$router.push('/leagues/schedules')">View schedules</button>
     </div>
 
-    
-    <button class="create-league-btn btn red_btn" @click="$router.push('/leagues/create')">Create a League</button>
+    <div class="leagues-container_btns">
+      <h3>Want to join in on the fun?</h3>
+      <button class="create-league-btn btn red_btn" @click="$router.push('/leagues/create')">Create a League</button>
+    </div>
   </div>
 </template>
 

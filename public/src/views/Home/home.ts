@@ -30,6 +30,7 @@ export default defineComponent({
           players: {text: league.player_ids.length + ' / ' + league.max_num_players, type: 'numeric-left'},
           startDate: {text: new Date(league.start_date).toLocaleDateString(undefined, {year: 'numeric', month: 'numeric', day: 'numeric'}), type: 'date'},
           endDate: {text: new Date(league.end_date).toLocaleDateString(undefined, {year: 'numeric', month: 'numeric', day: 'numeric'}), type: 'date'},
+          dealineDate: {text: new Date(league.deadline_date).toLocaleDateString(undefined, {year: 'numeric', month: 'numeric', day: 'numeric'}), type: 'date'},
           id: {text: league._id, type: 'hidden'}
         }
       })
@@ -62,8 +63,8 @@ export default defineComponent({
           if (a.player_ids.length > b.player_ids.length) return -1 * mult
           return 0
         })
-      } else if (columnName == 'startDate' || columnName == 'endDate') {
-        const key = columnName == 'startDate' ? 'start_date' : 'end_date'
+      } else if (columnName == 'startDate' || columnName == 'endDate' || columnName == 'deadlineDate') {
+        const key = columnName == 'startDate' ? 'start_date' : columnName == 'endDate' ? 'end_date' : 'deadline_date'
         this.leagues = this.leagues.sort((a: any, b: any) => {
           if (new Date(a[key]) < new Date(b[key])) return 1 * mult
           if (new Date(a[key]) > new Date(b[key])) return -1 * mult

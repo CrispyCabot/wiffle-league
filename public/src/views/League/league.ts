@@ -36,7 +36,10 @@ export default defineComponent({
         {columnLabel: 'Id', columnName: 'id', maxWidth: 'unset', isHidden: true}
       ],
       players: Array<any>(),
+      playersTableLoading: false,
       scheduleRows: Array<any>(),
+      scheduleTableLoading: false,
+      leagueDataTableLoading: false,
       fields: {
         name: { value: '', placeholder: 'Name', name: 'name', isRequired: true, type: 'input' },
         deadlineDate: { value: '', placeholder: 'Deadline Date', name: 'deadlineDate', isRequired: true, type: 'date' },
@@ -155,7 +158,9 @@ export default defineComponent({
   },
   async created() {
     this.leagueId = String(this.$route.params.leagueId)
+    this.leagueDataTableLoading = true
     this.leagueData = await this.fetchLeagueById(this.leagueId)
+    this.leagueDataTableLoading = false
     this.updateCurrentLeagueName(this.leagueData.name)
     this.creator = await this.fetchPlayerById(this.leagueData.league_creator_id)
 
@@ -191,10 +196,12 @@ export default defineComponent({
     ]),
     ...mapMutations(['updateGlobalToast', 'updateLoggedInPlayer', 'updateCurrentLeagueName']),
     async fetchPlayers() {
+      this.playersTableLoading = true
       this.players = await Promise.all(this.leagueData.player_ids.map(async (id: any) => {
         return await this.fetchPlayerById(id)
       }))
       this.players.sort((a, b) => b.player_stats.points - a.player_stats.points)
+      this.playersTableLoading = false
     },
     async setupLeagueDataStats() {
       this.leagueData.player_stats = await Promise.all(this.leagueData.player_stats.map(async (p: any) => {
@@ -210,6 +217,7 @@ export default defineComponent({
       })
     },
     async setupScheduleRows() {
+      this.scheduleTableLoading = true
       this.scheduleRows = await Promise.all(this.leagueData.game_ids.map(async (id: any) => {
         const game = await this.fetchGameById(id)
         const team1 = await Promise.all(game.team_1_ids.map(async (team1Id: any) => {
@@ -229,6 +237,7 @@ export default defineComponent({
           id: { text: game._id, type: 'hidden' }
         }
       }))
+      this.scheduleTableLoading = false
     },
     calcAvg(stats: any) {
       const { hits, at_bats } = stats

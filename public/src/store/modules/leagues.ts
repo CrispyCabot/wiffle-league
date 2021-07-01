@@ -7,6 +7,7 @@ export const LeagueActions = {
       {columnLabel: 'Players', columnName: 'players', maxWidth: 'unset', isHidden: false, canSort: true},
       {columnLabel: 'Start Date', columnName: 'startDate', maxWidth: 'unset', isHidden: false, canSort: true},
       {columnLabel: 'End Date', columnName: 'endDate', maxWidth: 'unset', isHidden: false, canSort: true},
+      {columnLabel: 'Join by Date', columnName: 'deadlineDate', maxWidth: 'unset', isHidden: false, canSort: true},
       {columnLabel: 'Id', columnName: 'id', maxWidth: 'unset', isHidden: true, canSort: false}
     ]
   },

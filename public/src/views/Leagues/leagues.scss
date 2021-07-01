@@ -19,6 +19,17 @@
     &_table {
       margin-top: .5rem;
     }
+    &_no-cards {
+      margin: 3rem auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      h1 {
+        font-size: 2rem;
+        margin-right: 1rem;
+      }
+    }
     &_cards {
       width: 90%;
       display: flex;

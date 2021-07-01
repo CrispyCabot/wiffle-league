@@ -25,6 +25,17 @@
     &_table {
       margin-top: .5rem;
     }
+    &_no-cards {
+      margin: 3rem auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      h1 {
+        font-size: 2rem;
+        margin-right: 1rem;
+      }
+    }
     &_cards {
       width: 90%;
       display: flex;
@@ -39,7 +50,16 @@
       margin-top: 1.5rem;
     }
   }
-  .create-league-btn {
-    margin-top: 2rem;
+  &_btns {
+    margin: 3rem 0;
+    h3 {
+      color: $off_white;
+      margin-bottom: .5rem;
+    }
+
+    .red_btn {
+      margin-left: 0.6rem;
+      margin-right: 0.6rem;
+    }
   }
 }
