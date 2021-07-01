@@ -34,8 +34,24 @@ body {
   .router-view {
     z-index: 5;
     position: relative;
+    transition: .3s;
     // min-height: calc(90vh - 20.25rem);
     &.not-max-viewport-height-router-view {
+    }
+  }
+  .background-svg {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    width: auto;
+    min-height: 100%;
+    background-color: $dark_background !important;
+    transition: .3s;
+    g rect {
+      transform: translate(-50%, 0);
+      width: 100vw;
+      transition: .3s;
     }
   }
   .footer-container {

@@ -16,6 +16,7 @@ export default defineComponent({
     return {
       isMobileView: true,
       isMaxViewportHeight: true,
+      backgroundSvg: require('@/assets/photon.svg')
     }
   },
   async created() {
