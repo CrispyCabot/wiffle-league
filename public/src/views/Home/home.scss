@@ -2,6 +2,9 @@
   position: relative;
   padding-bottom: unset;
   text-align: center;
+  &_subtitle {
+    font-size: 16px;
+  }
   &_league-table {
     margin: 1rem auto;
     padding: 1rem 0 1.5rem 0;
