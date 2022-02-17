@@ -1,12 +1,34 @@
 <template>
   <div class="home">
-    <h1 class="site-title">Wiffle Ninja</h1>
-    <h4 class="site-title home_subtitle">
-      Easy and Free Wiffle Ball League Manager
-    </h4>
-    <button class="btn red_btn" @click="redirect('/signup')">
-      Sign up today!
-    </button>
+    <div class="home_top">
+      <h1 class="site-title">League Ninja</h1>
+      <h4 class="site-title home_subtitle">
+        You Play. We’ll Handle the Rest.
+      </h4>
+      <button class="btn white_btn" @click="redirect('/signup')">
+        Sign up today!
+      </button>
+    </div>
+    <div class="home_img-container">
+      <img
+        class="home_img-container_backgroundImg"
+        :src="require('@/assets/multisport.png')"
+      />
+    </div>
+    <div class="home_services">
+      <div class="home_services_group">
+        <i class="fas fa-medal fa-4x home_services_group_icon"></i>
+        <p>Create Leagues</p>
+      </div>
+      <div class="home_services_group">
+        <i class="fas fa-pen fa-4x home_services_group_icon"></i>
+        <p>Track Stats</p>
+      </div>
+      <div class="home_services_group">
+        <i class="fas fa-calendar-plus fa-4x home_services_group_icon"></i>
+        <p>Build Schedules</p>
+      </div>
+    </div>
     <div class="home_league-table white_card_background ">
       <grid-table
         :columns="columns"

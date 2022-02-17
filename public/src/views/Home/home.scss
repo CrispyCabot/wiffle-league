@@ -1,58 +1,111 @@
 .home {
-  position: relative;
-  padding-bottom: unset;
-  text-align: center;
-  &_subtitle {
-    font-size: 16px;
-  }
-  &_league-table {
-    margin: 1rem auto;
-    padding: 1rem 0 1.5rem 0;
-  }
-  &_btns {
-    margin: 3rem 0;
-    h3 {
-      color: $off_white;
-      margin-bottom: .5rem;
+    position: relative;
+    padding-bottom: unset;
+    text-align: center;
+    &_top {
+        position: relative;
+        z-index: 10;
+        background-color: $accent_red;
+        width: 50%;
+        margin: 0 auto;
+        padding: 10px;
+        border-radius: 10px;
     }
-
-    .red_btn {
-      margin-left: 0.6rem;
-      margin-right: 0.6rem;
+    &_img-container {
+        width: 100%;
+        height: 25rem;
+        &_backgroundImg {
+            object-fit: cover;
+            width: 100%;
+            margin: 20px 0;
+            z-index: 1;
+            bottom: 125px;
+            position: relative;
+        }
     }
-  }
-  &_about {
-    width: 100%;
-    background: $off_white;
-    padding: 2rem 1.5rem;
-
-    h2 {
-      color: $dark_background;
-      font-style: italic;
-      font-size: 2rem;
+    &_subtitle {
+        font-size: 16px;
     }
-
-    p {
-      text-align: left;
-      font-size: 0.9rem;
+    &_services {
+        position: relative;
+        z-index: 10;
+        background-color: $off_white;
+        width: 90%;
+        margin: 0 auto;
+        border: 2px solid $accent_red;
+        border-radius: 10px;
+        box-shadow: 10px 10px 0px $accent_red;
+        height: 12rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex: row wrap;
+        &_group {
+            display: flex;
+            flex: 1 1 auto;
+            align-items: center;
+            justify-content: center;
+            margin: 0 20px;
+            padding: 20px;
+            height: 100%;
+            flex-direction: column;
+            &_icon {
+                color: $accent_red;
+            }
+            p {
+                font-style: italic;
+                margin-top: 10px;
+            }
+        }
+        &_group+&_group {
+            border-left: 1px solid $accent_red;
+        }
     }
-  }
+    &_league-table {
+        margin: 1rem auto;
+        padding: 1rem 0 1.5rem 0;
+        z-index: 1;
+    }
+    &_btns {
+        margin: 3rem 0;
+        h3 {
+            color: $off_white;
+            margin-bottom: 0.5rem;
+        }
+        .red_btn {
+            margin-left: 0.6rem;
+            margin-right: 0.6rem;
+        }
+    }
+    &_about {
+        width: 100%;
+        background: $off_white;
+        padding: 2rem 1.5rem;
+        h2 {
+            color: $dark_background;
+            font-style: italic;
+            font-size: 2rem;
+        }
+        p {
+            text-align: left;
+            font-size: 0.9rem;
+        }
+    }
 }
 
 // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default
-
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .home {
-    &_about {
-      padding: 2rem 3rem;
-      p {
-        max-width: 60rem;
-        margin: 0 auto;
-      }
+    .home {
+        &_about {
+            padding: 2rem 3rem;
+            p {
+                max-width: 60rem;
+                margin: 0 auto;
+            }
+        }
     }
-  }
 }
 
 // Medium devices (tablets, 768px and up)
@@ -60,22 +113,22 @@
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .home {
-    &_league-table {
-      width: 80%;
-      margin: 3rem auto;
+    .home {
+        &_league-table {
+            width: 80%;
+            margin: 3rem auto;
+        }
+        &_about {
+            padding: 5rem 3rem;
+            h2 {
+                margin-bottom: 1rem;
+            }
+        }
+        &_btns {
+            font-size: 1.5rem;
+            margin: 8rem auto;
+        }
     }
-    &_about {
-      padding: 5rem 3rem;
-      h2 {
-        margin-bottom: 1rem;
-      }
-    }
-    &_btns {
-      font-size: 1.5rem;
-      margin: 8rem auto;
-    }
-  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
