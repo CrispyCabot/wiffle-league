@@ -6,7 +6,7 @@
         You Play. We’ll Handle the Rest.
       </h4>
       <button class="btn white_btn" @click="redirect('/signup')">
-        Sign up today!
+        Get Started Now!
       </button>
     </div>
     <div class="home_img-container">
