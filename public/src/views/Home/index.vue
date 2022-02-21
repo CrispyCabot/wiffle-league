@@ -2,7 +2,7 @@
   <div class="home">
     <h1 class="site-title">Wiffle Ninja</h1>
     <h4 class="site-title home_subtitle">
-      Easy and Free Wiffle Ball League Manager
+      You Play. We’ll Handle the Rest.
     </h4>
     <button class="btn red_btn" @click="redirect('/signup')">
       Sign up today!
